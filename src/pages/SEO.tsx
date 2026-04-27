@@ -1,6 +1,5 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import InternalLinksFooter from "@/components/InternalLinks";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { CheckCircle, ArrowRight, Search, FileText, Link2, BarChart3, MapPin, Image } from "lucide-react";
@@ -53,7 +52,7 @@ const SEOPage = () => {
             Comprehensive search engine optimization services that cover every aspect of SEO. 
             From technical optimization to content strategy, we help contractors dominate search results.
           </p>
-          <Link to="/contact">
+          <Link to="/contact#get-in-touch">
             <Button variant="hero" size="lg">
               Start Ranking Higher
               <ArrowRight className="ml-2" size={20} />
@@ -166,7 +165,7 @@ const SEOPage = () => {
               <p className="text-white/90 mb-6">
                 Let our SEO experts help you rank higher and get more customers from search engines.
               </p>
-              <Link to="/contact">
+              <Link to="/contact#get-in-touch">
                 <Button variant="secondary" size="lg">
                   Get SEO Analysis
                 </Button>
@@ -305,7 +304,6 @@ const SEOPage = () => {
         </div>
       </section>
 
-      <InternalLinksFooter />
       <Footer />
     </div>
   );

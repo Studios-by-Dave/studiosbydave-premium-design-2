@@ -1,6 +1,5 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import InternalLinksFooter from "@/components/InternalLinks";
 import LogoMarquee from "@/components/LogoMarquee";
 import PixieDust from "@/components/PixieDust";
 import { Button } from "@/components/ui/button";
@@ -63,7 +62,7 @@ const Branding = () => {
             Professional branding that makes your business stand out. From logos to complete 
             brand identity packages, we create memorable brands for contractors and local businesses.
           </p>
-          <Link to="/contact">
+          <Link to="/contact#get-in-touch">
             <Button variant="hero" size="lg">
               Start Your Brand Design
               <ArrowRight className="ml-2" size={20} />
@@ -259,7 +258,7 @@ const Branding = () => {
           </div>
 
           <div className="text-center mt-12">
-            <Link to="/contact">
+            <Link to="/contact#get-in-touch">
               <Button variant="hero" size="lg">
                 Get Started with Your Brand Package
                 <ArrowRight className="ml-2" size={20} />
@@ -429,7 +428,6 @@ const Branding = () => {
         </div>
       </section>
 
-      <InternalLinksFooter />
       <Footer />
     </div>
   );

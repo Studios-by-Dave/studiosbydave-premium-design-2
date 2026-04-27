@@ -58,14 +58,14 @@ const About = () => {
             <h1 className="text-5xl lg:text-6xl font-bold text-white mb-6">
               About{" "}
               <span className="gradient-text bg-gradient-to-r from-accent to-white bg-clip-text text-transparent">
-                Studios by Dave
+                Us
               </span>
             </h1>
           </div>
           <p className="text-xl text-white/90 max-w-3xl mx-auto mb-8">
-            We don't just build websites. We build opportunity. We build something GREAT together!
+            Helping local business owners like YOU turn online visitors into loyal customers through strategic digital marketing and web development.
           </p>
-          <Link to="/contact">
+          <Link to="/contact#get-in-touch">
             <Button variant="hero" size="lg">
               Start Building Together
               <ArrowRight className="ml-2" size={20} />
@@ -285,7 +285,7 @@ const About = () => {
               <p className="text-white/90 mb-6">
                 Let's work together to unlock your business's full potential and create something amazing.
               </p>
-              <Link to="/contact">
+              <Link to="/contact#get-in-touch">
                 <Button variant="secondary" size="lg">
                   Let's Get Started
                 </Button>

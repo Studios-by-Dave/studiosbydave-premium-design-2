@@ -61,17 +61,17 @@ const Navigation = () => {
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-8">
-            <Link to="/" className={`text-sm font-medium transition-colors hover:text-primary ${isActive('/') ? "text-primary border-b-2 border-primary pb-1" : "text-foreground/80"}`}>
+            <Link to="/" className={`text-sm font-semibold transition-colors hover:text-primary ${isActive('/') ? "text-primary border-b-2 border-primary pb-1" : "text-foreground/80"}`}>
               Home
             </Link>
 
-            <Link to="/about" className={`text-sm font-medium transition-colors hover:text-primary ${isActive('/about') ? "text-primary border-b-2 border-primary pb-1" : "text-foreground/80"}`}>
+            <Link to="/about" className={`text-sm font-semibold transition-colors hover:text-primary ${isActive('/about') ? "text-primary border-b-2 border-primary pb-1" : "text-foreground/80"}`}>
               About Us
             </Link>
             
             {/* StudiosWeb Collapsible */}
             <div className="relative">
-              <button onClick={() => setStudiosWebOpen(!studiosWebOpen)} className={`text-sm font-bold transition-colors hover:text-primary flex items-center space-x-1 ${isStudiosWebActive() ? "text-primary border-b-2 border-primary pb-1" : "text-primary"}`}>
+              <button onClick={() => setStudiosWebOpen(!studiosWebOpen)} className={`text-sm font-extrabold transition-colors hover:text-primary flex items-center space-x-1 ${isStudiosWebActive() ? "text-primary border-b-2 border-primary pb-1" : "text-primary"}`}>
                 <span>Studios Web</span>
                 <ChevronDown className={`h-4 w-4 transition-transform duration-300 ${studiosWebOpen ? 'rotate-180' : ''}`} />
               </button>
@@ -89,12 +89,12 @@ const Navigation = () => {
             </div>
 
             {/* StudiosInk */}
-            <Link to="/studiosink" className={`text-sm font-bold transition-colors hover:text-primary ${isActive('/studiosink') ? "text-primary border-b-2 border-primary pb-1" : "text-primary"}`}>
+            <Link to="/studiosink" className={`text-sm font-extrabold transition-colors hover:text-primary ${isActive('/studiosink') ? "text-primary border-b-2 border-primary pb-1" : "text-primary"}`}>
               Studios Ink
             </Link>
 
             {/* StudiosGear */}
-            <Link to="/studiosgear" className={`text-sm font-bold transition-colors hover:text-primary ${location.pathname.startsWith('/studiosgear') ? "text-primary border-b-2 border-primary pb-1" : "text-primary"}`}>
+            <Link to="/studiosgear" className={`text-sm font-extrabold transition-colors hover:text-primary ${location.pathname.startsWith('/studiosgear') ? "text-primary border-b-2 border-primary pb-1" : "text-primary"}`}>
               Studios Gear
             </Link>
 
@@ -105,7 +105,7 @@ const Navigation = () => {
               </span>
             </Link>
 
-            <Link to="/contact" className={`text-sm font-medium transition-colors hover:text-primary ${isActive('/contact') ? "text-primary border-b-2 border-primary pb-1" : "text-foreground/80"}`}>
+            <Link to="/contact" className={`text-sm font-semibold transition-colors hover:text-primary ${isActive('/contact') ? "text-primary border-b-2 border-primary pb-1" : "text-foreground/80"}`}>
               Contact
             </Link>
             
@@ -126,17 +126,17 @@ const Navigation = () => {
 
         {/* Mobile Navigation */}
         {isOpen && <div className="lg:hidden pb-6 space-y-4">
-            <Link to="/" onClick={() => setIsOpen(false)} className={`block text-base font-medium transition-colors hover:text-primary ${isActive('/') ? "text-primary" : "text-foreground/80"}`}>
+            <Link to="/" onClick={() => setIsOpen(false)} className={`block text-base font-semibold transition-colors hover:text-primary ${isActive('/') ? "text-primary" : "text-foreground/80"}`}>
               Home
             </Link>
 
-            <Link to="/about" onClick={() => setIsOpen(false)} className={`block text-base font-medium transition-colors hover:text-primary ${isActive('/about') ? "text-primary" : "text-foreground/80"}`}>
+            <Link to="/about" onClick={() => setIsOpen(false)} className={`block text-base font-semibold transition-colors hover:text-primary ${isActive('/about') ? "text-primary" : "text-foreground/80"}`}>
               About Us
             </Link>
             
             {/* Mobile StudiosWeb Section */}
             <div className="border-t pt-4">
-              <Link to="/studiosweb" onClick={() => setIsOpen(false)} className={`block text-base font-bold transition-colors hover:text-primary mb-2 ${isStudiosWebActive() ? "text-primary" : "text-primary"}`}>
+              <Link to="/studiosweb" onClick={() => setIsOpen(false)} className={`block text-base font-extrabold transition-colors hover:text-primary mb-2 ${isStudiosWebActive() ? "text-primary" : "text-primary"}`}>
                 Studios Web
               </Link>
               <div className="ml-4 space-y-2">
@@ -148,14 +148,14 @@ const Navigation = () => {
 
             {/* Mobile StudiosInk */}
             <div className="border-t pt-4">
-              <Link to="/studiosink" onClick={() => setIsOpen(false)} className={`block text-base font-bold transition-colors hover:text-primary ${isActive('/studiosink') ? "text-primary" : "text-primary"}`}>
+              <Link to="/studiosink" onClick={() => setIsOpen(false)} className={`block text-base font-extrabold transition-colors hover:text-primary ${isActive('/studiosink') ? "text-primary" : "text-primary"}`}>
                 Studios Ink
               </Link>
             </div>
 
             {/* Mobile StudiosGear */}
             <div className="border-t pt-4">
-              <Link to="/studiosgear" onClick={() => setIsOpen(false)} className={`block text-base font-bold transition-colors hover:text-primary ${location.pathname.startsWith('/studiosgear') ? "text-primary" : "text-primary"}`}>
+              <Link to="/studiosgear" onClick={() => setIsOpen(false)} className={`block text-base font-extrabold transition-colors hover:text-primary ${location.pathname.startsWith('/studiosgear') ? "text-primary" : "text-primary"}`}>
                 Studios Gear
               </Link>
             </div>
@@ -169,7 +169,7 @@ const Navigation = () => {
               </Link>
             </div>
 
-            <Link to="/contact" onClick={() => setIsOpen(false)} className={`block text-base font-medium transition-colors hover:text-primary ${isActive('/contact') ? "text-primary" : "text-foreground/80"}`}>
+            <Link to="/contact" onClick={() => setIsOpen(false)} className={`block text-base font-semibold transition-colors hover:text-primary ${isActive('/contact') ? "text-primary" : "text-foreground/80"}`}>
               Contact
             </Link>
             

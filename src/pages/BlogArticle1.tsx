@@ -239,7 +239,7 @@ const BlogArticle1 = () => {
                       Contact Studios by Dave for professional web design, branding, and SEO services.
                     </p>
                     <Link 
-                      to="/contact"
+                      to="/contact#get-in-touch"
                       className="inline-block bg-stone-800 text-stone-100 px-4 py-2 text-xs font-bold tracking-wide uppercase hover:bg-stone-700 transition-colors"
                     >
                       Get Started Today

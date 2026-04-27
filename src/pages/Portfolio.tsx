@@ -10,16 +10,19 @@ import { Link } from "react-router-dom";
 
 // Portfolio screenshots
 import studiosbydaveImg from "@/assets/portfolio/studiosbydave.png";
+import fsExpeditedImg from "@/assets/portfolio/fs-expedited.jpg";
 import padgsteenguitarsImg from "@/assets/portfolio/padgsteenguitars.png";
 import shadesColorCraftImg from "@/assets/portfolio/shades-color-craft.png";
 import leeBuildsShelbyImg from "@/assets/portfolio/lee-builds-shelby.png";
 import odysseyHomeVisionsImg from "@/assets/portfolio/odyssey-home-visions.png";
 import moleDetectiveImg from "@/assets/portfolio/mole-detective.png"; // kept for future use
-import leadParrotConferenceImg from "@/assets/portfolio/lead-parrot-conference.png";
 import melodyLockImg from "@/assets/portfolio/melody-lock.png";
 import rifeWaveImg from "@/assets/portfolio/rife-wave.png";
 import waveSpyImg from "@/assets/portfolio/wave-spy.png";
-import leadParrotImg from "@/assets/portfolio/lead-parrot.png";
+import bigFuturisticPictureBoxImg from "@/assets/portfolio/big-futuristic-picture-box.png";
+import audioNotesAiImg from "@/assets/portfolio/audio-notes-ai.png";
+import mikesGutHealerImg from "@/assets/portfolio/mikes-gut-healer-5000.png";
+import theLivingWordImg from "@/assets/portfolio/the-living-word.png";
 
 interface PortfolioProject {
   title: string;
@@ -36,9 +39,9 @@ const webProjects: PortfolioProject[] = [
     category: "website",
   },
   {
-    title: "Lead-Parrot",
-    description: "AI-powered lead generation platform delivering verified, targeted leads in seconds with intelligent outreach templates.",
-    images: [leadParrotImg],
+    title: "F&S Expedited LLC",
+    description: "Professional interstate freight carrier specializing in reliable, fast, and customer-focused logistics solutions from Shelby, NC.",
+    images: [fsExpeditedImg],
     category: "website",
   },
   {
@@ -69,15 +72,33 @@ const webProjects: PortfolioProject[] = [
 
 const appProjects: PortfolioProject[] = [
   {
-    title: "Lead-Parrot",
-    description: "AI-powered lead generation platform delivering verified, targeted leads in seconds with intelligent outreach templates.",
-    images: [leadParrotConferenceImg],
+    title: "Big Futuristic Picture Box",
+    description: "AI-powered multi-layered image generator with advanced image reference and image doctor capabilities for creative professionals.",
+    images: [bigFuturisticPictureBoxImg],
+    category: "webapp",
+  },
+  {
+    title: "Audio Notes AI",
+    description: "AI-powered audio notes transcriber that transforms your audio notes and snippets into visual data, graphs, and actionable plans.",
+    images: [audioNotesAiImg],
     category: "webapp",
   },
   {
     title: "Musical Lock",
     description: "Revolutionary authentication system replacing passwords with memorable melodies for secure access.",
     images: [melodyLockImg],
+    category: "webapp",
+  },
+  {
+    title: "Mikes Gut Healer 5000",
+    description: "Fully comprehensive resource for gut healing, featuring earth medicines and Rife frequencies for true body, mind, and spirit healing.",
+    images: [mikesGutHealerImg],
+    category: "webapp",
+  },
+  {
+    title: "The Living Word",
+    description: "KJV-powered tool of spiritual life guidance with AI training based strictly on the King James Version of the Holy Bible.",
+    images: [theLivingWordImg],
     category: "webapp",
   },
   {

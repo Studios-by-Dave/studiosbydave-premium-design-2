@@ -311,7 +311,7 @@ const BlogArticle5 = () => {
                     <div className="border-t border-stone-300 pt-3 mt-1">
                       <p className="text-[10px] text-stone-500 uppercase tracking-wide mb-2">Need a website like this?</p>
                       <Link 
-                        to="/contact"
+                        to="/contact#get-in-touch"
                         className="inline-block border-2 border-stone-800 text-stone-900 px-4 py-2 text-xs font-bold tracking-wide uppercase hover:bg-stone-800 hover:text-stone-100 transition-colors"
                       >
                         Contact Studios by Dave

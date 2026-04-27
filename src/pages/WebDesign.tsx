@@ -1,6 +1,5 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import InternalLinksFooter from "@/components/InternalLinks";
 import PixieDust from "@/components/PixieDust";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -59,7 +58,7 @@ const WebDesign = () => {
             Custom websites that turn visitors into paying customers—designed specifically 
             for local small businesses.
           </p>
-          <Link to="/contact">
+          <Link to="/contact#get-in-touch">
             <Button variant="hero" size="lg">
               Get Your Free Quote
               <ArrowRight className="ml-2" size={20} />
@@ -296,7 +295,7 @@ const WebDesign = () => {
                 </ul>
                 <Link to="/contact" className="block mt-6">
                   <Button variant="outline" className="w-full" size="lg">
-                    Contact for Quote
+                    Contact for Free Quote
                   </Button>
                 </Link>
               </CardContent>
@@ -334,7 +333,7 @@ const WebDesign = () => {
                 </ul>
                 <Link to="/contact" className="block mt-6">
                   <Button variant="primary" className="w-full" size="lg">
-                    Contact for Quote
+                    Contact for Free Quote
                   </Button>
                 </Link>
               </CardContent>
@@ -367,7 +366,7 @@ const WebDesign = () => {
                 </ul>
                 <Link to="/contact" className="block mt-6">
                   <Button variant="outline" className="w-full" size="lg">
-                    Contact for Quote
+                    Contact for Free Quote
                   </Button>
                 </Link>
               </CardContent>
@@ -440,7 +439,7 @@ const WebDesign = () => {
             <p className="text-muted-foreground mb-4">
               Interested in any of these services? Contact us for a free consultation!
             </p>
-            <Link to="/contact">
+            <Link to="/contact#get-in-touch">
               <Button variant="hero" size="lg">
                 Get Your Free Quote
                 <ArrowRight className="ml-2" size={20} />
@@ -450,7 +449,6 @@ const WebDesign = () => {
         </div>
       </section>
 
-      <InternalLinksFooter />
       <Footer />
     </div>
   );

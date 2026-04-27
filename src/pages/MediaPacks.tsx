@@ -121,7 +121,7 @@ const MediaPacks = () => {
                       </li>
                     ))}
                   </ul>
-                  <Link to="/contact" className="mt-8 block">
+                  <Link to="/contact#get-in-touch" className="mt-8 block">
                     <Button variant="outline" size="lg" className="w-full font-semibold">
                       Order Your Pack
                     </Button>
@@ -160,7 +160,7 @@ const MediaPacks = () => {
                       </li>
                     ))}
                   </ul>
-                  <Link to="/contact" className="mt-8 block">
+                  <Link to="/contact#get-in-touch" className="mt-8 block">
                     <Button variant="shimmer" size="lg" className="w-full font-semibold">
                       Order Your Pack
                     </Button>
@@ -193,7 +193,7 @@ const MediaPacks = () => {
                       </li>
                     ))}
                   </ul>
-                  <Link to="/contact" className="mt-8 block">
+                  <Link to="/contact#get-in-touch" className="mt-8 block">
                     <Button variant="outline" size="lg" className="w-full font-semibold">
                       Order Your Pack
                     </Button>

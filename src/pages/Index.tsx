@@ -6,7 +6,6 @@ import NonExclusiveSection from "@/components/NonExclusiveSection";
 import PromotionMarquee from "@/components/PromotionMarquee";
 
 import Footer from "@/components/Footer";
-import InternalLinksFooter from "@/components/InternalLinks";
 import SimpleSEO from "@/components/SimpleSEO";
 import { organizationSchema, servicesSchema, localBusinessSchema, websiteSchema } from "@/data/structuredData";
 
@@ -31,7 +30,6 @@ const Index = () => {
         
         <NonExclusiveSection />
       </main>
-      <InternalLinksFooter />
       <Footer />
     </div>
   );

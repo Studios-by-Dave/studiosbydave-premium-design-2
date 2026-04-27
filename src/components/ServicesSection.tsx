@@ -130,7 +130,8 @@ const ServicesSection = () => {
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">We understand the unique challenges and opportunities within local business. Our solutions are built specifically for you to further in success.</p>
           </div>
 
-          <div className="grid md:grid-cols-3 lg:grid-cols-5 gap-8">
+          <div className="border-2 border-gray-300 rounded-2xl p-6 bg-gray-100/50">
+            <div className="grid md:grid-cols-3 lg:grid-cols-5 gap-8">
             {[{
             icon: "🏠",
             title: "Roofing Contractors",
@@ -151,6 +152,26 @@ const ServicesSection = () => {
             icon: "🏡",
             title: "Real Estate Agents",
             description: "Property listings, virtual tours, and lead capture systems that convert buyers and sellers."
+          }, {
+            icon: "🚚",
+            title: "Expedited Trucking",
+            description: "Real-time tracking systems, freight quote calculators, and logistics management platforms that streamline shipping operations."
+          }, {
+            icon: "🔨",
+            title: "Home Remodelers",
+            description: "Before/after galleries, project timelines, and consultation booking systems that showcase craftsmanship."
+          }, {
+            icon: "🔧",
+            title: "Plumbers",
+            description: "Emergency service dispatch, service area maps, and customer testimonial systems that build trust and drive calls."
+          }, {
+            icon: "🎨",
+            title: "Painters",
+            description: "Color selection tools, project galleries, and scheduling systems that help homeowners visualize and book painting services."
+          }, {
+            icon: "❄️",
+            title: "HVAC",
+            description: "Emergency repair dispatch, seasonal maintenance programs, and service area coverage maps that drive urgent service calls."
           }].map((industry, index) => <div key={index} className="text-center group">
                 <div className="text-5xl mb-4 group-hover:scale-110 transition-transform">
                   {industry.icon}
@@ -158,6 +179,7 @@ const ServicesSection = () => {
                 <h4 className="text-xl font-bold text-foreground mb-3">{industry.title}</h4>
                 <p className="text-muted-foreground">{industry.description}</p>
               </div>)}
+            </div>
           </div>
 
           {/* Backyard Fire Video */}
