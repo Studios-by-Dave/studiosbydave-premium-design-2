@@ -77,6 +77,14 @@ export async function prerender(url: string) {
   const { parseLinks } = await import('vite-prerender-plugin/parse');
   const links = parseLinks(html);
 
+  // Force exit after a short delay to ensure Vercel/CI environments don't hang
+  if (typeof process !== 'undefined' && process.env.NODE_ENV === 'production') {
+    setTimeout(() => {
+      console.log('Pre-rendering complete. Force exiting...');
+      process.exit(0);
+    }, 2000);
+  }
+
   return { 
     html,
     links: new Set(links),
