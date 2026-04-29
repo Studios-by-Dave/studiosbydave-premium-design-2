@@ -1,19 +1,43 @@
 {
   "redirects": [
     {
-      "source": "/:path(.*)",
-      "has": [{ "type": "host", "value": "studiosbydave.com" }],
-      "destination": "https://www.studiosbydave.com/:path",
+      "source": "/studiosweb/webdesign",
+      "destination": "/services/web-design",
       "statusCode": 301
     },
     {
-      "source": "/studiosweb/web-design",
-      "destination": "/studiosweb/webdesign",
+      "source": "/studiosweb/branding",
+      "destination": "/services/branding",
       "statusCode": 301
     },
     {
-      "source": "/studiosweb/ai-automations",
-      "destination": "/studiosweb",
+      "source": "/studiosweb/seo",
+      "destination": "/services/seo",
+      "statusCode": 301
+    },
+    {
+      "source": "/studiosweb/google-optimization",
+      "destination": "/services/google-optimization",
+      "statusCode": 301
+    },
+    {
+      "source": "/studiosweb/promos",
+      "destination": "/services/promos",
+      "statusCode": 301
+    },
+    {
+      "source": "/studiosweb/media-packs",
+      "destination": "/services/media-packs",
+      "statusCode": 301
+    },
+    {
+      "source": "/studiosweb/portfolio",
+      "destination": "/services/portfolio",
+      "statusCode": 301
+    },
+    {
+      "source": "/studiosweb/:path*",
+      "destination": "/services",
       "statusCode": 301
     }
   ],
