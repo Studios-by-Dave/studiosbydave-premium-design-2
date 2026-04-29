@@ -277,13 +277,13 @@ const BlogArticle2 = () => {
                       <span className="text-[10px] font-bold tracking-widest uppercase text-stone-600">Related Services</span>
                     </div>
                     <div className="p-3 space-y-2">
-                      <Link to="/studiosweb/webdesign" className="block text-xs text-stone-700 hover:text-stone-900 underline" style={{ fontFamily: "'Times New Roman', Times, serif" }}>
+                      <Link to="/services/web-design" className="block text-xs text-stone-700 hover:text-stone-900 underline" style={{ fontFamily: "'Times New Roman', Times, serif" }}>
                         Professional Web Design Services
                       </Link>
-                      <Link to="/studiosweb/seo" className="block text-xs text-stone-700 hover:text-stone-900 underline" style={{ fontFamily: "'Times New Roman', Times, serif" }}>
+                      <Link to="/services/seo" className="block text-xs text-stone-700 hover:text-stone-900 underline" style={{ fontFamily: "'Times New Roman', Times, serif" }}>
                         SEO Optimization Services
                       </Link>
-                      <Link to="/studiosweb/google-optimization" className="block text-xs text-stone-700 hover:text-stone-900 underline" style={{ fontFamily: "'Times New Roman', Times, serif" }}>
+                      <Link to="/services/google-optimization" className="block text-xs text-stone-700 hover:text-stone-900 underline" style={{ fontFamily: "'Times New Roman', Times, serif" }}>
                         Google Business Optimization
                       </Link>
                     </div>

@@ -6,16 +6,19 @@ const Footer = () => {
   const footerLinks = {
     services: [{
       name: "Web Design",
-      href: "/studiosweb/webdesign"
+      href: "/services/web-design"
     }, {
       name: "Logo Design & Branding",
-      href: "/studiosweb/branding"
+      href: "/services/branding"
     }, {
-      name: "AI Automations",
-      href: "/studiosweb/ai-automations"
+      name: "SEO Services",
+      href: "/services/seo"
     }, {
       name: "Google Optimization",
-      href: "/studiosweb/google-optimization"
+      href: "/services/google-optimization"
+    }, {
+      name: "Media Packs",
+      href: "/services/media-packs"
     }],
     company: [{
       name: "About Us",

@@ -7,11 +7,11 @@ interface InternalLink {
 }
 
 const footerLinks: InternalLink[] = [
-  { text: "Web Design Services", url: "/studiosweb/webdesign", description: "Custom contractor websites" },
-  { text: "SEO Optimization", url: "/studiosweb/seo", description: "Rank higher in search results" },
-  { text: "Branding & Logo Design", url: "/studiosweb/branding", description: "Professional brand identity" },
+  { text: "Web Design Services", url: "/services/web-design", description: "Custom contractor websites" },
+  { text: "SEO Optimization", url: "/services/seo", description: "Rank higher in search results" },
+  { text: "Branding & Logo Design", url: "/services/branding", description: "Professional brand identity" },
   
-  { text: "Google Optimization", url: "/studiosweb/google-optimization", description: "Local search dominance" },
+  { text: "Google Optimization", url: "/services/google-optimization", description: "Local search dominance" },
   
 ];
 

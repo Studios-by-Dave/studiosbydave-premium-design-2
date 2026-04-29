@@ -358,7 +358,7 @@ const Branding = () => {
               <p className="text-muted-foreground mb-4">
                 Websites that perfectly reflect your brand identity and convert visitors into loyal customers.
               </p>
-              <Link to="/studiosweb/webdesign" className="text-primary hover:text-primary/80 font-medium inline-flex items-center gap-2">
+              <Link to="/services/web-design" className="text-primary hover:text-primary/80 font-medium inline-flex items-center gap-2">
                 Get Branded Website
                 <ArrowRight size={16} />
               </Link>
@@ -370,7 +370,7 @@ const Branding = () => {
               <p className="text-muted-foreground mb-4">
                 Get your branded business found online with SEO strategies that build on your brand recognition.
               </p>
-              <Link to="/studiosweb/seo" className="text-primary hover:text-primary/80 font-medium inline-flex items-center gap-2">
+              <Link to="/services/seo" className="text-primary hover:text-primary/80 font-medium inline-flex items-center gap-2">
                 Boost Brand Visibility
                 <ArrowRight size={16} />
               </Link>
@@ -382,7 +382,7 @@ const Branding = () => {
               <p className="text-muted-foreground mb-4">
                 Ensure your brand appears consistently across Google Search, Maps, and Business Profile.
               </p>
-              <Link to="/studiosweb/google-optimization" className="text-primary hover:text-primary/80 font-medium inline-flex items-center gap-2">
+              <Link to="/services/google-optimization" className="text-primary hover:text-primary/80 font-medium inline-flex items-center gap-2">
                 Optimize Brand Presence
                 <ArrowRight size={16} />
               </Link>

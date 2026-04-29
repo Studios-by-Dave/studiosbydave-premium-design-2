@@ -144,7 +144,7 @@ export const ReferralBonusSection = () => {
           </p>
           
           {/* CTA Button */}
-          <Link to="/studiosweb/promos">
+          <Link to="/services/promos">
             <Button 
               size="lg" 
               className="bg-white text-accent hover:bg-white/90 font-semibold text-lg px-8 py-6 h-auto group shadow-lg hover:shadow-xl transition-all duration-300"

@@ -2,13 +2,9 @@ import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Routes, Route, Navigate } from "react-router-dom";
 import Index from "./pages/Index";
-import StudiosWeb from "./pages/StudiosWeb";
-import StudiosInk from "./pages/StudiosInk";
-import StudiosGear from "./pages/StudiosGear";
 
-import SacredArsenal from "./pages/SacredArsenal";
 import Blog from "./pages/Blog";
 import BlogArticle1 from "./pages/BlogArticle1";
 import BlogArticle2 from "./pages/BlogArticle2";
@@ -45,25 +41,40 @@ const App = () => (
       <TooltipProvider>
         <Toaster />
         <Sonner />
-        <BrowserRouter>
           <Watermark />
         <Routes>
           <Route path="/" element={<Index />} />
-          <Route path="/studiosweb" element={<StudiosWeb />} />
-          <Route path="/studiosweb/webdesign" element={<WebDesign />} />
-          <Route path="/studiosweb/branding" element={<Branding />} />
           
-          <Route path="/studiosweb/google-optimization" element={<GoogleOptimization />} />
-          <Route path="/studiosweb/seo" element={<SEOPage />} />
-          <Route path="/studiosweb/promos" element={<Promos />} />
-          <Route path="/studiosweb/media-packs" element={<MediaPacks />} />
+          {/* Redirects for old StudiosWeb paths */}
+          <Route path="/studiosweb" element={<Navigate to="/services" replace />} />
+          <Route path="/studiosweb/webdesign" element={<Navigate to="/services/web-design" replace />} />
+          <Route path="/studiosweb/branding" element={<Navigate to="/services/branding" replace />} />
+          <Route path="/studiosweb/google-optimization" element={<Navigate to="/services/google-optimization" replace />} />
+          <Route path="/studiosweb/seo" element={<Navigate to="/services/seo" replace />} />
+          <Route path="/studiosweb/promos" element={<Navigate to="/services/promos" replace />} />
+          <Route path="/studiosweb/media-packs" element={<Navigate to="/services/media-packs" replace />} />
+          <Route path="/studiosweb/portfolio" element={<Navigate to="/services/portfolio" replace />} />
+          <Route path="/studiosweb/ai-automations" element={<Navigate to="/services" replace />} />
+          
+          {/* Redirects for old StudiosInk paths */}
+          <Route path="/studiosink" element={<Navigate to="/" replace />} />
+          <Route path="/studiosink/sacred-arsenal" element={<Navigate to="/" replace />} />
+          
+          {/* Redirects for old StudiosGear paths */}
+          <Route path="/studiosgear" element={<Navigate to="/" replace />} />
+          <Route path="/studiosgear/lead-parrot" element={<Navigate to="/" replace />} />
+          
+          {/* New service routes */}
+          <Route path="/services/web-design" element={<WebDesign />} />
+          <Route path="/services/branding" element={<Branding />} />
+          
+          <Route path="/services/google-optimization" element={<GoogleOptimization />} />
+          <Route path="/services/seo" element={<SEOPage />} />
+          <Route path="/services/promos" element={<Promos />} />
+          <Route path="/services/media-packs" element={<MediaPacks />} />
           
 
-          <Route path="/studiosweb/portfolio" element={<Portfolio />} />
-          <Route path="/studiosink" element={<StudiosInk />} />
-          <Route path="/studiosink/sacred-arsenal" element={<SacredArsenal />} />
-          <Route path="/studiosgear" element={<StudiosGear />} />
-          
+          <Route path="/services/portfolio" element={<Portfolio />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/blog/why-choose-studios-by-dave" element={<BlogArticle1 />} />
           <Route path="/blog/does-your-business-need-a-website-2026" element={<BlogArticle2 />} />
@@ -82,7 +93,6 @@ const App = () => (
           </Routes>
           <ElfsightChatbot />
           <ElfsightPopup />
-        </BrowserRouter>
       </TooltipProvider>
   </QueryClientProvider>
 );

@@ -12,7 +12,7 @@ const services = [{
   title: "Web Design & Development",
   description: "Custom, responsive websites that convert visitors into customers. Optimized for local contractors and service businesses.",
   features: ["Mobile-First Design", "Lightning Fast Loading", "Lead Generation Forms", "Local SEO Built-In"],
-  link: "/studiosweb/webdesign",
+  link: "/services/web-design",
   linkText: "Learn About Web Design",
   gradient: "from-primary to-accent",
   backdrop: webDesignBackdrop
@@ -21,7 +21,7 @@ const services = [{
   title: "Logo Design & Branding",
   description: "Professional branding packages that make your business stand out from competitors and build trust with customers.",
   features: ["Custom Logo Design", "Brand Identity Package", "Business Card Design", "Social Media Assets"],
-  link: "/studiosweb/branding",
+  link: "/services/branding",
   linkText: "Learn About Branding",
   gradient: "from-accent to-secondary",
   backdrop: brandingBackdrop
@@ -30,7 +30,7 @@ const services = [{
   title: "Google Optimization",
   description: "Complete Google ecosystem optimization to dominate local search results and attract more customers.",
   features: ["Local SEO", "Google My Business", "Review Optimization", "Google Ads Management"],
-  link: "/studiosweb/google-optimization",
+  link: "/services/google-optimization",
   linkText: "Learn About Google Optimization",
   gradient: "from-primary to-accent",
   backdrop: googleBackdrop
@@ -39,7 +39,7 @@ const services = [{
   title: "Custom Media Packs",
   description: "Custom Digital Content — Ready to Use, Ready to Convert. Get high-quality, custom-made visuals, mockups, and digital assets tailored to your business.",
   features: ["Custom Visuals & Graphics", "Website & Social Media Ready", "Fast Turnaround Delivery", "Conversion-Focused Design"],
-  link: "/studiosweb/media-packs",
+  link: "/services/media-packs",
   linkText: "Learn About Media Packs",
   gradient: "from-accent to-primary",
   backdrop: mediaPacksBackdrop

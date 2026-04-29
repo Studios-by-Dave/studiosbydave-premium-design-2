@@ -16,19 +16,19 @@ import comptiaLogo from "@/assets/marquee-logos/comptia.png";
 const WebDesign = () => {
   const breadcrumbs = breadcrumbSchema([
     { name: "Home", url: "https://www.studiosbydave.com" },
-    { name: "Web Design", url: "https://www.studiosbydave.com/studiosweb/webdesign" }
+    { name: "Web Design", url: "https://www.studiosbydave.com/services/web-design" }
   ]);
 
   const webDesignSchema = serviceSchema(
     "Professional Web Design for Contractors",
     "Custom responsive websites designed specifically for roofing contractors, landscaping companies, and solar panel installers with mobile-first design and SEO optimization.",
-    "https://www.studiosbydave.com/studiosweb/webdesign"
+    "https://www.studiosbydave.com/services/web-design"
   );
 
   const localWebDesignSchema = localServiceSchema(
     "Web Design Services",
     "Local web design services in Shelby, NC. We create custom websites for contractors including roofing, landscaping, and solar installation companies.",
-    "https://www.studiosbydave.com/studiosweb/webdesign"
+    "https://www.studiosbydave.com/services/web-design"
   );
 
   return (
@@ -189,7 +189,7 @@ const WebDesign = () => {
               <p className="text-muted-foreground mb-4">
                 Complete brand identity packages including logos, color schemes, and brand guidelines that complement your new website.
               </p>
-              <Link to="/studiosweb/branding" className="text-primary hover:text-primary/80 font-medium inline-flex items-center gap-2">
+              <Link to="/services/branding" className="text-primary hover:text-primary/80 font-medium inline-flex items-center gap-2">
                 Explore Branding Services
                 <ArrowRight size={16} />
               </Link>
@@ -201,7 +201,7 @@ const WebDesign = () => {
               <p className="text-muted-foreground mb-4">
                 Get your new website found by local customers with our comprehensive SEO services tailored for contractors.
               </p>
-              <Link to="/studiosweb/seo" className="text-primary hover:text-primary/80 font-medium inline-flex items-center gap-2">
+              <Link to="/services/seo" className="text-primary hover:text-primary/80 font-medium inline-flex items-center gap-2">
                 Boost Your Rankings
                 <ArrowRight size={16} />
               </Link>
@@ -213,7 +213,7 @@ const WebDesign = () => {
               <p className="text-muted-foreground mb-4">
                 Optimize your Google Business Profile and local search presence to dominate your local market.
               </p>
-              <Link to="/studiosweb/google-optimization" className="text-primary hover:text-primary/80 font-medium inline-flex items-center gap-2">
+              <Link to="/services/google-optimization" className="text-primary hover:text-primary/80 font-medium inline-flex items-center gap-2">
                 Improve Local Search
                 <ArrowRight size={16} />
               </Link>

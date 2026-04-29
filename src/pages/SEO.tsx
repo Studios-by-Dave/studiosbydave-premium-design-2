@@ -234,7 +234,7 @@ const SEOPage = () => {
               <p className="text-muted-foreground mb-4">
                 SEO-optimized websites built from the ground up to rank well and convert visitors into customers.
               </p>
-              <Link to="/studiosweb/webdesign" className="text-primary hover:text-primary/80 font-medium inline-flex items-center gap-2">
+              <Link to="/services/web-design" className="text-primary hover:text-primary/80 font-medium inline-flex items-center gap-2">
                 Get SEO-Friendly Website
                 <ArrowRight size={16} />
               </Link>
@@ -246,7 +246,7 @@ const SEOPage = () => {
               <p className="text-muted-foreground mb-4">
                 Complete Google Business Profile optimization to dominate local search results.
               </p>
-              <Link to="/studiosweb/google-optimization" className="text-primary hover:text-primary/80 font-medium inline-flex items-center gap-2">
+              <Link to="/services/google-optimization" className="text-primary hover:text-primary/80 font-medium inline-flex items-center gap-2">
                 Optimize Google Presence
                 <ArrowRight size={16} />
               </Link>
@@ -258,7 +258,7 @@ const SEOPage = () => {
               <p className="text-muted-foreground mb-4">
                 Strong branding that complements your SEO efforts and builds trust with customers.
               </p>
-              <Link to="/studiosweb/branding" className="text-primary hover:text-primary/80 font-medium inline-flex items-center gap-2">
+              <Link to="/services/branding" className="text-primary hover:text-primary/80 font-medium inline-flex items-center gap-2">
                 Build Your Brand
                 <ArrowRight size={16} />
               </Link>
