@@ -610,6 +610,72 @@ const SEOPage = () => {
         </div>
       </section>
 
+      {/* Related Articles & Services */}
+      <section className="py-16 bg-background">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h3 className="text-2xl font-bold text-foreground mb-4">SEO Resources</h3>
+            <p className="text-muted-foreground">Learn more about search engine optimization and digital marketing</p>
+          </div>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {/* Blog Articles */}
+            <div className="space-y-4">
+              <h4 className="text-lg font-semibold text-foreground flex items-center gap-2">
+                <span className="w-2 h-2 bg-accent rounded-full"></span>
+                SEO Guides
+              </h4>
+              <div className="space-y-3">
+                <Link to="/blog/local-seo-essentials-2026" className="block p-3 rounded-lg border border-border/30 hover:border-accent/50 transition-colors">
+                  <h5 className="font-medium text-foreground hover:text-accent transition-colors">Local SEO Essentials 2026</h5>
+                  <p className="text-sm text-muted-foreground mt-1">Shelby SEO strategies for businesses</p>
+                </Link>
+                <Link to="/blog/website-mistakes-costing-customers" className="block p-3 rounded-lg border border-border/30 hover:border-accent/50 transition-colors">
+                  <h5 className="font-medium text-foreground hover:text-accent transition-colors">5 Common Website Mistakes</h5>
+                  <p className="text-sm text-muted-foreground mt-1">SEO errors that hurt rankings</p>
+                </Link>
+              </div>
+            </div>
+
+            {/* Related Services */}
+            <div className="space-y-4">
+              <h4 className="text-lg font-semibold text-foreground flex items-center gap-2">
+                <span className="w-2 h-2 bg-primary rounded-full"></span>
+                Related Services
+              </h4>
+              <div className="space-y-3">
+                <Link to="/services/google-optimization" className="block p-3 rounded-lg border border-border/30 hover:border-primary/50 transition-colors">
+                  <h5 className="font-medium text-foreground hover:text-primary transition-colors">Google Optimization</h5>
+                  <p className="text-sm text-muted-foreground mt-1">Local search dominance</p>
+                </Link>
+                <Link to="/services/web-design" className="block p-3 rounded-lg border border-border/30 hover:border-primary/50 transition-colors">
+                  <h5 className="font-medium text-foreground hover:text-primary transition-colors">SEO-Friendly Web Design</h5>
+                  <p className="text-sm text-muted-foreground mt-1">Websites built to rank</p>
+                </Link>
+              </div>
+            </div>
+
+            {/* Quick Actions */}
+            <div className="space-y-4">
+              <h4 className="text-lg font-semibold text-foreground flex items-center gap-2">
+                <span className="w-2 h-2 bg-trophy-gold rounded-full"></span>
+                Get Started
+              </h4>
+              <div className="space-y-3">
+                <Link to="/contact#get-in-touch" className="block p-3 rounded-lg bg-primary/10 hover:bg-primary/20 transition-colors border border-primary/20">
+                  <h5 className="font-medium text-primary">Free SEO Audit</h5>
+                  <p className="text-sm text-muted-foreground mt-1">Analyze your website's SEO</p>
+                </Link>
+                <Link to="/services/promos" className="block p-3 rounded-lg bg-trophy-gold/10 hover:bg-trophy-gold/20 transition-colors border border-trophy-gold/20">
+                  <h5 className="font-medium text-foreground">SEO Special Offers</h5>
+                  <p className="text-sm text-muted-foreground mt-1">Current promotions available</p>
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <Footer />
     </div>
   );

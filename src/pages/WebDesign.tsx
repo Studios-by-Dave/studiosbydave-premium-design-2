@@ -449,6 +449,72 @@ const WebDesign = () => {
         </div>
       </section>
 
+      {/* Related Articles & Services */}
+      <section className="py-16 bg-background">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h3 className="text-2xl font-bold text-foreground mb-4">Related Resources</h3>
+            <p className="text-muted-foreground">Learn more about web design and digital marketing</p>
+          </div>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {/* Blog Articles */}
+            <div className="space-y-4">
+              <h4 className="text-lg font-semibold text-foreground flex items-center gap-2">
+                <span className="w-2 h-2 bg-accent rounded-full"></span>
+                Latest Articles
+              </h4>
+              <div className="space-y-3">
+                <Link to="/blog/does-your-business-need-a-website-2026" className="block p-3 rounded-lg border border-border/30 hover:border-accent/50 transition-colors">
+                  <h5 className="font-medium text-foreground hover:text-accent transition-colors">Does Your Business Need a Website in 2026?</h5>
+                  <p className="text-sm text-muted-foreground mt-1">Why websites still matter for business growth</p>
+                </Link>
+                <Link to="/blog/website-mistakes-costing-customers" className="block p-3 rounded-lg border border-border/30 hover:border-accent/50 transition-colors">
+                  <h5 className="font-medium text-foreground hover:text-accent transition-colors">5 Common Website Mistakes</h5>
+                  <p className="text-sm text-muted-foreground mt-1">Fix costly errors that hurt your business</p>
+                </Link>
+              </div>
+            </div>
+
+            {/* Related Services */}
+            <div className="space-y-4">
+              <h4 className="text-lg font-semibold text-foreground flex items-center gap-2">
+                <span className="w-2 h-2 bg-primary rounded-full"></span>
+                Complementary Services
+              </h4>
+              <div className="space-y-3">
+                <Link to="/services/branding" className="block p-3 rounded-lg border border-border/30 hover:border-primary/50 transition-colors">
+                  <h5 className="font-medium text-foreground hover:text-primary transition-colors">Logo Design & Branding</h5>
+                  <p className="text-sm text-muted-foreground mt-1">Complete brand identity solutions</p>
+                </Link>
+                <Link to="/services/seo" className="block p-3 rounded-lg border border-border/30 hover:border-primary/50 transition-colors">
+                  <h5 className="font-medium text-foreground hover:text-primary transition-colors">SEO Services</h5>
+                  <p className="text-sm text-muted-foreground mt-1">Get found by your ideal customers</p>
+                </Link>
+              </div>
+            </div>
+
+            {/* Quick Actions */}
+            <div className="space-y-4">
+              <h4 className="text-lg font-semibold text-foreground flex items-center gap-2">
+                <span className="w-2 h-2 bg-trophy-gold rounded-full"></span>
+                Next Steps
+              </h4>
+              <div className="space-y-3">
+                <Link to="/services/promos" className="block p-3 rounded-lg bg-trophy-gold/10 hover:bg-trophy-gold/20 transition-colors border border-trophy-gold/20">
+                  <h5 className="font-medium text-foreground">Current Promotions</h5>
+                  <p className="text-sm text-muted-foreground mt-1">Special offers on web design</p>
+                </Link>
+                <Link to="/booking" className="block p-3 rounded-lg bg-primary/10 hover:bg-primary/20 transition-colors border border-primary/20">
+                  <h5 className="font-medium text-primary">Book a Consultation</h5>
+                  <p className="text-sm text-muted-foreground mt-1">Schedule your free strategy session</p>
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <Footer />
     </div>
   );

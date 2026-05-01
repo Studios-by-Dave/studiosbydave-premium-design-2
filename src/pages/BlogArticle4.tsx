@@ -297,6 +297,36 @@ const BlogArticle4 = () => {
                     </div>
                   </div>
 
+                  {/* Related Services Box */}
+                  <div className="border-2 border-stone-800 bg-stone-100/80 mb-4">
+                    <div className="bg-stone-800 text-stone-100 py-1 px-3 text-center">
+                      <span className="text-xs font-bold tracking-widest uppercase">Related Services</span>
+                    </div>
+                    <div className="p-3 space-y-2">
+                      <Link 
+                        to="/services/seo"
+                        className="block p-2 bg-stone-200/50 hover:bg-stone-300/50 transition-colors rounded"
+                      >
+                        <span className="text-xs font-bold text-stone-900">SEO Services</span>
+                        <p className="text-xs text-stone-700">Complete SEO optimization</p>
+                      </Link>
+                      <Link 
+                        to="/services/google-optimization"
+                        className="block p-2 bg-stone-200/50 hover:bg-stone-300/50 transition-colors rounded"
+                      >
+                        <span className="text-xs font-bold text-stone-900">Google Optimization</span>
+                        <p className="text-xs text-stone-700">GBP & local search</p>
+                      </Link>
+                      <Link 
+                        to="/services/web-design"
+                        className="block p-2 bg-stone-200/50 hover:bg-stone-300/50 transition-colors rounded"
+                      >
+                        <span className="text-xs font-bold text-stone-900">SEO-Friendly Web Design</span>
+                        <p className="text-xs text-stone-700">Websites built to rank</p>
+                      </Link>
+                    </div>
+                  </div>
+
                   {/* CTA Box */}
                   <div className="border-4 border-double border-stone-800 p-4 bg-stone-100/90 text-center">
                     <h4 className="font-black text-lg text-stone-900 mb-2" style={{ fontFamily: "'Times New Roman', Times, serif" }}>
@@ -306,7 +336,7 @@ const BlogArticle4 = () => {
                       We handle GBP optimization, citations, review strategies, and site tweaks tailored for Shelby and surrounding areas.
                     </p>
                     <Link 
-                      to="/contact"
+                      to="/contact#get-in-touch"
                       className="inline-block bg-stone-800 text-stone-100 px-4 py-2 text-xs font-bold tracking-wide uppercase hover:bg-stone-700 transition-colors"
                     >
                       Get a Free SEO Audit
