@@ -138,7 +138,7 @@ const Contact = () => {
   };
 
   return (
-    <div className="min-h-screen" itemScope itemType="https://schema.org/WebPage">
+    <div className="min-h-screen lg:scale-[0.95] lg:origin-top transition-transform duration-500" itemScope itemType="https://schema.org/WebPage">
       <SimpleSEO
         title="Contact Studios by Dave - Get Your Free Quote Today"
         description="Contact Studios by Dave for professional web design, SEO, AI automations, and branding services. Free consultations available. Call (704) 473-8188 or email us today."
@@ -150,13 +150,37 @@ const Contact = () => {
       {/* Hero Section */}
       <section className="bg-gradient-hero py-24" role="banner">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-6xl lg:text-7xl font-bold text-white mb-6 text-center">
-            Let's Build Something{" "}
-            <span className="gradient-text bg-gradient-to-r from-accent to-white bg-clip-text text-transparent">
-              GREAT
-            </span>{" "}
-            Together
-          </h1>
+          <div className="relative inline-block">
+            {/* Pixie Dust Effect */}
+            <div className="absolute -top-8 -left-4 w-40 h-40 pointer-events-none">
+              {[...Array(18)].map((_, i) => (
+                <div
+                  key={i}
+                  className="absolute w-1.5 h-1.5 rounded-full animate-dust-float"
+                  style={{
+                    left: `${Math.random() * 100}%`,
+                    top: `${Math.random() * 100}%`,
+                    background: i % 4 === 0 
+                      ? 'hsl(var(--trophy-gold))' 
+                      : i % 4 === 1 
+                      ? 'hsl(var(--accent) / 0.6)'
+                      : 'hsl(0, 0%, 30%)',
+                    animationDelay: `${i * 0.15}s`,
+                    animationDuration: `${2 + Math.random() * 2}s`,
+                    filter: 'blur(0.5px)',
+                    boxShadow: i % 4 === 0 ? '0 0 5px hsl(var(--trophy-gold))' : 'none'
+                  }}
+                />
+              ))}
+            </div>
+            <h1 className="text-5xl lg:text-6xl font-bold text-white mb-6 text-center">
+              Let's Build Something{" "}
+              <span className="gradient-text bg-gradient-to-r from-accent to-white bg-clip-text text-transparent">
+                GREAT
+              </span>{" "}
+              Together
+            </h1>
+          </div>
           <p className="text-xl text-white/90">
             Ready to take your business to the next level? Get in touch for a free consultation.
           </p>
@@ -177,7 +201,7 @@ const Contact = () => {
               </div>
 
               {/* Contact Card - Phone & Email */}
-              <div className="grid md:grid-cols-2 gap-6 mb-8">
+              <div className="flex flex-col gap-6 mb-8">
                 {/* Phone Card */}
                 <div className="bg-gradient-hero rounded-xl border border-white/20 p-8 shadow-glow">
                   <div className="text-center">
@@ -185,7 +209,7 @@ const Contact = () => {
                       <Phone size={32} className="text-accent" />
                     </div>
                     <p className="text-white/80 text-lg font-medium mb-2">Call Us — TEXT US!</p>
-                    <a href="tel:+17044738188" className="text-3xl lg:text-4xl font-bold text-amber-200 hover:text-amber-100 transition-colors">
+                    <a href="tel:+17044738188" className="text-4xl lg:text-6xl font-bold transition-colors gradient-text bg-gradient-to-r from-accent via-white to-accent bg-[length:200%_auto] animate-text-shine bg-clip-text text-transparent block">
                       (704) 473-8188
                     </a>
                     <p className="text-trophy-gold font-bold text-lg mt-3">Always Open. 24/7.</p>
@@ -200,7 +224,7 @@ const Contact = () => {
                       <Mail size={32} className="text-accent" />
                     </div>
                     <p className="text-white/80 text-lg font-medium mb-2">Email Us</p>
-                    <a href="mailto:dx1creations25@gmail.com" className="lg:text-2xl font-bold text-amber-200 hover:text-amber-100 transition-colors break-all block text-2xl">
+                    <a href="mailto:dx1creations25@gmail.com" className="text-2xl lg:text-4xl font-bold transition-colors break-all block gradient-text bg-gradient-to-r from-accent via-white to-accent bg-[length:200%_auto] animate-text-shine bg-clip-text text-transparent">
                       dx1creations25@gmail.com
                     </a>
                     <p className="text-white/60 text-sm mt-3">We reply within 24 hours</p>
@@ -232,120 +256,8 @@ const Contact = () => {
                 </div>
               </div>
 
-              {/* Contact Form */}
-              <Card className="shadow-card">
-                <CardHeader>
-                  <CardTitle>Send Us a Message</CardTitle>
-                  <CardDescription>
-                    Fill out the form below and we'll get back to you within 24 hours.
-                  </CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <Form {...form}>
-                    <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
-                      {/* Honeypot - hidden from users */}
-                      <div className="hidden" aria-hidden="true">
-                        <Input {...form.register("honeypot")} tabIndex={-1} autoComplete="off" />
-                      </div>
-
-                      <div className="grid md:grid-cols-2 gap-4">
-                        <FormField
-                          control={form.control}
-                          name="firstName"
-                          render={({ field }) => (
-                            <FormItem>
-                              <FormLabel>First Name *</FormLabel>
-                              <FormControl>
-                                <Input placeholder="John" {...field} />
-                              </FormControl>
-                              <FormMessage />
-                            </FormItem>
-                          )}
-                        />
-                        <FormField
-                          control={form.control}
-                          name="lastName"
-                          render={({ field }) => (
-                            <FormItem>
-                              <FormLabel>Last Name *</FormLabel>
-                              <FormControl>
-                                <Input placeholder="Doe" {...field} />
-                              </FormControl>
-                              <FormMessage />
-                            </FormItem>
-                          )}
-                        />
-                      </div>
-
-                      <div className="grid md:grid-cols-2 gap-4">
-                        <FormField
-                          control={form.control}
-                          name="email"
-                          render={({ field }) => (
-                            <FormItem>
-                              <FormLabel>Email *</FormLabel>
-                              <FormControl>
-                                <Input type="email" placeholder="john@example.com" {...field} />
-                              </FormControl>
-                              <FormMessage />
-                            </FormItem>
-                          )}
-                        />
-                        <FormField
-                          control={form.control}
-                          name="phone"
-                          render={({ field }) => (
-                            <FormItem>
-                              <FormLabel>Phone *</FormLabel>
-                              <FormControl>
-                                <Input type="tel" placeholder="(704) 555-1234" {...field} />
-                              </FormControl>
-                              <FormMessage />
-                            </FormItem>
-                          )}
-                        />
-                      </div>
-
-                      <FormField
-                        control={form.control}
-                        name="business"
-                        render={({ field }) => (
-                          <FormItem>
-                            <FormLabel>Business Type</FormLabel>
-                            <FormControl>
-                              <Input placeholder="e.g. Plumbing, Roofing, Landscaping" {...field} />
-                            </FormControl>
-                            <FormMessage />
-                          </FormItem>
-                        )}
-                      />
-
-                      <FormField
-                        control={form.control}
-                        name="message"
-                        render={({ field }) => (
-                          <FormItem>
-                            <FormLabel>Message *</FormLabel>
-                            <FormControl>
-                              <Textarea
-                                placeholder="Tell us about your project..."
-                                className="min-h-[120px]"
-                                {...field}
-                              />
-                            </FormControl>
-                            <FormMessage />
-                          </FormItem>
-                        )}
-                      />
-
-                      <Button type="submit" variant="hero" className="w-full" disabled={isSubmitting}>
-                        {isSubmitting ? "Sending..." : "Send Message"}
-                      </Button>
-                    </form>
-                  </Form>
-                </CardContent>
-              </Card>
-
+              {/* Contact Form - Temporarily Removed */}
+              
               {/* CTA Box */}
               <Card className="bg-gradient-hero text-white border-0 border border-white/20 shadow-glow">
                 <CardHeader>

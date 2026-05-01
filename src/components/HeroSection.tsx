@@ -107,7 +107,7 @@ const HeroSection = () => {
 
             {/* DaveBot Chat Widget Promotion */}
             <div className="pt-2">
-              <p className="text-white/80 text-base text-center animate-pulse">
+              <p className="text-white/90 text-lg lg:text-xl text-center animate-pulse font-medium">
                 💬 Try our DaveBot chat widget! Click the blue bubble in the bottom-right corner to get instant help!
               </p>
             </div>

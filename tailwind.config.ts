@@ -108,12 +108,31 @@ export default {
 						height: '0'
 					}
 				},
-			'shimmer': {
+				'shimmer': {
 					'0%': {
 						backgroundPosition: '-200% center'
 					},
 					'100%': {
 						backgroundPosition: '200% center'
+					}
+				},
+				'text-shine': {
+					'0%': {
+						backgroundPosition: '0% center'
+					},
+					'100%': {
+						backgroundPosition: '200% center'
+					}
+				},
+				'gradient-spin': {
+					'0%': {
+						backgroundPosition: '0% 50%'
+					},
+					'50%': {
+						backgroundPosition: '100% 50%'
+					},
+					'100%': {
+						backgroundPosition: '0% 50%'
 					}
 				},
 				'gentle-sway': {
@@ -135,6 +154,8 @@ export default {
 				'accordion-down': 'accordion-down 0.2s ease-out',
 				'accordion-up': 'accordion-up 0.2s ease-out',
 				'shimmer': 'shimmer 3s ease-in-out infinite',
+				'text-shine': 'text-shine 3s linear infinite',
+				'gradient-spin': 'gradient-spin 4s linear infinite',
 				'gentle-sway': 'gentle-sway 4s ease-in-out infinite'
 			}
 		}

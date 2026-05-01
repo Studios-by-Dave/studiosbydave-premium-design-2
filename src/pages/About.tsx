@@ -20,7 +20,7 @@ const About = () => {
   ]);
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen lg:scale-[0.95] lg:origin-top transition-transform duration-500">
       <SimpleSEO
         title="About Studios by Dave - Web Design & Digital Marketing Experts"
         description="Learn about Studios by Dave, your trusted partner for web design, SEO, AI automations, and branding. Specialized in helping roofing contractors, landscaping companies, and solar installers grow their business online."
@@ -195,14 +195,14 @@ const About = () => {
               <img 
                 src="/lovable-uploads/d08deff8-3748-4ab1-be7c-1f0aa5062b8b.png" 
                 alt="David Richardson - Founder and Lead Developer at Studios by Dave, web design expert and digital marketing specialist for contractors"
-                className="w-96 h-auto mx-auto mb-4 shadow-lg rounded-lg"
+                className="w-80 h-auto mx-auto mb-4 shadow-lg rounded-lg"
                 loading="lazy"
                 decoding="async"
-                width="384"
-                height="480"
+                width="320"
+                height="400"
               />
               <p className="text-2xl font-semibold text-foreground mb-6">"Dave" David Richardson</p>
-              <p className="text-2xl italic text-muted-foreground max-w-4xl mx-auto leading-relaxed">
+              <p className="text-xl italic text-muted-foreground max-w-4xl mx-auto leading-relaxed">
                 "Dave" David Richardson is a seasoned-long veteran in the various fields of Technology. He attended The University of North Carolina at Charlotte in 1997 and transferred to ECPI College of Technology in 2001 where he earned President of the National Vocational Technical Honor Society along with his College Degree. He then ventured into various service positions, one being Broadband Specialist/Installer with Shelby's own Computer Connections Inc. "Hey Eddie! Hi Lynne!" 😄 And then eventually proceeded to become Network Engineer at several private IT Firms. Local firms all the way to the deserts of Las Vegas, NV. David is also a life long musician that started playing music at the age of 8. He took to the love of recording music starting back at the turn of 1999-2000 and continued this craft on the side of work for nearly over 3 decades. Eventually coined his own status of Audio Mastering Engineer. "Dave" has always had a love for building websites and learning code and has taken this road full on as a Web Designer/Developer. Here at Studios by Dave we wanna see you succeed. Because when our clients are happy, Everybody is Happy! 😁
               </p>
             </div>
