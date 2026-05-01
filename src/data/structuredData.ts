@@ -245,11 +245,6 @@ export const websiteSchema = {
   "alternateName": "StudiosbyDave",
   "url": "https://www.studiosbydave.com",
   "description": "Professional web design, SEO, AI automations, and digital marketing for contractors and local businesses.",
-  "potentialAction": {
-    "@type": "SearchAction",
-    "target": "https://www.studiosbydave.com/search?q={search_term_string}",
-    "query-input": "required name=search_term_string"
-  },
   "publisher": {
     "@type": "Organization",
     "name": "Studios by Dave",

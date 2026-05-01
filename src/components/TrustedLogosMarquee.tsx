@@ -45,6 +45,8 @@ const TrustedLogosMarquee = () => {
                 src={logo.src}
                 alt={logo.alt}
                 className="max-h-full max-w-full object-contain"
+                width="208"
+                height="96"
                 loading="lazy"
                 decoding="async"
               />
