@@ -188,8 +188,16 @@ const Contact = () => {
       </section>
 
       {/* Contact Information Section */}
-      <section className="py-24 bg-gradient-subtle">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-24 bg-gradient-subtle relative">
+        {/* Contact Mascot */}
+        <div className="hidden lg:block absolute right-4 top-1/2 -translate-y-1/2 z-10 animate-bounce-slow">
+          <img 
+            src="/assets/promos/logo-mascot-contact.png" 
+            alt="Mascot pointing to contact information" 
+            className="w-48 h-48 object-contain drop-shadow-lg"
+          />
+        </div>
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 lg:pr-40">
           <div id="get-in-touch" className="space-y-8">
             <div>
               <h2 className="text-3xl font-bold text-foreground mb-6">

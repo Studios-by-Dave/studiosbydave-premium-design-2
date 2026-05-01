@@ -295,6 +295,22 @@ const About = () => {
         </div>
       </section>
 
+      {/* About Mascot Section */}
+      <section className="py-20 bg-background">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <div className="inline-block animate-bounce-slow">
+            <img 
+              src="/assets/promos/logo-mascot-about.png" 
+              alt="Studios by Dave mascot and Dave high five" 
+              className="w-80 h-80 object-contain drop-shadow-lg"
+            />
+          </div>
+          <p className="text-xl text-muted-foreground mt-8 max-w-2xl mx-auto">
+            Together, we're building something great for your business!
+          </p>
+        </div>
+      </section>
+
       {/* Our Core Values Section */}
       <section className="py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -358,11 +374,46 @@ const About = () => {
               Some of our favorite spots around Shelby, NC — the local businesses and places we love stopping by and showing love to. 💛
             </p>
           </div>
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-            {/* Placeholder for uploaded images */}
-            <p className="col-span-full text-center text-muted-foreground italic">
-              Images coming soon...
-            </p>
+          <div className="grid grid-cols-1 md:grid-cols-1 gap-8">
+            {/* Mascot Image */}
+            <div className="flex justify-center">
+              <div className="animate-bounce-slow">
+                <img 
+                  src="/assets/promos/logo-mascot-about.png" 
+                  alt="Studios by Dave mascot and Dave high five" 
+                  className="w-96 h-96 object-contain drop-shadow-lg"
+                />
+              </div>
+            </div>
+            
+            {/* Image Placeholders */}
+            <div className="space-y-4">
+              <h3 className="text-xl font-semibold text-foreground text-center">Our Favorite Local Spots</h3>
+              <p className="text-center text-muted-foreground italic">
+                Images coming soon...
+              </p>
+              <div className="flex flex-wrap justify-center gap-3">
+                {/* Placeholder divs for future images */}
+                <div className="bg-muted/30 rounded-lg w-24 h-24 flex items-center justify-center">
+                  <span className="text-muted-foreground/50 text-xs">Image Placeholder</span>
+                </div>
+                <div className="bg-muted/30 rounded-lg w-24 h-24 flex items-center justify-center">
+                  <span className="text-muted-foreground/50 text-xs">Image Placeholder</span>
+                </div>
+                <div className="bg-muted/30 rounded-lg w-24 h-24 flex items-center justify-center">
+                  <span className="text-muted-foreground/50 text-xs">Image Placeholder</span>
+                </div>
+                <div className="bg-muted/30 rounded-lg w-24 h-24 flex items-center justify-center">
+                  <span className="text-muted-foreground/50 text-xs">Image Placeholder</span>
+                </div>
+                <div className="bg-muted/30 rounded-lg w-24 h-24 flex items-center justify-center">
+                  <span className="text-muted-foreground/50 text-xs">Image Placeholder</span>
+                </div>
+                <div className="bg-muted/30 rounded-lg w-24 h-24 flex items-center justify-center">
+                  <span className="text-muted-foreground/50 text-xs">Image Placeholder</span>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>

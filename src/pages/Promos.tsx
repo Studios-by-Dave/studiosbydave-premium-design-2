@@ -24,9 +24,33 @@ const Promos = () => {
               <Star className="h-4 w-4" />
               Limited Time Offers
             </div>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
-              Current <span className="text-accent">Promotions</span>
-            </h1>
+            <div className="relative inline-block">
+              {/* Pixie Dust Effect */}
+              <div className="absolute -top-8 -left-4 w-40 h-40 pointer-events-none">
+                {[...Array(18)].map((_, i) => (
+                  <div
+                    key={i}
+                    className="absolute w-1.5 h-1.5 rounded-full animate-dust-float"
+                    style={{
+                      left: `${Math.random() * 100}%`,
+                      top: `${Math.random() * 100}%`,
+                      background: i % 4 === 0 
+                        ? 'hsl(var(--trophy-gold))' 
+                        : i % 4 === 1 
+                        ? 'hsl(var(--accent) / 0.6)'
+                        : 'hsl(0, 0%, 30%)',
+                      animationDelay: `${i * 0.15}s`,
+                      animationDuration: `${2 + Math.random() * 2}s`,
+                      filter: 'blur(0.5px)',
+                      boxShadow: i % 4 === 0 ? '0 0 5px hsl(var(--trophy-gold))' : 'none'
+                    }}
+                  />
+                ))}
+              </div>
+              <h1 className="text-4xl md:text-5xl lg:text-5xl font-bold text-white mb-6">
+                Current <span className="text-accent">Promotions</span>
+              </h1>
+            </div>
             <p className="text-xl text-white/80 max-w-3xl mx-auto">
               Take advantage of our exclusive offers designed to help your business grow. 
               Quality services with exceptional value.
@@ -35,32 +59,21 @@ const Promos = () => {
         </section>
 
         {/* Free Logo Design Section */}
-        <section className="py-20 bg-background">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <section className="py-20 bg-background relative">
+          {/* Mascot Pointer */}
+          <div className="hidden lg:block absolute right-4 top-1/2 -translate-y-1/2 z-10 animate-bounce-slow">
+            <img 
+              src="/assets/promos/logo-mascot-pointer.png" 
+              alt="Mascot pointing to promotions" 
+              className="w-48 h-48 object-contain drop-shadow-lg"
+            />
+          </div>
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 lg:pr-40">
             <Card className="border-2 border-primary/20 shadow-xl overflow-hidden">
               <div className="bg-gradient-to-r from-primary to-primary/80 p-6 relative overflow-hidden">
                 {/* Moving Reflection */}
                 <div className="absolute inset-0 overflow-hidden">
                   <div className="absolute -inset-full bg-gradient-to-r from-transparent via-white/20 to-transparent skew-x-12 animate-[shimmer_3s_infinite]" />
-                </div>
-                {/* Pixie Dust Effect */}
-                <div className="absolute inset-0 pointer-events-none">
-                  {[...Array(12)].map((_, i) => (
-                    <div
-                      key={i}
-                      className="absolute w-1 h-1 rounded-full animate-dust-float"
-                      style={{
-                        left: `${10 + Math.random() * 80}%`,
-                        top: `${Math.random() * 100}%`,
-                        background: i % 3 === 0 
-                          ? 'hsl(var(--trophy-gold))' 
-                          : 'rgba(255, 255, 255, 0.6)',
-                        animationDelay: `${i * 0.2}s`,
-                        animationDuration: `${2 + Math.random() * 2}s`,
-                        boxShadow: i % 3 === 0 ? '0 0 4px hsl(var(--trophy-gold))' : '0 0 3px rgba(255,255,255,0.5)'
-                      }}
-                    />
-                  ))}
                 </div>
                 <div className="flex items-center gap-4 relative z-10">
                   <div className="bg-white/20 p-3 rounded-full">
@@ -122,42 +135,31 @@ const Promos = () => {
         </section>
 
         {/* Unlimited Referral Bonus Section */}
-        <section className="py-20 bg-muted/30">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <section className="py-20 bg-muted/30 relative">
+          {/* Mascot Pointer */}
+          <div className="hidden lg:block absolute right-4 top-1/2 -translate-y-1/2 z-10 animate-bounce-slow" style={{ animationDelay: '1.5s' }}>
+            <img 
+              src="/assets/promos/logo-mascot-pointer.png" 
+              alt="Mascot pointing to referral bonus" 
+              className="w-48 h-48 object-contain drop-shadow-lg transform scale-x-[-1]"
+            />
+          </div>
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 lg:pr-40">
             <Card className="border-2 border-accent/20 shadow-xl overflow-hidden">
-              <div className="bg-gradient-to-r from-accent to-accent/80 p-6 relative overflow-hidden">
+              <div className="bg-gradient-to-r from-trophy-gold to-trophy-gold/80 p-6 relative overflow-hidden">
                 {/* Moving Reflection */}
                 <div className="absolute inset-0 overflow-hidden">
                   <div className="absolute -inset-full bg-gradient-to-r from-transparent via-white/20 to-transparent skew-x-12 animate-[shimmer_3s_infinite]" style={{ animationDelay: '1.5s' }} />
-                </div>
-                {/* Pixie Dust Effect */}
-                <div className="absolute inset-0 pointer-events-none">
-                  {[...Array(12)].map((_, i) => (
-                    <div
-                      key={i}
-                      className="absolute w-1 h-1 rounded-full animate-dust-float"
-                      style={{
-                        left: `${10 + Math.random() * 80}%`,
-                        top: `${Math.random() * 100}%`,
-                        background: i % 3 === 0 
-                          ? 'hsl(var(--trophy-gold))' 
-                          : 'rgba(255, 255, 255, 0.6)',
-                        animationDelay: `${i * 0.2}s`,
-                        animationDuration: `${2 + Math.random() * 2}s`,
-                        boxShadow: i % 3 === 0 ? '0 0 4px hsl(var(--trophy-gold))' : '0 0 3px rgba(255,255,255,0.5)'
-                      }}
-                    />
-                  ))}
                 </div>
                 <div className="flex items-center gap-4 relative z-10">
                   <div className="bg-white/20 p-3 rounded-full">
                     <Users className="h-8 w-8 text-white" />
                   </div>
                   <div>
-                    <h2 className="text-2xl md:text-3xl font-bold text-white">
+                    <h2 className="text-2xl md:text-3xl font-bold text-foreground">
                       Unlimited $100 Referral Bonus
                     </h2>
-                    <p className="text-white/90">Earn Cash for Every Referral—No Limits!</p>
+                    <p className="text-foreground/90">Earn Cash for Every Referral—No Limits!</p>
                   </div>
                 </div>
               </div>

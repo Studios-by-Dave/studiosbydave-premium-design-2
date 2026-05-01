@@ -135,6 +135,14 @@ export default {
 						backgroundPosition: '0% 50%'
 					}
 				},
+				'bounce-slow': {
+					'0%, 100%': {
+						transform: 'translateY(0) scale(1)'
+					},
+					'50%': {
+						transform: 'translateY(-10px) scale(1.05)'
+					}
+				},
 				'gentle-sway': {
 					'0%, 100%': {
 						transform: 'rotate(-0.3deg) translateY(0px)'
@@ -156,6 +164,7 @@ export default {
 				'shimmer': 'shimmer 3s ease-in-out infinite',
 				'text-shine': 'text-shine 3s linear infinite',
 				'gradient-spin': 'gradient-spin 4s linear infinite',
+				'bounce-slow': 'bounce-slow 3s ease-in-out infinite',
 				'gentle-sway': 'gentle-sway 4s ease-in-out infinite'
 			}
 		}

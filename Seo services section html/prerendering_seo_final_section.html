@@ -1,0 +1,407 @@
+
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&family=DM+Sans:wght@400;500&display=swap');
+
+  .sbd-section {
+    font-family: 'DM Sans', sans-serif;
+    background: #0a0a14;
+    color: #e8e8f0;
+    padding: 3rem 1.5rem;
+    border-radius: 16px;
+  }
+
+  .sbd-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: rgba(99,102,241,0.15);
+    border: 1px solid rgba(99,102,241,0.4);
+    color: #a5b4fc;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    padding: 5px 14px;
+    border-radius: 99px;
+    margin-bottom: 1.2rem;
+    text-transform: uppercase;
+  }
+
+  .sbd-badge-dot {
+    width: 6px; height: 6px; border-radius: 50%; background: #818cf8;
+    animation: pulse 2s infinite;
+  }
+
+  @keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.4; }
+  }
+
+  .sbd-headline {
+    font-family: 'Sora', sans-serif;
+    font-size: clamp(22px, 4vw, 34px);
+    font-weight: 700;
+    line-height: 1.25;
+    margin: 0 0 1rem;
+    background: linear-gradient(135deg, #fff 40%, #a5b4fc);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .sbd-intro {
+    font-size: 16px;
+    line-height: 1.75;
+    color: #b0b0c8;
+    max-width: 680px;
+    margin: 0 0 2rem;
+  }
+
+  .sbd-intro strong { color: #e8e8f0; font-weight: 500; }
+
+  .sbd-upgrade-callout {
+    background: rgba(99,102,241,0.08);
+    border: 1px solid rgba(99,102,241,0.2);
+    border-left: 3px solid #6366f1;
+    border-radius: 10px;
+    padding: 1.1rem 1.25rem;
+    margin-bottom: 2.2rem;
+    font-size: 14.5px;
+    line-height: 1.7;
+    color: #b0b0cc;
+  }
+
+  .sbd-upgrade-callout strong { color: #a5b4fc; font-weight: 500; }
+
+  .sbd-step-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    margin-bottom: 1.2rem;
+  }
+
+  .sbd-step-num {
+    min-width: 28px; height: 28px; border-radius: 50%;
+    background: rgba(99,102,241,0.2);
+    border: 1px solid rgba(99,102,241,0.5);
+    color: #a5b4fc;
+    font-size: 12px; font-weight: 600;
+    display: flex; align-items: center; justify-content: center;
+    margin-top: 2px;
+  }
+
+  .sbd-step-text { font-size: 15px; line-height: 1.65; color: #c0c0d8; }
+  .sbd-step-text strong { color: #e8e8f0; font-weight: 500; }
+
+  .sbd-divider {
+    height: 1px;
+    background: linear-gradient(to right, transparent, rgba(99,102,241,0.3), transparent);
+    margin: 2.5rem 0;
+  }
+
+  .sbd-panel-label {
+    font-family: 'Sora', sans-serif;
+    font-size: 15px; font-weight: 600;
+    color: #e8e8f0;
+    margin: 0 0 1.2rem;
+  }
+
+  .sbd-code-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-bottom: 2.5rem;
+  }
+
+  @media (max-width: 600px) {
+    .sbd-code-grid { grid-template-columns: 1fr; }
+    .sbd-gsc-grid  { grid-template-columns: 1fr; }
+  }
+
+  .sbd-code-panel {
+    border-radius: 12px; overflow: hidden;
+    border: 1px solid rgba(255,255,255,0.08);
+  }
+
+  .sbd-code-header {
+    display: flex; align-items: center; gap: 8px;
+    padding: 10px 14px;
+    background: rgba(255,255,255,0.05);
+    border-bottom: 1px solid rgba(255,255,255,0.07);
+  }
+
+  .sbd-dot { width: 10px; height: 10px; border-radius: 50%; }
+
+  .sbd-code-tag {
+    font-size: 11px; font-weight: 600; letter-spacing: 0.07em;
+    margin-left: auto; padding: 2px 9px; border-radius: 6px; text-transform: uppercase;
+  }
+
+  .tag-before { background: rgba(239,68,68,0.2); color: #fca5a5; }
+  .tag-after  { background: rgba(99,102,241,0.2); color: #a5b4fc; }
+
+  .sbd-code-body {
+    padding: 14px;
+    font-family: 'Courier New', monospace;
+    font-size: 11.5px; line-height: 1.7;
+    background: #0d0d1a;
+  }
+
+  .ln { color: #444466; margin-right: 10px; user-select: none; }
+  .tg { color: #67e8f9; }
+  .at { color: #a5b4fc; }
+  .vl { color: #86efac; }
+  .cm { color: #4a4a6a; font-style: italic; }
+  .hl  { background: rgba(99,102,241,0.12); border-left: 2px solid #6366f1; display: block; margin: 0 -14px; padding: 0 14px; }
+  .warn{ background: rgba(239,68,68,0.08); border-left: 2px solid #ef4444;  display: block; margin: 0 -14px; padding: 0 14px; }
+
+  .sbd-caption {
+    font-size: 12px; color: #6060a0;
+    text-align: center; margin-top: 8px; font-style: italic;
+  }
+
+  .sbd-gsc-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px; margin-bottom: 2rem;
+  }
+
+  .sbd-gsc-panel {
+    border-radius: 12px; border: 1px solid rgba(255,255,255,0.08); overflow: hidden;
+  }
+
+  .sbd-gsc-header {
+    background: #1a1a2e; padding: 10px 14px;
+    border-bottom: 1px solid rgba(255,255,255,0.07);
+    display: flex; align-items: center; gap: 8px;
+  }
+
+  .gsc-logo { width: 14px; height: 14px; border-radius: 3px; }
+  .gsc-title { font-size: 11px; color: #8080b0; letter-spacing: 0.04em; }
+  .gsc-url   { font-size: 10px; color: #5050a0; }
+
+  .sbd-gsc-body { padding: 14px; background: #0e0e1e; }
+
+  .gsc-bar-row { display: flex; align-items: center; gap: 8px; margin-bottom: 6px; }
+  .gsc-bar-label {
+    font-size: 10px; color: #7070a0;
+    width: 80px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+  }
+  .gsc-bar-track { flex: 1; height: 8px; background: rgba(255,255,255,0.06); border-radius: 4px; overflow: hidden; }
+  .gsc-bar-fill  { height: 100%; border-radius: 4px; }
+  .bar-grn1 { background: #6366f1; width: 92%; }
+  .bar-grn2 { background: #7c3aed; width: 85%; }
+  .bar-grn3 { background: #4f46e5; width: 78%; }
+  .bar-grn4 { background: #4338ca; width: 72%; }
+  .bar-grn5 { background: #3730a3; width: 65%; }
+
+  .gsc-count { font-size: 10px; color: #8080b0; min-width: 18px; text-align: right; }
+
+  .gsc-summary {
+    margin-top: 12px; padding-top: 10px;
+    border-top: 1px solid rgba(255,255,255,0.06);
+    display: flex; justify-content: space-between; align-items: center;
+  }
+
+  .gsc-total-label { font-size: 11px; color: #7070a0; }
+  .gsc-total-val   { font-size: 16px; font-weight: 600; }
+  .gsc-total-before { color: #ef4444; }
+  .gsc-total-after  { color: #a5b4fc; }
+
+  .gsc-no-data {
+    display: flex; flex-direction: column;
+    align-items: center; justify-content: center;
+    height: 130px; gap: 8px;
+  }
+  .gsc-no-icon { font-size: 28px; opacity: 0.4; }
+  .gsc-no-text { font-size: 11px; color: #4a4a6a; text-align: center; }
+
+  .sbd-cta-box {
+    background: linear-gradient(135deg, rgba(99,102,241,0.12), rgba(139,92,246,0.08));
+    border: 1px solid rgba(99,102,241,0.3);
+    border-radius: 14px;
+    padding: 1.5rem;
+    display: flex; align-items: center; justify-content: space-between;
+    flex-wrap: wrap; gap: 14px; margin-top: 2rem;
+  }
+
+  .sbd-cta-text { font-size: 15px; color: #c0c0dc; line-height: 1.6; }
+  .sbd-cta-text strong { color: #a5b4fc; font-weight: 500; }
+
+  .sbd-cta-btn {
+    background: #6366f1; color: #fff;
+    border: none; border-radius: 8px;
+    padding: 10px 22px; font-size: 14px; font-weight: 600;
+    cursor: pointer; white-space: nowrap; letter-spacing: 0.02em;
+  }
+  .sbd-cta-btn:hover { background: #4f46e5; }
+</style>
+
+<div class="sbd-section">
+
+  <div class="sbd-badge"><div class="sbd-badge-dot"></div>Exclusive Add-On &nbsp;·&nbsp; SEO Upgrade by Studios by Dave</div>
+
+  <h2 class="sbd-headline">We Don't Just Deploy Your Site.<br>We Make Sure Google Can Actually Read It.</h2>
+
+  <p class="sbd-intro">
+    When a developer deploys your website, they're doing exactly that — deploying it. Your site goes live, it looks great, but <strong>Google may not be able to read a single word of it.</strong> That's because modern websites built on JavaScript frameworks deliver an empty shell to search engine crawlers — your content only appears after code executes in a browser, which Google's bot often never waits for.
+  </p>
+
+  <div class="sbd-upgrade-callout">
+    <strong>The Studios by Dave SEO Upgrade</strong> solves this at the foundation level. We run your entire website through a professional <strong>pre-rendering and static generation pipeline</strong> — converting every page into fully-resolved, content-rich HTML that Google can crawl, index, and rank the moment it visits your site. This isn't a setting you flip on. It's a deliberate, technical process we perform for clients who are serious about being found online.
+  </div>
+
+  <div class="sbd-step-row">
+    <div class="sbd-step-num">1</div>
+    <div class="sbd-step-text"><strong>Audit your site's crawlability.</strong> We analyze how Google currently sees your pages — identifying which routes return empty content, missing metadata, or unresolved JavaScript that blocks indexing.</div>
+  </div>
+  <div class="sbd-step-row">
+    <div class="sbd-step-num">2</div>
+    <div class="sbd-step-text"><strong>Run the pre-rendering pipeline.</strong> Every page — services, locations, blog posts, landing pages — is processed through our build system and rendered into static HTML, complete with titles, descriptions, headings, and structured content.</div>
+  </div>
+  <div class="sbd-step-row">
+    <div class="sbd-step-num">3</div>
+    <div class="sbd-step-text"><strong>Submit to Google and verify.</strong> We submit your updated sitemap to Google Search Console and monitor the indexing rollout — so you can watch your pages go from invisible to ranked in real time.</div>
+  </div>
+
+  <div class="sbd-divider"></div>
+
+  <div class="sbd-panel-label">What Google actually sees — without vs. with the SEO Upgrade</div>
+
+  <div class="sbd-code-grid">
+
+    <div>
+      <div class="sbd-code-panel">
+        <div class="sbd-code-header">
+          <div class="sbd-dot" style="background:#ef4444;"></div>
+          <div class="sbd-dot" style="background:#f59e0b;"></div>
+          <div class="sbd-dot" style="background:#22c55e;"></div>
+          <span class="sbd-code-tag tag-before">Without Upgrade</span>
+        </div>
+        <div class="sbd-code-body">
+<span class="warn"><span class="ln">1</span><span class="cm">&lt;!-- Googlebot sees this --&gt;</span></span>
+<span class="ln">2</span><span class="tg">&lt;body&gt;</span>
+<span class="warn"><span class="ln">3</span>  <span class="tg">&lt;div</span> <span class="at">id=</span><span class="vl">"root"</span><span class="tg">&gt;&lt;/div&gt;</span></span>
+<span class="ln">4</span>  <span class="cm">&lt;!-- empty — content loads</span>
+<span class="ln">5</span><span class="cm">       only via JavaScript --&gt;</span>
+<span class="ln">6</span>  <span class="tg">&lt;script</span> <span class="at">src=</span><span class="vl">"/bundle.js"</span><span class="tg">&gt;&lt;/script&gt;</span>
+<span class="ln">7</span><span class="tg">&lt;/body&gt;</span>
+<span class="ln">8</span>
+<span class="ln">9</span><span class="cm">&lt;!-- No title. No headings.</span>
+<span class="ln">10</span><span class="cm">     No readable content.</span>
+<span class="ln">11</span><span class="cm">     Google indexes nothing. --&gt;</span>
+        </div>
+      </div>
+      <div class="sbd-caption">Standard JS deploy — crawler finds an empty shell</div>
+    </div>
+
+    <div>
+      <div class="sbd-code-panel">
+        <div class="sbd-code-header">
+          <div class="sbd-dot" style="background:#ef4444;"></div>
+          <div class="sbd-dot" style="background:#f59e0b;"></div>
+          <div class="sbd-dot" style="background:#22c55e;"></div>
+          <span class="sbd-code-tag tag-after">With SEO Upgrade</span>
+        </div>
+        <div class="sbd-code-body">
+<span class="hl"><span class="ln">1</span><span class="tg">&lt;title&gt;</span>Roofing Shelby NC | ABC Roofing<span class="tg">&lt;/title&gt;</span></span>
+<span class="hl"><span class="ln">2</span><span class="tg">&lt;meta</span> <span class="at">name=</span><span class="vl">"description"</span></span>
+<span class="hl"><span class="ln">3</span>  <span class="at">content=</span><span class="vl">"Top-rated roofer in Shelby..."</span><span class="tg">/&gt;</span></span>
+<span class="ln">4</span><span class="tg">&lt;body&gt;</span>
+<span class="hl"><span class="ln">5</span>  <span class="tg">&lt;h1&gt;</span>Shelby's Most Trusted Roofer<span class="tg">&lt;/h1&gt;</span></span>
+<span class="hl"><span class="ln">6</span>  <span class="tg">&lt;p&gt;</span>Serving Shelby, Gastonia &amp; Kings Mtn<span class="tg">&lt;/p&gt;</span></span>
+<span class="hl"><span class="ln">7</span>  <span class="tg">&lt;section&gt;</span>Free Estimates · Licensed &amp; Insured<span class="tg">&lt;/section&gt;</span></span>
+<span class="ln">8</span><span class="tg">&lt;/body&gt;</span>
+<span class="ln">9</span>
+<span class="ln">10</span><span class="cm">&lt;!-- Full HTML on first load.</span>
+<span class="ln">11</span><span class="cm">     Google reads every word. --&gt;</span>
+        </div>
+      </div>
+      <div class="sbd-caption">After SEO Upgrade — every word is indexed instantly</div>
+    </div>
+
+  </div>
+
+  <div class="sbd-panel-label">Google Search Console — indexing before vs. after the SEO Upgrade</div>
+
+  <div class="sbd-gsc-grid">
+
+    <div>
+      <div class="sbd-gsc-panel">
+        <div class="sbd-gsc-header">
+          <svg class="gsc-logo" viewBox="0 0 14 14" fill="none"><rect width="14" height="14" rx="3" fill="#1a73e8"/><text x="3" y="10" font-size="8" fill="white" font-family="sans-serif" font-weight="bold">G</text></svg>
+          <div>
+            <div class="gsc-title">Search Console — Coverage</div>
+            <div class="gsc-url">yourbusiness.com</div>
+          </div>
+          <span class="sbd-code-tag tag-before" style="margin-left:auto;">Before</span>
+        </div>
+        <div class="sbd-gsc-body">
+          <div class="gsc-no-data">
+            <div class="gsc-no-icon">📭</div>
+            <div class="gsc-no-text">Only 2 pages indexed.<br>Homepage + Contact only.<br>All other pages invisible to Google.</div>
+          </div>
+          <div class="gsc-summary">
+            <div class="gsc-total-label">Pages indexed by Google</div>
+            <div class="gsc-total-val gsc-total-before">2</div>
+          </div>
+        </div>
+      </div>
+      <div class="sbd-caption">Without the SEO Upgrade — nearly invisible</div>
+    </div>
+
+    <div>
+      <div class="sbd-gsc-panel">
+        <div class="sbd-gsc-header">
+          <svg class="gsc-logo" viewBox="0 0 14 14" fill="none"><rect width="14" height="14" rx="3" fill="#1a73e8"/><text x="3" y="10" font-size="sans-serif" font-weight="bold">G</text></svg>
+          <div>
+            <div class="gsc-title">Search Console — Coverage</div>
+            <div class="gsc-url">yourbusiness.com</div>
+          </div>
+          <span class="sbd-code-tag tag-after" style="margin-left:auto;">After</span>
+        </div>
+        <div class="sbd-gsc-body">
+          <div class="gsc-bar-row">
+            <div class="gsc-bar-label">/services/roofing</div>
+            <div class="gsc-bar-track"><div class="gsc-bar-fill bar-grn1"></div></div>
+            <div class="gsc-count">✓</div>
+          </div>
+          <div class="gsc-bar-row">
+            <div class="gsc-bar-label">/services/siding</div>
+            <div class="gsc-bar-track"><div class="gsc-bar-fill bar-grn2"></div></div>
+            <div class="gsc-count">✓</div>
+          </div>
+          <div class="gsc-bar-row">
+            <div class="gsc-bar-label">/locations/shelby</div>
+            <div class="gsc-bar-track"><div class="gsc-bar-fill bar-grn3"></div></div>
+            <div class="gsc-count">✓</div>
+          </div>
+          <div class="gsc-bar-row">
+            <div class="gsc-bar-label">/locations/gastonia</div>
+            <div class="gsc-bar-track"><div class="gsc-bar-fill bar-grn4"></div></div>
+            <div class="gsc-count">✓</div>
+          </div>
+          <div class="gsc-bar-row">
+            <div class="gsc-bar-label">/about + /contact</div>
+            <div class="gsc-bar-track"><div class="gsc-bar-fill bar-grn5"></div></div>
+            <div class="gsc-count">✓</div>
+          </div>
+          <div class="gsc-summary">
+            <div class="gsc-total-label">Pages indexed by Google</div>
+            <div class="gsc-total-val gsc-total-after">18</div>
+          </div>
+        </div>
+      </div>
+      <div class="sbd-caption">After SEO Upgrade — every page on Google's radar</div>
+    </div>
+
+  </div>
+
+  <div class="sbd-cta-box">
+    <div class="sbd-cta-text">
+      <strong>Ready to stop being invisible on Google?</strong><br>
+      The SEO Upgrade is available as a standalone service or bundled with any new website build. Let's talk about what it would look like for your business.
+    </div>
+    <button class="sbd-cta-btn" onclick="window.sendPrompt && sendPrompt('I want to learn more about the Studios by Dave SEO Upgrade service')">Inquire About the SEO Upgrade ↗</button>
+  </div>
+
+</div>
