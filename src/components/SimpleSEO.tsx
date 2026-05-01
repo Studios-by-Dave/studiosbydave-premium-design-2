@@ -9,6 +9,8 @@ interface SEOProps {
   ogType?: string;
   structuredData?: any;
   noindex?: boolean;
+  datePublished?: string;
+  dateModified?: string;
 }
 
 const SimpleSEO = ({
@@ -19,7 +21,9 @@ const SimpleSEO = ({
   ogImage = "https://www.studiosbydave.com/og-image.jpg",
   ogType = "website",
   structuredData,
-  noindex = false
+  noindex = false,
+  datePublished,
+  dateModified
 }: SEOProps) => {
   useEffect(() => {
     const fullTitle = title.includes("Studios by Dave") ? title : `${title} | Studios by Dave`;
@@ -78,6 +82,16 @@ const SimpleSEO = ({
     updateMetaTag('viewport', 'width=device-width, initial-scale=1.0');
     updateMetaTag('format-detection', 'telephone=yes');
 
+    // Article Date Meta Tags (for blog articles)
+    if (datePublished) {
+      updateMetaTag('article:published_time', datePublished);
+      updateMetaTag('datePublished', datePublished);
+    }
+    if (dateModified) {
+      updateMetaTag('article:modified_time', dateModified);
+      updateMetaTag('dateModified', dateModified);
+    }
+
     // Geo Tags
     updateMetaTag('geo.region', 'US-NC');
     updateMetaTag('geo.placename', 'Shelby');
@@ -109,7 +123,7 @@ const SimpleSEO = ({
     return () => {
       // Optional: cleanup if needed when component unmounts
     };
-  }, [title, description, keywords, canonical, ogImage, ogType, structuredData, noindex]);
+  }, [title, description, keywords, canonical, ogImage, ogType, structuredData, noindex, datePublished, dateModified]);
 
   return null; // This component doesn't render anything
 };

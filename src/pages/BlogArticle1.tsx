@@ -31,6 +31,8 @@ const BlogArticle1 = () => {
         keywords="Shelby NC web design, local web designer, branding Shelby NC, SEO Cleveland County, Studios by Dave"
         canonical="https://www.studiosbydave.com/blog/why-choose-studios-by-dave"
         structuredData={[breadcrumbs, articleStructuredData]}
+        datePublished="2025-01-15"
+        dateModified="2025-01-15"
       />
       
       <Navigation />

@@ -125,7 +125,6 @@ const Contact = () => {
 
       form.reset();
     } catch (error: any) {
-      console.error("Error sending message");
       toast({
         title: "Error",
         description: error.message || "Failed to send message. Please try again or contact us directly at dx1creations25@gmail.com",
