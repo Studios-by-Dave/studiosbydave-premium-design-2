@@ -381,7 +381,7 @@ const About = () => {
                 <img 
                   src="/assets/promos/logo-mascot-about.png" 
                   alt="Studios by Dave mascot and Dave high five" 
-                  className="w-96 h-96 object-contain drop-shadow-lg"
+                  className="w-[28rem] h-[28rem] object-contain drop-shadow-lg"
                 />
               </div>
             </div>

@@ -177,7 +177,7 @@ const SEOPage = () => {
             </div>
 
             {/* Headline */}
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6">
               We Don't Just Deploy Your Site.<br />
               <span className="gradient-text bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
                 We Make Sure Google Can Actually Read It.
@@ -185,7 +185,7 @@ const SEOPage = () => {
             </h2>
 
             {/* Intro */}
-            <p className="text-lg text-muted-foreground max-w-3xl mb-8">
+            <p className="text-xl text-muted-foreground max-w-3xl mb-8">
               When a developer deploys your website, they're doing exactly that — deploying it. Your site goes live, it looks great, but 
               <strong>Google may not be able to read a single word of it.</strong> That's because modern websites built on JavaScript frameworks 
               deliver an empty shell to search engine crawlers — your content only appears after code executes in a browser, which Google's bot 
@@ -194,7 +194,7 @@ const SEOPage = () => {
 
             {/* Upgrade Callout */}
             <div className="bg-primary/5 border border-primary/20 border-l-4 border-l-primary rounded-lg p-6 mb-8">
-              <p className="text-muted-foreground">
+              <p className="text-lg text-muted-foreground">
                 <strong className="text-foreground">The Studios by Dave SEO Upgrade</strong> solves this at the foundation level. 
                 We run your entire website through a professional <strong className="text-foreground">pre-rendering and static generation pipeline</strong> — 
                 converting every page into fully-resolved, content-rich HTML that Google can crawl, index, and rank the moment it visits your site. 
@@ -203,30 +203,30 @@ const SEOPage = () => {
             </div>
 
             {/* Steps */}
-            <div className="space-y-4 mb-12">
+            <div className="space-y-6 mb-12">
               <div className="flex gap-4">
-                <div className="w-7 h-7 bg-primary/20 border border-primary/50 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                  <span className="text-xs font-semibold text-primary">1</span>
+                <div className="w-8 h-8 bg-primary/20 border border-primary/50 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                  <span className="text-sm font-semibold text-primary">1</span>
                 </div>
-                <p className="text-muted-foreground">
+                <p className="text-lg text-muted-foreground">
                   <strong className="text-foreground">Audit your site's crawlability.</strong> We analyze how Google currently sees your pages — 
                   identifying which routes return empty content, missing metadata, or unresolved JavaScript that blocks indexing.
                 </p>
               </div>
               <div className="flex gap-4">
-                <div className="w-7 h-7 bg-primary/20 border border-primary/50 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                  <span className="text-xs font-semibold text-primary">2</span>
+                <div className="w-8 h-8 bg-primary/20 border border-primary/50 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                  <span className="text-sm font-semibold text-primary">2</span>
                 </div>
-                <p className="text-muted-foreground">
+                <p className="text-lg text-muted-foreground">
                   <strong className="text-foreground">Run the pre-rendering pipeline.</strong> Every page — services, locations, blog posts, landing pages — 
                   is processed through our build system and rendered into static HTML, complete with titles, descriptions, headings, and structured content.
                 </p>
               </div>
               <div className="flex gap-4">
-                <div className="w-7 h-7 bg-primary/20 border border-primary/50 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                  <span className="text-xs font-semibold text-primary">3</span>
+                <div className="w-8 h-8 bg-primary/20 border border-primary/50 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                  <span className="text-sm font-semibold text-primary">3</span>
                 </div>
-                <p className="text-muted-foreground">
+                <p className="text-lg text-muted-foreground">
                   <strong className="text-foreground">Submit to Google and verify.</strong> We submit your updated sitemap to Google Search Console and 
                   monitor the indexing rollout — so you can watch your pages go from invisible to ranked in real time.
                 </p>

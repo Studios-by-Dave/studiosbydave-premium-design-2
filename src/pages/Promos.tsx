@@ -20,11 +20,7 @@ const Promos = () => {
         {/* Hero Section */}
         <section className="relative py-20" style={{ background: 'linear-gradient(135deg, hsl(218 49% 15%) 0%, hsl(218 49% 22%) 50%, hsl(218 49% 18%) 100%)' }}>
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <div className="inline-flex items-center gap-2 bg-white/10 text-white px-4 py-2 rounded-full text-sm font-medium mb-6 border border-white/20">
-              <Star className="h-4 w-4" />
-              Limited Time Offers
-            </div>
-            <div className="relative inline-block">
+                        <div className="relative inline-block">
               {/* Pixie Dust Effect */}
               <div className="absolute -top-8 -left-4 w-40 h-40 pointer-events-none">
                 {[...Array(18)].map((_, i) => (
@@ -65,7 +61,7 @@ const Promos = () => {
             <img 
               src="/assets/promos/logo-mascot-pointer.png" 
               alt="Mascot pointing to promotions" 
-              className="w-48 h-48 object-contain drop-shadow-lg"
+              className="w-64 h-64 object-contain drop-shadow-lg"
             />
           </div>
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 lg:pr-40">
@@ -141,7 +137,7 @@ const Promos = () => {
             <img 
               src="/assets/promos/logo-mascot-pointer.png" 
               alt="Mascot pointing to referral bonus" 
-              className="w-48 h-48 object-contain drop-shadow-lg transform scale-x-[-1]"
+              className="w-64 h-64 object-contain drop-shadow-lg transform scale-x-[-1]"
             />
           </div>
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 lg:pr-40">

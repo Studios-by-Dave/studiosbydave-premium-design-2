@@ -61,13 +61,13 @@ const Navigation = () => {
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-8">
-            <Link to="/" className={`text-sm font-bold transition-colors hover:text-primary ${isActive('/') ? "text-primary border-b-2 border-primary pb-1" : "text-foreground"}`}>
+            <Link to="/" className={`text-sm font-black transition-colors hover:text-primary ${isActive('/') ? "text-primary border-b-2 border-primary pb-1" : "text-foreground"}`}>
               Home
             </Link>
             
             {/* Services Collapsible */}
             <div className="relative">
-              <button onClick={() => setServicesOpen(!servicesOpen)} className={`text-sm font-bold transition-colors hover:text-primary flex items-center space-x-1 ${isServicesActive() ? "text-primary border-b-2 border-primary pb-1" : "text-foreground"}`}>
+              <button onClick={() => setServicesOpen(!servicesOpen)} className={`text-sm font-black transition-colors hover:text-primary flex items-center space-x-1 ${isServicesActive() ? "text-primary border-b-2 border-primary pb-1" : "text-foreground"}`}>
                 <span>Services</span>
                 <ChevronDown className={`h-4 w-4 transition-transform duration-300 ${servicesOpen ? 'rotate-180' : ''}`} />
               </button>
@@ -84,11 +84,11 @@ const Navigation = () => {
               </div>
             </div>
 
-            <Link to="/about" className={`text-sm font-bold transition-colors hover:text-primary ${isActive('/about') ? "text-primary border-b-2 border-primary pb-1" : "text-foreground"}`}>
+            <Link to="/about" className={`text-sm font-black transition-colors hover:text-primary ${isActive('/about') ? "text-primary border-b-2 border-primary pb-1" : "text-foreground"}`}>
               About Us
             </Link>
 
-            <Link to="/contact" className={`text-sm font-bold transition-colors hover:text-primary ${isActive('/contact') ? "text-primary border-b-2 border-primary pb-1" : "text-foreground"}`}>
+            <Link to="/contact" className={`text-sm font-black transition-colors hover:text-primary ${isActive('/contact') ? "text-primary border-b-2 border-primary pb-1" : "text-foreground"}`}>
               Contact
             </Link>
 
@@ -116,13 +116,13 @@ const Navigation = () => {
 
         {/* Mobile Navigation */}
         {isOpen && <div className="lg:hidden pb-6 space-y-4">
-            <Link to="/" onClick={() => setIsOpen(false)} className={`block text-base font-bold transition-colors hover:text-primary ${isActive('/') ? "text-primary" : "text-foreground"}`}>
+            <Link to="/" onClick={() => setIsOpen(false)} className={`block text-base font-black transition-colors hover:text-primary ${isActive('/') ? "text-primary" : "text-foreground"}`}>
               Home
             </Link>
             
             {/* Mobile Services Section */}
             <div className="border-t pt-4">
-              <div className={`block text-base font-bold transition-colors hover:text-primary mb-2 ${isServicesActive() ? "text-primary" : "text-foreground"}`}>
+              <div className={`block text-base font-black transition-colors hover:text-primary mb-2 ${isServicesActive() ? "text-primary" : "text-foreground"}`}>
                 Services
               </div>
               <div className="ml-4 space-y-2">
@@ -132,11 +132,11 @@ const Navigation = () => {
               </div>
             </div>
 
-            <Link to="/about" onClick={() => setIsOpen(false)} className={`block text-base font-bold transition-colors hover:text-primary ${isActive('/about') ? "text-primary" : "text-foreground"}`}>
+            <Link to="/about" onClick={() => setIsOpen(false)} className={`block text-base font-black transition-colors hover:text-primary ${isActive('/about') ? "text-primary" : "text-foreground"}`}>
               About Us
             </Link>
 
-            <Link to="/contact" onClick={() => setIsOpen(false)} className={`block text-base font-bold transition-colors hover:text-primary ${isActive('/contact') ? "text-primary" : "text-foreground"}`}>
+            <Link to="/contact" onClick={() => setIsOpen(false)} className={`block text-base font-black transition-colors hover:text-primary ${isActive('/contact') ? "text-primary" : "text-foreground"}`}>
               Contact
             </Link>
 

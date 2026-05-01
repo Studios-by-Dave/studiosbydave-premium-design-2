@@ -193,7 +193,7 @@ const Contact = () => {
           <img 
             src="/assets/promos/logo-mascot-contact.png" 
             alt="Mascot pointing to contact information" 
-            className="w-48 h-48 object-contain drop-shadow-lg"
+            className="w-64 h-64 object-contain drop-shadow-lg"
           />
         </div>
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 lg:pr-40">
