@@ -7,9 +7,9 @@ const PromotionMarquee = () => {
         <div className="flex items-center gap-24 whitespace-nowrap">
           {/* Repeat the content multiple times for seamless loop */}
           {[...Array(4)].map((_, index) => <div key={index} className="flex items-center gap-3">
-              <img src={studiosByDaveLogo} alt="Studios by Dave" className="h-8 w-8 object-contain" />
+              <img src={studiosByDaveLogo} alt="Studios by Dave" className="h-8 w-8 object-contain" width="32" height="32" loading="lazy" decoding="async" />
               <span className="text-2xl md:text-3xl font-bold text-foreground/90">Free Logo Design with any Web Service!</span>
-              <img src={leadFerretMascot} alt="Lead Ferret" className="h-8 w-8 object-contain rounded-full" />
+              <img src={leadFerretMascot} alt="Lead Ferret" className="h-8 w-8 object-contain rounded-full" width="32" height="32" loading="lazy" decoding="async" />
               <span className="text-2xl md:text-3xl font-bold text-foreground/90">$100 Unlimited Referral Bonus!</span>
             </div>)}
         </div>

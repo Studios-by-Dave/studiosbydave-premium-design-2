@@ -30,11 +30,11 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="modulepreload" href="/src/main.tsx">
-    
+
     <!-- Critical Image Preloading -->
     <link rel="preload" as="image" href="/lovable-uploads/hero-human-inside.png" fetchpriority="high">
     <link rel="preload" as="image" href="/new-logo.png" fetchpriority="high">
-    
+
     <!-- Font Loading Optimization -->
     <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Fredoka+One&display=swap">
 
@@ -50,7 +50,7 @@
     <!-- Google Fonts with font-display: swap -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Fredoka+One&display=swap" rel="stylesheet">
     <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Fredoka+One&display=swap" rel="stylesheet"></noscript>
-    
+
     <!-- Critical CSS Inlining for Performance -->
     <style>
       /* Critical above-the-fold styles */
@@ -59,62 +59,32 @@
       .loaded { opacity: 1; }
       /* Prevent layout shifts */
       img { max-width: 100%; height: auto; }
-      /* Font display optimization */
-      body { font-display: swap; }
     </style>
 
     <!-- Open Graph -->
-    
-    
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://www.studiosbydave.com/" />
     <meta property="og:image" content="https://storage.googleapis.com/gpt-engineer-file-uploads/7yFZRN3a4zOnW6XxdC0mKKnJqbo1/social-images/social-1770800137613-instant_brand_kit_1f0db7f0-9175-6920-b144-d295dd9ac2e8_0_0(2).png">
+    <meta property="og:title" content="Web Design and SEO in Shelby, NC - Studios by Dave">
+    <meta property="og:description" content="We build high-converting websites, custom web apps tailored to your business needs. Servicing the surrounding Shelby, NC area. Call for your free quote today!">
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
-    
-    
     <meta name="twitter:image" content="https://storage.googleapis.com/gpt-engineer-file-uploads/7yFZRN3a4zOnW6XxdC0mKKnJqbo1/social-images/social-1770800137613-instant_brand_kit_1f0db7f0-9175-6920-b144-d295dd9ac2e8_0_0(2).png">
-    
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  <meta property="og:title" content="Web Design and SEO in Shelby, NC - Studios by Dave">
-  <meta name="twitter:title" content="Web Design and SEO in Shelby, NC - Studios by Dave">
-  <meta property="og:description" content="We build high-converting websites, custom web apps tailored to your business needs.  Servicing the surrounding Shelby, NC area. Call for your free quote today!">
-  <meta name="twitter:description" content="We build high-converting websites, custom web apps tailored to your business needs.  Servicing the surrounding Shelby, NC area. Call for your free quote today!">
+    <meta name="twitter:title" content="Web Design and SEO in Shelby, NC - Studios by Dave">
+    <meta name="twitter:description" content="We build high-converting websites, custom web apps tailored to your business needs. Servicing the surrounding Shelby, NC area. Call for your free quote today!">
 </head>
 
   <body>
     <div id="root"></div>
     <script prerender type="module" src="/src/main.tsx" defer></script>
-    
+
     <!-- Omnisend Tracking - Optimized Loading -->
     <script type="text/javascript">
         // Initialize Omnisend with deferred loading to prevent forced reflows
         window.omnisend = window.omnisend || [];
         omnisend.push(["brandID", "678f5723f9d19334d6009afe"]);
-        
+
         // Defer script loading to prevent blocking initial render
         window.addEventListener('load', function() {
             setTimeout(function() {

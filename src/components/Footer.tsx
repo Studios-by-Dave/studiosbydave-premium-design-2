@@ -35,13 +35,13 @@ const Footer = () => {
     }],
     industries: [{
       name: "Roofing Contractors",
-      href: "/industries/roofing"
+      href: "/services/web-design"
     }, {
       name: "Landscaping Companies",
-      href: "/industries/landscaping"
+      href: "/services/web-design"
     }, {
       name: "Solar Panel Installers",
-      href: "/industries/solar"
+      href: "/services/web-design"
     }]
   };
   return <footer className="bg-secondary text-white">
@@ -110,16 +110,16 @@ const Footer = () => {
             
             {/* Social Links */}
             <div className="flex space-x-4">
-              <a href="#" className="text-white/60 hover:text-accent transition-colors">
+              <a href="https://www.facebook.com/studiosbydave" target="_blank" rel="noopener noreferrer" aria-label="Follow Studios by Dave on Facebook" className="text-white/60 hover:text-accent transition-colors">
                 <Facebook size={20} />
               </a>
-              <a href="#" className="text-white/60 hover:text-accent transition-colors">
+              <a href="https://www.instagram.com/studiosbydave" target="_blank" rel="noopener noreferrer" aria-label="Follow Studios by Dave on Instagram" className="text-white/60 hover:text-accent transition-colors">
                 <Instagram size={20} />
               </a>
-              <a href="#" className="text-white/60 hover:text-accent transition-colors">
+              <a href="https://www.linkedin.com/company/studiosbydave" target="_blank" rel="noopener noreferrer" aria-label="Connect with Studios by Dave on LinkedIn" className="text-white/60 hover:text-accent transition-colors">
                 <Linkedin size={20} />
               </a>
-              <a href="#" className="text-white/60 hover:text-accent transition-colors">
+              <a href="https://www.studiosbydave.com" target="_blank" rel="noopener noreferrer" aria-label="Visit Studios by Dave website" className="text-white/60 hover:text-accent transition-colors">
                 <Globe size={20} />
               </a>
             </div>
