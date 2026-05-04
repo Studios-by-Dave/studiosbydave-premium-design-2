@@ -16,7 +16,7 @@ const Index = () => {
     <div className="min-h-screen">
       <SimpleSEO
         title="Studios by Dave - Web Development & Digital Marketing for Local Businesses"
-        description="Web Design Shelby, NC - Free Logo Design - Unlimited $100 Referrals"
+        description="Your Local Web Design and Development Resource - Serving Shelby, NC and Surrounding - Free Logo Design - Unlimited $100 Referrals"
         keywords="web design contractors, roofing contractor websites, landscaping web design, solar panel installer marketing, SEO for contractors, AI automation business, North Carolina web design"
         structuredData={structuredData}
       />
