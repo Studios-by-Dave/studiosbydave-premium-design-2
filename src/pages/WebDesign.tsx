@@ -392,10 +392,10 @@ const WebDesign = () => {
               <p className="text-muted-foreground mb-4">Professional web design services for local contractors and small businesses</p>
               <div className="bg-gray-100 rounded-lg p-4 overflow-hidden">
                 <img 
-                  src="/flyers/Web Flyer.jpg" 
+                  src="/flyers/Web%20Flyer.jpg" 
                   alt="Local Business Web Design Flyer - Professional web design services for contractors and small businesses"
-                  className="w-full h-auto object-contain max-w-none"
-                  style={{ imageRendering: 'crisp-edges' }}
+                  className="w-full h-auto object-contain max-w-2xl mx-auto"
+                  style={{ imageRendering: 'crisp-edges', maxHeight: '600px' }}
                   loading="lazy"
                   decoding="async"
                 />
@@ -408,10 +408,10 @@ const WebDesign = () => {
               <p className="text-muted-foreground mb-4">Complete online store solutions with custom domains and Shopify integration</p>
               <div className="bg-gray-100 rounded-lg p-4 overflow-hidden">
                 <img 
-                  src="/flyers/New Flyer_1.jpg" 
+                  src="/flyers/New%20Flyer_1.jpg" 
                   alt="Premium E-commerce Solutions Flyer - Shopify stores and custom domains for online businesses"
-                  className="w-full h-auto object-contain max-w-none"
-                  style={{ imageRendering: 'crisp-edges' }}
+                  className="w-full h-auto object-contain max-w-2xl mx-auto"
+                  style={{ imageRendering: 'crisp-edges', maxHeight: '600px' }}
                   loading="lazy"
                   decoding="async"
                 />
@@ -424,10 +424,10 @@ const WebDesign = () => {
               <p className="text-muted-foreground mb-4">Professional e-commerce platforms with advanced features for growing businesses</p>
               <div className="bg-gray-100 rounded-lg p-4 overflow-hidden">
                 <img 
-                  src="/flyers/New Flyer_2.jpg" 
+                  src="/flyers/New%20Flyer_2.jpg" 
                   alt="Advanced Online Stores Flyer - Professional e-commerce solutions for businesses"
-                  className="w-full h-auto object-contain max-w-none"
-                  style={{ imageRendering: 'crisp-edges' }}
+                  className="w-full h-auto object-contain max-w-2xl mx-auto"
+                  style={{ imageRendering: 'crisp-edges', maxHeight: '600px' }}
                   loading="lazy"
                   decoding="async"
                 />

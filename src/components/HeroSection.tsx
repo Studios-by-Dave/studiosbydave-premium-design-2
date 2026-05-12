@@ -33,9 +33,11 @@ const HeroSection = () => {
           }} />)}
           </div>
           <div className="text-center">
-            <p className="text-white/80 font-medium mb-1 text-base">                                    Call Us    --    TEXT US!          </p>
-            <a href="tel:+17044738188" className="font-bold transition-colors duration-300 text-amber-200 text-3xl">
-              (704) 473-8188
+            <p className="text-white/80 font-medium mb-1 text-base">                                    CALL US - TEXT US!          </p>
+            <a href="tel:+17044738188" className="font-bold transition-colors duration-300 text-amber-200 text-3xl relative">
+              <span className="bg-gradient-to-r from-amber-200 via-amber-100 to-amber-200 bg-[length:200%_auto] animate-text-shine bg-clip-text text-transparent">
+                (704) 473-8188
+              </span>
             </a>
           </div>
         </div>
@@ -71,7 +73,7 @@ const HeroSection = () => {
                   boxShadow: i % 4 === 0 ? '0 0 5px hsl(var(--trophy-gold))' : 'none'
                 }} />)}
                 </div>
-                <h1 className="font-bold chrome-text leading-tight lg:text-5xl drop-shadow-lg text-7xl">
+                <h1 className="font-bold chrome-text leading-tight lg:text-6xl drop-shadow-lg text-8xl">
                   We Don't Just Build Your <span className="cobalt-glow-text text-sidebar-ring">Website</span> or <span className="cobalt-glow-text">App</span>.
                 </h1>
                 <p className="leading-tight lg:text-2xl font-medium mt-3 text-[#dfe2f6] text-xl">
