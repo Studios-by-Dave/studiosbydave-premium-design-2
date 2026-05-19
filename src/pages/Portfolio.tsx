@@ -275,9 +275,19 @@ const Portfolio = () => {
       
       <main>
         {/* Hero Section */}
-        <section className="relative py-20 md:py-28 bg-secondary overflow-hidden">
+        <section className="relative py-16 md:py-24 bg-secondary overflow-hidden">
+          {/* Crown Molding Top */}
+          <div
+            className="absolute top-0 left-0 w-full h-8 z-10"
+            style={{
+              backgroundImage: 'url("/assets/crown molding cherry wood.png")',
+              backgroundRepeat: 'repeat-x',
+              backgroundSize: 'contain',
+              backgroundPosition: 'top'
+            }}
+          />
           <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-primary/20 via-transparent to-transparent" />
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-20 pt-8 pb-8">
             <div className="text-center max-w-3xl mx-auto">
               <h1 className="relative text-6xl md:text-8xl font-bold text-white mb-6">
                 <PixieDust />
@@ -290,6 +300,17 @@ const Portfolio = () => {
               </p>
             </div>
           </div>
+
+          {/* Crown Molding Bottom */}
+          <div
+            className="absolute bottom-0 left-0 w-full h-8 z-10 transform rotate-180"
+            style={{
+              backgroundImage: 'url("/assets/crown molding cherry wood.png")',
+              backgroundRepeat: 'repeat-x',
+              backgroundSize: 'contain',
+              backgroundPosition: 'top'
+            }}
+          />
         </section>
 
         {/* Web Projects Section */}

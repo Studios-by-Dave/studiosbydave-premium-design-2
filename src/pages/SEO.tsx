@@ -40,8 +40,19 @@ const SEOPage = () => {
       <Navigation />
       
       {/* Hero Section */}
-      <section className="bg-gradient-hero py-24">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <section className="bg-gradient-hero py-16 relative">
+        {/* Crown Molding Top */}
+        <div
+          className="absolute top-0 left-0 w-full h-8 z-10"
+          style={{
+            backgroundImage: 'url("/assets/crown molding cherry wood.png")',
+            backgroundRepeat: 'repeat-x',
+            backgroundSize: 'contain',
+            backgroundPosition: 'top'
+          }}
+        />
+        
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-20 pt-8 pb-8">
           <div className="relative inline-block">
             {/* Pixie Dust Effect */}
             <div className="absolute -top-8 -left-4 w-40 h-40 pointer-events-none">
@@ -83,6 +94,17 @@ const SEOPage = () => {
             </Button>
           </Link>
         </div>
+
+        {/* Crown Molding Bottom */}
+        <div
+          className="absolute bottom-0 left-0 w-full h-8 z-10 transform rotate-180"
+          style={{
+            backgroundImage: 'url("/assets/crown molding cherry wood.png")',
+            backgroundRepeat: 'repeat-x',
+            backgroundSize: 'contain',
+            backgroundPosition: 'top'
+          }}
+        />
       </section>
 
       {/* SEO Components with Visual */}
