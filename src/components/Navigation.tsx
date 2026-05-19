@@ -7,6 +7,7 @@ import studiosBrainLogo from "@/assets/studios-brain-logo.png";
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
+  const [promosOpen, setPromosOpen] = useState(false);
   const location = useLocation();
   const navItems = [{
     name: "Home",
@@ -35,10 +36,6 @@ const Navigation = () => {
     path: "/services/google-optimization",
     description: "Dominate local search results"
   }, {
-    name: "Promos",
-    path: "/services/promos",
-    description: "Current promotions & offers"
-  }, {
     name: "Media Packs",
     path: "/services/media-packs",
     description: "Custom digital content packages"
@@ -46,6 +43,15 @@ const Navigation = () => {
     name: "Portfolio",
     path: "/services/portfolio",
     description: "View our work"
+  }];
+  const promos = [{
+    name: "Free Logo Design",
+    path: "/promos/free-logo-design",
+    description: "FREE logo with web pack purchase"
+  }, {
+    name: "Referral Bonus",
+    path: "/promos/referral-bonus",
+    description: "Earn $100 per referral"
   }];
   const isActive = (path: string) => location.pathname === path;
   const isServicesActive = () => location.pathname.startsWith('/services');
@@ -88,19 +94,38 @@ const Navigation = () => {
               About Us
             </Link>
 
+            {/* Promos Collapsible */}
+            <div className="relative">
+              <button onClick={() => setPromosOpen(!promosOpen)} className={`text-sm font-black transition-colors hover:text-primary flex items-center space-x-1 ${location.pathname.startsWith('/promos') ? "text-primary border-b-2 border-primary pb-1" : "text-foreground"}`}>
+                <span>Promos</span>
+                <ChevronDown className={`h-4 w-4 transition-transform duration-300 ${promosOpen ? 'rotate-180' : ''}`} />
+              </button>
+
+              {/* Fan-out dropdown underneath */}
+              <div className={`absolute top-full left-0 mt-2 bg-white rounded-lg shadow-lg border border-border/50 z-50 overflow-hidden transition-all duration-300 ${promosOpen ? 'opacity-100 visible' : 'opacity-0 invisible'}`}>
+                <div className="p-2 flex flex-col">
+                  {promos.map((promo, index) => <Link key={promo.name} to={promo.path} onClick={() => setPromosOpen(false)} className={`text-sm whitespace-nowrap px-4 py-2 rounded-md transition-all duration-300 hover:bg-muted hover:text-primary font-medium ${isActive(promo.path) ? "text-primary bg-muted/50" : "text-foreground/80"} ${promosOpen ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-8'}`} style={{
+                  transitionDelay: promosOpen ? `${index * 60}ms` : '0ms'
+                }}>
+                      {promo.name}
+                    </Link>)}
+                </div>
+              </div>
+            </div>
+
             <Link to="/contact" className={`text-sm font-black transition-colors hover:text-primary ${isActive('/contact') ? "text-primary border-b-2 border-primary pb-1" : "text-foreground"}`}>
               Contact
             </Link>
 
             {/* Blog */}
             <Link to="/blog" className={`font-poofy text-base transition-all hover:scale-105 ${isActive('/blog') ? "border-b-2 border-primary pb-1" : ""}`}>
-              <span className="bg-gradient-to-r from-purple-500 via-violet-400 to-purple-600 bg-clip-text bg-[length:200%_auto] animate-shimmer drop-shadow-[0_0_8px_rgba(139,92,246,0.4)] text-amber-600">
+              <span className="bg-gradient-to-r from-purple-500 via-violet-400 to-purple-600 bg-clip-text bg-[length:200%_auto] animate-shimmer drop-shadow-[0_0_8px_rgba(139,92,246,0.4)] text-sky-400">
                 Blog
               </span>
             </Link>
             
-            <Link to="/contact">
-              <Button variant="shimmer" size="sm" className="ml-4 text-sm">
+            <Link to="/contact#get-in-touch">
+              <Button variant="shimmer" size="sm" className="ml-4 text-sm bg-[hsl(45,100%,68%)] text-black border-2 border-black hover:bg-[hsl(45,100%,60%)]">
                 Get Started
               </Button>
             </Link>
@@ -136,6 +161,18 @@ const Navigation = () => {
               About Us
             </Link>
 
+            {/* Mobile Promos Section */}
+            <div className="border-t pt-4">
+              <div className={`block text-base font-black transition-colors hover:text-primary mb-2 ${location.pathname.startsWith('/promos') ? "text-primary" : "text-foreground"}`}>
+                Promos
+              </div>
+              <div className="ml-4 space-y-2">
+                {promos.map(promo => <Link key={promo.name} to={promo.path} onClick={() => setIsOpen(false)} className={`block text-sm hover:text-primary transition-colors text-muted-foreground ${isActive(promo.path) ? "text-primary" : ""}`}>
+                    {promo.name}
+                  </Link>)}
+              </div>
+            </div>
+
             <Link to="/contact" onClick={() => setIsOpen(false)} className={`block text-base font-black transition-colors hover:text-primary ${isActive('/contact') ? "text-primary" : "text-foreground"}`}>
               Contact
             </Link>
@@ -143,14 +180,14 @@ const Navigation = () => {
             {/* Mobile Blog */}
             <div className="border-t pt-4">
               <Link to="/blog" onClick={() => setIsOpen(false)} className={`block font-poofy text-lg transition-all ${isActive('/blog') ? "text-primary" : ""}`}>
-                <span className="bg-gradient-to-r from-purple-500 via-violet-400 to-purple-600 bg-clip-text text-transparent bg-[length:200%_auto] animate-shimmer drop-shadow-[0_0_8px_rgba(139,92,246,0.4)]">
+                <span className="bg-gradient-to-r from-purple-500 via-violet-400 to-purple-600 bg-clip-text text-transparent bg-[length:200%_auto] animate-shimmer drop-shadow-[0_0_8px_rgba(139,92,246,0.4)] text-sky-400">
                   Blog
                 </span>
               </Link>
             </div>
             
-            <Link to="/contact" onClick={() => setIsOpen(false)}>
-              <Button variant="primary" className="w-full">
+            <Link to="/contact#get-in-touch" onClick={() => setIsOpen(false)}>
+              <Button variant="shimmer" className="w-full bg-[hsl(45,100%,68%)] text-black border-2 border-black hover:bg-[hsl(45,100%,60%)]">
                 Get Started
               </Button>
             </Link>

@@ -208,33 +208,33 @@ const Contact = () => {
               </div>
 
               {/* Contact Card - Phone & Email */}
-              <div className="flex flex-col gap-6 mb-8">
+              <div className="flex flex-col gap-4 mb-8">
                 {/* Phone Card */}
-                <div className="bg-gradient-hero rounded-xl border border-white/20 p-8 shadow-glow">
+                <div className="bg-gradient-hero rounded-xl border border-white/20 p-6 shadow-glow">
                   <div className="text-center">
-                    <div className="w-16 h-16 bg-white/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                      <Phone size={32} className="text-accent" />
+                    <div className="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center mx-auto mb-3">
+                      <Phone size={24} className="text-accent" />
                     </div>
-                    <p className="text-white/80 text-lg font-medium mb-2">Call Us — TEXT US!</p>
-                    <a href="tel:+17044738188" className="text-4xl lg:text-6xl font-bold transition-colors gradient-text bg-gradient-to-r from-accent via-white to-accent bg-[length:200%_auto] animate-text-shine bg-clip-text text-transparent block">
+                    <p className="text-white/80 text-base font-medium mb-1">Call Us — TEXT US!</p>
+                    <a href="tel:+17044738188" className="text-3xl lg:text-5xl font-bold transition-colors gradient-text bg-gradient-to-r from-accent via-white to-accent bg-[length:200%_auto] animate-text-shine bg-clip-text text-transparent block">
                       (704) 473-8188
                     </a>
-                    <p className="text-trophy-gold font-bold text-lg mt-3">Always Open. 24/7.</p>
-                    <p className="text-white/60 text-sm mt-1">We respond within 12-24 hours, guaranteed.</p>
+                    <p className="text-trophy-gold font-bold text-base mt-2">Always Open. 24/7.</p>
+                    <p className="text-white/60 text-xs mt-1">We respond within 12-24 hours, guaranteed.</p>
                   </div>
                 </div>
 
                 {/* Email Card */}
-                <div className="bg-gradient-hero rounded-xl border border-white/20 p-8 shadow-glow">
+                <div className="bg-gradient-hero rounded-xl border border-white/20 p-6 shadow-glow">
                   <div className="text-center">
-                    <div className="w-16 h-16 bg-white/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                      <Mail size={32} className="text-accent" />
+                    <div className="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center mx-auto mb-3">
+                      <Mail size={24} className="text-accent" />
                     </div>
-                    <p className="text-white/80 text-lg font-medium mb-2">Email Us</p>
-                    <a href="mailto:dx1creations25@gmail.com" className="text-2xl lg:text-4xl font-bold transition-colors break-all block gradient-text bg-gradient-to-r from-accent via-white to-accent bg-[length:200%_auto] animate-text-shine bg-clip-text text-transparent">
+                    <p className="text-white/80 text-base font-medium mb-1">Email Us</p>
+                    <a href="mailto:dx1creations25@gmail.com" className="text-xl lg:text-3xl font-bold transition-colors break-all block gradient-text bg-gradient-to-r from-accent via-white to-accent bg-[length:200%_auto] animate-text-shine bg-clip-text text-transparent">
                       dx1creations25@gmail.com
                     </a>
-                    <p className="text-white/60 text-sm mt-3">We reply within 24 hours</p>
+                    <p className="text-white/60 text-xs mt-2">We reply within 24 hours</p>
                   </div>
                 </div>
               </div>

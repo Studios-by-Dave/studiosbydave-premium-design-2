@@ -3,7 +3,7 @@ import Footer from "@/components/Footer";
 import InternalLinksFooter from "@/components/InternalLinks";
 import SimpleSEO from "@/components/SimpleSEO";
 import { Link } from "react-router-dom";
-import { Gift, Users, Clock, CheckCircle, Star } from "lucide-react";
+import { Gift, Users, Clock, CheckCircle, Star, Search, Settings, MapPin, TrendingUp, Phone, Star as StarIcon } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 const Promos = () => {
@@ -65,22 +65,23 @@ const Promos = () => {
             />
           </div>
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 lg:pr-40">
-            <Card className="border-2 border-primary/20 shadow-xl overflow-hidden">
-              <div className="bg-gradient-to-r from-primary to-primary/80 p-6 relative overflow-hidden">
+            <Card className="border-2 border-blue-900/40 shadow-xl overflow-hidden">
+              <div className="p-6 relative overflow-hidden" style={{ background: 'linear-gradient(135deg, #0f2a4a 0%, #1a3a5c 85%, #e2e8f0 100%)' }}>
                 {/* Moving Reflection */}
                 <div className="absolute inset-0 overflow-hidden">
-                  <div className="absolute -inset-full bg-gradient-to-r from-transparent via-white/20 to-transparent skew-x-12 animate-[shimmer_3s_infinite]" />
+                  <div className="absolute -inset-full bg-gradient-to-r from-transparent via-white/30 to-transparent skew-x-12 animate-[shimmer_3s_infinite]" />
+                  <div className="absolute -inset-full bg-gradient-to-r from-transparent via-white/10 to-transparent skew-x-12 animate-[shimmer_3s_infinite]" style={{ animationDelay: '1.5s' }} />
                 </div>
                 <div className="flex items-center gap-4 relative z-10">
                   <div className="bg-white/20 p-3 rounded-full">
                     <Gift className="h-8 w-8 text-white" />
                   </div>
-                  <div>
-                    <h2 className="text-2xl md:text-3xl font-bold text-white">
+                  <Link to="/promos/free-logo-design" className="flex-1">
+                    <h2 className="text-2xl md:text-3xl font-bold text-white hover:text-accent transition-colors">
                       FREE Logo Design
                     </h2>
                     <p className="text-white/90">With Any Web Pack Purchase</p>
-                  </div>
+                  </Link>
                 </div>
               </div>
               <CardContent className="p-8">
@@ -133,30 +134,31 @@ const Promos = () => {
         {/* Unlimited Referral Bonus Section */}
         <section className="py-20 bg-muted/30 relative">
           {/* Mascot Pointer */}
-          <div className="hidden lg:block absolute right-4 top-1/2 -translate-y-1/2 z-10 animate-bounce-slow" style={{ animationDelay: '1.5s' }}>
-            <img 
-              src="/assets/promos/logo-mascot-pointer.png" 
-              alt="Mascot pointing to referral bonus" 
+          <div className="hidden lg:block absolute left-4 top-1/2 -translate-y-1/2 z-10 animate-bounce-slow" style={{ animationDelay: '1.5s' }}>
+            <img
+              src="/assets/promos/logo-mascot-pointer.png"
+              alt="Mascot pointing to referral bonus"
               className="w-64 h-64 object-contain drop-shadow-lg transform scale-x-[-1]"
             />
           </div>
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 lg:pr-40">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 lg:pl-40">
             <Card className="border-2 border-accent/20 shadow-xl overflow-hidden">
               <div className="bg-gradient-to-r from-trophy-gold to-trophy-gold/80 p-6 relative overflow-hidden">
                 {/* Moving Reflection */}
                 <div className="absolute inset-0 overflow-hidden">
-                  <div className="absolute -inset-full bg-gradient-to-r from-transparent via-white/20 to-transparent skew-x-12 animate-[shimmer_3s_infinite]" style={{ animationDelay: '1.5s' }} />
+                  <div className="absolute -inset-full bg-gradient-to-r from-transparent via-white/30 to-transparent skew-x-12 animate-[shimmer_3s_infinite]" style={{ animationDelay: '1.5s' }} />
+                  <div className="absolute -inset-full bg-gradient-to-r from-transparent via-white/10 to-transparent skew-x-12 animate-[shimmer_3s_infinite]" style={{ animationDelay: '3s' }} />
                 </div>
                 <div className="flex items-center gap-4 relative z-10">
                   <div className="bg-white/20 p-3 rounded-full">
                     <Users className="h-8 w-8 text-white" />
                   </div>
-                  <div>
-                    <h2 className="text-2xl md:text-3xl font-bold text-foreground">
+                  <Link to="/promos/referral-bonus" className="flex-1">
+                    <h2 className="text-2xl md:text-3xl font-bold text-foreground hover:text-accent transition-colors">
                       Unlimited $100 Referral Bonus
                     </h2>
                     <p className="text-foreground/90">Earn Cash for Every Referral—No Limits!</p>
-                  </div>
+                  </Link>
                 </div>
               </div>
               <CardContent className="p-8">

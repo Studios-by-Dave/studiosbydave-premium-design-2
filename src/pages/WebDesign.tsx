@@ -42,8 +42,19 @@ const WebDesign = () => {
       <Navigation />
       
       {/* Hero Section */}
-      <section className="bg-gradient-hero py-16" itemScope itemType="https://schema.org/WebPageElement">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <section className="bg-gradient-hero py-16 relative" itemScope itemType="https://schema.org/WebPageElement">
+        {/* Crown Molding Top */}
+        <div
+          className="absolute top-0 left-0 w-full h-8 z-10"
+          style={{
+            backgroundImage: 'url("/assets/crown molding cherry wood.png")',
+            backgroundRepeat: 'repeat-x',
+            backgroundSize: 'contain',
+            backgroundPosition: 'top'
+          }}
+        />
+        
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-20 pt-8 pb-8">
           <div className="relative inline-block">
             <PixieDust />
             <h1 className="text-4xl lg:text-5xl font-bold text-white mb-6" itemProp="headline">
@@ -55,7 +66,7 @@ const WebDesign = () => {
             </h1>
           </div>
           <p className="text-xl text-white/90 max-w-3xl mx-auto mb-8" itemProp="description">
-            Custom websites that turn visitors into paying customers—designed specifically 
+            Custom websites that turn visitors into paying customers—designed specifically
             for local small businesses.
           </p>
           <Link to="/contact#get-in-touch">
@@ -65,6 +76,17 @@ const WebDesign = () => {
             </Button>
           </Link>
         </div>
+
+        {/* Crown Molding Bottom */}
+        <div
+          className="absolute bottom-0 left-0 w-full h-8 z-10 transform rotate-180"
+          style={{
+            backgroundImage: 'url("/assets/crown molding cherry wood.png")',
+            backgroundRepeat: 'repeat-x',
+            backgroundSize: 'contain',
+            backgroundPosition: 'top'
+          }}
+        />
       </section>
 
       {/* Features Section */}

@@ -13,6 +13,7 @@ import BlogArticle3 from "./pages/BlogArticle3";
 import BlogArticle4 from "./pages/BlogArticle4";
 import BlogArticle5 from "./pages/BlogArticle5";
 import BlogArticle6 from "./pages/BlogArticle6";
+import BlogArticle7 from "./pages/BlogArticle7";
 
 import WebDesign from "./pages/WebDesign";
 import Branding from "./pages/Branding";
@@ -21,6 +22,8 @@ import GoogleOptimization from "./pages/GoogleOptimization";
 import SEOPage from "./pages/SEO";
 import Promos from "./pages/Promos";
 import MediaPacks from "./pages/MediaPacks";
+import FreeLogoDesign from "./pages/promos/FreeLogoDesign";
+import ReferralBonus from "./pages/promos/ReferralBonus";
 
 
 import Portfolio from "./pages/Portfolio";
@@ -57,6 +60,9 @@ const App = () => (
           <Route path="/studiosweb/media-packs" element={<Navigate to="/services/media-packs" replace />} />
           <Route path="/studiosweb/portfolio" element={<Navigate to="/services/portfolio" replace />} />
           <Route path="/studiosweb/ai-automations" element={<Navigate to="/services" replace />} />
+
+          {/* Redirect for cleaner promos URL structure */}
+          <Route path="/services/promos" element={<Navigate to="/promos" replace />} />
           
           {/* Redirects for old StudiosInk paths */}
           <Route path="/studiosink" element={<Navigate to="/" replace />} />
@@ -75,6 +81,10 @@ const App = () => (
           <Route path="/services/promos" element={<Promos />} />
           <Route path="/services/media-packs" element={<MediaPacks />} />
           
+          {/* Individual promo pages */}
+          <Route path="/promos/free-logo-design" element={<FreeLogoDesign />} />
+          <Route path="/promos/referral-bonus" element={<ReferralBonus />} />
+          
 
           <Route path="/services/portfolio" element={<Portfolio />} />
           <Route path="/blog" element={<Blog />} />
@@ -84,6 +94,7 @@ const App = () => (
           <Route path="/blog/local-seo-essentials-2026" element={<BlogArticle4 />} />
           <Route path="/blog/fs-expedited-llc-spotlight" element={<BlogArticle5 />} />
           <Route path="/blog/ai-development-stack-2026" element={<BlogArticle6 />} />
+          <Route path="/blog/trucking-industry-challenges-2026" element={<BlogArticle7 />} />
           
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />

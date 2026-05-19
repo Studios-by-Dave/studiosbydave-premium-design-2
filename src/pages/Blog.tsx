@@ -7,6 +7,15 @@ import { breadcrumbSchema } from "@/data/structuredData";
 
 const blogArticles = [
   {
+    id: 7,
+    slug: "trucking-industry-challenges-2026",
+    title: "The Road Gets Harder: What Today's Trucking Companies Are Up Against — And Why Their Work Has Never Mattered More",
+    subtitle: "Featured on Studios by Dave | Spotlighting F&S Expedited LLC",
+    date: "May 2026",
+    volume: "Vol #1 Article #7",
+    excerpt: "An honest look at the trucking industry's challenges and why companies like F&S Expedited LLC deserve your business. Fuel costs, regulations, and market pressures explained.",
+  },
+  {
     id: 6,
     slug: "ai-development-stack-2026",
     title: "My AI-Powered Web Development Stack (2026): Tools, Workflow, and Setup",

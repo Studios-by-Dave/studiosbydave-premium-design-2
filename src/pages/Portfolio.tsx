@@ -3,6 +3,7 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import InternalLinksFooter from "@/components/InternalLinks";
 import SimpleSEO from "@/components/SimpleSEO";
+import PixieDust from "@/components/PixieDust";
 import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { ChevronLeft, ChevronRight, X } from "lucide-react";
@@ -278,10 +279,8 @@ const Portfolio = () => {
           <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-primary/20 via-transparent to-transparent" />
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div className="text-center max-w-3xl mx-auto">
-              <span className="inline-block text-accent font-medium text-sm tracking-wide uppercase mb-4">
-                Our Work
-              </span>
-              <h1 className="text-5xl lg:text-6xl font-bold text-white mb-6">
+              <h1 className="relative text-6xl md:text-8xl font-bold text-white mb-6">
+                <PixieDust />
                 <span className="gradient-text bg-gradient-to-r from-accent to-white bg-clip-text text-transparent">
                   Portfolio
                 </span>
