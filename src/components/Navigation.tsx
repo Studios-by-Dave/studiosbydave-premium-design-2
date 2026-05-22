@@ -20,7 +20,7 @@ const Navigation = () => {
     path: "/contact"
   }];
   const services = [{
-    name: "Web Design",
+    name: "Web Development",
     path: "/services/web-design",
     description: "Professional responsive websites"
   }, {

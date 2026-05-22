@@ -14,6 +14,7 @@ import BlogArticle4 from "./pages/BlogArticle4";
 import BlogArticle5 from "./pages/BlogArticle5";
 import BlogArticle6 from "./pages/BlogArticle6";
 import BlogArticle7 from "./pages/BlogArticle7";
+import BlogArticle8 from "./pages/BlogArticle8";
 
 import WebDesign from "./pages/WebDesign";
 import Branding from "./pages/Branding";
@@ -95,6 +96,7 @@ const App = () => (
           <Route path="/blog/fs-expedited-llc-spotlight" element={<BlogArticle5 />} />
           <Route path="/blog/ai-development-stack-2026" element={<BlogArticle6 />} />
           <Route path="/blog/trucking-industry-challenges-2026" element={<BlogArticle7 />} />
+          <Route path="/blog/web-development-2026" element={<BlogArticle8 />} />
           
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
