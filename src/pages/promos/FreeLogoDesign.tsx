@@ -21,6 +21,28 @@ const FreeLogoDesign = () => {
         <section className="relative py-20" style={{ background: 'linear-gradient(135deg, hsl(218 49% 15%) 0%, hsl(218 49% 22%) 50%, hsl(218 49% 18%) 100%)' }}>
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <div className="relative inline-block">
+              {/* Pixie Dust Effect */}
+              <div className="absolute -top-8 -left-4 w-40 h-40 pointer-events-none">
+                {[...Array(18)].map((_, i) => (
+                  <div
+                    key={i}
+                    className="absolute w-1.5 h-1.5 rounded-full animate-dust-float"
+                    style={{
+                      left: `${Math.random() * 100}%`,
+                      top: `${Math.random() * 100}%`,
+                      background: i % 4 === 0 
+                        ? 'hsl(var(--trophy-gold))' 
+                        : i % 4 === 1 
+                        ? 'hsl(var(--accent) / 0.6)'
+                        : 'hsl(0, 0%, 30%)',
+                      animationDelay: `${i * 0.15}s`,
+                      animationDuration: `${2 + Math.random() * 2}s`,
+                      filter: 'blur(0.5px)',
+                      boxShadow: i % 4 === 0 ? '0 0 5px hsl(var(--trophy-gold))' : 'none'
+                    }}
+                  />
+                ))}
+              </div>
               <h1 className="text-4xl md:text-5xl lg:text-5xl font-bold text-white mb-6">
                 FREE <span className="text-accent">Logo Design</span>
               </h1>
@@ -33,6 +55,14 @@ const FreeLogoDesign = () => {
 
         {/* Promotion Details */}
         <section className="py-20 bg-background relative">
+          {/* Mascot Pointer */}
+          <div className="hidden lg:block absolute right-4 top-1/2 -translate-y-1/2 z-10 animate-bounce-slow">
+            <img
+              src="/assets/promos/logo-mascot-pointer.png"
+              alt="Mascot pointing to promotion"
+              className="w-64 h-64 object-contain drop-shadow-lg"
+            />
+          </div>
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 lg:pr-40">
             <Card className="border-2 border-blue-900/40 shadow-xl overflow-hidden">
               <div className="p-6 relative overflow-hidden" style={{ background: 'linear-gradient(135deg, #0f2a4a 0%, #1a3a5c 85%, #e2e8f0 100%)' }}>

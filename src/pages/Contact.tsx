@@ -238,7 +238,7 @@ const Contact = () => {
                       <Phone size={24} className="text-accent" />
                     </div>
                     <p className="text-white/80 text-base font-medium mb-1">Call Us — TEXT US!</p>
-                    <a href="tel:+17044738188" className="text-3xl lg:text-5xl font-bold transition-colors gradient-text bg-gradient-to-r from-accent via-white to-accent bg-[length:200%_auto] animate-text-shine bg-clip-text text-transparent block">
+                    <a href="tel:+17044738188" className="text-3xl lg:text-5xl font-bold transition-colors gradient-text bg-gradient-to-r from-trophy-gold via-white to-trophy-gold bg-[length:200%_auto] animate-text-shine bg-clip-text text-transparent block">
                       (704) 473-8188
                     </a>
                     <p className="text-trophy-gold font-bold text-base mt-2">Always Open. 24/7.</p>
@@ -253,7 +253,7 @@ const Contact = () => {
                       <Mail size={24} className="text-accent" />
                     </div>
                     <p className="text-white/80 text-base font-medium mb-1">Email Us</p>
-                    <a href="mailto:dx1creations25@gmail.com" className="text-xl lg:text-3xl font-bold transition-colors break-all block gradient-text bg-gradient-to-r from-accent via-white to-accent bg-[length:200%_auto] animate-text-shine bg-clip-text text-transparent">
+                    <a href="mailto:dx1creations25@gmail.com" className="text-xl lg:text-3xl font-bold transition-colors break-all block gradient-text bg-gradient-to-r from-trophy-gold via-white to-trophy-gold bg-[length:200%_auto] animate-text-shine bg-clip-text text-transparent">
                       dx1creations25@gmail.com
                     </a>
                     <p className="text-white/60 text-xs mt-2">We reply within 24 hours</p>
