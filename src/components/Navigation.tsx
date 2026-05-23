@@ -52,6 +52,10 @@ const Navigation = () => {
     name: "Referral Bonus",
     path: "/promos/referral-bonus",
     description: "Earn $100 per referral"
+  }, {
+    name: "Free SEO Audit",
+    path: "/promos/free-seo-audit",
+    description: "First 10 callers only"
   }];
   const isActive = (path: string) => location.pathname === path;
   const isServicesActive = () => location.pathname.startsWith('/services');

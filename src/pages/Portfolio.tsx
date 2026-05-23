@@ -275,7 +275,7 @@ const Portfolio = () => {
       
       <main>
         {/* Hero Section */}
-        <section className="relative py-16 md:py-24 bg-secondary overflow-hidden">
+        <section className="relative py-12 md:py-16 bg-secondary overflow-hidden">
           {/* Crown Molding Top */}
           <div
             className="absolute top-0 left-0 w-full h-8 z-10"

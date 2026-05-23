@@ -227,6 +227,95 @@ const Promos = () => {
           </div>
         </section>
 
+        {/* Free SEO Audit Section */}
+        <section className="py-20 bg-background relative">
+          {/* Mascot Pointer */}
+          <div className="hidden lg:block absolute right-4 top-1/2 -translate-y-1/2 z-10 animate-bounce-slow" style={{ animationDelay: '3s' }}>
+            <img
+              src="/assets/promos/logo-mascot-pointer.png"
+              alt="Mascot pointing to SEO audit promotion"
+              className="w-64 h-64 object-contain drop-shadow-lg"
+            />
+          </div>
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 lg:pr-40">
+            <Card className="border-2 border-blue-900/40 shadow-xl overflow-hidden">
+              <div className="p-6 relative overflow-hidden" style={{ background: 'linear-gradient(135deg, #0f2a4a 0%, #1a3a5c 85%, #e2e8f0 100%)' }}>
+                <div className="absolute inset-0 overflow-hidden">
+                  <div className="absolute -inset-full bg-gradient-to-r from-transparent via-white/30 to-transparent skew-x-12 animate-[shimmer_3s_infinite]" style={{ animationDelay: '2s' }} />
+                  <div className="absolute -inset-full bg-gradient-to-r from-transparent via-white/10 to-transparent skew-x-12 animate-[shimmer_3s_infinite]" style={{ animationDelay: '3.5s' }} />
+                </div>
+                <div className="flex items-center gap-4 relative z-10">
+                  <div className="bg-white/20 p-3 rounded-full">
+                    <Search className="h-8 w-8 text-white" />
+                  </div>
+                  <div>
+                    <h2 className="text-2xl md:text-3xl font-bold text-white">
+                      FREE Website SEO Audit
+                    </h2>
+                    <p className="text-white/90">First 10 Lucky Callers Only</p>
+                  </div>
+                </div>
+              </div>
+              <CardContent className="p-8">
+                <div className="grid md:grid-cols-2 gap-8">
+                  <div>
+                    <h3 className="text-xl font-semibold text-foreground mb-4">What You Get</h3>
+                    <p className="text-muted-foreground mb-6">
+                      Comprehensive SEO analysis of your website with actionable insights to improve your search engine rankings.
+                    </p>
+                    <div className="space-y-3">
+                      <div className="flex items-start gap-3">
+                        <CheckCircle className="h-5 w-5 text-primary mt-0.5" />
+                        <span className="text-foreground">Complete on-page SEO analysis</span>
+                      </div>
+                      <div className="flex items-start gap-3">
+                        <CheckCircle className="h-5 w-5 text-primary mt-0.5" />
+                        <span className="text-foreground">Technical SEO audit and recommendations</span>
+                      </div>
+                      <div className="flex items-start gap-3">
+                        <CheckCircle className="h-5 w-5 text-primary mt-0.5" />
+                        <span className="text-foreground">Local SEO optimization review</span>
+                      </div>
+                      <div className="flex items-start gap-3">
+                        <CheckCircle className="h-5 w-5 text-primary mt-0.5" />
+                        <span className="text-foreground">Competitor analysis and insights</span>
+                      </div>
+                      <div className="flex items-start gap-3">
+                        <CheckCircle className="h-5 w-5 text-primary mt-0.5" />
+                        <span className="text-foreground">Actionable improvement roadmap</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="bg-muted/50 rounded-lg p-6">
+                    <h3 className="text-xl font-semibold text-foreground mb-4">Our Simple Request</h3>
+                    <p className="text-muted-foreground mb-4">
+                      In exchange for this comprehensive SEO audit (valued at $297), we only ask that you leave us an honest review on our Google My Business page.
+                    </p>
+                    <div className="bg-trophy-gold/20 border border-trophy-gold/30 rounded-lg p-4">
+                      <div className="flex items-center gap-2 text-trophy-gold font-semibold mb-2">
+                        <Clock className="h-5 w-5" />
+                        <span>Limited Time Offer</span>
+                      </div>
+                      <p className="text-sm text-muted-foreground">
+                        Available to the first 10 lucky callers only. Act fast!
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="mt-8 text-center">
+                  <Link to="/promos/free-seo-audit">
+                    <Button variant="hero" size="lg" className="group">
+                      Learn More
+                      <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
+                    </Button>
+                  </Link>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+        </section>
+
         {/* Terms & Conditions Section */}
         <section className="py-12 bg-background border-t border-border">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">

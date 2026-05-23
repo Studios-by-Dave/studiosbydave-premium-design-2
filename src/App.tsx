@@ -25,6 +25,7 @@ import Promos from "./pages/Promos";
 import MediaPacks from "./pages/MediaPacks";
 import FreeLogoDesign from "./pages/promos/FreeLogoDesign";
 import ReferralBonus from "./pages/promos/ReferralBonus";
+import FreeSEOAudit from "./pages/promos/FreeSEOAudit";
 
 
 import Portfolio from "./pages/Portfolio";
@@ -85,6 +86,7 @@ const App = () => (
           {/* Individual promo pages */}
           <Route path="/promos/free-logo-design" element={<FreeLogoDesign />} />
           <Route path="/promos/referral-bonus" element={<ReferralBonus />} />
+          <Route path="/promos/free-seo-audit" element={<FreeSEOAudit />} />
           
 
           <Route path="/services/portfolio" element={<Portfolio />} />
