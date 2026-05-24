@@ -2,7 +2,7 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import SimpleSEO from "@/components/SimpleSEO";
 import { Link } from "react-router-dom";
-import { Search, CheckCircle, ArrowRight, Award, Clock, Target } from "lucide-react";
+import { Search, CheckCircle, ArrowRight, Award, Clock, Target, Badge } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
@@ -18,7 +18,7 @@ const FreeSEOAudit = () => {
       
       <main>
         {/* Hero Section */}
-        <section className="relative py-20" style={{ background: 'linear-gradient(135deg, hsl(218 49% 15%) 0%, hsl(218 49% 22%) 50%, hsl(218 49% 18%) 100%)' }}>
+        <section className="relative py-20" style={{ background: 'linear-gradient(135deg, hsl(218 70% 12%) 0%, hsl(218 70% 18%) 50%, hsl(218 70% 15%) 100%)' }}>
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <div className="relative inline-block">
               {/* Pixie Dust Effect */}
@@ -143,17 +143,18 @@ const FreeSEOAudit = () => {
                 </div>
 
                 {/* Exchange Requirement - Emphasized */}
-                <div className="mt-8 bg-gradient-to-r from-trophy-gold/30 to-trophy-gold/20 border-2 border-trophy-gold/50 rounded-lg p-8">
+                <div className="mt-8 bg-gradient-to-r from-white/30 to-white/20 border-2 border-white/50 rounded-lg p-8">
                   <div className="flex items-center gap-4 mb-4">
-                    <Target className="h-8 w-8 text-trophy-gold" />
+                    <Target className="h-8 w-8 text-foreground" />
                     <h3 className="text-2xl font-bold text-foreground">Our Simple Request</h3>
                   </div>
                   <p className="text-muted-foreground mb-4 text-lg">
                     In exchange for this comprehensive SEO audit (normally valued at $297), we simply ask for an honest review on our Google My Business page.
                   </p>
-                  <div className="bg-trophy-gold/10 border border-trophy-gold/30 rounded-lg p-4">
-                    <p className="text-foreground font-semibold text-center">
-                      🎁 FREE SEO Audit = One Honest Google Review
+                  <div className="bg-white/10 border border-white/30 rounded-lg p-4">
+                    <p className="text-foreground font-semibold text-center flex items-center justify-center gap-2">
+                      <Badge className="h-5 w-5" />
+                      FREE SEO Audit = One Honest Google Review
                     </p>
                   </div>
                   <p className="text-sm text-muted-foreground mt-4">
@@ -162,15 +163,15 @@ const FreeSEOAudit = () => {
                 </div>
 
                 {/* Limited Time Offer Banner */}
-                <div className="mt-6 bg-gradient-to-r from-accent/20 to-accent/10 border border-accent/30 rounded-lg p-6">
+                <div className="mt-6 bg-gradient-to-r from-white/20 to-white/10 border border-white/30 rounded-lg p-6">
                   <div className="flex items-center gap-4 mb-4">
-                    <Clock className="h-6 w-6 text-accent" />
+                    <Clock className="h-6 w-6 text-foreground" />
                     <h3 className="text-xl font-bold text-foreground">Limited Time Offer</h3>
                   </div>
                   <p className="text-muted-foreground mb-4">
                     This free SEO audit is available to the first 10 callers only. Once the spots are gone, the offer ends.
                   </p>
-                  <div className="flex items-center gap-2 text-accent font-semibold">
+                  <div className="flex items-center gap-2 text-foreground font-semibold">
                     <Award className="h-5 w-5" />
                     <span>Act fast — availability is extremely limited!</span>
                   </div>
