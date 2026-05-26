@@ -2,7 +2,7 @@ import studiosByDaveLogo from "@/assets/new-logo.png";
 import leadFerretMascot from "@/assets/lead-ferret-mascot.jpeg";
 
 const PromotionMarquee = () => {
-  return <div className="w-[95%] mx-auto bg-[linear-gradient(110deg,hsl(0_0%_75%)_0%,hsl(0_0%_90%)_25%,hsl(0_0%_95%)_50%,hsl(0_0%_90%)_75%,hsl(0_0%_75%)_100%)] py-2 overflow-hidden relative">
+  return <div className="w-full bg-[linear-gradient(110deg,hsl(0_0%_75%)_0%,hsl(0_0%_90%)_25%,hsl(0_0%_95%)_50%,hsl(0_0%_90%)_75%,hsl(0_0%_75%)_100%)] py-2 overflow-hidden relative">
       <div className="animate-[marquee_20s_linear_infinite]">
         <div className="flex items-center gap-24 whitespace-nowrap">
           {/* Repeat the content multiple times for seamless loop */}
