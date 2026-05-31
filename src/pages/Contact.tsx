@@ -90,7 +90,7 @@ const Contact = () => {
       "@type": "Organization",
       "name": "Studios by Dave",
       "telephone": "+1-704-473-8188",
-      "email": "dx1creations25@gmail.com",
+      "email": "david.richardson@studiosbydave.com",
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "125 S. Toney Street",
@@ -112,7 +112,7 @@ const Contact = () => {
       if (error) {
         const errorMessage = error.message?.includes("Too many requests") || error.message?.includes("429") ?
         "You've submitted too many requests. Please try again in an hour." :
-        "Failed to send message. Please try again or contact us directly at dx1creations25@gmail.com";
+        "Failed to send message. Please try again or contact us directly at david.richardson@studiosbydave.com";
 
         throw new Error(errorMessage);
       }
@@ -127,7 +127,7 @@ const Contact = () => {
     } catch (error: any) {
       toast({
         title: "Error",
-        description: error.message || "Failed to send message. Please try again or contact us directly at dx1creations25@gmail.com",
+        description: error.message || "Failed to send message. Please try again or contact us directly at david.richardson@studiosbydave.com",
         variant: "destructive",
         duration: 7000
       });
@@ -253,8 +253,8 @@ const Contact = () => {
                       <Mail size={24} className="text-accent" />
                     </div>
                     <p className="text-white/80 text-base font-medium mb-1">Email Us</p>
-                    <a href="mailto:dx1creations25@gmail.com" className="text-xl lg:text-3xl font-bold transition-colors break-all block gradient-text bg-gradient-to-r from-trophy-gold via-white to-trophy-gold bg-[length:200%_auto] animate-text-shine bg-clip-text text-transparent">
-                      dx1creations25@gmail.com
+                    <a href="mailto:david.richardson@studiosbydave.com" className="text-xl lg:text-3xl font-bold transition-colors break-all block gradient-text bg-gradient-to-r from-trophy-gold via-white to-trophy-gold bg-[length:200%_auto] animate-text-shine bg-clip-text text-transparent">
+                      david.richardson@studiosbydave.com
                     </a>
                     <p className="text-white/60 text-xs mt-2">We reply within 24 hours</p>
                   </div>

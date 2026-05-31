@@ -80,8 +80,11 @@ const App = () => (
           
           <Route path="/services/google-optimization" element={<GoogleOptimization />} />
           <Route path="/services/seo" element={<SEOPage />} />
-          <Route path="/services/promos" element={<Promos />} />
+          <Route path="/services/promos" element={<Navigate to="/promos" replace />} />
           <Route path="/services/media-packs" element={<MediaPacks />} />
+          
+          {/* Promos main page */}
+          <Route path="/promos" element={<Promos />} />
           
           {/* Individual promo pages */}
           <Route path="/promos/free-logo-design" element={<FreeLogoDesign />} />

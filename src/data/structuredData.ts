@@ -9,12 +9,12 @@ export const organizationSchema = {
   "logo": "https://www.studiosbydave.com/new-logo.png",
   "image": "https://www.studiosbydave.com/lovable-uploads/88912462-92f4-48cf-8aaf-c9507974f8ea-optimized.jpg",
   "telephone": "+1-704-473-8188",
-  "email": "dx1creations25@gmail.com",
+  "email": "david.richardson@studiosbydave.com",
   "contactPoint": {
     "@type": "ContactPoint",
     "telephone": "+1-704-473-8188",
     "contactType": "customer service",
-    "email": "dx1creations25@gmail.com",
+    "email": "david.richardson@studiosbydave.com",
     "availableLanguage": ["English"],
     "areaServed": "US",
     "contactOption": ["TollFree"],
@@ -132,7 +132,7 @@ export const localBusinessSchema = {
   "name": "Studios by Dave",
   "image": "https://www.studiosbydave.com/new-logo.png",
   "telephone": "+1-704-473-8188",
-  "email": "dx1creations25@gmail.com",
+  "email": "david.richardson@studiosbydave.com",
   "address": {
     "@type": "PostalAddress",
     "streetAddress": "125 S. Toney Street",
@@ -304,7 +304,7 @@ export const localServiceSchema = (serviceName: string, description: string, url
   "description": description,
   "url": url,
   "telephone": "+1-704-473-8188",
-  "email": "dx1creations25@gmail.com",
+  "email": "david.richardson@studiosbydave.com",
   "address": {
     "@type": "PostalAddress",
     "streetAddress": "125 S. Toney Street",
