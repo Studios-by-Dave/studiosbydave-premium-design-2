@@ -242,6 +242,28 @@ const WebDesign = () => {
             </div>
           </div>
 
+          {/* IDE Charts Section */}
+          <div className="grid md:grid-cols-2 gap-8 mb-12">
+            <div className="bg-card p-6 rounded-xl border border-border/50">
+              <img
+                src="/assets/sbd ide chart1.png"
+                alt="IDE Chart 1"
+                className="w-full h-auto rounded-lg"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+            <div className="bg-card p-6 rounded-xl border border-border/50">
+              <img
+                src="/assets/sbd ide chart2.png"
+                alt="IDE Chart 2"
+                className="w-full h-auto rounded-lg"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+          </div>
+
           {/* Related Blog Articles */}
           <div className="bg-background/50 p-8 rounded-xl border border-border/30">
             <h3 className="text-2xl font-bold mb-6 text-center">Helpful Resources</h3>
