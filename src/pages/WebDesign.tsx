@@ -243,21 +243,13 @@ const WebDesign = () => {
           </div>
 
           {/* IDE Charts Section */}
-          <div className="grid md:grid-cols-2 gap-8 mb-12">
-            <div className="bg-card p-6 rounded-xl border border-border/50">
+          <div className="mb-12">
+            <div className="bg-card p-6 rounded-xl border border-border/50 max-w-4xl mx-auto">
               <img
                 src="/assets/sbd ide chart1.png"
                 alt="IDE Chart 1"
                 className="w-full h-auto rounded-lg"
-                loading="lazy"
-                decoding="async"
-              />
-            </div>
-            <div className="bg-card p-6 rounded-xl border border-border/50">
-              <img
-                src="/assets/sbd ide chart2.png"
-                alt="IDE Chart 2"
-                className="w-full h-auto rounded-lg"
+                style={{ maxHeight: '1200px' }}
                 loading="lazy"
                 decoding="async"
               />
@@ -315,10 +307,11 @@ const WebDesign = () => {
           
           <div className="grid md:grid-cols-3 gap-8">
             {/* Launch Package */}
-            <Card className="border-2 border-border hover:border-primary/50 transition-colors">
+            <Card className="border-2 border-border hover:border-primary/50 transition-colors group">
               <CardHeader className="text-center pb-4">
-                <CardTitle className="text-2xl trophy-gold-text">Launch Package</CardTitle>
+                <CardTitle className="text-3xl trophy-gold-text group-hover:animate-wobble">Launch Package</CardTitle>
                 <CardDescription className="text-lg font-medium text-primary">1-5 Page Website</CardDescription>
+                <div className="text-3xl font-bold trophy-gold-text mt-2">$998-$1,498</div>
               </CardHeader>
               <CardContent className="space-y-4">
                 <ul className="space-y-3">
@@ -346,15 +339,16 @@ const WebDesign = () => {
             </Card>
 
             {/* Professional Package */}
-            <Card className="border-2 border-primary relative shadow-elegant">
+            <Card className="border-2 border-primary relative shadow-elegant group">
               <div className="absolute -top-4 left-1/2 -translate-x-1/2">
                 <span className="bg-primary text-primary-foreground px-4 py-1 rounded-full text-sm font-semibold">
                   Most Popular
                 </span>
               </div>
               <CardHeader className="text-center pb-4 pt-8">
-                <CardTitle className="text-2xl trophy-gold-text">Scale Package</CardTitle>
+                <CardTitle className="text-3xl trophy-gold-text group-hover:animate-wobble">Scale Package</CardTitle>
                 <CardDescription className="text-lg font-medium text-primary">6-10 Page Website</CardDescription>
+                <div className="text-3xl font-bold trophy-gold-text mt-2">$1,998-$2,998</div>
               </CardHeader>
               <CardContent className="space-y-4">
                 <ul className="space-y-3">
@@ -384,10 +378,11 @@ const WebDesign = () => {
             </Card>
 
             {/* Transform Package */}
-            <Card className="border-2 border-border hover:border-primary/50 transition-colors">
+            <Card className="border-2 border-border hover:border-primary/50 transition-colors group">
               <CardHeader className="text-center pb-4">
-                <CardTitle className="text-2xl trophy-gold-text">Transform Package</CardTitle>
+                <CardTitle className="text-3xl trophy-gold-text group-hover:animate-wobble">Transform Package</CardTitle>
                 <CardDescription className="text-lg font-medium text-primary">15+ Page Website</CardDescription>
+                <div className="text-3xl font-bold trophy-gold-text mt-2">Call for Custom Quote</div>
               </CardHeader>
               <CardContent className="space-y-4">
                 <ul className="space-y-3">

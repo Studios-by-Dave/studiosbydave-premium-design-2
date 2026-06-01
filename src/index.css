@@ -379,6 +379,23 @@
     animation: dust-float-right 3s ease-out infinite;
   }
 
+  /* Wobble animation for package headers */
+  @keyframes wobble {
+    0%, 100% {
+      transform: rotate(0deg);
+    }
+    25% {
+      transform: rotate(-3deg);
+    }
+    75% {
+      transform: rotate(3deg);
+    }
+  }
+
+  .animate-wobble {
+    animation: wobble 0.5s ease-in-out;
+  }
+
   /* Hero spacecraft slow spin */
   @keyframes spacecraft-hover {
     0% {
