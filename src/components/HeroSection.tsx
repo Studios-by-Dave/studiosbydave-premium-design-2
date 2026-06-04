@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight, CheckCircle, Star } from "lucide-react";
+import { ArrowRight, CheckCircle, Star, Phone } from "lucide-react";
 import { Link } from "react-router-dom";
 import heroImage from "@/assets/hero-image.jpg";
 import robotBg from "@/assets/robot-construction-bg.jpg";
@@ -33,7 +33,10 @@ const HeroSection = () => {
           }} />)}
           </div>
           <div className="text-center">
-            <p className="text-white/80 font-medium mb-1 text-base">                                    CALL US - TEXT US!          </p>
+            <p className="text-white/80 font-medium mb-1 text-base flex items-center justify-center gap-2">
+              <Phone className="text-green-500 w-4 h-4" />
+              CALL US - TEXT US!
+            </p>
             <a href="tel:+17044738188" className="font-bold transition-colors duration-300 text-amber-200 text-3xl relative">
               <span className="bg-gradient-to-r from-amber-200 via-amber-100 to-amber-200 bg-[length:200%_auto] animate-text-shine bg-clip-text text-transparent">
                 (704) 473-8188
@@ -51,9 +54,9 @@ const HeroSection = () => {
           {/* Left Column - Content */}
           <div className="space-y-8">
             {/* Trust Badge */}
-            <div className="flex items-center space-x-2 text-white/90 opacity-30">
+            <div className="flex items-center space-x-2 text-amber-300 opacity-30">
               <div className="flex items-center space-x-1">
-                {[...Array(5)].map((_, i) => <Star key={i} size={16} className="fill-accent text-accent" />)}
+                {[...Array(5)].map((_, i) => <Star key={i} size={16} className="fill-amber-300 text-amber-300" />)}
               </div>
               <span className="text-sm font-medium">Trusted by 100+ Local Businesses</span>
             </div>
@@ -73,10 +76,10 @@ const HeroSection = () => {
                   boxShadow: i % 4 === 0 ? '0 0 5px hsl(var(--trophy-gold))' : 'none'
                 }} />)}
                 </div>
-                <h1 className="font-bold chrome-text leading-tight lg:text-5xl drop-shadow-lg text-7xl">
+                <h1 className="font-bold chrome-text leading-tight lg:text-7xl drop-shadow-lg text-4xl">
                   We Don't Just Build Your <span className="cobalt-glow-text text-sidebar-ring">Website</span> or <span className="cobalt-glow-text">App</span>.
                 </h1>
-                <p className="leading-tight lg:text-2xl font-medium mt-3 text-[#dfe2f6] text-xl">
+                <p className="leading-tight lg:text-2xl font-medium mt-3 text-[#dfe2f6] text-xl italic">
                   We build the online engine that gets your business found, trusted, and hired!
                 </p>
               </div>
@@ -85,7 +88,7 @@ const HeroSection = () => {
             {/* Key Benefits */}
             <div className="space-y-4">
               {["Custom websites that convert visitors into customers", "SEO optimization to dominate local search results", "Quality custom digital assets tailored to your business"].map((benefit, index) => <div key={index} className="flex items-center space-x-3 text-white/90">
-                  <CheckCircle size={20} className="text-accent flex-shrink-0" />
+                  <CheckCircle size={20} className="text-green-500 flex-shrink-0" />
                   <span className="font-medium">{benefit}</span>
                 </div>)}
             </div>
@@ -109,7 +112,7 @@ const HeroSection = () => {
 
             {/* DaveBot Chat Widget Promotion */}
             <div className="pt-2">
-              <p className="text-white/90 text-lg lg:text-xl text-center animate-pulse font-medium">
+              <p className="text-[hsl(var(--trophy-gold))] text-lg lg:text-xl text-center animate-pulse font-medium">
                 💬 Try our DaveBot chat widget! Click the blue bubble in the bottom-right corner to get instant help!
               </p>
             </div>
