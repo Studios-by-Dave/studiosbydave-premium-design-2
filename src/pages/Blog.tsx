@@ -89,8 +89,8 @@ const Blog = () => {
   return (
     <div className="min-h-screen bg-[#f5f5f0]">
       <SimpleSEO
-        title="The Studio's Chronicle | Digital Marketing Blog for Contractors"
-        description="Expert insights, tips, and industry news from Studios by Dave. Web design, branding, SEO, and digital marketing content for contractors and local businesses in Shelby, NC."
+        title="The Studio's Chronicle | Local Business Tips & Insights 2026"
+        description="Insights, tips, and stories for local business success — web design, SEO, branding, and digital marketing advice from Studios by Dave in Shelby, NC."
         keywords="contractor blog, web design tips, SEO insights, digital marketing news, branding advice, Shelby NC, contractor marketing, local business blog"
         canonical="https://www.studiosbydave.com/blog"
         structuredData={[breadcrumbs]}
