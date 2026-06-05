@@ -451,6 +451,22 @@
       transform: translateX(200%) skewX(-12deg);
     }
   }
+
+  /* Color Flash Animation for Button Text */
+  @keyframes color-flash {
+    0%, 100% {
+      color: #FFFF00; /* Bright Yellow */
+      text-shadow: 0 0 10px rgba(255, 255, 0, 0.8);
+    }
+    50% {
+      color: #0066FF; /* Bright Blue */
+      text-shadow: 0 0 10px rgba(0, 102, 255, 0.8);
+    }
+  }
+
+  .animate-color-flash {
+    animation: color-flash 0.6s ease-in-out infinite;
+  }
 }
 
 @keyframes marquee {
