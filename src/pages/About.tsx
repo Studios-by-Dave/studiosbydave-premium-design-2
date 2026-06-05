@@ -12,6 +12,7 @@ import aiBackdrop from "@/assets/ai-backdrop.jpeg";
 import googleBackdrop from "@/assets/google-backdrop.jpeg";
 import daveMascotHappier from "@/assets/dave-mascot-happier.png";
 import daveMascotPlanting from "@/assets/dave-mascot-planting.png";
+import contractorInnovation from "@/assets/contractor-innovation.jpg";
 
 const About = () => {
   const breadcrumbs = breadcrumbSchema([
@@ -246,8 +247,8 @@ const About = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div className="order-2 lg:order-1">
-              <img 
-                src={daveMascotHappier} 
+              <img
+                src={daveMascotHappier}
                 alt="Dave and the Studios by Dave mascot asking how to make clients happier today"
                 className="w-full max-w-lg mx-auto rounded-2xl shadow-lg"
                 loading="lazy"
@@ -264,10 +265,27 @@ const About = () => {
                 Every day, we wake up asking ourselves one simple question: "How can we make our clients more money today?"
               </p>
               <p className="text-lg text-muted-foreground">
-                This isn't just a catchy phrase - Your success is our success, 
+                This isn't just a catchy phrase - Your success is our success,
                 and we're committed to delivering results that directly impact your bottom line.
               </p>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Contractor Innovation Image */}
+      <section className="py-12 bg-background">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex justify-center">
+            <img
+              src={contractorInnovation}
+              alt="Contractor innovation and digital transformation"
+              className="w-full max-w-4xl rounded-2xl shadow-lg"
+              loading="lazy"
+              decoding="async"
+              width="1200"
+              height="600"
+            />
           </div>
         </div>
       </section>
