@@ -277,15 +277,18 @@ const About = () => {
       <section className="py-12 bg-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-center">
-            <img
-              src={contractorInnovation}
-              alt="Contractor innovation and digital transformation"
-              className="w-full max-w-4xl rounded-2xl shadow-lg"
-              loading="lazy"
-              decoding="async"
-              width="1200"
-              height="600"
-            />
+            <div className="relative w-full max-w-4xl">
+              <img
+                src={contractorInnovation}
+                alt="Contractor innovation and digital transformation"
+                className="w-full rounded-full shadow-lg"
+                loading="lazy"
+                decoding="async"
+                width="1200"
+                height="600"
+                style={{ maskImage: 'radial-gradient(circle, black 60%, transparent 100%)', WebkitMaskImage: 'radial-gradient(circle, black 60%, transparent 100%)' }}
+              />
+            </div>
           </div>
         </div>
       </section>
