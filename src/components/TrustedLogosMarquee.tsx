@@ -44,7 +44,7 @@ const TrustedLogosMarquee = () => {
               <img
                 src={logo.src}
                 alt={logo.alt}
-                className="max-h-full max-w-full object-contain"
+                className="max-h-full max-w-full object-contain grayscale hover:grayscale-0 transition-all duration-300"
                 width="208"
                 height="96"
                 loading="lazy"

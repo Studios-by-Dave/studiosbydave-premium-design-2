@@ -97,7 +97,29 @@ const Blog = () => {
       />
       <Navigation />
       
-      <main className="py-12 md:py-20">
+      <main className="py-12 md:py-20 relative">
+        {/* Corner Images */}
+        <img
+          src="/assets/blog1.jpeg"
+          alt="Blog decoration"
+          className="absolute top-4 left-4 w-20 h-20 md:w-32 md:h-32 object-cover rounded-lg opacity-60"
+        />
+        <img
+          src="/assets/blog3.jpeg"
+          alt="Blog decoration"
+          className="absolute top-4 right-4 w-20 h-20 md:w-32 md:h-32 object-cover rounded-lg opacity-60"
+        />
+        <img
+          src="/assets/blog2.jpeg"
+          alt="Blog decoration"
+          className="absolute bottom-4 left-4 w-20 h-20 md:w-32 md:h-32 object-cover rounded-lg opacity-60"
+        />
+        <img
+          src="/assets/blog4.jpeg"
+          alt="Blog decoration"
+          className="absolute bottom-4 right-4 w-20 h-20 md:w-32 md:h-32 object-cover rounded-lg opacity-60"
+        />
+
         <div className="container mx-auto px-4 max-w-5xl">
           {/* Newspaper Masthead */}
           <header className="text-center mb-12 border-b-4 border-double border-neutral-900 pb-8">

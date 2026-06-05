@@ -19,6 +19,44 @@ const WebDesign = () => {
     { name: "Web Design", url: "https://www.studiosbydave.com/services/web-design" }
   ]);
 
+  const calculateROI = (investment: number, avgCustomerValue: number) => {
+    const paybackPeriodEl = document.getElementById('paybackPeriod') as HTMLElement;
+    const roiPercentageEl = document.getElementById('roiPercentage') as HTMLElement;
+    const roiAmountEl = document.getElementById('roiAmount') as HTMLElement;
+
+    if (investment <= 0 || avgCustomerValue <= 0) {
+      if (paybackPeriodEl) paybackPeriodEl.textContent = 'Enter values to calculate';
+      if (roiPercentageEl) roiPercentageEl.textContent = 'Enter values to calculate';
+      if (roiAmountEl) roiAmountEl.textContent = 'Enter values to calculate';
+      return;
+    }
+
+    // Simple calculation assuming website generates 5 new customers per year
+    const customersPerYear = 5;
+    const annualRevenue = avgCustomerValue * customersPerYear;
+    const roiAmount = annualRevenue - investment;
+    const roiPercentage = (roiAmount / investment) * 100;
+    const paybackPeriod = investment / (annualRevenue / 12);
+
+    if (paybackPeriodEl) {
+      if (paybackPeriod <= 0) {
+        paybackPeriodEl.textContent = 'Immediate';
+      } else if (paybackPeriod < 1) {
+        paybackPeriodEl.textContent = `${Math.round(paybackPeriod * 30)} days`;
+      } else {
+        paybackPeriodEl.textContent = `${Math.round(paybackPeriod)} months`;
+      }
+    }
+
+    if (roiPercentageEl) {
+      roiPercentageEl.textContent = `${roiPercentage.toFixed(1)}%`;
+    }
+
+    if (roiAmountEl) {
+      roiAmountEl.textContent = `$${roiAmount.toLocaleString()}`;
+    }
+  };
+
   const webDesignSchema = serviceSchema(
     "Professional Web Design for Contractors",
     "Custom responsive websites designed specifically for roofing contractors, landscaping companies, and solar panel installers with mobile-first design and SEO optimization.",
@@ -411,6 +449,95 @@ const WebDesign = () => {
               </CardContent>
             </Card>
           </div>
+        </div>
+      </section>
+
+      {/* ROI Calculator Section */}
+      <section className="py-16 bg-muted/30">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="crazy-gradient-text text-3xl font-bold mb-4">ROI Calculator</h2>
+            <p className="text-lg text-muted-foreground">
+              Estimate your return on investment with a new website
+            </p>
+          </div>
+
+          <Card className="border-2 border-primary shadow-elegant">
+            <CardContent className="p-8">
+              <div className="grid md:grid-cols-2 gap-8">
+                {/* Inputs */}
+                <div className="space-y-6">
+                  <div>
+                    <label className="block text-sm font-medium text-red-500 mb-2">
+                      Investment Amount ($)
+                    </label>
+                    <input
+                      type="number"
+                      id="investment"
+                      className="w-full px-4 py-3 border-2 border-border rounded-lg focus:outline-none focus:border-primary transition-colors"
+                      placeholder="Enter investment amount"
+                      min="0"
+                      step="100"
+                      onChange={(e) => {
+                        const investment = parseFloat(e.target.value) || 0;
+                        const avgCustomer = parseFloat((document.getElementById('avgCustomer') as HTMLInputElement).value) || 0;
+                        calculateROI(investment, avgCustomer);
+                      }}
+                    />
+                  </div>
+
+                  <div>
+                    <label className="block text-sm font-medium text-red-500 mb-2">
+                      Average Customer Value ($)
+                    </label>
+                    <input
+                      type="number"
+                      id="avgCustomer"
+                      className="w-full px-4 py-3 border-2 border-border rounded-lg focus:outline-none focus:border-primary transition-colors"
+                      placeholder="Enter average customer value"
+                      min="0"
+                      step="10"
+                      onChange={(e) => {
+                        const avgCustomer = parseFloat(e.target.value) || 0;
+                        const investment = parseFloat((document.getElementById('investment') as HTMLInputElement).value) || 0;
+                        calculateROI(investment, avgCustomer);
+                      }}
+                    />
+                  </div>
+                </div>
+
+                {/* Outputs */}
+                <div className="space-y-6 bg-primary/5 rounded-lg p-6">
+                  <div>
+                    <label className="block text-sm font-medium text-muted-foreground mb-2">
+                      Payback Period
+                    </label>
+                    <div id="paybackPeriod" className="text-2xl font-bold text-green-500">
+                      Enter values to calculate
+                    </div>
+                  </div>
+
+                  <div>
+                    <label className="block text-sm font-medium text-muted-foreground mb-2">
+                      ROI Percentage
+                    </label>
+                    <div id="roiPercentage" className="text-2xl font-bold text-green-500">
+                      Enter values to calculate
+                    </div>
+                  </div>
+
+                  <div>
+                    <label className="block text-sm font-medium text-muted-foreground mb-2">
+                      ROI Approximate Amount
+                    </label>
+                    <div id="roiAmount" className="text-2xl font-bold text-green-500">
+                      Enter values to calculate
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
         </div>
       </section>
 
