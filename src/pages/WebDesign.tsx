@@ -156,7 +156,7 @@ const WebDesign = () => {
                     <ul className="space-y-3">
                       {feature.features.map((item, idx) => (
                         <li key={idx} className="flex items-center text-foreground/80">
-                          <CheckCircle size={16} className="text-accent mr-3 flex-shrink-0" />
+                          <CheckCircle size={16} className="text-green-500 mr-3 flex-shrink-0" />
                           <span className="font-medium">{item}</span>
                         </li>
                       ))}
@@ -311,7 +311,7 @@ const WebDesign = () => {
               <CardHeader className="text-center pb-4">
                 <CardTitle className="text-3xl trophy-gold-text group-hover:animate-wobble">Launch Package</CardTitle>
                 <CardDescription className="text-lg font-medium text-primary">1-5 Page Website</CardDescription>
-                <div className="text-3xl font-bold trophy-gold-text mt-2">$998-$1,498</div>
+                <div className="text-3xl font-bold trophy-gold-text mt-2">Contact for Quote</div>
               </CardHeader>
               <CardContent className="space-y-4">
                 <ul className="space-y-3">
@@ -325,7 +325,7 @@ const WebDesign = () => {
                     "Estimated delivery: 4-6 weeks"
                   ].map((feature, index) => (
                     <li key={index} className="flex items-start gap-3">
-                      <CheckCircle className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
+                      <CheckCircle className="h-5 w-5 text-green-500 mt-0.5 flex-shrink-0" />
                       <span className="text-muted-foreground">{feature}</span>
                     </li>
                   ))}
@@ -348,7 +348,7 @@ const WebDesign = () => {
               <CardHeader className="text-center pb-4 pt-8">
                 <CardTitle className="text-3xl trophy-gold-text group-hover:animate-wobble">Scale Package</CardTitle>
                 <CardDescription className="text-lg font-medium text-primary">6-10 Page Website</CardDescription>
-                <div className="text-3xl font-bold trophy-gold-text mt-2">$1,998-$2,998</div>
+                <div className="text-3xl font-bold trophy-gold-text mt-2">Contact for Quote</div>
               </CardHeader>
               <CardContent className="space-y-4">
                 <ul className="space-y-3">
@@ -364,7 +364,7 @@ const WebDesign = () => {
                     "Estimated delivery: 4-6 weeks"
                   ].map((feature, index) => (
                     <li key={index} className="flex items-start gap-3">
-                      <CheckCircle className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
+                      <CheckCircle className="h-5 w-5 text-green-500 mt-0.5 flex-shrink-0" />
                       <span className="text-muted-foreground">{feature}</span>
                     </li>
                   ))}
@@ -398,7 +398,7 @@ const WebDesign = () => {
                     "Estimated delivery: 5-8 weeks"
                   ].map((feature, index) => (
                     <li key={index} className="flex items-start gap-3">
-                      <CheckCircle className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
+                      <CheckCircle className="h-5 w-5 text-green-500 mt-0.5 flex-shrink-0" />
                       <span className="text-muted-foreground">{feature}</span>
                     </li>
                   ))}
