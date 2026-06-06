@@ -67,7 +67,7 @@ export const organizationSchema = {
   "aggregateRating": {
     "@type": "AggregateRating",
     "ratingValue": "5.0",
-    "reviewCount": "50",
+    "reviewCount": "2",
     "bestRating": "5",
     "worstRating": "1"
   }
@@ -152,7 +152,7 @@ export const localBusinessSchema = {
   "aggregateRating": {
     "@type": "AggregateRating",
     "ratingValue": "5.0",
-    "reviewCount": "50"
+    "reviewCount": "2"
   }
 };
 
@@ -370,3 +370,150 @@ export const reviewSchema = (reviewText: string, rating: number, author: string,
     "name": "Studios by Dave"
   }
 });
+
+export const webDesignFAQSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is included in the Starter Web Package?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The Starter Web Package includes 1-3 pages, mobile responsive design, contact form, basic SEO setup, and a 7-day turnaround. Domain and hosting are purchased separately, and no maintenance is included with 1 revision round."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What's the difference between the Business and Scale Web Packages?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The Business Web Package ($998) includes up to 5 pages, custom branding, lead capture forms, Google Business Profile integration, and basic on-page SEO. The Scale Web Package ($1,998) includes up to 10 pages, conversion-focused design, advanced forms, CRM integration, local SEO setup, and an analytics dashboard."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How long does it take to build a website?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The Starter Web Package has a 7-day turnaround. Other packages typically take 2-4 weeks depending on complexity and requirements. We work closely with you throughout the process to ensure timely delivery."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you provide domain and hosting?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Domain and hosting are purchased separately by you. We provide guidance on recommended hosting providers and help you set everything up. This ensures you have full ownership and control of your website assets."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the Ultra Premium Web Package?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The Ultra Premium Web Package is our custom solution for businesses needing a complete digital presence. It includes fully custom design, advanced integrations, memberships or booking functionality, multi-location support, conversion optimization, and dedicated support. Contact us for a custom quote tailored to your specific needs."
+      }
+    }
+  ]
+};
+
+export const webPackageOfferSchema = [
+  {
+    "@context": "https://schema.org",
+    "@type": "Offer",
+    "name": "Starter Web Package",
+    "description": "1-3 pages, mobile responsive, contact form, basic SEO setup, 7-day turnaround",
+    "price": "499",
+    "priceCurrency": "USD",
+    "availability": "https://schema.org/InStock",
+    "seller": {
+      "@type": "Organization",
+      "name": "Studios by Dave",
+      "url": "https://www.studiosbydave.com"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Offer",
+    "name": "Business Web Package",
+    "description": "Up to 5 pages, custom branding, lead capture forms, Google Business Profile integration, basic on-page SEO",
+    "price": "998",
+    "priceCurrency": "USD",
+    "availability": "https://schema.org/InStock",
+    "seller": {
+      "@type": "Organization",
+      "name": "Studios by Dave",
+      "url": "https://www.studiosbydave.com"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Offer",
+    "name": "Scale Web Package",
+    "description": "Up to 10 pages, conversion-focused design, advanced forms, CRM integration, local SEO setup, analytics dashboard",
+    "price": "1998",
+    "priceCurrency": "USD",
+    "availability": "https://schema.org/InStock",
+    "seller": {
+      "@type": "Organization",
+      "name": "Studios by Dave",
+      "url": "https://www.studiosbydave.com"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Offer",
+    "name": "Ultra Premium Web Package",
+    "description": "Fully custom design, advanced integrations, memberships/booking functionality, multi-location support, conversion optimization",
+    "availability": "https://schema.org/InStock",
+    "seller": {
+      "@type": "Organization",
+      "name": "Studios by Dave",
+      "url": "https://www.studiosbydave.com"
+    }
+  }
+];
+
+export const googleReviewsSchema = [
+  {
+    "@context": "https://schema.org",
+    "@type": "Review",
+    "reviewRating": {
+      "@type": "Rating",
+      "ratingValue": "5",
+      "bestRating": "5"
+    },
+    "author": {
+      "@type": "Person",
+      "name": "Paul Richardson"
+    },
+    "reviewBody": "Dave really presented /uncovered opportunities that we wouldn't have ever known otherwise. And now our website is really generating our online business beautifully! Thanks again Dave! 😃",
+    "datePublished": "2025-11-15",
+    "itemReviewed": {
+      "@type": "Organization",
+      "name": "Studios by Dave",
+      "url": "https://www.studiosbydave.com"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Review",
+    "reviewRating": {
+      "@type": "Rating",
+      "ratingValue": "5",
+      "bestRating": "5"
+    },
+    "author": {
+      "@type": "Person",
+      "name": "Ryan \"Kris\" Jones"
+    },
+    "reviewBody": "Studios by Dave really knocked it out of the park. Our online presence is not only fully present, its generating our business so many leads now! Thank You!!!",
+    "datePublished": "2025-11-15",
+    "itemReviewed": {
+      "@type": "Organization",
+      "name": "Studios by Dave",
+      "url": "https://www.studiosbydave.com"
+    }
+  }
+];

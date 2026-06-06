@@ -11,7 +11,7 @@ const Promos = () => {
     <div className="min-h-screen bg-background">
       <SimpleSEO
         title="Current Promotions | Studios by Dave - Free Logo Design & Referral Bonus"
-        description="Take advantage of our current promotions: FREE Logo Design with any Web Pack purchase and Unlimited $100 Referral Bonuses. Limited time offers for contractors and local businesses."
+        description="Take advantage of our current promotions: FREE Logo Design with any Web Package purchase and Unlimited $100 Referral Bonuses. Limited time offers for contractors and local businesses."
         keywords="free logo design, referral bonus, web design promotion, contractor website deals, studios by dave promotions"
       />
       <Navigation />
@@ -80,7 +80,7 @@ const Promos = () => {
                     <h2 className="text-2xl md:text-3xl font-bold text-white hover:text-accent transition-colors">
                       FREE Logo Design
                     </h2>
-                    <p className="text-white/90">With Any Web Pack Purchase</p>
+                    <p className="text-white/90">With Any Web Package Purchase</p>
                   </Link>
                 </div>
               </div>

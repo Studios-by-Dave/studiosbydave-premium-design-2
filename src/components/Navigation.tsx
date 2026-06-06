@@ -20,7 +20,7 @@ const Navigation = () => {
     path: "/contact"
   }];
   const services = [{
-    name: "Web Development",
+    name: "Web Design",
     path: "/services/web-design",
     description: "Professional responsive websites"
   }, {
@@ -47,7 +47,7 @@ const Navigation = () => {
   const promos = [{
     name: "Free Logo Design",
     path: "/promos/free-logo-design",
-    description: "FREE logo with web pack purchase"
+    description: "FREE logo with web package purchase"
   }, {
     name: "Referral Bonus",
     path: "/promos/referral-bonus",
@@ -71,13 +71,13 @@ const Navigation = () => {
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-8">
-            <Link to="/" className={`text-sm font-black transition-colors hover:text-primary ${isActive('/') ? "text-primary border-b-2 border-primary pb-1" : "text-foreground"}`}>
+            <Link to="/" className={`text-sm font-black transition-colors hover:text-primary hover:animate-trophy-gold-flash border-b-2 border-transparent pb-1 ${isActive('/') ? "text-primary border-primary" : "text-foreground"}`}>
               Home
             </Link>
             
             {/* Services Collapsible */}
             <div className="relative">
-              <button onClick={() => setServicesOpen(!servicesOpen)} className={`text-sm font-black transition-colors hover:text-primary flex items-center space-x-1 ${isServicesActive() ? "text-primary border-b-2 border-primary pb-1" : "text-foreground"}`}>
+              <button onClick={() => setServicesOpen(!servicesOpen)} className={`text-sm font-black transition-colors hover:text-primary hover:animate-trophy-gold-flash flex items-center space-x-1 border-b-2 border-transparent pb-1 ${isServicesActive() ? "text-primary border-primary" : "text-foreground"}`}>
                 <span>Services</span>
                 <ChevronDown className={`h-4 w-4 transition-transform duration-300 ${servicesOpen ? 'rotate-180' : ''}`} />
               </button>
@@ -94,13 +94,13 @@ const Navigation = () => {
               </div>
             </div>
 
-            <Link to="/about" className={`text-sm font-black transition-colors hover:text-primary ${isActive('/about') ? "text-primary border-b-2 border-primary pb-1" : "text-foreground"}`}>
+            <Link to="/about" className={`text-sm font-black transition-colors hover:text-primary hover:animate-trophy-gold-flash border-b-2 border-transparent pb-1 ${isActive('/about') ? "text-primary border-primary" : "text-foreground"}`}>
               About Us
             </Link>
 
             {/* Promos Collapsible */}
             <div className="relative">
-              <button onClick={() => setPromosOpen(!promosOpen)} className={`text-sm font-black transition-colors hover:text-primary flex items-center space-x-1 ${location.pathname.startsWith('/promos') ? "text-primary border-b-2 border-primary pb-1" : "text-foreground"}`}>
+              <button onClick={() => setPromosOpen(!promosOpen)} className={`text-sm font-black transition-colors hover:text-primary hover:animate-trophy-gold-flash flex items-center space-x-1 border-b-2 border-transparent pb-1 ${location.pathname.startsWith('/promos') ? "text-primary border-primary" : "text-foreground"}`}>
                 <span>Promos</span>
                 <ChevronDown className={`h-4 w-4 transition-transform duration-300 ${promosOpen ? 'rotate-180' : ''}`} />
               </button>
@@ -117,12 +117,12 @@ const Navigation = () => {
               </div>
             </div>
 
-            <Link to="/contact" className={`text-sm font-black transition-colors hover:text-primary ${isActive('/contact') ? "text-primary border-b-2 border-primary pb-1" : "text-foreground"}`}>
+            <Link to="/contact" className={`text-sm font-black transition-colors hover:text-primary hover:animate-trophy-gold-flash border-b-2 border-transparent pb-1 ${isActive('/contact') ? "text-primary border-primary" : "text-foreground"}`}>
               Contact
             </Link>
 
             {/* Blog */}
-            <Link to="/blog" className={`font-poofy text-base transition-all hover:scale-105 ${isActive('/blog') ? "border-b-2 border-primary pb-1" : ""}`}>
+            <Link to="/blog" className={`font-poofy text-sm md:text-base transition-all hover:scale-105 hover:animate-trophy-gold-flash border-b-2 border-transparent pb-1 ${isActive('/blog') ? "border-primary" : ""}`}>
               <span className="bg-gradient-to-r from-purple-500 via-violet-400 to-purple-600 bg-clip-text bg-[length:200%_auto] animate-shimmer drop-shadow-[0_0_8px_rgba(139,92,246,0.4)] text-blue-700">
                 Blog
               </span>

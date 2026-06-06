@@ -3,10 +3,10 @@ import Footer from "@/components/Footer";
 import PixieDust from "@/components/PixieDust";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { CheckCircle, ArrowRight, Globe, Smartphone, Zap, Search } from "lucide-react";
+import { CheckCircle, ArrowRight, Globe, Smartphone, Zap, Search, Star } from "lucide-react";
 import { Link } from "react-router-dom";
 import SimpleSEO from "@/components/SimpleSEO";
-import { breadcrumbSchema, serviceSchema, localServiceSchema } from "@/data/structuredData";
+import { breadcrumbSchema, serviceSchema, localServiceSchema, webDesignFAQSchema, webPackageOfferSchema, googleReviewsSchema } from "@/data/structuredData";
 import webDesignBackdrop from "@/assets/web-design-backdrop.png";
 import brandingBackdrop from "@/assets/branding-backdrop.jpeg";
 import googleBackdrop from "@/assets/google-backdrop.jpeg";
@@ -75,7 +75,7 @@ const WebDesign = () => {
         title="Professional Web Design for Contractors - Mobile-Responsive Websites"
         description="Custom web design for roofing contractors, landscaping companies, and solar installers. Mobile-first responsive websites that convert visitors into customers. Get your free quote today."
         keywords="contractor web design, roofing contractor websites, landscaping web design, solar installer websites, mobile responsive design, lead generation websites, professional web development"
-        structuredData={[breadcrumbs, webDesignSchema, localWebDesignSchema]}
+        structuredData={[breadcrumbs, webDesignSchema, localWebDesignSchema, webDesignFAQSchema, ...webPackageOfferSchema, ...googleReviewsSchema]}
       />
       <Navigation />
       
@@ -130,6 +130,14 @@ const WebDesign = () => {
       {/* Features Section */}
       <section className="py-24 bg-gradient-subtle" itemScope itemType="https://schema.org/ItemList">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <p className="text-lg text-muted-foreground max-w-4xl mx-auto mb-12 leading-relaxed text-center">
+            At Studios by Dave, we understand that building a website for your business can feel like an overwhelming task. 
+            The technical details, the design decisions, the endless options—it's a lot to consider. That's exactly why we're here. 
+            We're with you every step of the way, keeping you informed, updated, and confident throughout the entire process. 
+            Because we don't just sell you a website, and we don't just build one. Our real job is to fulfill the purpose behind your online presence—
+            whether that means generating more phone calls, securing more bookings, or attracting more customers to your business. 
+            That's what we're here for, and at Studios by Dave, we don't rest until you're completely happy with the results!
+          </p>
           <h2 className="text-4xl font-bold text-center text-foreground mb-16" itemProp="name">
             Everything Your Business Website Needs
           </h2>
@@ -203,6 +211,193 @@ const WebDesign = () => {
                 </Card>
               );
             })}
+          </div>
+        </div>
+      </section>
+
+      {/* Pricing Section */}
+      <section className="py-24 bg-background" itemScope itemType="https://schema.org/ItemList">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-4xl font-bold text-center text-foreground mb-4" itemProp="name">
+            Web Design Packages
+          </h2>
+          <p className="text-xl text-muted-foreground text-center max-w-2xl mx-auto mb-16">
+            Choose the perfect package for your business needs
+          </p>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {/* Starter Web Package */}
+            <Card className="border-2 border-border hover:border-primary/50 transition-all duration-300 group relative bg-gradient-to-br from-white to-gray-50 shadow-[0_4px_6px_-1px_rgba(0,0,0,0.1),0_2px_4px_-1px_rgba(0,0,0,0.06),0_8px_16px_-4px_rgba(0,0,0,0.15)] hover:shadow-[0_8px_12px_-1px_rgba(0,0,0,0.15),0_4px_6px_-1px_rgba(0,0,0,0.1),0_16px_32px_-4px_rgba(0,0,0,0.25)] hover:-translate-y-1">
+              <CardHeader className="text-center pb-4">
+                <CardTitle className="text-2xl green-yellow-outline-text group-hover:animate-bounce-hover">Starter Web Package</CardTitle>
+                <CardDescription className="text-sm font-medium text-primary">NEW</CardDescription>
+                <div className="text-3xl font-bold trophy-gold-text mt-2 group-hover:animate-throb group-hover:animate-red-yellow-flash">ONLY $499</div>
+              </CardHeader>
+              <CardContent className="space-y-4">
+                <p className="text-sm text-primary text-center italic">Best for startups</p>
+                <ul className="space-y-2">
+                  {[
+                    "1-3 pages",
+                    "Mobile responsive",
+                    "Contact form",
+                    "Basic SEO setup",
+                    "7-day turnaround",
+                    "Domain and hosting purchased separately",
+                    "No maintenance included, 1 revision round"
+                  ].map((feature, index) => (
+                    <li key={index} className="flex items-start gap-2">
+                      <CheckCircle className="h-4 w-4 text-green-500 mt-0.5 flex-shrink-0" />
+                      <span className={`text-sm ${index >= 5 ? 'font-bold text-foreground' : 'text-muted-foreground'}`}>{feature}</span>
+                    </li>
+                  ))}
+                </ul>
+                <Link to="/contact" className="block mt-6">
+                  <Button variant="outline" className="w-full" size="lg">
+                    Get Started
+                  </Button>
+                </Link>
+              </CardContent>
+            </Card>
+
+            {/* Business Web Package */}
+            <Card className="border-2 border-primary relative transition-all duration-300 group bg-gradient-to-br from-white to-gray-50 shadow-[0_4px_6px_-1px_rgba(0,0,0,0.1),0_2px_4px_-1px_rgba(0,0,0,0.06),0_8px_16px_-4px_rgba(0,0,0,0.15)] hover:shadow-[0_8px_12px_-1px_rgba(0,0,0,0.15),0_4px_6px_-1px_rgba(0,0,0,0.1),0_16px_32px_-4px_rgba(0,0,0,0.25)] hover:-translate-y-1">
+              <div className="absolute -top-4 left-1/2 -translate-x-1/2">
+                <span className="bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-400 text-black px-4 py-1 rounded-full text-sm font-semibold shadow-lg shadow-yellow-500/50">
+                  Most Popular
+                </span>
+              </div>
+              <CardHeader className="text-center pb-4 pt-8">
+                <CardTitle className="text-2xl green-yellow-outline-text group-hover:animate-bounce-hover">Business Web Package</CardTitle>
+                <CardDescription className="text-sm font-medium text-primary italic">Best for established local businesses</CardDescription>
+                <div className="text-3xl font-bold trophy-gold-text mt-2">$998</div>
+              </CardHeader>
+              <CardContent className="space-y-4">
+                <ul className="space-y-2">
+                  {[
+                    "Up to 5 pages",
+                    "Custom branding",
+                    "Lead capture forms",
+                    "Google Business Profile integration",
+                    "Basic on-page SEO",
+                    "2 revision rounds",
+                    "Optional care plan"
+                  ].map((feature, index) => (
+                    <li key={index} className="flex items-start gap-2">
+                      <CheckCircle className="h-4 w-4 text-green-500 mt-0.5 flex-shrink-0" />
+                      <span className="text-sm text-muted-foreground">{feature}</span>
+                    </li>
+                  ))}
+                </ul>
+                <Link to="/contact" className="block mt-6">
+                  <Button variant="primary" className="w-full" size="lg">
+                    Get Started
+                  </Button>
+                </Link>
+              </CardContent>
+            </Card>
+
+            {/* Scale Web Package */}
+            <Card className="border-2 border-border hover:border-primary/50 transition-all duration-300 group bg-gradient-to-br from-white to-gray-50 shadow-[0_4px_6px_-1px_rgba(0,0,0,0.1),0_2px_4px_-1px_rgba(0,0,0,0.06),0_8px_16px_-4px_rgba(0,0,0,0.15)] hover:shadow-[0_8px_12px_-1px_rgba(0,0,0,0.15),0_4px_6px_-1px_rgba(0,0,0,0.1),0_16px_32px_-4px_rgba(0,0,0,0.25)] hover:-translate-y-1">
+              <CardHeader className="text-center pb-4">
+                <CardTitle className="text-2xl green-yellow-outline-text group-hover:animate-bounce-hover">Scale Web Package</CardTitle>
+                <CardDescription className="text-sm font-medium text-primary italic">Best for lead generation</CardDescription>
+                <div className="text-3xl font-bold trophy-gold-text mt-2">$1,998</div>
+              </CardHeader>
+              <CardContent className="space-y-4">
+                <ul className="space-y-2">
+                  {[
+                    "Up to 10 pages",
+                    "Conversion-focused design",
+                    "Advanced forms",
+                    "CRM integration",
+                    "Local SEO setup",
+                    "Analytics dashboard",
+                    "Priority support"
+                  ].map((feature, index) => (
+                    <li key={index} className="flex items-start gap-2">
+                      <CheckCircle className="h-4 w-4 text-green-500 mt-0.5 flex-shrink-0" />
+                      <span className="text-sm text-muted-foreground">{feature}</span>
+                    </li>
+                  ))}
+                </ul>
+                <Link to="/contact" className="block mt-6">
+                  <Button variant="outline" className="w-full" size="lg">
+                    Get Started
+                  </Button>
+                </Link>
+              </CardContent>
+            </Card>
+
+            {/* Ultra Premium Web Package */}
+            <Card className="border-2 border-border hover:border-primary/50 transition-all duration-300 group bg-gradient-to-br from-white to-gray-50 shadow-[0_4px_6px_-1px_rgba(0,0,0,0.1),0_2px_4px_-1px_rgba(0,0,0,0.06),0_8px_16px_-4px_rgba(0,0,0,0.15)] hover:shadow-[0_8px_12px_-1px_rgba(0,0,0,0.15),0_4px_6px_-1px_rgba(0,0,0,0.1),0_16px_32px_-4px_rgba(0,0,0,0.25)] hover:-translate-y-1">
+              <CardHeader className="text-center pb-4">
+                <CardTitle className="text-2xl green-yellow-outline-text group-hover:animate-bounce-hover">Ultra Premium Web Package</CardTitle>
+                <CardDescription className="text-sm font-medium text-primary italic">Complete digital presence</CardDescription>
+                <div className="text-3xl font-bold trophy-gold-text mt-2">Call for Quote</div>
+              </CardHeader>
+              <CardContent className="space-y-4">
+                <ul className="space-y-2">
+                  {[
+                    "Fully custom design",
+                    "Advanced integrations",
+                    "Memberships, booking, or custom functionality",
+                    "Multi-location support",
+                    "Conversion optimization",
+                    "Strategy consultation",
+                    "30 days post-launch support"
+                  ].map((feature, index) => (
+                    <li key={index} className="flex items-start gap-2">
+                      <CheckCircle className="h-4 w-4 text-green-500 mt-0.5 flex-shrink-0" />
+                      <span className="text-sm text-muted-foreground">{feature}</span>
+                    </li>
+                  ))}
+                </ul>
+                <Link to="/contact" className="block mt-6">
+                  <Button variant="outline" className="w-full" size="lg">
+                    Get Started
+                  </Button>
+                </Link>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* Testimonials Section */}
+      <section className="py-20 bg-background">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-4xl font-bold text-center text-foreground mb-12">What Our Clients Say</h2>
+          <div className="grid md:grid-cols-2 gap-8">
+            <div className="bg-white p-8 rounded-lg shadow-lg border border-border/20">
+              <div className="flex items-center gap-1 mb-4">
+                {[...Array(5)].map((_, i) => <Star key={i} className="h-5 w-5 fill-yellow-400 text-yellow-400" />)}
+              </div>
+              <p className="text-muted-foreground mb-6 italic">"Dave really presented /uncovered opportunities that we wouldn't have ever known otherwise. And now our website is really generating our online business beautifully! Thanks again Dave! 😃"</p>
+              <div className="flex items-center gap-3">
+                <div className="h-12 w-12 bg-primary/10 rounded-full flex items-center justify-center">
+                  <span className="text-primary font-bold text-lg">PR</span>
+                </div>
+                <div>
+                  <p className="font-semibold text-foreground">Paul Richardson</p>
+                  <p className="text-sm text-muted-foreground">Local Guide</p>
+                </div>
+              </div>
+            </div>
+            <div className="bg-white p-8 rounded-lg shadow-lg border border-border/20">
+              <div className="flex items-center gap-1 mb-4">
+                {[...Array(5)].map((_, i) => <Star key={i} className="h-5 w-5 fill-yellow-400 text-yellow-400" />)}
+              </div>
+              <p className="text-muted-foreground mb-6 italic">"Studios by Dave really knocked it out of the park. Our online presence is not only fully present, its generating our business so many leads now! Thank You!!!"</p>
+              <div className="flex items-center gap-3">
+                <div className="h-12 w-12 bg-primary/10 rounded-full flex items-center justify-center">
+                  <span className="text-primary font-bold text-lg">RJ</span>
+                </div>
+                <div>
+                  <p className="font-semibold text-foreground">Ryan "Kris" Jones</p>
+                  <p className="text-sm text-muted-foreground">Verified Customer</p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -333,138 +528,19 @@ const WebDesign = () => {
         </div>
       </section>
 
-      {/* Pricing Section */}
-      <section className="py-24 bg-background" itemScope itemType="https://schema.org/ItemList">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl font-bold text-center text-foreground mb-4" itemProp="name">
-            Web Design Packages
-          </h2>
-          <p className="text-xl text-muted-foreground text-center max-w-2xl mx-auto mb-16">
-            Choose the perfect package for your business needs
-          </p>
-          
-          <div className="grid md:grid-cols-3 gap-8">
-            {/* Launch Package */}
-            <Card className="border-2 border-border hover:border-primary/50 transition-colors group">
-              <CardHeader className="text-center pb-4">
-                <CardTitle className="text-3xl trophy-gold-text group-hover:animate-wobble">Launch Package</CardTitle>
-                <CardDescription className="text-lg font-medium text-primary">1-5 Page Website</CardDescription>
-                <div className="text-3xl font-bold trophy-gold-text mt-2">Contact for Quote</div>
-              </CardHeader>
-              <CardContent className="space-y-4">
-                <ul className="space-y-3">
-                  {[
-                    "Up to 5 custom-designed pages",
-                    "Mobile-responsive design",
-                    "Basic SEO setup",
-                    "Contact form integration",
-                    "Social media links",
-                    "1 round of revisions",
-                    "Estimated delivery: 4-6 weeks"
-                  ].map((feature, index) => (
-                    <li key={index} className="flex items-start gap-3">
-                      <CheckCircle className="h-5 w-5 text-green-500 mt-0.5 flex-shrink-0" />
-                      <span className="text-muted-foreground">{feature}</span>
-                    </li>
-                  ))}
-                </ul>
-                <Link to="/contact" className="block mt-6">
-                  <Button variant="outline" className="w-full" size="lg">
-                    Contact for Free Quote
-                  </Button>
-                </Link>
-              </CardContent>
-            </Card>
-
-            {/* Professional Package */}
-            <Card className="border-2 border-primary relative shadow-elegant group">
-              <div className="absolute -top-4 left-1/2 -translate-x-1/2">
-                <span className="bg-primary text-primary-foreground px-4 py-1 rounded-full text-sm font-semibold">
-                  Most Popular
-                </span>
-              </div>
-              <CardHeader className="text-center pb-4 pt-8">
-                <CardTitle className="text-3xl trophy-gold-text group-hover:animate-wobble">Scale Package</CardTitle>
-                <CardDescription className="text-lg font-medium text-primary">6-10 Page Website</CardDescription>
-                <div className="text-3xl font-bold trophy-gold-text mt-2">Contact for Quote</div>
-              </CardHeader>
-              <CardContent className="space-y-4">
-                <ul className="space-y-3">
-                  {[
-                    "Up to 10 custom-designed pages",
-                    "Mobile-responsive design",
-                    "Advanced SEO optimization",
-                    "Blog/News section",
-                    "Google Analytics integration",
-                    "Lead capture forms",
-                    "Photo gallery",
-                    "3 rounds of revisions",
-                    "Estimated delivery: 4-6 weeks"
-                  ].map((feature, index) => (
-                    <li key={index} className="flex items-start gap-3">
-                      <CheckCircle className="h-5 w-5 text-green-500 mt-0.5 flex-shrink-0" />
-                      <span className="text-muted-foreground">{feature}</span>
-                    </li>
-                  ))}
-                </ul>
-                <Link to="/contact" className="block mt-6">
-                  <Button variant="primary" className="w-full" size="lg">
-                    Contact for Free Quote
-                  </Button>
-                </Link>
-              </CardContent>
-            </Card>
-
-            {/* Transform Package */}
-            <Card className="border-2 border-border hover:border-primary/50 transition-colors group">
-              <CardHeader className="text-center pb-4">
-                <CardTitle className="text-3xl trophy-gold-text group-hover:animate-wobble">Transform Package</CardTitle>
-                <CardDescription className="text-lg font-medium text-primary">15+ Page Website</CardDescription>
-                <div className="text-3xl font-bold trophy-gold-text mt-2">Call for Custom Quote</div>
-              </CardHeader>
-              <CardContent className="space-y-4">
-                <ul className="space-y-3">
-                  {[
-                    "Unlimited pages",
-                    "E-commerce or booking system",
-                    "Comprehensive SEO strategy",
-                    "CMS for easy content updates",
-                    "Email marketing integration",
-                    "Custom functionality",
-                    "Priority support",
-                    "Unlimited revisions",
-                    "Estimated delivery: 5-8 weeks"
-                  ].map((feature, index) => (
-                    <li key={index} className="flex items-start gap-3">
-                      <CheckCircle className="h-5 w-5 text-green-500 mt-0.5 flex-shrink-0" />
-                      <span className="text-muted-foreground">{feature}</span>
-                    </li>
-                  ))}
-                </ul>
-                <Link to="/contact" className="block mt-6">
-                  <Button variant="outline" className="w-full" size="lg">
-                    Contact for Free Quote
-                  </Button>
-                </Link>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
-      </section>
-
       {/* ROI Calculator Section */}
       <section className="py-16 bg-muted/30">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="crazy-gradient-text text-3xl font-bold mb-4">ROI Calculator</h2>
-            <p className="text-lg text-muted-foreground">
+            <h2 className="crazy-gradient-text text-2xl md:text-3xl font-bold mb-4">ROI Calculator</h2>
+            <p className="text-base md:text-lg text-muted-foreground">
               Estimate your return on investment with a new website
             </p>
           </div>
 
           <Card className="border-2 border-primary shadow-elegant">
-            <CardContent className="p-8">
-              <div className="grid md:grid-cols-2 gap-8">
+            <CardContent className="p-4 md:p-8">
+              <div className="grid md:grid-cols-2 gap-4 md:gap-8">
                 {/* Inputs */}
                 <div className="space-y-6">
                   <div>

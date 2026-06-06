@@ -70,15 +70,9 @@ const ReferralBonus = () => {
                   <div className="absolute -inset-full bg-gradient-to-r from-transparent via-white/30 to-transparent skew-x-12 animate-[shimmer_3s_infinite]" style={{ animationDelay: '1.5s' }} />
                   <div className="absolute -inset-full bg-gradient-to-r from-transparent via-white/10 to-transparent skew-x-12 animate-[shimmer_3s_infinite]" style={{ animationDelay: '3s' }} />
                 </div>
-                <div className="flex items-center gap-4 relative z-10">
+                <div className="flex items-center justify-center relative z-10">
                   <div className="bg-white/20 p-3 rounded-full">
                     <Users className="h-8 w-8 text-white" />
-                  </div>
-                  <div>
-                    <h2 className="text-2xl md:text-3xl font-bold text-foreground">
-                      Unlimited $100 Referral Bonus
-                    </h2>
-                    <p className="text-foreground/90">Earn Cash for Every Referral—No Limits!</p>
                   </div>
                 </div>
               </div>

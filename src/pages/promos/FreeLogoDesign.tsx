@@ -47,7 +47,7 @@ const FreeLogoDesign = () => {
                 FREE <span className="text-accent">Logo Design</span>
               </h1>
               <p className="text-xl text-white/80 max-w-3xl mx-auto">
-                With Any Web Pack Purchase
+                With Any Web Package Purchase
               </p>
             </div>
           </div>
@@ -70,15 +70,9 @@ const FreeLogoDesign = () => {
                   <div className="absolute -inset-full bg-gradient-to-r from-transparent via-white/30 to-transparent skew-x-12 animate-[shimmer_3s_infinite]" />
                   <div className="absolute -inset-full bg-gradient-to-r from-transparent via-white/10 to-transparent skew-x-12 animate-[shimmer_3s_infinite]" style={{ animationDelay: '1.5s' }} />
                 </div>
-                <div className="flex items-center gap-4 relative z-10">
+                <div className="flex items-center justify-center relative z-10">
                   <div className="bg-white/20 p-3 rounded-full">
                     <Gift className="h-8 w-8 text-white" />
-                  </div>
-                  <div>
-                    <h2 className="text-2xl md:text-3xl font-bold text-white">
-                      FREE Logo Design
-                    </h2>
-                    <p className="text-white/90">With Any Web Pack Purchase</p>
                   </div>
                 </div>
               </div>
@@ -153,7 +147,7 @@ const FreeLogoDesign = () => {
                     </Button>
                   </Link>
                   <p className="text-sm text-muted-foreground mt-4">
-                    *Offer valid with any Web Pack purchase. Terms and conditions apply.
+                    *Offer valid with any Web Package purchase. Terms and conditions apply.
                   </p>
                 </div>
               </CardContent>

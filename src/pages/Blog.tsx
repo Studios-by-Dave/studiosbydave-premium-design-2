@@ -102,22 +102,22 @@ const Blog = () => {
         <img
           src="/assets/blog1.jpeg"
           alt="Blog decoration"
-          className="absolute top-4 left-4 w-20 h-20 md:w-32 md:h-32 object-cover rounded-lg opacity-60"
+          className="absolute top-4 left-4 w-12 h-12 md:w-32 md:h-32 object-cover rounded-lg opacity-60"
         />
         <img
           src="/assets/blog3.jpeg"
           alt="Blog decoration"
-          className="absolute top-4 right-4 w-20 h-20 md:w-32 md:h-32 object-cover rounded-lg opacity-60"
+          className="absolute top-4 right-4 w-12 h-12 md:w-32 md:h-32 object-cover rounded-lg opacity-60"
         />
         <img
           src="/assets/blog2.jpeg"
           alt="Blog decoration"
-          className="absolute bottom-4 left-4 w-20 h-20 md:w-32 md:h-32 object-cover rounded-lg opacity-60"
+          className="absolute bottom-4 left-4 w-12 h-12 md:w-32 md:h-32 object-cover rounded-lg opacity-60"
         />
         <img
           src="/assets/blog4.jpeg"
           alt="Blog decoration"
-          className="absolute bottom-4 right-4 w-20 h-20 md:w-32 md:h-32 object-cover rounded-lg opacity-60"
+          className="absolute bottom-4 right-4 w-12 h-12 md:w-32 md:h-32 object-cover rounded-lg opacity-60"
         />
 
         <div className="container mx-auto px-4 max-w-5xl">
@@ -126,7 +126,7 @@ const Blog = () => {
             <p className="text-xs tracking-[0.3em] uppercase text-neutral-500 font-serif mb-2">
               Est. 2024
             </p>
-            <h1 className="text-5xl md:text-7xl font-bold text-[hsl(259_84%_30%)] font-serif tracking-tight border-4 border-[hsl(218_49%_22%)] rounded-lg px-6 py-3 inline-block shadow-[0_0_15px_hsl(259_84%_30%/0.15)] italic [font-style:oblique_4deg]">
+            <h1 className="text-3xl md:text-5xl lg:text-7xl font-bold text-[hsl(259_84%_30%)] font-serif tracking-tight border-4 border-[hsl(218_49%_22%)] rounded-lg px-4 md:px-6 py-2 md:py-3 inline-block shadow-[0_0_15px_hsl(259_84%_30%/0.15)] italic [font-style:oblique_4deg]">
               The Studio's Chronicle
             </h1>
             <p className="text-lg text-neutral-600 font-serif italic mt-4">
@@ -155,15 +155,15 @@ const Blog = () => {
                   </div>
                   
                   {/* Article Title */}
-                  <h2 className="text-2xl md:text-3xl font-bold text-neutral-900 font-serif mb-2 group-hover:underline decoration-2 underline-offset-4">
+                  <h2 className="text-xl md:text-2xl lg:text-3xl font-bold text-neutral-900 font-serif mb-2 group-hover:underline decoration-2 underline-offset-4">
                     {article.title}
                   </h2>
-                  <p className="text-lg text-neutral-600 font-serif italic mb-4">
+                  <p className="text-base md:text-lg text-neutral-600 font-serif italic mb-4">
                     {article.subtitle}
                   </p>
                   
                   {/* Excerpt */}
-                  <p className="text-neutral-700 font-serif leading-relaxed mb-6">
+                  <p className="text-sm md:text-base text-neutral-700 font-serif leading-relaxed mb-6">
                     {article.excerpt}
                   </p>
                   

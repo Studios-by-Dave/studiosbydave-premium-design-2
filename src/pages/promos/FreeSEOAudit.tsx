@@ -2,7 +2,7 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import SimpleSEO from "@/components/SimpleSEO";
 import { Link } from "react-router-dom";
-import { Search, CheckCircle, ArrowRight, Award, Clock, Target, Badge } from "lucide-react";
+import { Search, CheckCircle, ArrowRight, Award, Clock, Target, Badge, Gift } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
@@ -64,21 +64,15 @@ const FreeSEOAudit = () => {
             />
           </div>
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 lg:pr-40">
-            <Card className="border-2 border-blue-900/40 shadow-xl overflow-hidden">
-              <div className="p-6 relative overflow-hidden" style={{ background: 'linear-gradient(135deg, #0f2a4a 0%, #1a3a5c 85%, #e2e8f0 100%)' }}>
+            <Card className="border-2 border-purple-900/40 shadow-xl overflow-hidden">
+              <div className="p-6 relative overflow-hidden" style={{ background: 'linear-gradient(135deg, #7c3aed 0%, #8b5cf6 50%, #a78bfa 100%)' }}>
                 <div className="absolute inset-0 overflow-hidden">
                   <div className="absolute -inset-full bg-gradient-to-r from-transparent via-white/30 to-transparent skew-x-12 animate-[shimmer_3s_infinite]" />
                   <div className="absolute -inset-full bg-gradient-to-r from-transparent via-white/10 to-transparent skew-x-12 animate-[shimmer_3s_infinite]" style={{ animationDelay: '1.5s' }} />
                 </div>
-                <div className="flex items-center gap-4 relative z-10">
+                <div className="flex items-center justify-center relative z-10">
                   <div className="bg-white/20 p-3 rounded-full">
-                    <Search className="h-8 w-8 text-white" />
-                  </div>
-                  <div>
-                    <h2 className="text-2xl md:text-3xl font-bold text-white">
-                      FREE Website SEO Audit
-                    </h2>
-                    <p className="text-white/90">Comprehensive Analysis of Your Online Presence</p>
+                    <Gift className="h-8 w-8 text-white" />
                   </div>
                 </div>
               </div>
