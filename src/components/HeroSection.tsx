@@ -82,6 +82,9 @@ const HeroSection = () => {
                 <p className="leading-tight font-medium mt-3 text-[#dfe2f6]" style={{ fontSize: 'clamp(1rem, 2.5vw, 1.5rem)' }}>
                   We build the online engine that gets your business found, trusted, and hired!
                 </p>
+                <p className="text-white/70 text-sm mt-2 font-medium">
+                  Serving Shelby, Charlotte, Gastonia, Spartanburg, Asheville, and Raleigh
+                </p>
               </div>
             </div>
 

@@ -70,6 +70,38 @@
     <priority>0.8</priority>
   </url>
   
+  <!-- City-Specific Web Design Pages -->
+  <url>
+    <loc>https://www.studiosbydave.com/web-design-charlotte-nc</loc>
+    <lastmod>2026-06-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.studiosbydave.com/web-design-gastonia-nc</loc>
+    <lastmod>2026-06-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.studiosbydave.com/web-design-spartanburg-sc</loc>
+    <lastmod>2026-06-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.studiosbydave.com/web-design-asheville-nc</loc>
+    <lastmod>2026-06-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.studiosbydave.com/web-design-raleigh-nc</loc>
+    <lastmod>2026-06-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
   <!-- Blog Section -->
   <url>
     <loc>https://www.studiosbydave.com/blog</loc>

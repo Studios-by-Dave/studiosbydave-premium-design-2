@@ -18,6 +18,11 @@ import BlogArticle8 from "./pages/BlogArticle8";
 
 import WebDesign from "./pages/WebDesign";
 import Branding from "./pages/Branding";
+import WebDesignCharlotte from "./pages/WebDesignCharlotte";
+import WebDesignGastonia from "./pages/WebDesignGastonia";
+import WebDesignSpartanburg from "./pages/WebDesignSpartanburg";
+import WebDesignAsheville from "./pages/WebDesignAsheville";
+import WebDesignRaleigh from "./pages/WebDesignRaleigh";
 
 import GoogleOptimization from "./pages/GoogleOptimization";
 import SEOPage from "./pages/SEO";
@@ -77,6 +82,13 @@ const App = () => (
           {/* New service routes */}
           <Route path="/services/web-design" element={<WebDesign />} />
           <Route path="/services/branding" element={<Branding />} />
+          
+          {/* City-specific web design pages */}
+          <Route path="/web-design-charlotte-nc" element={<WebDesignCharlotte />} />
+          <Route path="/web-design-gastonia-nc" element={<WebDesignGastonia />} />
+          <Route path="/web-design-spartanburg-sc" element={<WebDesignSpartanburg />} />
+          <Route path="/web-design-asheville-nc" element={<WebDesignAsheville />} />
+          <Route path="/web-design-raleigh-nc" element={<WebDesignRaleigh />} />
           
           <Route path="/services/google-optimization" element={<GoogleOptimization />} />
           <Route path="/services/seo" element={<SEOPage />} />

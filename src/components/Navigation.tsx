@@ -8,6 +8,7 @@ const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
   const [promosOpen, setPromosOpen] = useState(false);
+  const [serviceAreasOpen, setServiceAreasOpen] = useState(false);
   const location = useLocation();
   const navItems = [{
     name: "Home",
@@ -57,6 +58,27 @@ const Navigation = () => {
     path: "/promos/free-seo-audit",
     description: "First 10 callers only"
   }];
+  const serviceAreas = [{
+    name: "Charlotte, NC",
+    path: "/web-design-charlotte-nc",
+    description: "Web design for Charlotte businesses"
+  }, {
+    name: "Gastonia, NC",
+    path: "/web-design-gastonia-nc",
+    description: "Web design for Gastonia businesses"
+  }, {
+    name: "Spartanburg, SC",
+    path: "/web-design-spartanburg-sc",
+    description: "Web design for Spartanburg businesses"
+  }, {
+    name: "Asheville, NC",
+    path: "/web-design-asheville-nc",
+    description: "Web design for Asheville businesses"
+  }, {
+    name: "Raleigh, NC",
+    path: "/web-design-raleigh-nc",
+    description: "Web design for Raleigh businesses"
+  }];
   const isActive = (path: string) => location.pathname === path;
   const isServicesActive = () => location.pathname.startsWith('/services');
   return <nav className="bg-white/95 backdrop-blur-md border-b border-border/50 sticky top-0 z-50 shadow-sm">
@@ -97,6 +119,25 @@ const Navigation = () => {
             <Link to="/about" className={`text-sm font-black transition-colors hover:text-primary hover:animate-trophy-gold-flash border-b-2 border-transparent pb-1 ${isActive('/about') ? "text-primary border-primary" : "text-foreground"}`}>
               About Us
             </Link>
+
+            {/* Service Areas Collapsible */}
+            <div className="relative">
+              <button onClick={() => setServiceAreasOpen(!serviceAreasOpen)} className={`text-sm font-black transition-colors hover:text-primary hover:animate-trophy-gold-flash flex items-center space-x-1 border-b-2 border-transparent pb-1 ${location.pathname.startsWith('/web-design-') ? "text-primary border-primary" : "text-foreground"}`}>
+                <span>Service Areas</span>
+                <ChevronDown className={`h-4 w-4 transition-transform duration-300 ${serviceAreasOpen ? 'rotate-180' : ''}`} />
+              </button>
+
+              {/* Fan-out dropdown underneath */}
+              <div className={`absolute top-full left-0 mt-2 bg-white rounded-lg shadow-lg border border-border/50 z-50 overflow-hidden transition-all duration-300 ${serviceAreasOpen ? 'opacity-100 visible' : 'opacity-0 invisible'}`}>
+                <div className="p-2 flex flex-col">
+                  {serviceAreas.map((area, index) => <Link key={area.name} to={area.path} onClick={() => setServiceAreasOpen(false)} className={`text-sm whitespace-nowrap px-4 py-2 rounded-md transition-all duration-300 hover:bg-muted hover:text-primary font-medium ${isActive(area.path) ? "text-primary bg-muted/50" : "text-foreground/80"} ${serviceAreasOpen ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-8'}`} style={{
+                  transitionDelay: serviceAreasOpen ? `${index * 60}ms` : '0ms'
+                }}>
+                      {area.name}
+                    </Link>)}
+                </div>
+              </div>
+            </div>
 
             {/* Promos Collapsible */}
             <div className="relative">
@@ -164,6 +205,18 @@ const Navigation = () => {
             <Link to="/about" onClick={() => setIsOpen(false)} className={`block text-base font-black transition-colors hover:text-primary ${isActive('/about') ? "text-primary" : "text-foreground"}`}>
               About Us
             </Link>
+
+            {/* Mobile Service Areas Section */}
+            <div className="border-t pt-4">
+              <div className={`block text-base font-black transition-colors hover:text-primary mb-2 ${location.pathname.startsWith('/web-design-') ? "text-primary" : "text-foreground"}`}>
+                Service Areas
+              </div>
+              <div className="ml-4 space-y-2">
+                {serviceAreas.map(area => <Link key={area.name} to={area.path} onClick={() => setIsOpen(false)} className={`block text-sm hover:text-primary transition-colors text-muted-foreground ${isActive(area.path) ? "text-primary" : ""}`}>
+                    {area.name}
+                  </Link>)}
+              </div>
+            </div>
 
             {/* Mobile Promos Section */}
             <div className="border-t pt-4">

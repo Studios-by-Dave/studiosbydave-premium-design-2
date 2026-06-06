@@ -81,6 +81,17 @@ const WebDesign = () => {
       
       {/* Hero Section */}
       <section className="bg-gradient-hero py-16 relative" itemScope itemType="https://schema.org/WebPageElement">
+        {/* Shelby Background */}
+        <div
+          className="absolute inset-0 z-0"
+          style={{
+            backgroundImage: 'url("/assets/Shelby-intro-1751301212.webp")',
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+            filter: 'brightness(0.4) contrast(1.1)'
+          }}
+        />
+        
         {/* Crown Molding Top */}
         <div
           className="absolute top-0 left-0 w-full h-8 z-10"
@@ -105,7 +116,7 @@ const WebDesign = () => {
           </div>
           <p className="text-xl text-white/90 max-w-3xl mx-auto mb-8" itemProp="description">
             Custom websites that turn visitors into paying customers—designed specifically
-            for local small businesses.
+            for local small businesses. Serving Shelby, Charlotte, Gastonia, Spartanburg, Asheville, and Raleigh.
           </p>
           <Link to="/contact#get-in-touch">
             <Button variant="hero" size="lg">
