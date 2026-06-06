@@ -106,7 +106,7 @@ const ServicesSection = () => {
                 <CardContent className="relative z-10">
                   <ul className="space-y-3 mb-6">
                     {service.features.map((feature, idx) => <li key={idx} className="flex items-center text-foreground/80">
-                        <Target size={16} className="text-accent mr-3 flex-shrink-0" />
+                        <Target size={16} className="text-green-500 mr-3 flex-shrink-0" />
                         <span className="font-medium">{feature}</span>
                       </li>)}
                   </ul>
@@ -149,10 +149,6 @@ const ServicesSection = () => {
             title: "Tree Specialists",
             description: "Emergency tree services, project galleries, and seasonal care programs that attract homeowners."
           }, {
-            icon: "🏡",
-            title: "Real Estate Agents",
-            description: "Property listings, virtual tours, and lead capture systems that convert buyers and sellers."
-          }, {
             icon: "🚚",
             title: "Expedited Trucking",
             description: "Real-time tracking systems, freight quote calculators, and logistics management platforms that streamline shipping operations."
@@ -168,10 +164,6 @@ const ServicesSection = () => {
             icon: "🎨",
             title: "Painters",
             description: "Color selection tools, project galleries, and scheduling systems that help homeowners visualize and book painting services."
-          }, {
-            icon: "❄️",
-            title: "HVAC",
-            description: "Emergency repair dispatch, seasonal maintenance programs, and service area coverage maps that drive urgent service calls."
           }].map((industry, index) => <div key={index} className="text-center group">
                 <div className="text-5xl mb-4 group-hover:scale-110 transition-transform">
                   {industry.icon}
