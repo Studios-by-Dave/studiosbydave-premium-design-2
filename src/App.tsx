@@ -23,6 +23,7 @@ import WebDesignGastonia from "./pages/WebDesignGastonia";
 import WebDesignSpartanburg from "./pages/WebDesignSpartanburg";
 import WebDesignAsheville from "./pages/WebDesignAsheville";
 import WebDesignRaleigh from "./pages/WebDesignRaleigh";
+import WebDesignShelby from "./pages/WebDesignShelby";
 
 import GoogleOptimization from "./pages/GoogleOptimization";
 import SEOPage from "./pages/SEO";
@@ -89,6 +90,7 @@ const App = () => (
           <Route path="/web-design-spartanburg-sc" element={<WebDesignSpartanburg />} />
           <Route path="/web-design-asheville-nc" element={<WebDesignAsheville />} />
           <Route path="/web-design-raleigh-nc" element={<WebDesignRaleigh />} />
+          <Route path="/web-design-shelby-nc" element={<WebDesignShelby />} />
           
           <Route path="/services/google-optimization" element={<GoogleOptimization />} />
           <Route path="/services/seo" element={<SEOPage />} />

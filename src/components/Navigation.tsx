@@ -59,6 +59,10 @@ const Navigation = () => {
     description: "First 10 callers only"
   }];
   const serviceAreas = [{
+    name: "Shelby, NC",
+    path: "/web-design-shelby-nc",
+    description: "Web design for Shelby businesses"
+  }, {
     name: "Charlotte, NC",
     path: "/web-design-charlotte-nc",
     description: "Web design for Charlotte businesses"

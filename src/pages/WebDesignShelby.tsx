@@ -12,41 +12,41 @@ import brandingBackdrop from "@/assets/branding-backdrop.jpeg";
 import googleBackdrop from "@/assets/google-backdrop.jpeg";
 import mediaPacksBackdrop from "@/assets/media-packs-backdrop.jpg";
 
-const WebDesignRaleigh = () => {
+const WebDesignShelby = () => {
   const breadcrumbs = breadcrumbSchema([
     { name: "Home", url: "https://www.studiosbydave.com" },
-    { name: "Web Design Raleigh", url: "https://www.studiosbydave.com/web-design-raleigh-nc" }
+    { name: "Web Design Shelby", url: "https://www.studiosbydave.com/web-design-shelby-nc" }
   ]);
 
-  const raleighWebDesignSchema = serviceSchema(
-    "Professional Web Design Raleigh NC",
-    "Custom responsive websites designed specifically for Raleigh businesses including government, tech, healthcare, and professional services with mobile-first design and SEO optimization.",
-    "https://www.studiosbydave.com/web-design-raleigh-nc"
+  const shelbyWebDesignSchema = serviceSchema(
+    "Professional Web Design Shelby NC",
+    "Custom responsive websites designed specifically for Shelby businesses including contractors, retail, restaurants, and professional services with mobile-first design and SEO optimization.",
+    "https://www.studiosbydave.com/web-design-shelby-nc"
   );
 
-  const raleighLocalSchema = localServiceSchema(
-    "Web Design Services Raleigh NC",
-    "Local web design services in Raleigh, NC. We create custom websites for Raleigh businesses including government, tech, healthcare, and professional services.",
-    "https://www.studiosbydave.com/web-design-raleigh-nc"
+  const shelbyLocalSchema = localServiceSchema(
+    "Web Design Services Shelby NC",
+    "Local web design services in Shelby, NC. We create custom websites for Shelby businesses including contractors, retail, restaurants, and professional services.",
+    "https://www.studiosbydave.com/web-design-shelby-nc"
   );
 
   return (
     <div className="min-h-screen">
       <SimpleSEO
-        title="Web Design Raleigh NC | Professional Websites for Local Businesses"
-        description="Custom web design services in Raleigh, NC. We build mobile-responsive websites that convert visitors into customers for government, tech, healthcare, and professional services. Get your free quote today."
-        keywords="web design Raleigh NC, Raleigh web development, Raleigh website design, Raleigh small business websites, Raleigh tech websites, Raleigh SEO, Raleigh digital marketing"
-        structuredData={[breadcrumbs, raleighWebDesignSchema, raleighLocalSchema, webDesignFAQSchema, ...webPackageOfferSchema, ...googleReviewsSchema]}
+        title="Web Design Shelby NC | Professional Websites for Local Businesses"
+        description="Custom web design services in Shelby, NC. We build mobile-responsive websites that convert visitors into customers for contractors, retail, restaurants, and professional services. Get your free quote today."
+        keywords="web design Shelby NC, Shelby web development, Shelby website design, Shelby small business websites, Shelby contractor websites, Shelby SEO, Shelby digital marketing"
+        structuredData={[breadcrumbs, shelbyWebDesignSchema, shelbyLocalSchema, webDesignFAQSchema, ...webPackageOfferSchema, ...googleReviewsSchema]}
       />
       <Navigation />
       
       {/* Hero Section */}
       <section className="bg-gradient-hero py-16 relative" itemScope itemType="https://schema.org/WebPageElement">
-        {/* Raleigh Background */}
+        {/* Shelby Background */}
         <div
           className="absolute inset-0 z-0"
           style={{
-            backgroundImage: 'url("/assets/raleigh1.jpg")',
+            backgroundImage: 'url("/assets/Shelby-intro-1751301212.webp")',
             backgroundSize: 'cover',
             backgroundPosition: 'center',
             filter: 'brightness(0.4) contrast(1.1)'
@@ -68,7 +68,7 @@ const WebDesignRaleigh = () => {
           <div className="relative inline-block">
             <PixieDust />
             <h1 className="text-4xl lg:text-5xl font-bold text-white mb-6" itemProp="headline">
-              Raleigh{" "}
+              Shelby{" "}
               <span className="gradient-text bg-gradient-to-r from-accent to-white bg-clip-text text-transparent">
                 Web Design
               </span>
@@ -76,7 +76,7 @@ const WebDesignRaleigh = () => {
             </h1>
           </div>
           <p className="text-xl text-white/90 max-w-3xl mx-auto mb-8" itemProp="description">
-            Professional web design for Raleigh businesses. We create custom websites that turn visitors into paying customers—serving Raleigh and the Research Triangle area.
+            Professional web design for Shelby businesses. We create custom websites that turn visitors into paying customers—serving Cleveland County and surrounding areas.
           </p>
           <Link to="/contact#get-in-touch">
             <Button variant="hero" size="lg">
@@ -98,32 +98,32 @@ const WebDesignRaleigh = () => {
         />
       </section>
 
-      {/* Raleigh Market Focus Section */}
+      {/* Shelby Market Focus Section */}
       <section className="py-24 bg-gradient-subtle">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-4xl font-bold text-center text-foreground mb-12">
-            Serving Raleigh's Capital City Business Community
+            Serving Shelby's Diverse Business Community
           </h2>
           <p className="text-lg text-muted-foreground max-w-4xl mx-auto mb-12 leading-relaxed text-center">
-            Raleigh is North Carolina's capital city and a major hub for government, technology, healthcare, and education. As part of the Research Triangle, Raleigh businesses compete in a sophisticated market. Our web design services are tailored to help Raleigh businesses stand out in this dynamic environment.
+            Shelby is the heart of Cleveland County, known for its historic downtown, manufacturing heritage, and growing small business community. From uptown businesses to industrial areas, we understand the unique challenges Shelby businesses face. Our web design services are tailored to help Shelby businesses thrive in this close-knit local market.
           </p>
           
           <div className="grid md:grid-cols-3 gap-8">
             {[
               {
-                title: "Government & Public Sector",
-                description: "Professional websites for government agencies, public services, and civic organizations throughout the Raleigh area.",
-                industries: ["Government Agencies", "Public Services", "Civic Organizations", "Non-Profits"]
+                title: "Contractors & Trades",
+                description: "Professional websites for roofing, landscaping, electrical, plumbing, and other trade businesses throughout Shelby and Cleveland County.",
+                industries: ["Roofing Contractors", "Landscaping", "Electrical Services", "Plumbing"]
               },
               {
-                title: "Tech & Innovation",
-                description: "Modern web solutions for tech startups, software companies, and innovative businesses in the Research Triangle.",
-                industries: ["Tech Startups", "Software Companies", "Innovation Hubs", "Tech Services"]
+                title: "Retail & Restaurants",
+                description: "Modern web solutions for local shops, restaurants, cafes, and retail businesses serving the Shelby community.",
+                industries: ["Local Shops", "Restaurants", "Cafes", "Retail Stores"]
               },
               {
-                title: "Healthcare & Professional",
-                description: "Comprehensive web design for healthcare providers, legal firms, financial services, and professional consultants.",
-                industries: ["Healthcare Providers", "Legal Firms", "Financial Services", "Professional Consultants"]
+                title: "Professional Services",
+                description: "Comprehensive web design for healthcare, legal, financial, and professional services in the Shelby area.",
+                industries: ["Healthcare Providers", "Legal Services", "Financial Services", "Consultants"]
               }
             ].map((area, index) => (
               <Card key={index} className="border-2 border-border/50 hover:border-primary/50 transition-all duration-300">
@@ -147,11 +147,66 @@ const WebDesignRaleigh = () => {
         </div>
       </section>
 
+      {/* Shelby Cafe Image Section */}
+      <section className="py-16 bg-background relative overflow-hidden">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            {/* Left Column - Content */}
+            <div className="space-y-6">
+              <h2 className="text-3xl font-bold text-foreground">
+                Supporting Shelby's Local Business Scene
+              </h2>
+              <p className="text-lg text-muted-foreground leading-relaxed">
+                From charming local cafes to established businesses, Shelby's entrepreneurial spirit drives our community forward. We understand the unique character of Shelby's business landscape and create websites that reflect the authentic, hometown feel that makes our city special.
+              </p>
+              <div className="space-y-4">
+                {[
+                  "Local business partnerships",
+                  "Community-focused design",
+                  "Shelby market expertise",
+                  "Personalized service"
+                ].map((point, index) => (
+                  <div key={index} className="flex items-center space-x-3">
+                    <CheckCircle size={20} className="text-green-500 flex-shrink-0" />
+                    <span className="text-foreground font-medium">{point}</span>
+                  </div>
+                ))}
+              </div>
+              <Link to="/contact#get-in-touch">
+                <Button variant="default" size="lg">
+                  Connect With Us
+                  <ArrowRight className="ml-2" size={20} />
+                </Button>
+              </Link>
+            </div>
+
+            {/* Right Column - Image */}
+            <div className="relative">
+              <div className="relative rounded-2xl overflow-hidden shadow-glow border border-border/20">
+                <img 
+                  src="/assets/shelby-cafe-768x938.jpg" 
+                  alt="Shelby local cafe scene showcasing the vibrant downtown business community" 
+                  className="w-full h-auto object-cover"
+                  loading="lazy"
+                  decoding="async"
+                />
+                {/* Overlay */}
+                <div className="absolute inset-0 bg-gradient-to-t from-primary/20 via-transparent to-accent/10" />
+              </div>
+              
+              {/* Floating Elements */}
+              <div className="absolute -top-4 -right-4 w-16 h-16 bg-accent/20 rounded-full blur-xl animate-pulse" />
+              <div className="absolute -bottom-4 -left-4 w-24 h-24 bg-white/10 rounded-full blur-2xl animate-pulse" />
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Features Section */}
       <section className="py-24 bg-background" itemScope itemType="https://schema.org/ItemList">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-4xl font-bold text-center text-foreground mb-16" itemProp="name">
-            Everything Your Raleigh Business Website Needs
+            Everything Your Shelby Business Website Needs
           </h2>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -159,28 +214,28 @@ const WebDesignRaleigh = () => {
               {
                 icon: Smartphone,
                 title: "Mobile-First Design",
-                description: "Raleigh professionals search on mobile—we ensure your site looks perfect on all devices",
+                description: "Shelby customers search on mobile—we ensure your site looks perfect on all devices",
                 features: ["Responsive Layout", "Touch-Optimized", "Fast Loading", "Works Everywhere"],
                 backdrop: webDesignBackdrop
               },
               {
                 icon: Zap,
                 title: "Lightning Fast",
-                description: "Optimized for speed to keep Raleigh visitors engaged and reduce bounce rates",
+                description: "Optimized for speed to keep Shelby visitors engaged and reduce bounce rates",
                 features: ["Optimized Performance", "Fast Load Times", "Better Rankings", "User Retention"],
                 backdrop: brandingBackdrop
               },
               {
                 icon: Search,
-                title: "Raleigh SEO",
-                description: "Local SEO optimized for Raleigh search results and Google Business Profile",
-                features: ["On-Page SEO", "Technical SEO", "Local Raleigh SEO", "Rankings Boost"],
+                title: "Shelby SEO",
+                description: "Local SEO optimized for Shelby search results and Google Business Profile",
+                features: ["On-Page SEO", "Technical SEO", "Local Shelby SEO", "Rankings Boost"],
                 backdrop: googleBackdrop
               },
               {
                 icon: Globe,
                 title: "Lead Generation",
-                description: "Contact forms and CTAs designed to convert Raleigh visitors into customers",
+                description: "Contact forms and CTAs designed to convert Shelby visitors into customers",
                 features: ["Contact Forms", "Call-to-Action", "Conversion Tracking", "Lead Capture"],
                 backdrop: mediaPacksBackdrop
               }
@@ -231,10 +286,10 @@ const WebDesignRaleigh = () => {
       <section className="py-24 bg-gradient-subtle" itemScope itemType="https://schema.org/ItemList">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-4xl font-bold text-center text-foreground mb-4" itemProp="name">
-            Web Design Packages for Raleigh Businesses
+            Web Design Packages for Shelby Businesses
           </h2>
           <p className="text-xl text-muted-foreground text-center max-w-2xl mx-auto mb-16">
-            Choose the perfect package for your Raleigh business needs
+            Choose the perfect package for your Shelby business needs
           </p>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -379,7 +434,7 @@ const WebDesignRaleigh = () => {
       <section className="py-20 bg-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-4xl font-bold text-center text-foreground mb-12">What Our Clients Say</h2>
-          <p className="text-lg text-muted-foreground text-center mb-8">Serving businesses throughout Raleigh and the Research Triangle</p>
+          <p className="text-lg text-muted-foreground text-center mb-8">Serving businesses throughout Shelby and Cleveland County</p>
           <div className="grid md:grid-cols-2 gap-8">
             <div className="bg-white p-8 rounded-lg shadow-lg border border-border/20">
               <div className="flex items-center gap-1 mb-4">
@@ -418,9 +473,9 @@ const WebDesignRaleigh = () => {
       {/* CTA Section */}
       <section className="py-16 bg-gradient-subtle">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl font-bold text-foreground mb-4">Ready to Grow Your Raleigh Business Online?</h2>
+          <h2 className="text-3xl font-bold text-foreground mb-4">Ready to Grow Your Shelby Business Online?</h2>
           <p className="text-lg text-muted-foreground mb-8">
-            Contact us today for a free consultation and discover how we can help your Raleigh business succeed online.
+            Contact us today for a free consultation and discover how we can help your Shelby business succeed online.
           </p>
           <Link to="/contact#get-in-touch">
             <Button variant="hero" size="lg">
@@ -436,4 +491,4 @@ const WebDesignRaleigh = () => {
   );
 };
 
-export default WebDesignRaleigh;
+export default WebDesignShelby;
