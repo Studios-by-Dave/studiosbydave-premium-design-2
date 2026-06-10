@@ -14,7 +14,7 @@ const Index = () => {
   const structuredData = [organizationSchema, servicesSchema, localBusinessSchema, websiteSchema, ...googleReviewsSchema];
   
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen bg-luxury-bg">
       <SimpleSEO
         title="Your Local Shelby NC Web Designer & App Developer"
         description="Your Local Shelby, NC web design, app development & digital marketing studio. Building modern websites and custom web apps that drive real growth for local businesses. Free logo design included + $100 referral rewards."
@@ -32,37 +32,40 @@ const Index = () => {
         <NonExclusiveSection />
         
         {/* Testimonials Section */}
-        <section className="py-20 bg-gradient-subtle">
+        <section className="py-32 bg-luxury-bg">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-4xl font-bold text-center text-foreground mb-12">What Our Clients Say</h2>
+            <div className="section-eyebrow text-center mb-4">✦ Client Results</div>
+            <h2 className="display-heading text-luxury-text-primary text-4xl lg:text-5xl text-center mb-16">What Our Clients Say</h2>
             <div className="grid md:grid-cols-2 gap-8">
-              <div className="bg-white p-8 rounded-lg shadow-lg border border-border/20">
-                <div className="flex items-center gap-1 mb-4">
-                  {[...Array(5)].map((_, i) => <Star key={i} className="h-5 w-5 fill-yellow-400 text-yellow-400" />)}
+              <div className="luxury-card rounded-xl p-8 relative">
+                <div className="absolute top-4 right-4 text-6xl font-display text-luxury-royal-blue/20">"</div>
+                <div className="flex items-center gap-1 mb-6">
+                  {[...Array(5)].map((_, i) => <Star key={i} className="h-5 w-5 fill-luxury-lime text-luxury-lime" />)}
                 </div>
-                <p className="text-muted-foreground mb-6 italic">"Dave really presented /uncovered opportunities that we wouldn't have ever known otherwise. And now our website is really generating our online business beautifully! Thanks again Dave! 😃"</p>
-                <div className="flex items-center gap-3">
-                  <div className="h-12 w-12 bg-primary/10 rounded-full flex items-center justify-center">
-                    <span className="text-primary font-bold text-lg">PR</span>
+                <p className="accent-text text-luxury-text-secondary text-lg mb-6 leading-relaxed">"Dave really presented /uncovered opportunities that we wouldn't have ever known otherwise. And now our website is really generating our online business beautifully! Thanks again Dave! 😃"</p>
+                <div className="flex items-center gap-4">
+                  <div className="h-12 w-12 rounded-full bg-luxury-royal-blue/10 flex items-center justify-center">
+                    <span className="text-luxury-royal-blue font-bold text-lg">PR</span>
                   </div>
                   <div>
-                    <p className="font-semibold text-foreground">Paul Richardson</p>
-                    <p className="text-sm text-muted-foreground">Local Guide</p>
+                    <p className="font-section text-luxury-text-primary text-sm uppercase tracking-wider">Paul Richardson</p>
+                    <p className="font-body text-luxury-text-secondary text-xs">Local Guide</p>
                   </div>
                 </div>
               </div>
-              <div className="bg-white p-8 rounded-lg shadow-lg border border-border/20">
-                <div className="flex items-center gap-1 mb-4">
-                  {[...Array(5)].map((_, i) => <Star key={i} className="h-5 w-5 fill-yellow-400 text-yellow-400" />)}
+              <div className="luxury-card rounded-xl p-8 relative">
+                <div className="absolute top-4 right-4 text-6xl font-display text-luxury-royal-blue/20">"</div>
+                <div className="flex items-center gap-1 mb-6">
+                  {[...Array(5)].map((_, i) => <Star key={i} className="h-5 w-5 fill-luxury-lime text-luxury-lime" />)}
                 </div>
-                <p className="text-muted-foreground mb-6 italic">"Studios by Dave really knocked it out of the park. Our online presence is not only fully present, its generating our business so many leads now! Thank You!!!"</p>
-                <div className="flex items-center gap-3">
-                  <div className="h-12 w-12 bg-primary/10 rounded-full flex items-center justify-center">
-                    <span className="text-primary font-bold text-lg">RJ</span>
+                <p className="accent-text text-luxury-text-secondary text-lg mb-6 leading-relaxed">"Studios by Dave really knocked it out of the park. Our online presence is not only fully present, its generating our business so many leads now! Thank You!!!"</p>
+                <div className="flex items-center gap-4">
+                  <div className="h-12 w-12 rounded-full bg-luxury-royal-blue/10 flex items-center justify-center">
+                    <span className="text-luxury-royal-blue font-bold text-lg">RJ</span>
                   </div>
                   <div>
-                    <p className="font-semibold text-foreground">Ryan "Kris" Jones</p>
-                    <p className="text-sm text-muted-foreground">Verified Customer</p>
+                    <p className="font-section text-luxury-text-primary text-sm uppercase tracking-wider">Ryan "Kris" Jones</p>
+                    <p className="font-body text-luxury-text-secondary text-xs">Verified Customer</p>
                   </div>
                 </div>
               </div>

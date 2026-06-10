@@ -137,7 +137,7 @@ const Contact = () => {
   };
 
   return (
-    <div className="min-h-screen lg:scale-[0.95] lg:origin-top transition-transform duration-500" itemScope itemType="https://schema.org/WebPage">
+    <div className="min-h-screen bg-luxury-bg lg:scale-[0.95] lg:origin-top transition-transform duration-500" itemScope itemType="https://schema.org/WebPage">
       <SimpleSEO
         title="Contact Studios by Dave - Get Your Free Quote Today"
         description="Contact Studios by Dave for professional web design, SEO, AI automations, and branding services. Free consultations available. Call (704) 473-8188 or email us today."
@@ -147,69 +147,29 @@ const Contact = () => {
       <Navigation />
       
       {/* Hero Section */}
-      <section className="bg-gradient-hero py-16 relative" role="banner">
-        {/* Crown Molding Top */}
-        <div
-          className="absolute top-0 left-0 w-full h-8 z-10"
-          style={{
-            backgroundImage: 'url("/assets/crown molding cherry wood.png")',
-            backgroundRepeat: 'repeat-x',
-            backgroundSize: 'contain',
-            backgroundPosition: 'top'
-          }}
-        />
-        
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-20 pt-8 pb-8">
+      <section className="relative min-h-[70vh] bg-luxury-bg noise-overlay flex items-center" role="banner">
+        {/* Radial Glow */}
+        <div className="absolute inset-0 radial-glow z-10" />
+
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-20 py-24">
           <div className="relative inline-block">
-            {/* Pixie Dust Effect */}
-            <div className="absolute -top-8 -left-4 w-40 h-40 pointer-events-none">
-              {[...Array(18)].map((_, i) => (
-                <div
-                  key={i}
-                  className="absolute w-1.5 h-1.5 rounded-full animate-dust-float"
-                  style={{
-                    left: `${Math.random() * 100}%`,
-                    top: `${Math.random() * 100}%`,
-                    background: i % 4 === 0 
-                      ? 'hsl(var(--trophy-gold))' 
-                      : i % 4 === 1 
-                      ? 'hsl(var(--accent) / 0.6)'
-                      : 'hsl(0, 0%, 30%)',
-                    animationDelay: `${i * 0.15}s`,
-                    animationDuration: `${2 + Math.random() * 2}s`,
-                    filter: 'blur(0.5px)',
-                    boxShadow: i % 4 === 0 ? '0 0 5px hsl(var(--trophy-gold))' : 'none'
-                  }}
-                />
-              ))}
-            </div>
-            <h1 className="text-5xl lg:text-6xl font-bold text-white mb-6 text-center">
+            <div className="section-eyebrow mb-4">✦ Contact</div>
+            <h1 className="display-heading text-luxury-text-primary text-5xl lg:text-6xl mb-6 text-center" style={{ fontSize: 'clamp(2.5rem, 6vw, 4.5rem)' }}>
               Let's Build Something{" "}
-              <span className="gradient-text bg-gradient-to-r from-accent to-white bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-luxury-purple to-luxury-royal-blue bg-clip-text text-transparent">
                 GREAT
               </span>{" "}
               Together
             </h1>
           </div>
-          <p className="text-xl text-white/90">
+          <p className="font-body text-luxury-text-secondary text-xl">
             Ready to take your business to the next level? Get in touch for a free consultation.
           </p>
         </div>
-
-        {/* Crown Molding Bottom */}
-        <div
-          className="absolute bottom-0 left-0 w-full h-8 z-10 transform rotate-180"
-          style={{
-            backgroundImage: 'url("/assets/crown molding cherry wood.png")',
-            backgroundRepeat: 'repeat-x',
-            backgroundSize: 'contain',
-            backgroundPosition: 'top'
-          }}
-        />
       </section>
 
       {/* Contact Information Section */}
-      <section className="py-24 bg-gradient-subtle relative">
+      <section className="py-32 bg-luxury-surface border-y border-white/6 relative">
         {/* Contact Mascot */}
         <div className="hidden lg:block absolute right-4 top-1/2 -translate-y-1/2 z-10 animate-bounce-slow">
           <img 
@@ -221,10 +181,11 @@ const Contact = () => {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 lg:pr-40">
           <div id="get-in-touch" className="space-y-8">
             <div>
-              <h2 className="text-3xl font-bold text-foreground mb-6">
+              <div className="section-eyebrow mb-4">✦ Get in Touch</div>
+              <h2 className="display-heading text-luxury-text-primary text-3xl mb-6">
                 Get in Touch
               </h2>
-                <p className="text-lg text-muted-foreground mb-8">
+                <p className="font-body text-luxury-text-secondary text-lg mb-8">
                   We're here to help your business succeed online. Reach out through any of these channels:
                 </p>
               </div>
@@ -232,55 +193,55 @@ const Contact = () => {
               {/* Contact Card - Phone & Email */}
               <div className="flex flex-col gap-4 mb-8">
                 {/* Phone Card */}
-                <div className="bg-gradient-hero rounded-xl border border-white/20 p-6 shadow-glow">
+                <div className="luxury-card rounded-xl p-6">
                   <div className="text-center">
-                    <div className="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center mx-auto mb-3">
-                      <Phone size={24} className="text-accent" />
+                    <div className="w-12 h-12 bg-luxury-lime/10 rounded-full flex items-center justify-center mx-auto mb-3">
+                      <Phone size={24} className="text-luxury-lime" />
                     </div>
-                    <p className="text-white/80 text-base font-medium mb-1">Call Us — TEXT US!</p>
-                    <a href="tel:+17044738188" className="text-3xl lg:text-5xl font-bold transition-colors gradient-text bg-gradient-to-r from-trophy-gold via-white to-trophy-gold bg-[length:200%_auto] animate-text-shine bg-clip-text text-transparent block">
+                    <p className="text-luxury-text-secondary text-base font-medium mb-1">Call Us — TEXT US!</p>
+                    <a href="tel:+17044738188" className="text-3xl lg:text-5xl font-bold transition-colors bg-gradient-to-r from-luxury-lime via-white to-luxury-lime bg-[length:200%_auto] animate-text-shine bg-clip-text text-transparent block">
                       (704) 473-8188
                     </a>
-                    <p className="text-trophy-gold font-bold text-base mt-2">Always Open. 24/7.</p>
-                    <p className="text-white/60 text-xs mt-1">We respond within 12-24 hours, guaranteed.</p>
+                    <p className="text-luxury-lime font-bold text-base mt-2">Always Open. 24/7.</p>
+                    <p className="text-luxury-text-secondary text-xs mt-1">We respond within 12-24 hours, guaranteed.</p>
                   </div>
                 </div>
 
                 {/* Email Card */}
-                <div className="bg-gradient-hero rounded-xl border border-white/20 p-6 shadow-glow">
+                <div className="luxury-card rounded-xl p-6">
                   <div className="text-center">
-                    <div className="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center mx-auto mb-3">
-                      <Mail size={24} className="text-accent" />
+                    <div className="w-12 h-12 bg-luxury-lime/10 rounded-full flex items-center justify-center mx-auto mb-3">
+                      <Mail size={24} className="text-luxury-lime" />
                     </div>
-                    <p className="text-white/80 text-base font-medium mb-1">Email Us</p>
-                    <a href="mailto:david.richardson@studiosbydave.com" className="text-xl lg:text-3xl font-bold transition-colors break-all block gradient-text bg-gradient-to-r from-trophy-gold via-white to-trophy-gold bg-[length:200%_auto] animate-text-shine bg-clip-text text-transparent">
+                    <p className="text-luxury-text-secondary text-base font-medium mb-1">Email Us</p>
+                    <a href="mailto:david.richardson@studiosbydave.com" className="text-xl lg:text-3xl font-bold transition-colors break-all block bg-gradient-to-r from-luxury-lime via-white to-luxury-lime bg-[length:200%_auto] animate-text-shine bg-clip-text text-transparent">
                       david.richardson@studiosbydave.com
                     </a>
-                    <p className="text-white/60 text-xs mt-2">We reply within 24 hours</p>
+                    <p className="text-luxury-text-secondary text-xs mt-2">We reply within 24 hours</p>
                   </div>
                 </div>
               </div>
 
               {/* Additional Info Cards */}
               <div className="grid md:grid-cols-2 gap-6">
-                <div className="flex items-start space-x-4 p-6 bg-white rounded-lg shadow-card">
-                  <div className="w-12 h-12 bg-gradient-primary-gold rounded-lg flex items-center justify-center flex-shrink-0">
-                    <MapPin size={24} className="text-white" />
+                <div className="flex items-start space-x-4 p-6 luxury-card rounded-xl">
+                  <div className="w-12 h-12 bg-luxury-royal-blue/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <MapPin size={24} className="text-luxury-royal-blue" />
                   </div>
                   <div>
-                    <h3 className="font-semibold text-foreground mb-1">Service Area</h3>
-                    <p className="text-primary font-medium">Shelby, NC Surrounding Area</p>
-                    <p className="text-sm text-muted-foreground">Serving contractors nationwide</p>
+                    <h3 className="font-semibold text-luxury-text-primary mb-1">Service Area</h3>
+                    <p className="text-luxury-royal-blue font-medium">Shelby, NC Surrounding Area</p>
+                    <p className="text-sm text-luxury-text-secondary">Serving contractors nationwide</p>
                   </div>
                 </div>
-                <div className="flex items-start space-x-4 p-6 bg-white rounded-lg shadow-card">
-                  <div className="w-12 h-12 bg-gradient-primary-gold rounded-lg flex items-center justify-center flex-shrink-0">
-                    <Clock size={24} className="text-white" />
+                <div className="flex items-start space-x-4 p-6 luxury-card rounded-xl">
+                  <div className="w-12 h-12 bg-luxury-royal-blue/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <Clock size={24} className="text-luxury-royal-blue" />
                   </div>
                   <div>
-                    <h3 className="font-semibold text-foreground mb-1">Response Time</h3>
-                    <p className="text-primary font-medium">Same Day Response</p>
-                    <p className="text-sm text-muted-foreground">Quick turnaround on all inquiries</p>
+                    <h3 className="font-semibold text-luxury-text-primary mb-1">Response Time</h3>
+                    <p className="text-luxury-royal-blue font-medium">Same Day Response</p>
+                    <p className="text-sm text-luxury-text-secondary">Quick turnaround on all inquiries</p>
                   </div>
                 </div>
               </div>
@@ -288,21 +249,19 @@ const Contact = () => {
               {/* Contact Form - Temporarily Removed */}
               
               {/* CTA Box */}
-              <Card className="bg-gradient-hero text-white border-0 border border-white/20 shadow-glow">
-                <CardHeader>
-                  <CardTitle className="text-white">Ready to Start?</CardTitle>
-                  <CardDescription className="text-white/80">
+              <div className="luxury-card rounded-xl p-8">
+                <div className="text-center mb-6">
+                  <h3 className="display-heading text-luxury-text-primary text-2xl mb-2">Ready to Start?</h3>
+                  <p className="font-body text-luxury-text-secondary">
                     Schedule a free 30-minute consultation to discuss your project.
-                  </CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <a href="tel:+17044738188">
-                    <Button variant="hero" className="w-full">
-                      Call Us Now
-                    </Button>
-                  </a>
-                </CardContent>
-              </Card>
+                  </p>
+                </div>
+                <a href="tel:+17044738188">
+                  <Button className="w-full bg-luxury-lime text-black hover:bg-luxury-lime/90 font-semibold uppercase tracking-wider text-xs">
+                    Call Us Now
+                  </Button>
+                </a>
+              </div>
             </div>
           </div>
       </section>

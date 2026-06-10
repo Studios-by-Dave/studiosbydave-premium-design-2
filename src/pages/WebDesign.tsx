@@ -80,7 +80,10 @@ const WebDesign = () => {
       <Navigation />
       
       {/* Hero Section */}
-      <section className="bg-gradient-hero py-16 relative" itemScope itemType="https://schema.org/WebPageElement">
+      <section className="relative min-h-[70vh] bg-luxury-bg noise-overlay flex items-center" itemScope itemType="https://schema.org/WebPageElement">
+        {/* Radial Glow */}
+        <div className="absolute inset-0 radial-glow" />
+
         {/* Shelby Background */}
         <div
           className="absolute inset-0 z-0"
@@ -88,70 +91,49 @@ const WebDesign = () => {
             backgroundImage: 'url("/assets/Shelby-intro-1751301212.webp")',
             backgroundSize: 'cover',
             backgroundPosition: 'center',
-            filter: 'brightness(0.4) contrast(1.1)'
+            filter: 'brightness(0.25) contrast(1.1)'
           }}
         />
-        
-        {/* Crown Molding Top */}
-        <div
-          className="absolute top-0 left-0 w-full h-8 z-10"
-          style={{
-            backgroundImage: 'url("/assets/crown molding cherry wood.png")',
-            backgroundRepeat: 'repeat-x',
-            backgroundSize: 'contain',
-            backgroundPosition: 'top'
-          }}
-        />
-        
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-20 pt-8 pb-8">
+        <div className="absolute inset-0 bg-luxury-bg/70 z-[1]" />
+
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-20 py-24">
           <div className="relative inline-block">
-            <PixieDust />
-            <h1 className="text-4xl lg:text-5xl font-bold text-white mb-6" itemProp="headline">
+            <div className="section-eyebrow mb-4">✦ Web Design Services</div>
+            <h1 className="display-heading text-luxury-text-primary text-4xl lg:text-6xl mb-6" itemProp="headline" style={{ fontSize: 'clamp(2.5rem, 6vw, 4.5rem)' }}>
               Professional{" "}
-              <span className="gradient-text bg-gradient-to-r from-accent to-white bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-luxury-purple to-luxury-royal-blue bg-clip-text text-transparent">
                 Web Design
               </span>
               {" "}with You in Mind
             </h1>
           </div>
-          <p className="text-xl text-white/90 max-w-3xl mx-auto mb-8" itemProp="description">
+          <p className="font-body text-luxury-text-secondary text-xl max-w-3xl mx-auto mb-10 leading-relaxed" itemProp="description">
             Custom websites that turn visitors into paying customers—designed specifically
             for local small businesses. Serving Shelby, Charlotte, Gastonia, Spartanburg, Asheville, and Raleigh.
           </p>
           <Link to="/contact#get-in-touch">
-            <Button variant="hero" size="lg">
-              Get Your Free Quote
-              <ArrowRight className="ml-2" size={20} />
+            <Button className="group relative overflow-hidden bg-luxury-lime text-black hover:bg-luxury-lime/90 transition-all duration-300 px-8 py-6 text-sm font-semibold uppercase tracking-wider">
+              <span className="relative z-10">Get Your Free Quote</span>
+              <ArrowRight className="ml-2 relative z-10 group-hover:translate-x-1 transition-transform" size={20} />
             </Button>
           </Link>
         </div>
-
-        {/* Crown Molding Bottom */}
-        <div
-          className="absolute bottom-0 left-0 w-full h-8 z-10 transform rotate-180"
-          style={{
-            backgroundImage: 'url("/assets/crown molding cherry wood.png")',
-            backgroundRepeat: 'repeat-x',
-            backgroundSize: 'contain',
-            backgroundPosition: 'top'
-          }}
-        />
       </section>
 
       {/* Features Section */}
-      <section className="py-24 bg-gradient-subtle" itemScope itemType="https://schema.org/ItemList">
+      <section className="py-32 bg-luxury-bg" itemScope itemType="https://schema.org/ItemList">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <p className="text-lg text-muted-foreground max-w-4xl mx-auto mb-12 leading-relaxed text-center">
-            At Studios by Dave, we understand that building a website for your business can feel like an overwhelming task. 
-            The technical details, the design decisions, the endless options—it's a lot to consider. That's exactly why we're here. 
-            We're with you every step of the way, keeping you informed, updated, and confident throughout the entire process. 
-            Because we don't just sell you a website, and we don't just build one. Our real job is to fulfill the purpose behind your online presence—
-            whether that means generating more phone calls, securing more bookings, or attracting more customers to your business. 
-            That's what we're here for, and at Studios by Dave, we don't rest until you're completely happy with the results!
-          </p>
-          <h2 className="text-4xl font-bold text-center text-foreground mb-16" itemProp="name">
-            Everything Your Business Website Needs
-          </h2>
+          <div className="text-center mb-20">
+            <div className="section-eyebrow mb-4">✦ What You Get</div>
+            <h2 className="display-heading text-luxury-text-primary text-4xl lg:text-5xl mb-6" itemProp="name">
+              Everything Your Business Website Needs
+            </h2>
+            <p className="font-body text-luxury-text-secondary text-lg max-w-4xl mx-auto leading-relaxed">
+              At Studios by Dave, we understand that building a website for your business can feel like an overwhelming task. 
+              We're with you every step of the way. Because we don't just sell you a website, and we don't just build one. 
+              Our real job is to fulfill the purpose behind your online presence.
+            </p>
+          </div>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
@@ -186,40 +168,27 @@ const WebDesign = () => {
             ].map((feature, index) => {
               const IconComponent = feature.icon;
               return (
-                <Card key={index} className="group hover:shadow-card transition-all duration-300 border-0 bg-white/80 backdrop-blur-sm overflow-hidden relative">
-                  <div 
-                    className="absolute inset-0 opacity-[0.06] pointer-events-none"
-                    style={{
-                      backgroundImage: `url(${feature.backdrop})`,
-                      backgroundSize: 'cover',
-                      backgroundPosition: 'center',
-                      filter: 'grayscale(85%) brightness(1.2) contrast(1.1)',
-                      mixBlendMode: 'multiply'
-                    }}
-                  />
-                  <CardHeader className="pb-4 relative z-10">
-                    <div className="relative w-14 h-14 rounded-lg bg-gradient-primary-gold flex items-center justify-center mb-4 group-hover:scale-110 transition-transform overflow-hidden">
-                      <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/40 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700 ease-out skew-x-12" />
-                      <IconComponent size={28} className="text-white drop-shadow-md relative z-10" />
+                <div key={index} className="luxury-card rounded-xl p-8 relative overflow-hidden group">
+                  <div className="relative z-10">
+                    <div className="w-12 h-12 rounded-lg bg-luxury-lime/10 flex items-center justify-center mb-6 group-hover:bg-luxury-lime/20 transition-colors">
+                      <IconComponent size={24} className="text-luxury-lime" />
                     </div>
-                    <CardTitle className="text-2xl font-bold text-foreground group-hover:text-primary transition-colors">
+                    <h3 className="display-heading text-luxury-text-primary text-2xl mb-4 group-hover:text-luxury-lime transition-colors">
                       {feature.title}
-                    </CardTitle>
-                    <CardDescription className="text-base text-muted-foreground leading-relaxed">
+                    </h3>
+                    <p className="font-body text-luxury-text-secondary text-base leading-relaxed mb-6">
                       {feature.description}
-                    </CardDescription>
-                  </CardHeader>
-                  <CardContent className="relative z-10">
+                    </p>
                     <ul className="space-y-3">
                       {feature.features.map((item, idx) => (
-                        <li key={idx} className="flex items-center text-foreground/80">
-                          <CheckCircle size={16} className="text-green-500 mr-3 flex-shrink-0" />
-                          <span className="font-medium">{item}</span>
+                        <li key={idx} className="flex items-center text-luxury-text-primary/80 text-sm">
+                          <CheckCircle size={16} className="text-luxury-lime mr-3 flex-shrink-0" />
+                          <span className="font-body">{item}</span>
                         </li>
                       ))}
                     </ul>
-                  </CardContent>
-                </Card>
+                  </div>
+                </div>
               );
             })}
           </div>
@@ -227,25 +196,28 @@ const WebDesign = () => {
       </section>
 
       {/* Pricing Section */}
-      <section className="py-24 bg-background" itemScope itemType="https://schema.org/ItemList">
+      <section className="py-32 bg-luxury-surface border-y border-white/6" itemScope itemType="https://schema.org/ItemList">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl font-bold text-center text-foreground mb-4" itemProp="name">
-            Web Design Packages
-          </h2>
-          <p className="text-xl text-muted-foreground text-center max-w-2xl mx-auto mb-16">
-            Choose the perfect package for your business needs
-          </p>
+          <div className="text-center mb-20">
+            <div className="section-eyebrow mb-4">✦ Pricing</div>
+            <h2 className="display-heading text-luxury-text-primary text-4xl lg:text-5xl mb-4" itemProp="name">
+              Web Design Packages
+            </h2>
+            <p className="font-body text-luxury-text-secondary text-lg text-center max-w-2xl mx-auto">
+              Choose the perfect package for your business needs
+            </p>
+          </div>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {/* Starter Web Package */}
-            <Card className="border-2 border-border hover:border-primary/50 transition-all duration-300 group relative bg-gradient-to-br from-white to-gray-50 shadow-[0_4px_6px_-1px_rgba(0,0,0,0.1),0_2px_4px_-1px_rgba(0,0,0,0.06),0_8px_16px_-4px_rgba(0,0,0,0.15)] hover:shadow-[0_8px_12px_-1px_rgba(0,0,0,0.15),0_4px_6px_-1px_rgba(0,0,0,0.1),0_16px_32px_-4px_rgba(0,0,0,0.25)] hover:-translate-y-1">
-              <CardHeader className="text-center pb-4">
-                <CardTitle className="text-2xl green-yellow-outline-text group-hover:animate-bounce-hover">Starter Web Package</CardTitle>
-                <CardDescription className="text-sm font-medium text-primary">NEW</CardDescription>
-                <div className="text-3xl font-bold trophy-gold-text mt-2 group-hover:animate-throb group-hover:animate-red-yellow-flash">ONLY $499</div>
-              </CardHeader>
-              <CardContent className="space-y-4">
-                <p className="text-sm text-primary text-center italic">Best for startups</p>
+            <div className="luxury-card rounded-xl p-6 transition-all duration-300 group relative hover:border-luxury-royal-blue/50">
+              <div className="text-center pb-4">
+                <h3 className="display-heading text-luxury-text-primary text-2xl mb-1">Starter Web Package</h3>
+                <span className="inline-block text-xs font-semibold uppercase tracking-wider text-luxury-lime mb-2">NEW</span>
+                <div className="text-3xl font-bold text-luxury-lime mt-2">ONLY $499</div>
+              </div>
+              <div className="space-y-4">
+                <p className="text-sm text-luxury-lime text-center italic font-body">Best for startups</p>
                 <ul className="space-y-2">
                   {[
                     "1-3 pages",
@@ -257,32 +229,32 @@ const WebDesign = () => {
                     "No maintenance included, 1 revision round"
                   ].map((feature, index) => (
                     <li key={index} className="flex items-start gap-2">
-                      <CheckCircle className="h-4 w-4 text-green-500 mt-0.5 flex-shrink-0" />
-                      <span className={`text-sm ${index >= 5 ? 'font-bold text-foreground' : 'text-muted-foreground'}`}>{feature}</span>
+                      <CheckCircle className="h-4 w-4 text-luxury-lime mt-0.5 flex-shrink-0" />
+                      <span className={`text-sm font-body ${index >= 5 ? 'font-bold text-luxury-text-primary' : 'text-luxury-text-secondary'}`}>{feature}</span>
                     </li>
                   ))}
                 </ul>
                 <Link to="/contact" className="block mt-6">
-                  <Button variant="outline" className="w-full" size="lg">
+                  <Button className="w-full bg-luxury-lime text-black hover:bg-luxury-lime/90 font-semibold uppercase tracking-wider text-xs" size="lg">
                     Get Started
                   </Button>
                 </Link>
-              </CardContent>
-            </Card>
+              </div>
+            </div>
 
             {/* Business Web Package */}
-            <Card className="border-2 border-primary relative transition-all duration-300 group bg-gradient-to-br from-white to-gray-50 shadow-[0_4px_6px_-1px_rgba(0,0,0,0.1),0_2px_4px_-1px_rgba(0,0,0,0.06),0_8px_16px_-4px_rgba(0,0,0,0.15)] hover:shadow-[0_8px_12px_-1px_rgba(0,0,0,0.15),0_4px_6px_-1px_rgba(0,0,0,0.1),0_16px_32px_-4px_rgba(0,0,0,0.25)] hover:-translate-y-1">
+            <div className="luxury-card rounded-xl p-6 relative transition-all duration-300 group hover:border-luxury-lime/50 border border-luxury-lime/30">
               <div className="absolute -top-4 left-1/2 -translate-x-1/2">
-                <span className="bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-400 text-black px-4 py-1 rounded-full text-sm font-semibold shadow-lg shadow-yellow-500/50">
+                <span className="bg-luxury-lime text-black px-4 py-1 rounded-full text-sm font-semibold">
                   Most Popular
                 </span>
               </div>
-              <CardHeader className="text-center pb-4 pt-8">
-                <CardTitle className="text-2xl green-yellow-outline-text group-hover:animate-bounce-hover">Business Web Package</CardTitle>
-                <CardDescription className="text-sm font-medium text-primary italic">Best for established local businesses</CardDescription>
-                <div className="text-3xl font-bold trophy-gold-text mt-2">$998</div>
-              </CardHeader>
-              <CardContent className="space-y-4">
+              <div className="text-center pb-4 pt-8">
+                <h3 className="display-heading text-luxury-text-primary text-2xl mb-1">Business Web Package</h3>
+                <p className="text-sm font-medium text-luxury-lime italic font-body">Best for established local businesses</p>
+                <div className="text-3xl font-bold text-luxury-lime mt-2">$998</div>
+              </div>
+              <div className="space-y-4">
                 <ul className="space-y-2">
                   {[
                     "Up to 5 pages",
@@ -294,27 +266,27 @@ const WebDesign = () => {
                     "Optional care plan"
                   ].map((feature, index) => (
                     <li key={index} className="flex items-start gap-2">
-                      <CheckCircle className="h-4 w-4 text-green-500 mt-0.5 flex-shrink-0" />
-                      <span className="text-sm text-muted-foreground">{feature}</span>
+                      <CheckCircle className="h-4 w-4 text-luxury-lime mt-0.5 flex-shrink-0" />
+                      <span className="text-sm text-luxury-text-secondary font-body">{feature}</span>
                     </li>
                   ))}
                 </ul>
                 <Link to="/contact" className="block mt-6">
-                  <Button variant="primary" className="w-full" size="lg">
+                  <Button className="w-full bg-luxury-lime text-black hover:bg-luxury-lime/90 font-semibold uppercase tracking-wider text-xs" size="lg">
                     Get Started
                   </Button>
                 </Link>
-              </CardContent>
-            </Card>
+              </div>
+            </div>
 
             {/* Scale Web Package */}
-            <Card className="border-2 border-border hover:border-primary/50 transition-all duration-300 group bg-gradient-to-br from-white to-gray-50 shadow-[0_4px_6px_-1px_rgba(0,0,0,0.1),0_2px_4px_-1px_rgba(0,0,0,0.06),0_8px_16px_-4px_rgba(0,0,0,0.15)] hover:shadow-[0_8px_12px_-1px_rgba(0,0,0,0.15),0_4px_6px_-1px_rgba(0,0,0,0.1),0_16px_32px_-4px_rgba(0,0,0,0.25)] hover:-translate-y-1">
-              <CardHeader className="text-center pb-4">
-                <CardTitle className="text-2xl green-yellow-outline-text group-hover:animate-bounce-hover">Scale Web Package</CardTitle>
-                <CardDescription className="text-sm font-medium text-primary italic">Best for lead generation</CardDescription>
-                <div className="text-3xl font-bold trophy-gold-text mt-2">$1,998</div>
-              </CardHeader>
-              <CardContent className="space-y-4">
+            <div className="luxury-card rounded-xl p-6 transition-all duration-300 group relative hover:border-luxury-royal-blue/50">
+              <div className="text-center pb-4">
+                <h3 className="display-heading text-luxury-text-primary text-2xl mb-1">Scale Web Package</h3>
+                <p className="text-sm font-medium text-luxury-royal-blue italic font-body">Best for lead generation</p>
+                <div className="text-3xl font-bold text-luxury-lime mt-2">$1,998</div>
+              </div>
+              <div className="space-y-4">
                 <ul className="space-y-2">
                   {[
                     "Up to 10 pages",
@@ -326,27 +298,27 @@ const WebDesign = () => {
                     "Priority support"
                   ].map((feature, index) => (
                     <li key={index} className="flex items-start gap-2">
-                      <CheckCircle className="h-4 w-4 text-green-500 mt-0.5 flex-shrink-0" />
-                      <span className="text-sm text-muted-foreground">{feature}</span>
+                      <CheckCircle className="h-4 w-4 text-luxury-lime mt-0.5 flex-shrink-0" />
+                      <span className="text-sm text-luxury-text-secondary font-body">{feature}</span>
                     </li>
                   ))}
                 </ul>
                 <Link to="/contact" className="block mt-6">
-                  <Button variant="outline" className="w-full" size="lg">
+                  <Button className="w-full bg-luxury-lime text-black hover:bg-luxury-lime/90 font-semibold uppercase tracking-wider text-xs" size="lg">
                     Get Started
                   </Button>
                 </Link>
-              </CardContent>
-            </Card>
+              </div>
+            </div>
 
             {/* Ultra Premium Web Package */}
-            <Card className="border-2 border-border hover:border-primary/50 transition-all duration-300 group bg-gradient-to-br from-white to-gray-50 shadow-[0_4px_6px_-1px_rgba(0,0,0,0.1),0_2px_4px_-1px_rgba(0,0,0,0.06),0_8px_16px_-4px_rgba(0,0,0,0.15)] hover:shadow-[0_8px_12px_-1px_rgba(0,0,0,0.15),0_4px_6px_-1px_rgba(0,0,0,0.1),0_16px_32px_-4px_rgba(0,0,0,0.25)] hover:-translate-y-1">
-              <CardHeader className="text-center pb-4">
-                <CardTitle className="text-2xl green-yellow-outline-text group-hover:animate-bounce-hover">Ultra Premium Web Package</CardTitle>
-                <CardDescription className="text-sm font-medium text-primary italic">Complete digital presence</CardDescription>
-                <div className="text-3xl font-bold trophy-gold-text mt-2">Call for Quote</div>
-              </CardHeader>
-              <CardContent className="space-y-4">
+            <div className="luxury-card rounded-xl p-6 transition-all duration-300 group relative hover:border-luxury-purple/50">
+              <div className="text-center pb-4">
+                <h3 className="display-heading text-luxury-text-primary text-2xl mb-1">Ultra Premium Web Package</h3>
+                <p className="text-sm font-medium text-luxury-purple italic font-body">Complete digital presence</p>
+                <div className="text-3xl font-bold text-luxury-lime mt-2">Call for Quote</div>
+              </div>
+              <div className="space-y-4">
                 <ul className="space-y-2">
                   {[
                     "Fully custom design",
@@ -358,54 +330,59 @@ const WebDesign = () => {
                     "30 days post-launch support"
                   ].map((feature, index) => (
                     <li key={index} className="flex items-start gap-2">
-                      <CheckCircle className="h-4 w-4 text-green-500 mt-0.5 flex-shrink-0" />
-                      <span className="text-sm text-muted-foreground">{feature}</span>
+                      <CheckCircle className="h-4 w-4 text-luxury-lime mt-0.5 flex-shrink-0" />
+                      <span className="text-sm text-luxury-text-secondary font-body">{feature}</span>
                     </li>
                   ))}
                 </ul>
                 <Link to="/contact" className="block mt-6">
-                  <Button variant="outline" className="w-full" size="lg">
+                  <Button className="w-full bg-luxury-lime text-black hover:bg-luxury-lime/90 font-semibold uppercase tracking-wider text-xs" size="lg">
                     Get Started
                   </Button>
                 </Link>
-              </CardContent>
-            </Card>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
       {/* Testimonials Section */}
-      <section className="py-20 bg-background">
+      <section className="py-32 bg-luxury-bg">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl font-bold text-center text-foreground mb-12">What Our Clients Say</h2>
+          <div className="text-center mb-16">
+            <div className="section-eyebrow mb-4">✦ Client Results</div>
+            <h2 className="display-heading text-luxury-text-primary text-4xl lg:text-5xl">What Our Clients Say</h2>
+          </div>
           <div className="grid md:grid-cols-2 gap-8">
-            <div className="bg-white p-8 rounded-lg shadow-lg border border-border/20">
-              <div className="flex items-center gap-1 mb-4">
-                {[...Array(5)].map((_, i) => <Star key={i} className="h-5 w-5 fill-yellow-400 text-yellow-400" />)}
+            <div className="luxury-card rounded-xl p-8 relative">
+              <div className="absolute top-4 right-4 text-6xl font-display text-luxury-royal-blue/20">"</div>
+              <div className="flex items-center gap-1 mb-6">
+                {[...Array(5)].map((_, i) => <Star key={i} className="h-5 w-5 fill-luxury-lime text-luxury-lime" />)}
               </div>
-              <p className="text-muted-foreground mb-6 italic">"Dave really presented /uncovered opportunities that we wouldn't have ever known otherwise. And now our website is really generating our online business beautifully! Thanks again Dave! 😃"</p>
-              <div className="flex items-center gap-3">
-                <div className="h-12 w-12 bg-primary/10 rounded-full flex items-center justify-center">
-                  <span className="text-primary font-bold text-lg">PR</span>
+              <p className="accent-text text-luxury-text-secondary text-lg mb-6 leading-relaxed">"Dave really presented /uncovered opportunities that we wouldn't have ever known otherwise. And now our website is really generating our online business beautifully! Thanks again Dave! 😃"</p>
+              <div className="flex items-center gap-4">
+                <div className="h-12 w-12 rounded-full bg-luxury-royal-blue/10 flex items-center justify-center">
+                  <span className="text-luxury-royal-blue font-bold text-lg">PR</span>
                 </div>
                 <div>
-                  <p className="font-semibold text-foreground">Paul Richardson</p>
-                  <p className="text-sm text-muted-foreground">Local Guide</p>
+                  <p className="font-section text-luxury-text-primary text-sm uppercase tracking-wider">Paul Richardson</p>
+                  <p className="font-body text-luxury-text-secondary text-xs">Local Guide</p>
                 </div>
               </div>
             </div>
-            <div className="bg-white p-8 rounded-lg shadow-lg border border-border/20">
-              <div className="flex items-center gap-1 mb-4">
-                {[...Array(5)].map((_, i) => <Star key={i} className="h-5 w-5 fill-yellow-400 text-yellow-400" />)}
+            <div className="luxury-card rounded-xl p-8 relative">
+              <div className="absolute top-4 right-4 text-6xl font-display text-luxury-royal-blue/20">"</div>
+              <div className="flex items-center gap-1 mb-6">
+                {[...Array(5)].map((_, i) => <Star key={i} className="h-5 w-5 fill-luxury-lime text-luxury-lime" />)}
               </div>
-              <p className="text-muted-foreground mb-6 italic">"Studios by Dave really knocked it out of the park. Our online presence is not only fully present, its generating our business so many leads now! Thank You!!!"</p>
-              <div className="flex items-center gap-3">
-                <div className="h-12 w-12 bg-primary/10 rounded-full flex items-center justify-center">
-                  <span className="text-primary font-bold text-lg">RJ</span>
+              <p className="accent-text text-luxury-text-secondary text-lg mb-6 leading-relaxed">"Studios by Dave really knocked it out of the park. Our online presence is not only fully present, its generating our business so many leads now! Thank You!!!"</p>
+              <div className="flex items-center gap-4">
+                <div className="h-12 w-12 rounded-full bg-luxury-royal-blue/10 flex items-center justify-center">
+                  <span className="text-luxury-royal-blue font-bold text-lg">RJ</span>
                 </div>
                 <div>
-                  <p className="font-semibold text-foreground">Ryan "Kris" Jones</p>
-                  <p className="text-sm text-muted-foreground">Verified Customer</p>
+                  <p className="font-section text-luxury-text-primary text-sm uppercase tracking-wider">Ryan "Kris" Jones</p>
+                  <p className="font-body text-luxury-text-secondary text-xs">Verified Customer</p>
                 </div>
               </div>
             </div>
@@ -414,9 +391,9 @@ const WebDesign = () => {
       </section>
 
       {/* Related Services & Resources Section */}
-      <section className="py-16 bg-gradient-subtle">
+      <section className="py-32 bg-luxury-surface border-y border-white/6">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-3 gap-8 items-center mb-12">
+          <div className="grid md:grid-cols-3 gap-8 items-center mb-16">
             {/* Left Certification Image */}
             <div className="flex justify-center">
               <img 
@@ -430,8 +407,8 @@ const WebDesign = () => {
             
             {/* Center Text */}
             <div className="text-center">
-              <h2 className="text-3xl font-bold text-foreground mb-4">Complete Your Digital Presence</h2>
-              <p className="text-lg text-muted-foreground">
+              <h2 className="display-heading text-luxury-text-primary text-3xl mb-4">Complete Your Digital Presence</h2>
+              <p className="font-body text-luxury-text-secondary text-lg">
                 A great website is just the beginning. Explore our other services to maximize your online success
               </p>
             </div>
@@ -448,38 +425,38 @@ const WebDesign = () => {
             </div>
           </div>
           
-          <div className="grid md:grid-cols-3 gap-8 mb-12">
+          <div className="grid md:grid-cols-3 gap-8 mb-16">
             {/* Branding Service */}
-            <div className="bg-card p-6 rounded-xl border border-border/50 hover:border-primary/50 transition-colors">
-              <h3 className="text-xl font-bold mb-3 text-primary">Professional Branding</h3>
-              <p className="text-muted-foreground mb-4">
+            <div className="luxury-card rounded-xl p-6 hover:border-luxury-royal-blue/50 transition-all">
+              <h3 className="display-heading text-luxury-text-primary text-xl mb-3">Professional Branding</h3>
+              <p className="font-body text-luxury-text-secondary mb-4">
                 Complete brand identity packages including logos, color schemes, and brand guidelines that complement your new website.
               </p>
-              <Link to="/services/branding" className="text-primary hover:text-primary/80 font-medium inline-flex items-center gap-2">
+              <Link to="/services/branding" className="text-luxury-royal-blue hover:text-luxury-purple font-body text-sm font-semibold uppercase tracking-wider inline-flex items-center gap-2 transition-colors">
                 Explore Branding Services
                 <ArrowRight size={16} />
               </Link>
             </div>
 
             {/* SEO Service */}
-            <div className="bg-card p-6 rounded-xl border border-border/50 hover:border-primary/50 transition-colors">
-              <h3 className="text-xl font-bold mb-3 text-primary">SEO Optimization</h3>
-              <p className="text-muted-foreground mb-4">
+            <div className="luxury-card rounded-xl p-6 hover:border-luxury-royal-blue/50 transition-all">
+              <h3 className="display-heading text-luxury-text-primary text-xl mb-3">SEO Optimization</h3>
+              <p className="font-body text-luxury-text-secondary mb-4">
                 Get your new website found by local customers with our comprehensive SEO services tailored for contractors.
               </p>
-              <Link to="/services/seo" className="text-primary hover:text-primary/80 font-medium inline-flex items-center gap-2">
+              <Link to="/services/seo" className="text-luxury-royal-blue hover:text-luxury-purple font-body text-sm font-semibold uppercase tracking-wider inline-flex items-center gap-2 transition-colors">
                 Boost Your Rankings
                 <ArrowRight size={16} />
               </Link>
             </div>
 
             {/* Google Optimization */}
-            <div className="bg-card p-6 rounded-xl border border-border/50 hover:border-primary/50 transition-colors">
-              <h3 className="text-xl font-bold mb-3 text-primary">Google Optimization</h3>
-              <p className="text-muted-foreground mb-4">
+            <div className="luxury-card rounded-xl p-6 hover:border-luxury-royal-blue/50 transition-all">
+              <h3 className="display-heading text-luxury-text-primary text-xl mb-3">Google Optimization</h3>
+              <p className="font-body text-luxury-text-secondary mb-4">
                 Optimize your Google Business Profile and local search presence to dominate your local market.
               </p>
-              <Link to="/services/google-optimization" className="text-primary hover:text-primary/80 font-medium inline-flex items-center gap-2">
+              <Link to="/services/google-optimization" className="text-luxury-royal-blue hover:text-luxury-purple font-body text-sm font-semibold uppercase tracking-wider inline-flex items-center gap-2 transition-colors">
                 Improve Local Search
                 <ArrowRight size={16} />
               </Link>
@@ -487,8 +464,8 @@ const WebDesign = () => {
           </div>
 
           {/* IDE Charts Section */}
-          <div className="mb-12">
-            <div className="bg-card p-6 rounded-xl border border-border/50 max-w-4xl mx-auto">
+          <div className="mb-16">
+            <div className="luxury-card p-6 rounded-xl max-w-4xl mx-auto">
               <img
                 src="/assets/sbd ide chart1.png"
                 alt="IDE Chart 1"
@@ -501,34 +478,34 @@ const WebDesign = () => {
           </div>
 
           {/* Related Blog Articles */}
-          <div className="bg-background/50 p-8 rounded-xl border border-border/30">
-            <h3 className="text-2xl font-bold mb-6 text-center">Helpful Resources</h3>
+          <div className="bg-luxury-bg p-8 rounded-xl border border-white/6">
+            <h3 className="display-heading text-luxury-text-primary text-2xl mb-6 text-center">Helpful Resources</h3>
             <div className="grid md:grid-cols-2 gap-6">
               <div>
-                <h4 className="font-semibold mb-3">Web Design Insights</h4>
+                <h4 className="font-section text-luxury-text-primary text-sm uppercase tracking-wider mb-3">Web Design Insights</h4>
                 <ul className="space-y-2">
                   <li>
-                    <Link to="/blog/does-your-business-need-a-website-2026" className="text-primary hover:text-primary/80 underline">
+                    <Link to="/blog/does-your-business-need-a-website-2026" className="text-luxury-royal-blue hover:text-luxury-purple transition-colors font-body text-sm">
                       Does Your Business Really Need a Website in 2026?
                     </Link>
                   </li>
                   <li>
-                    <Link to="/blog/website-mistakes-costing-customers" className="text-primary hover:text-primary/80 underline">
+                    <Link to="/blog/website-mistakes-costing-customers" className="text-luxury-royal-blue hover:text-luxury-purple transition-colors font-body text-sm">
                       5 Common Website Mistakes Costing Local Businesses Customers
                     </Link>
                   </li>
                 </ul>
               </div>
               <div>
-                <h4 className="font-semibold mb-3">SEO & Marketing Tips</h4>
+                <h4 className="font-section text-luxury-text-primary text-sm uppercase tracking-wider mb-3">SEO & Marketing Tips</h4>
                 <ul className="space-y-2">
                   <li>
-                    <Link to="/blog/local-seo-essentials-2026" className="text-primary hover:text-primary/80 underline">
+                    <Link to="/blog/local-seo-essentials-2026" className="text-luxury-royal-blue hover:text-luxury-purple transition-colors font-body text-sm">
                       Local SEO Essentials for Shelby Businesses in 2026
                     </Link>
                   </li>
                   <li>
-                    <Link to="/blog/why-choose-studios-by-dave" className="text-primary hover:text-primary/80 underline">
+                    <Link to="/blog/why-choose-studios-by-dave" className="text-luxury-royal-blue hover:text-luxury-purple transition-colors font-body text-sm">
                       Why Choose Studios by Dave Over Local Competition?
                     </Link>
                   </li>
@@ -540,109 +517,109 @@ const WebDesign = () => {
       </section>
 
       {/* ROI Calculator Section */}
-      <section className="py-16 bg-muted/30">
+      <section className="py-32 bg-luxury-bg">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="crazy-gradient-text text-2xl md:text-3xl font-bold mb-4">ROI Calculator</h2>
-            <p className="text-base md:text-lg text-muted-foreground">
+          <div className="text-center mb-16">
+            <div className="section-eyebrow mb-4">✦ Estimate Your ROI</div>
+            <h2 className="display-heading text-luxury-text-primary text-3xl md:text-4xl mb-4">ROI Calculator</h2>
+            <p className="font-body text-luxury-text-secondary text-lg">
               Estimate your return on investment with a new website
             </p>
           </div>
 
-          <Card className="border-2 border-primary shadow-elegant">
-            <CardContent className="p-4 md:p-8">
-              <div className="grid md:grid-cols-2 gap-4 md:gap-8">
-                {/* Inputs */}
-                <div className="space-y-6">
-                  <div>
-                    <label className="block text-sm font-medium text-red-500 mb-2">
-                      Investment Amount ($)
-                    </label>
-                    <input
-                      type="number"
-                      id="investment"
-                      className="w-full px-4 py-3 border-2 border-border rounded-lg focus:outline-none focus:border-primary transition-colors"
-                      placeholder="Enter investment amount"
-                      min="0"
-                      step="100"
-                      onChange={(e) => {
-                        const investment = parseFloat(e.target.value) || 0;
-                        const avgCustomer = parseFloat((document.getElementById('avgCustomer') as HTMLInputElement).value) || 0;
-                        calculateROI(investment, avgCustomer);
-                      }}
-                    />
-                  </div>
+          <div className="luxury-card rounded-xl p-6 md:p-10 border border-white/10">
+            <div className="grid md:grid-cols-2 gap-8">
+              {/* Inputs */}
+              <div className="space-y-6">
+                <div>
+                  <label className="block text-sm font-medium text-luxury-lime mb-2 font-body uppercase tracking-wider">
+                    Investment Amount ($)
+                  </label>
+                  <input
+                    type="number"
+                    id="investment"
+                    className="w-full px-4 py-3 bg-luxury-surface border border-white/10 rounded-lg focus:outline-none focus:border-luxury-royal-blue transition-colors text-luxury-text-primary placeholder:text-luxury-text-secondary/50"
+                    placeholder="Enter investment amount"
+                    min="0"
+                    step="100"
+                    onChange={(e) => {
+                      const investment = parseFloat(e.target.value) || 0;
+                      const avgCustomer = parseFloat((document.getElementById('avgCustomer') as HTMLInputElement).value) || 0;
+                      calculateROI(investment, avgCustomer);
+                    }}
+                  />
+                </div>
 
-                  <div>
-                    <label className="block text-sm font-medium text-red-500 mb-2">
-                      Average Customer Value ($)
-                    </label>
-                    <input
-                      type="number"
-                      id="avgCustomer"
-                      className="w-full px-4 py-3 border-2 border-border rounded-lg focus:outline-none focus:border-primary transition-colors"
-                      placeholder="Enter average customer value"
-                      min="0"
-                      step="10"
-                      onChange={(e) => {
-                        const avgCustomer = parseFloat(e.target.value) || 0;
-                        const investment = parseFloat((document.getElementById('investment') as HTMLInputElement).value) || 0;
-                        calculateROI(investment, avgCustomer);
-                      }}
-                    />
+                <div>
+                  <label className="block text-sm font-medium text-luxury-lime mb-2 font-body uppercase tracking-wider">
+                    Average Customer Value ($)
+                  </label>
+                  <input
+                    type="number"
+                    id="avgCustomer"
+                    className="w-full px-4 py-3 bg-luxury-surface border border-white/10 rounded-lg focus:outline-none focus:border-luxury-royal-blue transition-colors text-luxury-text-primary placeholder:text-luxury-text-secondary/50"
+                    placeholder="Enter average customer value"
+                    min="0"
+                    step="10"
+                    onChange={(e) => {
+                      const avgCustomer = parseFloat(e.target.value) || 0;
+                      const investment = parseFloat((document.getElementById('investment') as HTMLInputElement).value) || 0;
+                      calculateROI(investment, avgCustomer);
+                    }}
+                  />
+                </div>
+              </div>
+
+              {/* Outputs */}
+              <div className="space-y-6 bg-luxury-surface rounded-lg p-6 border border-white/6">
+                <div>
+                  <label className="block text-sm font-medium text-luxury-text-secondary mb-2 font-body uppercase tracking-wider">
+                    Payback Period
+                  </label>
+                  <div id="paybackPeriod" className="text-2xl font-bold text-luxury-lime">
+                    Enter values to calculate
                   </div>
                 </div>
 
-                {/* Outputs */}
-                <div className="space-y-6 bg-primary/5 rounded-lg p-6">
-                  <div>
-                    <label className="block text-sm font-medium text-muted-foreground mb-2">
-                      Payback Period
-                    </label>
-                    <div id="paybackPeriod" className="text-2xl font-bold text-green-500">
-                      Enter values to calculate
-                    </div>
+                <div>
+                  <label className="block text-sm font-medium text-luxury-text-secondary mb-2 font-body uppercase tracking-wider">
+                    ROI Percentage
+                  </label>
+                  <div id="roiPercentage" className="text-2xl font-bold text-luxury-lime">
+                    Enter values to calculate
                   </div>
+                </div>
 
-                  <div>
-                    <label className="block text-sm font-medium text-muted-foreground mb-2">
-                      ROI Percentage
-                    </label>
-                    <div id="roiPercentage" className="text-2xl font-bold text-green-500">
-                      Enter values to calculate
-                    </div>
-                  </div>
-
-                  <div>
-                    <label className="block text-sm font-medium text-muted-foreground mb-2">
-                      ROI Approximate Amount
-                    </label>
-                    <div id="roiAmount" className="text-2xl font-bold text-green-500">
-                      Enter values to calculate
-                    </div>
+                <div>
+                  <label className="block text-sm font-medium text-luxury-text-secondary mb-2 font-body uppercase tracking-wider">
+                    ROI Approximate Amount
+                  </label>
+                  <div id="roiAmount" className="text-2xl font-bold text-luxury-lime">
+                    Enter values to calculate
                   </div>
                 </div>
               </div>
-            </CardContent>
-          </Card>
+            </div>
+          </div>
         </div>
       </section>
 
       {/* Current Web Flyers Section */}
-      <section className="py-16 bg-background">
+      <section className="py-32 bg-luxury-surface border-y border-white/6">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="crazy-gradient-text mb-4">Current Web Flyers</h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Explore our current marketing flyers showcasing our web design and e-commerce solutions for different business needs
+          <div className="text-center mb-16">
+            <div className="section-eyebrow mb-4">✦ Marketing Materials</div>
+            <h2 className="display-heading text-luxury-text-primary text-3xl md:text-4xl mb-4">Current Web Flyers</h2>
+            <p className="font-body text-luxury-text-secondary text-lg max-w-2xl mx-auto">
+              Explore our current marketing flyers showcasing our web design and e-commerce solutions
             </p>
           </div>
           
           <div className="space-y-8">
             {/* Original Local Business Flyer */}
-            <div className="bg-card rounded-xl border border-border/50 p-6">
-              <h3 className="text-xl font-bold mb-4 text-primary">Local Business Web Design</h3>
-              <p className="text-muted-foreground mb-4">Professional web design services for local contractors and small businesses</p>
+            <div className="luxury-card rounded-xl p-6">
+              <h3 className="display-heading text-luxury-text-primary text-xl mb-2">Local Business Web Design</h3>
+              <p className="font-body text-luxury-text-secondary mb-4">Professional web design services for local contractors and small businesses</p>
               <div className="bg-gray-100 rounded-lg p-4 overflow-hidden">
                 <img 
                   src="/flyers/Web%20Flyer.jpg" 
@@ -656,9 +633,9 @@ const WebDesign = () => {
             </div>
 
             {/* E-commerce Flyer 1 */}
-            <div className="bg-card rounded-xl border border-border/50 p-6">
-              <h3 className="text-xl font-bold mb-4 text-primary">Premium E-commerce Solutions</h3>
-              <p className="text-muted-foreground mb-4">Complete online store solutions with custom domains and Shopify integration</p>
+            <div className="luxury-card rounded-xl p-6">
+              <h3 className="display-heading text-luxury-text-primary text-xl mb-2">Premium E-commerce Solutions</h3>
+              <p className="font-body text-luxury-text-secondary mb-4">Complete online store solutions with custom domains and Shopify integration</p>
               <div className="bg-gray-100 rounded-lg p-4 overflow-hidden">
                 <img 
                   src="/flyers/New%20Flyer_1.jpg" 
@@ -672,9 +649,9 @@ const WebDesign = () => {
             </div>
 
             {/* E-commerce Flyer 2 */}
-            <div className="bg-card rounded-xl border border-border/50 p-6">
-              <h3 className="text-xl font-bold mb-4 text-primary">Advanced Online Stores</h3>
-              <p className="text-muted-foreground mb-4">Professional e-commerce platforms with advanced features for growing businesses</p>
+            <div className="luxury-card rounded-xl p-6">
+              <h3 className="display-heading text-luxury-text-primary text-xl mb-2">Advanced Online Stores</h3>
+              <p className="font-body text-luxury-text-secondary mb-4">Professional e-commerce platforms with advanced features for growing businesses</p>
               <div className="bg-gray-100 rounded-lg p-4 overflow-hidden">
                 <img 
                   src="/flyers/New%20Flyer_2.jpg" 
@@ -689,13 +666,13 @@ const WebDesign = () => {
           </div>
 
           <div className="text-center mt-12">
-            <p className="text-muted-foreground mb-4">
+            <p className="font-body text-luxury-text-secondary mb-6">
               Interested in any of these services? Contact us for a free consultation!
             </p>
             <Link to="/contact#get-in-touch">
-              <Button variant="hero" size="lg">
-                Get Your Free Quote
-                <ArrowRight className="ml-2" size={20} />
+              <Button className="group relative overflow-hidden bg-luxury-lime text-black hover:bg-luxury-lime/90 transition-all duration-300 px-8 py-6 text-sm font-semibold uppercase tracking-wider">
+                <span className="relative z-10">Get Your Free Quote</span>
+                <ArrowRight className="ml-2 relative z-10 group-hover:translate-x-1 transition-transform" size={20} />
               </Button>
             </Link>
           </div>
@@ -703,64 +680,65 @@ const WebDesign = () => {
       </section>
 
       {/* Related Articles & Services */}
-      <section className="py-16 bg-background">
+      <section className="py-32 bg-luxury-bg">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h3 className="text-2xl font-bold text-foreground mb-4">Related Resources</h3>
-            <p className="text-muted-foreground">Learn more about web design and digital marketing</p>
+          <div className="text-center mb-16">
+            <div className="section-eyebrow mb-4">✦ Learn More</div>
+            <h3 className="display-heading text-luxury-text-primary text-2xl md:text-3xl mb-4">Related Resources</h3>
+            <p className="font-body text-luxury-text-secondary">Learn more about web design and digital marketing</p>
           </div>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {/* Blog Articles */}
             <div className="space-y-4">
-              <h4 className="text-lg font-semibold text-foreground flex items-center gap-2">
-                <span className="w-2 h-2 bg-accent rounded-full"></span>
+              <h4 className="font-section text-luxury-text-primary text-sm uppercase tracking-wider flex items-center gap-2">
+                <span className="w-2 h-2 bg-luxury-lime rounded-full"></span>
                 Latest Articles
               </h4>
               <div className="space-y-3">
-                <Link to="/blog/does-your-business-need-a-website-2026" className="block p-3 rounded-lg border border-border/30 hover:border-accent/50 transition-colors">
-                  <h5 className="font-medium text-foreground hover:text-accent transition-colors">Does Your Business Need a Website in 2026?</h5>
-                  <p className="text-sm text-muted-foreground mt-1">Why websites still matter for business growth</p>
+                <Link to="/blog/does-your-business-need-a-website-2026" className="block p-4 rounded-lg border border-white/6 hover:border-luxury-royal-blue/50 transition-colors bg-luxury-surface/50">
+                  <h5 className="font-body text-luxury-text-primary hover:text-luxury-royal-blue transition-colors font-medium">Does Your Business Need a Website in 2026?</h5>
+                  <p className="text-sm text-luxury-text-secondary mt-1">Why websites still matter for business growth</p>
                 </Link>
-                <Link to="/blog/website-mistakes-costing-customers" className="block p-3 rounded-lg border border-border/30 hover:border-accent/50 transition-colors">
-                  <h5 className="font-medium text-foreground hover:text-accent transition-colors">5 Common Website Mistakes</h5>
-                  <p className="text-sm text-muted-foreground mt-1">Fix costly errors that hurt your business</p>
+                <Link to="/blog/website-mistakes-costing-customers" className="block p-4 rounded-lg border border-white/6 hover:border-luxury-royal-blue/50 transition-colors bg-luxury-surface/50">
+                  <h5 className="font-body text-luxury-text-primary hover:text-luxury-royal-blue transition-colors font-medium">5 Common Website Mistakes</h5>
+                  <p className="text-sm text-luxury-text-secondary mt-1">Fix costly errors that hurt your business</p>
                 </Link>
               </div>
             </div>
 
             {/* Related Services */}
             <div className="space-y-4">
-              <h4 className="text-lg font-semibold text-foreground flex items-center gap-2">
-                <span className="w-2 h-2 bg-primary rounded-full"></span>
+              <h4 className="font-section text-luxury-text-primary text-sm uppercase tracking-wider flex items-center gap-2">
+                <span className="w-2 h-2 bg-luxury-royal-blue rounded-full"></span>
                 Complementary Services
               </h4>
               <div className="space-y-3">
-                <Link to="/services/branding" className="block p-3 rounded-lg border border-border/30 hover:border-primary/50 transition-colors">
-                  <h5 className="font-medium text-foreground hover:text-primary transition-colors">Logo Design & Branding</h5>
-                  <p className="text-sm text-muted-foreground mt-1">Complete brand identity solutions</p>
+                <Link to="/services/branding" className="block p-4 rounded-lg border border-white/6 hover:border-luxury-royal-blue/50 transition-colors bg-luxury-surface/50">
+                  <h5 className="font-body text-luxury-text-primary hover:text-luxury-royal-blue transition-colors font-medium">Logo Design & Branding</h5>
+                  <p className="text-sm text-luxury-text-secondary mt-1">Complete brand identity solutions</p>
                 </Link>
-                <Link to="/services/seo" className="block p-3 rounded-lg border border-border/30 hover:border-primary/50 transition-colors">
-                  <h5 className="font-medium text-foreground hover:text-primary transition-colors">SEO Services</h5>
-                  <p className="text-sm text-muted-foreground mt-1">Get found by your ideal customers</p>
+                <Link to="/services/seo" className="block p-4 rounded-lg border border-white/6 hover:border-luxury-royal-blue/50 transition-colors bg-luxury-surface/50">
+                  <h5 className="font-body text-luxury-text-primary hover:text-luxury-royal-blue transition-colors font-medium">SEO Services</h5>
+                  <p className="text-sm text-luxury-text-secondary mt-1">Get found by your ideal customers</p>
                 </Link>
               </div>
             </div>
 
             {/* Quick Actions */}
             <div className="space-y-4">
-              <h4 className="text-lg font-semibold text-foreground flex items-center gap-2">
-                <span className="w-2 h-2 bg-trophy-gold rounded-full"></span>
+              <h4 className="font-section text-luxury-text-primary text-sm uppercase tracking-wider flex items-center gap-2">
+                <span className="w-2 h-2 bg-luxury-lime rounded-full"></span>
                 Next Steps
               </h4>
               <div className="space-y-3">
-                <Link to="/services/promos" className="block p-3 rounded-lg bg-trophy-gold/10 hover:bg-trophy-gold/20 transition-colors border border-trophy-gold/20">
-                  <h5 className="font-medium text-foreground">Current Promotions</h5>
-                  <p className="text-sm text-muted-foreground mt-1">Special offers on web design</p>
+                <Link to="/services/promos" className="block p-4 rounded-lg border border-luxury-lime/20 hover:bg-luxury-lime/10 transition-colors bg-luxury-surface/50">
+                  <h5 className="font-body text-luxury-lime font-medium">Current Promotions</h5>
+                  <p className="text-sm text-luxury-text-secondary mt-1">Special offers on web design</p>
                 </Link>
-                <Link to="/booking" className="block p-3 rounded-lg bg-primary/10 hover:bg-primary/20 transition-colors border border-primary/20">
-                  <h5 className="font-medium text-primary">Book a Consultation</h5>
-                  <p className="text-sm text-muted-foreground mt-1">Schedule your free strategy session</p>
+                <Link to="/booking" className="block p-4 rounded-lg border border-luxury-royal-blue/20 hover:bg-luxury-royal-blue/10 transition-colors bg-luxury-surface/50">
+                  <h5 className="font-body text-luxury-royal-blue font-medium">Book a Consultation</h5>
+                  <p className="text-sm text-luxury-text-secondary mt-1">Schedule your free strategy session</p>
                 </Link>
               </div>
             </div>

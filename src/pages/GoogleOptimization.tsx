@@ -42,66 +42,48 @@ const GoogleOptimization = () => {
       <Navigation />
       
       {/* Hero Section */}
-      <section className="bg-gradient-hero py-16 relative">
-        {/* Crown Molding Top */}
-        <div
-          className="absolute top-0 left-0 w-full h-8 z-10"
-          style={{
-            backgroundImage: 'url("/assets/crown molding cherry wood.png")',
-            backgroundRepeat: 'repeat-x',
-            backgroundSize: 'contain',
-            backgroundPosition: 'top'
-          }}
-        />
-        
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-20 pt-8 pb-8">
+      <section className="relative min-h-[70vh] bg-luxury-bg noise-overlay flex items-center">
+        {/* Radial Glow */}
+        <div className="absolute inset-0 radial-glow" />
+
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-20 py-24">
           <div className="relative inline-block">
-            <PixieDust />
-            <h1 className="text-4xl lg:text-5xl font-bold text-white mb-6">
+            <div className="section-eyebrow mb-4">✦ Google Ecosystem</div>
+            <h1 className="display-heading text-luxury-text-primary text-4xl lg:text-6xl mb-6" style={{ fontSize: 'clamp(2.5rem, 6vw, 4.5rem)' }}>
               Google{" "}
-              <span className="gradient-text bg-gradient-to-r from-accent to-white bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-luxury-purple to-luxury-royal-blue bg-clip-text text-transparent">
                 Optimization Services
               </span>
             </h1>
           </div>
-          <p className="text-xl text-white/90 max-w-3xl mx-auto mb-8">
+          <p className="font-body text-luxury-text-secondary text-xl max-w-3xl mx-auto mb-10 leading-relaxed">
             Dominate local search results and get more customers. Our Google optimization 
             services help contractors rank higher, get more reviews, and maximize their online visibility.
           </p>
           <Link to="/contact">
-            <Button variant="hero" size="lg">
-              Boost Your Rankings
-              <ArrowRight className="ml-2" size={20} />
+            <Button className="group relative overflow-hidden bg-luxury-lime text-black hover:bg-luxury-lime/90 transition-all duration-300 px-8 py-6 text-sm font-semibold uppercase tracking-wider">
+              <span className="relative z-10">Boost Your Rankings</span>
+              <ArrowRight className="ml-2 relative z-10 group-hover:translate-x-1 transition-transform" size={20} />
             </Button>
           </Link>
         </div>
-
-        {/* Crown Molding Bottom */}
-        <div
-          className="absolute bottom-0 left-0 w-full h-8 z-10 transform rotate-180"
-          style={{
-            backgroundImage: 'url("/assets/crown molding cherry wood.png")',
-            backgroundRepeat: 'repeat-x',
-            backgroundSize: 'contain',
-            backgroundPosition: 'top'
-          }}
-        />
       </section>
 
       {/* Google My Business Showcase */}
-      <section className="py-24">
+      <section className="py-32 bg-luxury-bg">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-4xl font-bold text-foreground mb-8">
+          <div className="section-eyebrow mb-4">✦ Google My Business</div>
+          <h2 className="display-heading text-luxury-text-primary text-4xl lg:text-5xl mb-8">
             Get Found on Google My Business
           </h2>
-          <p className="text-xl text-muted-foreground mb-12 max-w-3xl mx-auto">
+          <p className="font-body text-luxury-text-secondary text-xl mb-12 max-w-3xl mx-auto">
             Your Google My Business profile is often the first thing customers see. We optimize it to get you more calls, reviews, and customers.
           </p>
           <div className="max-w-2xl mx-auto">
             <img 
               src="/lovable-uploads/b56502ca-7d57-469f-a63b-c87e8173c7c4.png" 
               alt="Google My Business profile optimization featuring 5-star reviews, local search visibility, and enhanced business listing for contractors" 
-              className="w-full h-auto rounded-2xl shadow-elegant"
+              className="w-full h-auto rounded-2xl luxury-card"
               loading="lazy"
               decoding="async"
               width="672"
@@ -112,14 +94,14 @@ const GoogleOptimization = () => {
       </section>
 
       {/* Google Optimization Features with Visual */}
-      <section className="py-24 bg-gradient-subtle">
+      <section className="py-32 bg-luxury-surface border-y border-white/6">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div className="relative">
               <img 
                 src="/lovable-uploads/1e32a73d-031e-4dfc-becf-0bd28772b676.png" 
                 alt="Comprehensive SEO optimization dashboard displaying keyword rankings, content strategy, traffic analytics, backlink profile, and search performance metrics" 
-                className="w-full h-auto rounded-2xl shadow-elegant"
+                className="w-full h-auto rounded-2xl luxury-card"
                 loading="lazy"
                 decoding="async"
                 width="600"
@@ -128,7 +110,8 @@ const GoogleOptimization = () => {
             </div>
             
             <div>
-              <h2 className="text-4xl font-bold text-foreground mb-8">
+              <div className="section-eyebrow mb-4">✦ Our Services</div>
+              <h2 className="display-heading text-luxury-text-primary text-4xl lg:text-5xl mb-8">
                 Complete Google Optimization Suite
               </h2>
               <div className="grid gap-6">
@@ -153,19 +136,22 @@ const GoogleOptimization = () => {
                     title: "Local SEO",
                     description: "Dominate local search results in your service area"
                   }
-                ].map((service, index) => (
-                  <Card key={index} className="border-0 shadow-card">
-                    <CardContent className="flex items-start space-x-4 p-6">
-                      <div className="w-12 h-12 bg-gradient-primary-gold rounded-lg flex items-center justify-center flex-shrink-0">
-                        <service.icon size={24} className="text-white" />
+                ].map((service, index) => {
+                  const IconComponent = service.icon;
+                  return (
+                    <div key={index} className="luxury-card rounded-xl p-6 hover:border-luxury-royal-blue/50 transition-all">
+                      <div className="flex items-start space-x-4">
+                        <div className="w-12 h-12 bg-luxury-lime/10 rounded-lg flex items-center justify-center flex-shrink-0 hover:bg-luxury-lime/20 transition-colors">
+                          <IconComponent size={24} className="text-luxury-lime" />
+                        </div>
+                        <div>
+                          <h3 className="display-heading text-luxury-text-primary text-xl mb-2 group-hover:text-luxury-lime transition-colors">{service.title}</h3>
+                          <p className="font-body text-luxury-text-secondary">{service.description}</p>
+                        </div>
                       </div>
-                      <div>
-                        <h3 className="text-xl font-bold mb-2">{service.title}</h3>
-                        <p className="text-muted-foreground">{service.description}</p>
-                      </div>
-                    </CardContent>
-                  </Card>
-                ))}
+                    </div>
+                  );
+                })}
               </div>
             </div>
           </div>
@@ -173,11 +159,12 @@ const GoogleOptimization = () => {
       </section>
 
       {/* Results Section */}
-      <section className="py-24">
+      <section className="py-32 bg-luxury-bg">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div>
-              <h2 className="text-4xl font-bold text-foreground mb-8">
+              <div className="section-eyebrow mb-4">✦ Results</div>
+              <h2 className="display-heading text-luxury-text-primary text-4xl lg:text-5xl mb-8">
                 Proven Google Optimization Results
               </h2>
               <div className="space-y-6">
@@ -190,19 +177,19 @@ const GoogleOptimization = () => {
                   "Improved online reputation with more positive reviews"
                 ].map((result, index) => (
                   <div key={index} className="flex items-center gap-3">
-                    <CheckCircle className="text-primary w-6 h-6 flex-shrink-0" />
-                    <p className="text-lg text-muted-foreground">{result}</p>
+                    <CheckCircle className="text-luxury-lime w-6 h-6 flex-shrink-0" />
+                    <p className="font-body text-luxury-text-secondary text-lg">{result}</p>
                   </div>
                 ))}
               </div>
             </div>
-            <div className="bg-gradient-primary rounded-2xl p-8 text-center">
-              <h3 className="text-2xl font-bold text-white mb-4">Ready to Dominate Google?</h3>
-              <p className="text-white/90 mb-6">
+            <div className="bg-gradient-to-br from-luxury-purple to-luxury-royal-blue rounded-2xl p-8 text-center luxury-card">
+              <h3 className="display-heading text-white text-2xl mb-4">Ready to Dominate Google?</h3>
+              <p className="text-white/90 mb-6 font-body">
                 Start getting more customers from Google with our proven optimization strategies.
               </p>
               <Link to="/contact">
-                <Button variant="secondary" size="lg">
+                <Button className="bg-luxury-lime text-black hover:bg-luxury-lime/90 font-semibold uppercase tracking-wider text-xs" size="lg">
                   Get More Customers
                 </Button>
               </Link>
@@ -212,9 +199,10 @@ const GoogleOptimization = () => {
       </section>
 
       {/* What's Included Section */}
-      <section className="py-24 bg-gradient-subtle">
+      <section className="py-32 bg-luxury-surface border-y border-white/6">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-4xl font-bold text-foreground mb-16">
+          <div className="section-eyebrow mb-4">✦ What's Included</div>
+          <h2 className="display-heading text-luxury-text-primary text-4xl lg:text-5xl mb-16">
             What's Included in Our Google Optimization
           </h2>
           
@@ -233,21 +221,19 @@ const GoogleOptimization = () => {
                 features: ["Review generation system", "Response management", "Reputation monitoring", "Review widgets"]
               }
             ].map((package_item, index) => (
-              <Card key={index} className="border-0 shadow-card">
-                <CardHeader>
-                  <CardTitle className="text-2xl font-bold">{package_item.title}</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <ul className="space-y-3">
-                    {package_item.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center gap-2">
-                        <CheckCircle className="text-primary w-5 h-5 flex-shrink-0" />
-                        <span>{feature}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </CardContent>
-              </Card>
+              <div key={index} className="luxury-card rounded-xl p-6 hover:border-luxury-royal-blue/50 transition-all">
+                <div className="mb-6">
+                  <h3 className="display-heading text-luxury-text-primary text-2xl mb-2">{package_item.title}</h3>
+                </div>
+                <ul className="space-y-3">
+                  {package_item.features.map((feature, featureIndex) => (
+                    <li key={featureIndex} className="flex items-center gap-2">
+                      <CheckCircle className="text-luxury-lime w-5 h-5 flex-shrink-0" />
+                      <span className="font-body text-luxury-text-secondary">{feature}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
             ))}
           </div>
         </div>

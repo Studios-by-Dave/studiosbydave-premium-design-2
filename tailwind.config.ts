@@ -19,6 +19,17 @@ export default {
 		},
 		extend: {
 			colors: {
+				// Ultra-Premium Dark Luxury Palette
+				'luxury-bg': '#0A0A0F',
+				'luxury-surface': '#111118',
+				'luxury-royal-blue': '#4169E1',
+				'luxury-purple': '#9370DB',
+				'luxury-lime': '#C9F04D',
+				'luxury-text-primary': '#F2F2F0',
+				'luxury-text-secondary': '#7A7A8A',
+				'luxury-footer': '#070709',
+				
+				// Existing shadcn colors (keeping for compatibility)
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
 				ring: 'hsl(var(--ring))',
@@ -83,6 +94,12 @@ export default {
 				'bounce': 'var(--transition-bounce)',
 			},
 			fontFamily: {
+				// Ultra-Premium Typography
+				display: ['Playfair Display', 'serif'],
+				section: ['Syne', 'sans-serif'],
+				body: ['Inter', 'system-ui', 'sans-serif'],
+				accent: ['Cormorant Garamond', 'serif'],
+				// Legacy font names for compatibility
 				sans: ['Inter', 'system-ui', 'sans-serif'],
 				poofy: ['Fredoka One', 'cursive'],
 			},
@@ -156,6 +173,27 @@ export default {
 					'75%': {
 						transform: 'rotate(-0.2deg) translateY(-1px)'
 					}
+				},
+				// Ultra-Premium animations
+				'fade-in-up': {
+					'0%': {
+						opacity: '0',
+						transform: 'translateY(20px)'
+					},
+					'100%': {
+						opacity: '1',
+						transform: 'translateY(0)'
+					}
+				},
+				'cursor-trail': {
+					'0%': {
+						transform: 'scale(1)',
+						opacity: '0.8'
+					},
+					'100%': {
+						transform: 'scale(0)',
+						opacity: '0'
+					}
 				}
 			},
 			animation: {
@@ -165,7 +203,10 @@ export default {
 				'text-shine': 'text-shine 3s linear infinite',
 				'gradient-spin': 'gradient-spin 4s linear infinite',
 				'bounce-slow': 'bounce-slow 3s ease-in-out infinite',
-				'gentle-sway': 'gentle-sway 4s ease-in-out infinite'
+				'gentle-sway': 'gentle-sway 4s ease-in-out infinite',
+				// Ultra-Premium animations
+				'fade-in-up': 'fade-in-up 0.6s ease-out',
+				'cursor-trail': 'cursor-trail 0.5s ease-out'
 			}
 		}
 	},

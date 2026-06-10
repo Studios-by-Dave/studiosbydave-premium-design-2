@@ -85,96 +85,116 @@ const Navigation = () => {
   }];
   const isActive = (path: string) => location.pathname === path;
   const isServicesActive = () => location.pathname.startsWith('/services');
-  return <nav className="bg-white/95 backdrop-blur-md border-b border-border/50 sticky top-0 z-50 shadow-sm">
+  return <nav className="frosted-glass border-b border-white/6 sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-24">
+        <div className="flex justify-between items-center h-20">
           {/* Logo */}
           <div className="flex-shrink-0">
             <Link to="/" className="flex items-center space-x-3">
-              <img src={studiosBrainLogo} alt="Studios by Dave Logo" className="h-24 w-auto" width="96" height="96" />
+              <img src={studiosBrainLogo} alt="Studios by Dave Logo" className="h-16 w-auto" width="64" height="64" />
             </Link>
           </div>
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-8">
-            <Link to="/" className={`text-sm font-black transition-colors hover:text-primary hover:animate-trophy-gold-flash border-b-2 border-transparent pb-1 ${isActive('/') ? "text-primary border-primary" : "text-foreground"}`}>
+            <Link to="/" className={`font-body text-xs uppercase tracking-wider transition-all duration-300 hover:text-luxury-royal-blue relative ${isActive('/') ? "text-luxury-royal-blue" : "text-luxury-text-primary"}`}>
               Home
+              <span className={`absolute bottom-0 left-0 h-px bg-luxury-royal-blue transition-all duration-300 ${isActive('/') ? "w-full" : "w-0 group-hover:w-full"}`}></span>
             </Link>
             
             {/* Services Collapsible */}
-            <div className="relative">
-              <button onClick={() => setServicesOpen(!servicesOpen)} className={`text-sm font-black transition-colors hover:text-primary hover:animate-trophy-gold-flash flex items-center space-x-1 border-b-2 border-transparent pb-1 ${isServicesActive() ? "text-primary border-primary" : "text-foreground"}`}>
+            <div className="relative group">
+              <button onClick={() => setServicesOpen(!servicesOpen)} className={`font-body text-xs uppercase tracking-wider transition-all duration-300 hover:text-luxury-royal-blue relative flex items-center space-x-1 ${isServicesActive() ? "text-luxury-royal-blue" : "text-luxury-text-primary"}`}>
                 <span>Services</span>
-                <ChevronDown className={`h-4 w-4 transition-transform duration-300 ${servicesOpen ? 'rotate-180' : ''}`} />
+                <ChevronDown className={`h-3 w-3 transition-transform duration-300 ${servicesOpen ? 'rotate-180' : ''}`} />
               </button>
               
               {/* Fan-out dropdown underneath */}
-              <div className={`absolute top-full left-0 mt-2 bg-white rounded-lg shadow-lg border border-border/50 z-50 overflow-hidden transition-all duration-300 ${servicesOpen ? 'opacity-100 visible' : 'opacity-0 invisible'}`}>
+              <div className={`absolute top-full left-0 mt-2 bg-luxury-surface rounded-lg shadow-lg border border-white/6 z-50 overflow-hidden transition-all duration-300 ${servicesOpen ? 'opacity-100 visible' : 'opacity-0 invisible'}`}>
                 <div className="p-2 flex flex-col">
-                  {services.map((service, index) => <Link key={service.name} to={service.path} onClick={() => setServicesOpen(false)} className={`text-sm whitespace-nowrap px-4 py-2 rounded-md transition-all duration-300 hover:bg-muted hover:text-primary ${service.name === 'Portfolio' ? 'font-bold' : 'font-medium'} ${isActive(service.path) ? "text-primary bg-muted/50" : "text-foreground/80"} ${servicesOpen ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-8'}`} style={{
-                  transitionDelay: servicesOpen ? `${index * 60}ms` : '0ms'
-                }}>
+                  {services.map((service, index) => (
+                    <Link 
+                      key={service.name} 
+                      to={service.path} 
+                      onClick={() => setServicesOpen(false)} 
+                      className={`font-body text-xs whitespace-nowrap px-4 py-2 rounded-md transition-all duration-300 hover:bg-white/5 hover:text-luxury-royal-blue ${service.name === 'Portfolio' ? 'font-semibold' : 'font-medium'} ${isActive(service.path) ? "text-luxury-royal-blue bg-white/5" : "text-luxury-text-secondary"} ${servicesOpen ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-8'}`}
+                      style={{ transitionDelay: servicesOpen ? `${index * 60}ms` : '0ms' }}
+                    >
                       {service.name}
-                    </Link>)}
+                    </Link>
+                  ))}
                 </div>
               </div>
             </div>
 
-            <Link to="/about" className={`text-sm font-black transition-colors hover:text-primary hover:animate-trophy-gold-flash border-b-2 border-transparent pb-1 ${isActive('/about') ? "text-primary border-primary" : "text-foreground"}`}>
+            <Link to="/about" className={`font-body text-xs uppercase tracking-wider transition-all duration-300 hover:text-luxury-royal-blue relative ${isActive('/about') ? "text-luxury-royal-blue" : "text-luxury-text-primary"}`}>
               About Us
+              <span className={`absolute bottom-0 left-0 h-px bg-luxury-royal-blue transition-all duration-300 ${isActive('/about') ? "w-full" : "w-0 group-hover:w-full"}`}></span>
             </Link>
 
             {/* Service Areas Collapsible */}
-            <div className="relative">
-              <button onClick={() => setServiceAreasOpen(!serviceAreasOpen)} className={`text-sm font-black transition-colors hover:text-primary hover:animate-trophy-gold-flash flex items-center space-x-1 border-b-2 border-transparent pb-1 ${location.pathname.startsWith('/web-design-') ? "text-primary border-primary" : "text-foreground"}`}>
+            <div className="relative group">
+              <button onClick={() => setServiceAreasOpen(!serviceAreasOpen)} className={`font-body text-xs uppercase tracking-wider transition-all duration-300 hover:text-luxury-royal-blue relative flex items-center space-x-1 ${location.pathname.startsWith('/web-design-') ? "text-luxury-royal-blue" : "text-luxury-text-primary"}`}>
                 <span>Service Areas</span>
-                <ChevronDown className={`h-4 w-4 transition-transform duration-300 ${serviceAreasOpen ? 'rotate-180' : ''}`} />
+                <ChevronDown className={`h-3 w-3 transition-transform duration-300 ${serviceAreasOpen ? 'rotate-180' : ''}`} />
               </button>
 
               {/* Fan-out dropdown underneath */}
-              <div className={`absolute top-full left-0 mt-2 bg-white rounded-lg shadow-lg border border-border/50 z-50 overflow-hidden transition-all duration-300 ${serviceAreasOpen ? 'opacity-100 visible' : 'opacity-0 invisible'}`}>
+              <div className={`absolute top-full left-0 mt-2 bg-luxury-surface rounded-lg shadow-lg border border-white/6 z-50 overflow-hidden transition-all duration-300 ${serviceAreasOpen ? 'opacity-100 visible' : 'opacity-0 invisible'}`}>
                 <div className="p-2 flex flex-col">
-                  {serviceAreas.map((area, index) => <Link key={area.name} to={area.path} onClick={() => setServiceAreasOpen(false)} className={`text-sm whitespace-nowrap px-4 py-2 rounded-md transition-all duration-300 hover:bg-muted hover:text-primary font-medium ${isActive(area.path) ? "text-primary bg-muted/50" : "text-foreground/80"} ${serviceAreasOpen ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-8'}`} style={{
-                  transitionDelay: serviceAreasOpen ? `${index * 60}ms` : '0ms'
-                }}>
+                  {serviceAreas.map((area, index) => (
+                    <Link 
+                      key={area.name} 
+                      to={area.path} 
+                      onClick={() => setServiceAreasOpen(false)} 
+                      className={`font-body text-xs whitespace-nowrap px-4 py-2 rounded-md transition-all duration-300 hover:bg-white/5 hover:text-luxury-royal-blue font-medium ${isActive(area.path) ? "text-luxury-royal-blue bg-white/5" : "text-luxury-text-secondary"} ${serviceAreasOpen ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-8'}`}
+                      style={{ transitionDelay: serviceAreasOpen ? `${index * 60}ms` : '0ms' }}
+                    >
                       {area.name}
-                    </Link>)}
+                    </Link>
+                  ))}
                 </div>
               </div>
             </div>
 
             {/* Promos Collapsible */}
-            <div className="relative">
-              <button onClick={() => setPromosOpen(!promosOpen)} className={`text-sm font-black transition-colors hover:text-primary hover:animate-trophy-gold-flash flex items-center space-x-1 border-b-2 border-transparent pb-1 ${location.pathname.startsWith('/promos') ? "text-primary border-primary" : "text-foreground"}`}>
+            <div className="relative group">
+              <button onClick={() => setPromosOpen(!promosOpen)} className={`font-body text-xs uppercase tracking-wider transition-all duration-300 hover:text-luxury-royal-blue relative flex items-center space-x-1 ${location.pathname.startsWith('/promos') ? "text-luxury-royal-blue" : "text-luxury-text-primary"}`}>
                 <span>Promos</span>
-                <ChevronDown className={`h-4 w-4 transition-transform duration-300 ${promosOpen ? 'rotate-180' : ''}`} />
+                <ChevronDown className={`h-3 w-3 transition-transform duration-300 ${promosOpen ? 'rotate-180' : ''}`} />
               </button>
 
               {/* Fan-out dropdown underneath */}
-              <div className={`absolute top-full left-0 mt-2 bg-white rounded-lg shadow-lg border border-border/50 z-50 overflow-hidden transition-all duration-300 ${promosOpen ? 'opacity-100 visible' : 'opacity-0 invisible'}`}>
+              <div className={`absolute top-full left-0 mt-2 bg-luxury-surface rounded-lg shadow-lg border border-white/6 z-50 overflow-hidden transition-all duration-300 ${promosOpen ? 'opacity-100 visible' : 'opacity-0 invisible'}`}>
                 <div className="p-2 flex flex-col">
-                  {promos.map((promo, index) => <Link key={promo.name} to={promo.path} onClick={() => setPromosOpen(false)} className={`text-sm whitespace-nowrap px-4 py-2 rounded-md transition-all duration-300 hover:bg-muted hover:text-primary font-medium ${isActive(promo.path) ? "text-primary bg-muted/50" : "text-foreground/80"} ${promosOpen ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-8'}`} style={{
-                  transitionDelay: promosOpen ? `${index * 60}ms` : '0ms'
-                }}>
+                  {promos.map((promo, index) => (
+                    <Link 
+                      key={promo.name} 
+                      to={promo.path} 
+                      onClick={() => setPromosOpen(false)} 
+                      className={`font-body text-xs whitespace-nowrap px-4 py-2 rounded-md transition-all duration-300 hover:bg-white/5 hover:text-luxury-royal-blue font-medium ${isActive(promo.path) ? "text-luxury-royal-blue bg-white/5" : "text-luxury-text-secondary"} ${promosOpen ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-8'}`}
+                      style={{ transitionDelay: promosOpen ? `${index * 60}ms` : '0ms' }}
+                    >
                       {promo.name}
-                    </Link>)}
+                    </Link>
+                  ))}
                 </div>
               </div>
             </div>
 
-            <Link to="/contact" className={`text-sm font-black transition-colors hover:text-primary hover:animate-trophy-gold-flash border-b-2 border-transparent pb-1 ${isActive('/contact') ? "text-primary border-primary" : "text-foreground"}`}>
+            <Link to="/contact" className={`font-body text-xs uppercase tracking-wider transition-all duration-300 hover:text-luxury-royal-blue relative ${isActive('/contact') ? "text-luxury-royal-blue" : "text-luxury-text-primary"}`}>
               Contact
+              <span className={`absolute bottom-0 left-0 h-px bg-luxury-royal-blue transition-all duration-300 ${isActive('/contact') ? "w-full" : "w-0 group-hover:w-full"}`}></span>
             </Link>
 
             {/* Blog */}
-            <Link to="/blog" className={`font-poofy text-sm md:text-base transition-all hover:scale-105 hover:animate-trophy-gold-flash border-b-2 border-transparent pb-1 ${isActive('/blog') ? "border-primary" : ""}`}>
-              <span className="bg-gradient-to-r from-purple-500 via-violet-400 to-purple-600 bg-clip-text bg-[length:200%_auto] animate-shimmer drop-shadow-[0_0_8px_rgba(139,92,246,0.4)] text-blue-700">
-                Blog
-              </span>
+            <Link to="/blog" className={`font-body text-xs uppercase tracking-wider transition-all duration-300 hover:text-luxury-royal-blue relative ${isActive('/blog') ? "text-luxury-royal-blue" : "text-luxury-text-primary"}`}>
+              Blog
+              <span className={`absolute bottom-0 left-0 h-px bg-luxury-royal-blue transition-all duration-300 ${isActive('/blog') ? "w-full" : "w-0 group-hover:w-full"}`}></span>
             </Link>
             
             <Link to="/contact#get-in-touch">
-              <Button variant="shimmer" size="sm" className="ml-4 text-sm bg-[hsl(45,100%,68%)] text-black border-2 border-black hover:bg-[hsl(45,100%,60%)]">
+              <Button size="sm" className="ml-4 text-xs font-semibold uppercase tracking-wider bg-luxury-lime text-black hover:bg-luxury-lime/90 transition-all duration-300">
                 Get Started
               </Button>
             </Link>
@@ -182,76 +202,106 @@ const Navigation = () => {
 
           {/* Mobile menu button */}
           <div className="lg:hidden">
-            <Button variant="ghost" size="sm" onClick={() => setIsOpen(!isOpen)} className="text-foreground hover:text-foreground/80 p-2">
-              {isOpen ? <X size={32} strokeWidth={2.5} /> : <Menu size={32} strokeWidth={2.5} />}
+            <Button variant="ghost" size="sm" onClick={() => setIsOpen(!isOpen)} className="text-luxury-text-primary hover:text-luxury-lime p-2">
+              {isOpen ? <X size={28} strokeWidth={2} /> : <Menu size={28} strokeWidth={2} />}
             </Button>
           </div>
         </div>
 
-        {/* Mobile Navigation */}
-        {isOpen && <div className="lg:hidden pb-6 space-y-4">
-            <Link to="/" onClick={() => setIsOpen(false)} className={`block text-base font-black transition-colors hover:text-primary ${isActive('/') ? "text-primary" : "text-foreground"}`}>
-              Home
-            </Link>
-            
-            {/* Mobile Services Section */}
-            <div className="border-t pt-4">
-              <div className={`block text-base font-black transition-colors hover:text-primary mb-2 ${isServicesActive() ? "text-primary" : "text-foreground"}`}>
-                Services
+        {/* Mobile Navigation - Slide-in drawer from right */}
+        {isOpen && <div className="lg:hidden fixed inset-0 z-40">
+            <div className="absolute inset-0 bg-black/50" onClick={() => setIsOpen(false)}></div>
+            <div className="absolute right-0 top-0 h-full w-80 bg-luxury-surface border-l border-white/6 p-6 overflow-y-auto">
+              <div className="flex justify-end mb-8">
+                <Button variant="ghost" size="sm" onClick={() => setIsOpen(false)} className="text-luxury-text-primary hover:text-luxury-lime p-2">
+                  <X size={28} strokeWidth={2} />
+                </Button>
               </div>
-              <div className="ml-4 space-y-2">
-                {services.map(service => <Link key={service.name} to={service.path} onClick={() => setIsOpen(false)} className={`block text-sm hover:text-primary transition-colors ${service.name === 'Portfolio' ? 'font-bold text-foreground' : 'text-muted-foreground'} ${isActive(service.path) ? "text-primary" : ""}`}>
-                    {service.name}
-                  </Link>)}
+              
+              <div className="space-y-6">
+                <Link to="/" onClick={() => setIsOpen(false)} className={`block font-body text-sm uppercase tracking-wider transition-colors hover:text-luxury-royal-blue ${isActive('/') ? "text-luxury-royal-blue" : "text-luxury-text-primary"}`}>
+                  Home
+                </Link>
+                
+                {/* Mobile Services Section */}
+                <div className="border-t border-white/6 pt-6">
+                  <div className={`font-body text-sm uppercase tracking-wider transition-colors hover:text-luxury-royal-blue mb-4 ${isServicesActive() ? "text-luxury-royal-blue" : "text-luxury-text-primary"}`}>
+                    Services
+                  </div>
+                  <div className="ml-4 space-y-3">
+                    {services.map(service => (
+                      <Link 
+                        key={service.name} 
+                        to={service.path} 
+                        onClick={() => setIsOpen(false)} 
+                        className={`block font-body text-sm hover:text-luxury-royal-blue transition-colors ${service.name === 'Portfolio' ? 'font-semibold text-luxury-text-primary' : 'text-luxury-text-secondary'} ${isActive(service.path) ? "text-luxury-royal-blue" : ""}`}
+                      >
+                        {service.name}
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+
+                <Link to="/about" onClick={() => setIsOpen(false)} className={`block font-body text-sm uppercase tracking-wider transition-colors hover:text-luxury-royal-blue ${isActive('/about') ? "text-luxury-royal-blue" : "text-luxury-text-primary"}`}>
+                  About Us
+                </Link>
+
+                {/* Mobile Service Areas Section */}
+                <div className="border-t border-white/6 pt-6">
+                  <div className={`font-body text-sm uppercase tracking-wider transition-colors hover:text-luxury-royal-blue mb-4 ${location.pathname.startsWith('/web-design-') ? "text-luxury-royal-blue" : "text-luxury-text-primary"}`}>
+                    Service Areas
+                  </div>
+                  <div className="ml-4 space-y-3">
+                    {serviceAreas.map(area => (
+                      <Link 
+                        key={area.name} 
+                        to={area.path} 
+                        onClick={() => setIsOpen(false)} 
+                        className={`block font-body text-sm hover:text-luxury-royal-blue transition-colors text-luxury-text-secondary ${isActive(area.path) ? "text-luxury-royal-blue" : ""}`}
+                      >
+                        {area.name}
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Mobile Promos Section */}
+                <div className="border-t border-white/6 pt-6">
+                  <div className={`font-body text-sm uppercase tracking-wider transition-colors hover:text-luxury-royal-blue mb-4 ${location.pathname.startsWith('/promos') ? "text-luxury-royal-blue" : "text-luxury-text-primary"}`}>
+                    Promos
+                  </div>
+                  <div className="ml-4 space-y-3">
+                    {promos.map(promo => (
+                      <Link 
+                        key={promo.name} 
+                        to={promo.path} 
+                        onClick={() => setIsOpen(false)} 
+                        className={`block font-body text-sm hover:text-luxury-royal-blue transition-colors text-luxury-text-secondary ${isActive(promo.path) ? "text-luxury-royal-blue" : ""}`}
+                      >
+                        {promo.name}
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+
+                <Link to="/contact" onClick={() => setIsOpen(false)} className={`block font-body text-sm uppercase tracking-wider transition-colors hover:text-luxury-royal-blue ${isActive('/contact') ? "text-luxury-royal-blue" : "text-luxury-text-primary"}`}>
+                  Contact
+                </Link>
+
+                {/* Mobile Blog */}
+                <div className="border-t border-white/6 pt-6">
+                  <Link to="/blog" onClick={() => setIsOpen(false)} className={`block font-body text-sm uppercase tracking-wider transition-all ${isActive('/blog') ? "text-luxury-royal-blue" : "text-luxury-text-primary"}`}>
+                    Blog
+                  </Link>
+                </div>
+                
+                <Link to="/contact#get-in-touch" onClick={() => setIsOpen(false)}>
+                  <Button className="w-full bg-luxury-lime text-black hover:bg-luxury-lime/90 font-semibold uppercase tracking-wider text-xs">
+                    Get Started
+                  </Button>
+                </Link>
               </div>
             </div>
-
-            <Link to="/about" onClick={() => setIsOpen(false)} className={`block text-base font-black transition-colors hover:text-primary ${isActive('/about') ? "text-primary" : "text-foreground"}`}>
-              About Us
-            </Link>
-
-            {/* Mobile Service Areas Section */}
-            <div className="border-t pt-4">
-              <div className={`block text-base font-black transition-colors hover:text-primary mb-2 ${location.pathname.startsWith('/web-design-') ? "text-primary" : "text-foreground"}`}>
-                Service Areas
-              </div>
-              <div className="ml-4 space-y-2">
-                {serviceAreas.map(area => <Link key={area.name} to={area.path} onClick={() => setIsOpen(false)} className={`block text-sm hover:text-primary transition-colors text-muted-foreground ${isActive(area.path) ? "text-primary" : ""}`}>
-                    {area.name}
-                  </Link>)}
-              </div>
-            </div>
-
-            {/* Mobile Promos Section */}
-            <div className="border-t pt-4">
-              <div className={`block text-base font-black transition-colors hover:text-primary mb-2 ${location.pathname.startsWith('/promos') ? "text-primary" : "text-foreground"}`}>
-                Promos
-              </div>
-              <div className="ml-4 space-y-2">
-                {promos.map(promo => <Link key={promo.name} to={promo.path} onClick={() => setIsOpen(false)} className={`block text-sm hover:text-primary transition-colors text-muted-foreground ${isActive(promo.path) ? "text-primary" : ""}`}>
-                    {promo.name}
-                  </Link>)}
-              </div>
-            </div>
-
-            <Link to="/contact" onClick={() => setIsOpen(false)} className={`block text-base font-black transition-colors hover:text-primary ${isActive('/contact') ? "text-primary" : "text-foreground"}`}>
-              Contact
-            </Link>
-
-            {/* Mobile Blog */}
-            <div className="border-t pt-4">
-              <Link to="/blog" onClick={() => setIsOpen(false)} className={`block font-poofy text-lg transition-all ${isActive('/blog') ? "text-primary" : ""}`}>
-                <span className="bg-gradient-to-r from-purple-500 via-violet-400 to-purple-600 bg-clip-text text-transparent bg-[length:200%_auto] animate-shimmer drop-shadow-[0_0_8px_rgba(139,92,246,0.4)] text-blue-700">
-                  Blog
-                </span>
-              </Link>
-            </div>
-            
-            <Link to="/contact#get-in-touch" onClick={() => setIsOpen(false)}>
-              <Button variant="shimmer" className="w-full bg-[hsl(45,100%,68%)] text-black border-2 border-black hover:bg-[hsl(45,100%,60%)]">
-                Get Started
-              </Button>
-            </Link>
           </div>}
       </div>
     </nav>;

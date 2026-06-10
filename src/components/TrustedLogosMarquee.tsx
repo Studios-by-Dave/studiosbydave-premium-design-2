@@ -26,14 +26,14 @@ const TrustedLogosMarquee = () => {
   const doubled = [...logos, ...logos];
 
   return (
-    <section className="w-full py-12 overflow-hidden bg-muted/30">
-      <p className="text-center text-sm text-muted-foreground mb-6 font-semibold tracking-wide uppercase">
+    <section className="w-full py-12 overflow-hidden bg-gradient-to-r from-gray-100 via-gray-50 to-gray-100 border-y border-white/10">
+      <p className="text-center text-sm text-gray-700 mb-6 font-semibold tracking-wide uppercase">
         Powered by the best in the industry
       </p>
       <div className="relative">
         {/* Fade edges */}
-        <div className="absolute left-0 top-0 bottom-0 w-24 bg-gradient-to-r from-background to-transparent z-10 pointer-events-none" />
-        <div className="absolute right-0 top-0 bottom-0 w-24 bg-gradient-to-l from-background to-transparent z-10 pointer-events-none" />
+        <div className="absolute left-0 top-0 bottom-0 w-24 bg-gradient-to-r from-gray-100 to-transparent z-10 pointer-events-none" />
+        <div className="absolute right-0 top-0 bottom-0 w-24 bg-gradient-to-l from-gray-100 to-transparent z-10 pointer-events-none" />
 
         <div className="flex animate-marquee w-max items-center gap-10 px-8">
           {doubled.map((logo, i) => (
@@ -44,7 +44,7 @@ const TrustedLogosMarquee = () => {
               <img
                 src={logo.src}
                 alt={logo.alt}
-                className="max-h-full max-w-full object-contain grayscale hover:grayscale-0 transition-all duration-300"
+                className="max-h-full max-w-full object-contain transition-all duration-300"
                 width="208"
                 height="96"
                 loading="lazy"

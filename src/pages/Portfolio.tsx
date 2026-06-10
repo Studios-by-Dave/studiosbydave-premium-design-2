@@ -124,7 +124,7 @@ interface ProjectCardProps {
 const ProjectCard = ({ project, onClick }: ProjectCardProps) => (
   <button
     onClick={onClick}
-    className="group block w-full text-left overflow-hidden rounded-xl border border-border/50 bg-card shadow-card hover:shadow-glow transition-all duration-300 hover:-translate-y-1"
+    className="group block w-full text-left overflow-hidden rounded-xl border border-white/10 luxury-card hover:border-luxury-royal-blue/50 transition-all duration-300 hover:-translate-y-1"
   >
     <div className="relative aspect-video overflow-hidden">
       <img
@@ -136,18 +136,18 @@ const ProjectCard = ({ project, onClick }: ProjectCardProps) => (
         width="400"
         height="225"
       />
-      <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+      <div className="absolute inset-0 bg-gradient-to-t from-luxury-bg/90 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
       <div className="absolute bottom-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-        <span className="inline-flex items-center gap-1 bg-primary text-primary-foreground px-3 py-1.5 rounded-full text-sm font-medium">
+        <span className="inline-flex items-center gap-1 bg-luxury-lime text-black px-3 py-1.5 rounded-full text-sm font-medium">
           View Gallery
         </span>
       </div>
     </div>
     <div className="p-5">
-      <h3 className="text-lg font-bold text-foreground group-hover:text-primary transition-colors">
+      <h3 className="display-heading text-luxury-text-primary text-lg font-bold group-hover:text-luxury-royal-blue transition-colors">
         {project.title}
       </h3>
-      <p className="mt-2 text-sm text-muted-foreground line-clamp-2">
+      <p className="mt-2 font-body text-luxury-text-secondary text-sm line-clamp-2">
         {project.description}
       </p>
     </div>
@@ -177,17 +177,17 @@ const ProjectGalleryModal = ({ project, isOpen, onClose }: ProjectGalleryModalPr
 
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
-      <DialogContent className="max-w-5xl w-[95vw] max-h-[90vh] overflow-hidden p-0 bg-background border-border">
+      <DialogContent className="max-w-5xl w-[95vw] max-h-[90vh] overflow-hidden p-0 bg-luxury-surface border-white/10">
         <DialogHeader className="p-6 pb-0">
-          <DialogTitle className="text-2xl font-bold text-foreground">
+          <DialogTitle className="display-heading text-luxury-text-primary text-2xl font-bold">
             {project.title}
           </DialogTitle>
-          <p className="text-muted-foreground mt-2">{project.description}</p>
+          <p className="font-body text-luxury-text-secondary mt-2">{project.description}</p>
         </DialogHeader>
         
         <div className="relative p-6 pt-4">
           {/* Main Image */}
-          <div className="relative aspect-video rounded-lg overflow-hidden bg-muted">
+          <div className="relative aspect-video rounded-lg overflow-hidden bg-luxury-bg">
             <img
               src={project.images[currentIndex]}
               alt={`${project.title} screenshot ${currentIndex + 1}`}
@@ -199,14 +199,14 @@ const ProjectGalleryModal = ({ project, isOpen, onClose }: ProjectGalleryModalPr
               <>
                 <button
                   onClick={goToPrevious}
-                  className="absolute left-2 top-1/2 -translate-y-1/2 p-2 rounded-full bg-background/80 hover:bg-background text-foreground transition-colors"
+                  className="absolute left-2 top-1/2 -translate-y-1/2 p-2 rounded-full bg-luxury-bg/80 hover:bg-luxury-bg text-luxury-text-primary transition-colors border border-white/10"
                   aria-label="Previous image"
                 >
                   <ChevronLeft className="w-6 h-6" />
                 </button>
                 <button
                   onClick={goToNext}
-                  className="absolute right-2 top-1/2 -translate-y-1/2 p-2 rounded-full bg-background/80 hover:bg-background text-foreground transition-colors"
+                  className="absolute right-2 top-1/2 -translate-y-1/2 p-2 rounded-full bg-luxury-bg/80 hover:bg-luxury-bg text-luxury-text-primary transition-colors border border-white/10"
                   aria-label="Next image"
                 >
                   <ChevronRight className="w-6 h-6" />
@@ -224,8 +224,8 @@ const ProjectGalleryModal = ({ project, isOpen, onClose }: ProjectGalleryModalPr
                   onClick={() => setCurrentIndex(index)}
                   className={`flex-shrink-0 w-20 h-14 rounded-md overflow-hidden border-2 transition-all ${
                     index === currentIndex
-                      ? "border-primary ring-2 ring-primary/30"
-                      : "border-transparent hover:border-muted-foreground/50"
+                      ? "border-luxury-royal-blue ring-2 ring-luxury-royal-blue/30"
+                      : "border-transparent hover:border-white/30"
                   }`}
                 >
                   <img
@@ -240,7 +240,7 @@ const ProjectGalleryModal = ({ project, isOpen, onClose }: ProjectGalleryModalPr
 
           {/* Image Counter */}
           {hasMultipleImages && (
-            <div className="text-center text-sm text-muted-foreground mt-2">
+            <div className="text-center text-sm font-body text-luxury-text-secondary mt-2">
               {currentIndex + 1} of {project.images.length}
             </div>
           )}
@@ -265,7 +265,7 @@ const Portfolio = () => {
   };
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen bg-luxury-bg">
       <SimpleSEO
         title="Portfolio - Studios by Dave | Web Design & Development Projects"
         description="Explore our portfolio of professional websites and web applications. See real examples of our work for local businesses including contractors, musicians, and innovative apps."
@@ -275,52 +275,34 @@ const Portfolio = () => {
       
       <main>
         {/* Hero Section */}
-        <section className="relative py-12 md:py-16 bg-secondary overflow-hidden">
-          {/* Crown Molding Top */}
-          <div
-            className="absolute top-0 left-0 w-full h-8 z-10"
-            style={{
-              backgroundImage: 'url("/assets/crown molding cherry wood.png")',
-              backgroundRepeat: 'repeat-x',
-              backgroundSize: 'contain',
-              backgroundPosition: 'top'
-            }}
-          />
-          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-primary/20 via-transparent to-transparent" />
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-20 pt-8 pb-8">
+        <section className="relative min-h-[50vh] bg-luxury-bg noise-overlay flex items-center">
+          {/* Radial Glow */}
+          <div className="absolute inset-0 radial-glow" />
+
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-20 py-24">
             <div className="text-center max-w-3xl mx-auto">
-              <h1 className="relative text-6xl md:text-8xl font-bold text-white mb-6">
-                <PixieDust />
-                <span className="gradient-text bg-gradient-to-r from-accent to-white bg-clip-text text-transparent">
+              <div className="section-eyebrow mb-4">✦ Our Work</div>
+              <h1 className="display-heading text-luxury-text-primary text-6xl md:text-8xl mb-6" style={{ fontSize: 'clamp(3rem, 8vw, 6rem)' }}>
+                <span className="bg-gradient-to-r from-luxury-purple to-luxury-royal-blue bg-clip-text text-transparent">
                   Portfolio
                 </span>
               </h1>
-              <p className="text-lg text-white/90">
+              <p className="font-body text-luxury-text-secondary text-lg">
                 Explore our collection of websites and web applications. Each project is crafted with attention to detail, performance, and user experience.
               </p>
             </div>
           </div>
-
-          {/* Crown Molding Bottom */}
-          <div
-            className="absolute bottom-0 left-0 w-full h-8 z-10 transform rotate-180"
-            style={{
-              backgroundImage: 'url("/assets/crown molding cherry wood.png")',
-              backgroundRepeat: 'repeat-x',
-              backgroundSize: 'contain',
-              backgroundPosition: 'top'
-            }}
-          />
         </section>
 
         {/* Web Projects Section */}
-        <section className="py-16 md:py-24 bg-background">
+        <section className="py-32 bg-luxury-bg">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+            <div className="mb-16">
+              <div className="section-eyebrow mb-4">✦ Websites</div>
+              <h2 className="display-heading text-luxury-text-primary text-3xl md:text-4xl mb-4">
                 Websites
               </h2>
-              <p className="text-muted-foreground max-w-2xl">
+              <p className="font-body text-luxury-text-secondary max-w-2xl">
                 Professional, responsive websites built for local businesses. From contractors to artisans, we create digital experiences that convert visitors into customers.
               </p>
             </div>
@@ -338,13 +320,14 @@ const Portfolio = () => {
         </section>
 
         {/* Web Apps Section */}
-        <section className="py-16 md:py-24 bg-muted/30">
+        <section className="py-32 bg-luxury-surface border-y border-white/6">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+            <div className="mb-16">
+              <div className="section-eyebrow mb-4">✦ Web Applications</div>
+              <h2 className="display-heading text-luxury-text-primary text-3xl md:text-4xl mb-4">
                 Web Applications
               </h2>
-              <p className="text-muted-foreground max-w-2xl">
+              <p className="font-body text-luxury-text-secondary max-w-2xl">
                 Interactive web applications showcasing our technical expertise. From specialized tools to innovative solutions.
               </p>
             </div>
@@ -362,19 +345,20 @@ const Portfolio = () => {
         </section>
 
         {/* CTA Section */}
-        <section className="py-16 md:py-24 bg-secondary">
+        <section className="py-32 bg-luxury-bg">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            <div className="section-eyebrow mb-4">✦ Let's Build</div>
+            <h2 className="display-heading text-luxury-text-primary text-4xl md:text-5xl mb-6">
               Ready to Build Something{" "}
-              <span className="gradient-text bg-gradient-to-r from-accent to-white bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-luxury-purple to-luxury-royal-blue bg-clip-text text-transparent">
                 Great?
               </span>
             </h2>
-            <p className="text-lg text-white/90 mb-8">
+            <p className="font-body text-luxury-text-secondary text-lg mb-8">
               Let's discuss your project and create something that stands out.
             </p>
             <Link to="/contact">
-              <Button variant="shimmer" size="lg">
+              <Button className="bg-luxury-lime text-black hover:bg-luxury-lime/90 font-semibold uppercase tracking-wider text-xs" size="lg">
                 Get Started Today
               </Button>
             </Link>

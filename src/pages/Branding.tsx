@@ -47,60 +47,42 @@ const Branding = () => {
       <Navigation />
       
       {/* Hero Section */}
-      <section className="bg-gradient-hero py-16 relative">
-        {/* Crown Molding Top */}
-        <div
-          className="absolute top-0 left-0 w-full h-8 z-10"
-          style={{
-            backgroundImage: 'url("/assets/crown molding cherry wood.png")',
-            backgroundRepeat: 'repeat-x',
-            backgroundSize: 'contain',
-            backgroundPosition: 'top'
-          }}
-        />
-        
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-20 pt-8 pb-8">
+      <section className="relative min-h-[70vh] bg-luxury-bg noise-overlay flex items-center">
+        {/* Radial Glow */}
+        <div className="absolute inset-0 radial-glow" />
+
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-20 py-24">
           <div className="relative inline-block">
-            <PixieDust />
-            <h1 className="text-4xl lg:text-5xl font-bold text-white mb-6">
+            <div className="section-eyebrow mb-4">✦ Brand Identity</div>
+            <h1 className="display-heading text-luxury-text-primary text-4xl lg:text-6xl mb-6" style={{ fontSize: 'clamp(2.5rem, 6vw, 4.5rem)' }}>
               Logo Design &{" "}
-              <span className="gradient-text bg-gradient-to-r from-accent to-white bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-luxury-purple to-luxury-royal-blue bg-clip-text text-transparent">
                 Branding Solutions
               </span>
             </h1>
           </div>
-          <p className="text-xl text-white/90 max-w-3xl mx-auto mb-8">
+          <p className="font-body text-luxury-text-secondary text-xl max-w-3xl mx-auto mb-10 leading-relaxed">
             Professional branding that makes your business stand out. From logos to complete 
             brand identity packages, we create memorable brands for contractors and local businesses.
           </p>
           <Link to="/contact#get-in-touch">
-            <Button variant="hero" size="lg">
-              Start Your Brand Design
-              <ArrowRight className="ml-2" size={20} />
+            <Button className="group relative overflow-hidden bg-luxury-lime text-black hover:bg-luxury-lime/90 transition-all duration-300 px-8 py-6 text-sm font-semibold uppercase tracking-wider">
+              <span className="relative z-10">Start Your Brand Design</span>
+              <ArrowRight className="ml-2 relative z-10 group-hover:translate-x-1 transition-transform" size={20} />
             </Button>
           </Link>
         </div>
-
-        {/* Crown Molding Bottom */}
-        <div
-          className="absolute bottom-0 left-0 w-full h-8 z-10 transform rotate-180"
-          style={{
-            backgroundImage: 'url("/assets/crown molding cherry wood.png")',
-            backgroundRepeat: 'repeat-x',
-            backgroundSize: 'contain',
-            backgroundPosition: 'top'
-          }}
-        />
       </section>
 
       {/* Services Overview Section */}
-      <section className="py-24 bg-gradient-subtle">
+      <section className="py-32 bg-luxury-bg">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl lg:text-5xl font-bold text-foreground mb-4">
+          <div className="text-center mb-20">
+            <div className="section-eyebrow mb-4">✦ What We Offer</div>
+            <h2 className="display-heading text-luxury-text-primary text-4xl lg:text-5xl mb-4">
               Logo Design & Branding
             </h2>
-            <p className="text-2xl text-muted-foreground font-semibold">
+            <p className="font-body text-luxury-text-secondary text-2xl font-semibold">
               Complete Branding Solutions
             </p>
           </div>
@@ -131,29 +113,24 @@ const Branding = () => {
                 description: "Strategic positioning and messaging that differentiates your business and resonates with your target market.",
                 backdrop: mediaPacksBackdrop
               }
-            ].map((service, index) => (
-              <Card key={index} className="text-center border-0 shadow-card relative overflow-hidden bg-white/80 backdrop-blur-sm">
-                <div 
-                  className="absolute inset-0 opacity-[0.06] pointer-events-none"
-                  style={{
-                    backgroundImage: `url(${service.backdrop})`,
-                    backgroundSize: 'cover',
-                    backgroundPosition: 'center',
-                    filter: 'grayscale(85%) brightness(1.2) contrast(1.1)',
-                    mixBlendMode: 'multiply'
-                  }}
-                />
-                <CardHeader className="relative z-10">
-                  <div className="w-16 h-16 bg-gradient-primary-gold rounded-full flex items-center justify-center mx-auto mb-4">
-                    <service.icon size={32} className="text-white" />
+            ].map((service, index) => {
+              const IconComponent = service.icon;
+              return (
+                <div key={index} className="luxury-card rounded-xl p-8 relative overflow-hidden group text-center">
+                  <div className="relative z-10">
+                    <div className="w-16 h-16 bg-luxury-lime/10 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-luxury-lime/20 transition-colors">
+                      <IconComponent size={32} className="text-luxury-lime" />
+                    </div>
+                    <h3 className="display-heading text-luxury-text-primary text-xl mb-4 group-hover:text-luxury-lime transition-colors">
+                      {service.title}
+                    </h3>
+                    <p className="font-body text-luxury-text-secondary text-base leading-relaxed">
+                      {service.description}
+                    </p>
                   </div>
-                  <CardTitle className="text-xl font-bold">{service.title}</CardTitle>
-                </CardHeader>
-                <CardContent className="relative z-10">
-                  <CardDescription className="text-base">{service.description}</CardDescription>
-                </CardContent>
-              </Card>
-            ))}
+                </div>
+              );
+            })}
           </div>
         </div>
       </section>
@@ -162,128 +139,117 @@ const Branding = () => {
       <LogoMarquee />
 
       {/* Branding Packages Section */}
-      <section className="py-24">
+      <section className="py-32 bg-luxury-surface border-y border-white/6">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-foreground mb-6">
+          <div className="text-center mb-20">
+            <div className="section-eyebrow mb-4">✦ Packages</div>
+            <h2 className="display-heading text-luxury-text-primary text-4xl lg:text-5xl mb-6">
               Choose Your Branding Package
             </h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+            <p className="font-body text-luxury-text-secondary text-xl max-w-3xl mx-auto">
               From essential brand basics to comprehensive marketing systems, we have the perfect package to establish and grow your business identity.
             </p>
           </div>
           
           <div className="grid lg:grid-cols-3 gap-8">
             {/* Starter Package */}
-            <Card className="border-0 shadow-card">
-              <CardHeader>
-                <div className="text-center mb-4">
-                  <div className="w-16 h-16 bg-gradient-bronze rounded-full flex items-center justify-center mx-auto mb-4">
-                    <Palette size={32} className="text-white" />
+            <div className="luxury-card rounded-xl p-6 transition-all duration-300 group relative hover:border-luxury-royal-blue/50">
+              <div className="text-center mb-6">
+                <div className="w-16 h-16 bg-luxury-royal-blue/10 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-luxury-royal-blue/20 transition-colors">
+                  <Palette size={32} className="text-luxury-royal-blue" />
+                </div>
+                <h3 className="display-heading text-luxury-text-primary text-2xl mb-2">Starter Brand Package</h3>
+                <p className="font-body text-luxury-royal-blue text-lg italic">Perfect for new businesses getting started</p>
+              </div>
+              <div className="space-y-3">
+                {[
+                  "Custom Logo Design (3 concepts)",
+                  "Basic Brand Guidelines",
+                  "Business Card Design",
+                  "Letterhead Template",
+                  "Email Signature Design",
+                  "Social Media Profile Package",
+                  "Basic Brand Color Palette"
+                ].map((item, index) => (
+                  <div key={index} className="flex items-center gap-3">
+                    <CheckCircle className="text-luxury-lime w-5 h-5 flex-shrink-0" />
+                    <span className="font-body text-luxury-text-secondary text-sm">{item}</span>
                   </div>
-                  <CardTitle className="text-2xl font-bold">Starter Brand Package</CardTitle>
-                  <CardDescription className="text-lg mt-2 italic">Perfect for new businesses getting started</CardDescription>
-                </div>
-              </CardHeader>
-              <CardContent className="space-y-4">
-                <div className="space-y-3">
-                  {[
-                    "Custom Logo Design (3 concepts)",
-                    "Basic Brand Guidelines",
-                    "Business Card Design",
-                    "Letterhead Template",
-                    "Email Signature Design",
-                    "Social Media Profile Package",
-                    "Basic Brand Color Palette"
-                  ].map((item, index) => (
-                    <div key={index} className="flex items-center gap-3">
-                      <CheckCircle className="text-primary w-5 h-5 flex-shrink-0" />
-                      <span className="text-muted-foreground">{item}</span>
-                    </div>
-                  ))}
-                </div>
-              </CardContent>
-            </Card>
+                ))}
+              </div>
+            </div>
 
             {/* Professional Package */}
-            <Card className="border-2 border-primary shadow-elegant relative overflow-hidden">
-              <div className="absolute top-0 right-0 bg-primary text-primary-foreground px-4 py-1 text-sm font-semibold">
+            <div className="luxury-card rounded-xl p-6 relative transition-all duration-300 group hover:border-luxury-lime/50 border border-luxury-lime/30">
+              <div className="absolute top-0 right-0 bg-luxury-lime text-black px-4 py-1 text-sm font-semibold">
                 MOST POPULAR
               </div>
-              <CardHeader>
-                <div className="text-center mb-4">
-                  <div className="w-16 h-16 bg-gradient-primary-gold rounded-full flex items-center justify-center mx-auto mb-4">
-                    <Users size={32} className="text-white" />
+              <div className="text-center mb-6 pt-4">
+                <div className="w-16 h-16 bg-luxury-lime/10 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-luxury-lime/20 transition-colors">
+                  <Users size={32} className="text-luxury-lime" />
+                </div>
+                <h3 className="display-heading text-luxury-text-primary text-2xl mb-2">Professional Brand Package</h3>
+                <p className="font-body text-luxury-lime text-lg italic">Complete branding solution for established businesses</p>
+              </div>
+              <div className="space-y-3">
+                {[
+                  "Premium Logo Design (5 concepts + revisions)",
+                  "Comprehensive Brand Guidelines",
+                  "Business Cards & Stationery Suite",
+                  "Brochure & Flyer Templates",
+                  "Vehicle Decal/Wrap Design",
+                  "Yard Sign & Banners",
+                  "Website Header Graphics",
+                  "Social Media Brand Kit",
+                  "Invoice & Estimate Templates",
+                  "Extended Brand Color System"
+                ].map((item, index) => (
+                  <div key={index} className="flex items-center gap-3">
+                    <CheckCircle className="text-luxury-lime w-5 h-5 flex-shrink-0" />
+                    <span className="font-body text-luxury-text-secondary text-sm">{item}</span>
                   </div>
-                  <CardTitle className="text-2xl font-bold">Professional Brand Package</CardTitle>
-                  <CardDescription className="text-lg mt-2 italic">Complete branding solution for established businesses</CardDescription>
-                </div>
-              </CardHeader>
-              <CardContent className="space-y-4">
-                <div className="space-y-3">
-                  {[
-                    "Premium Logo Design (5 concepts + revisions)",
-                    "Comprehensive Brand Guidelines",
-                    "Business Cards & Stationery Suite",
-                    "Brochure & Flyer Templates",
-                    "Vehicle Decal/Wrap Design",
-                    "Yard Sign & Banners",
-                    "Website Header Graphics",
-                    "Social Media Brand Kit",
-                    "Invoice & Estimate Templates",
-                    "Extended Brand Color System"
-                  ].map((item, index) => (
-                    <div key={index} className="flex items-center gap-3">
-                      <CheckCircle className="text-primary w-5 h-5 flex-shrink-0" />
-                      <span className="text-muted-foreground">{item}</span>
-                    </div>
-                  ))}
-                </div>
-              </CardContent>
-            </Card>
+                ))}
+              </div>
+            </div>
 
             {/* Enterprise Package */}
-            <Card className="border-0 shadow-card">
-              <CardHeader>
-                <div className="text-center mb-4">
-                  <div className="w-16 h-16 bg-gradient-platinum rounded-full flex items-center justify-center mx-auto mb-4 shadow-glow">
-                    <Award size={32} className="text-white" />
+            <div className="luxury-card rounded-xl p-6 transition-all duration-300 group relative hover:border-luxury-purple/50">
+              <div className="text-center mb-6">
+                <div className="w-16 h-16 bg-luxury-purple/10 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-luxury-purple/20 transition-colors">
+                  <Award size={32} className="text-luxury-purple" />
+                </div>
+                <h3 className="display-heading text-luxury-text-primary text-2xl mb-2">Enterprise Brand Package</h3>
+                <p className="font-body text-luxury-purple text-lg italic">Complete marketing system for growing companies</p>
+              </div>
+              <div className="space-y-3">
+                {[
+                  "Premium Logo Suite (Multiple variations)",
+                  "Complete Brand Manual & Guidelines",
+                  "Full Stationery & Business Materials",
+                  "Marketing Collateral Suite",
+                  "Full Vehicle Wrap Design",
+                  "Large Format Signage Package",
+                  "Trade Show & Event Materials",
+                  "Uniform & Apparel Designs",
+                  "Complete Digital Brand Package",
+                  "Brand Photography Guidelines",
+                  "Ongoing Brand Consultation (3 months)",
+                  "Brand Implementation Support"
+                ].map((item, index) => (
+                  <div key={index} className="flex items-center gap-3">
+                    <CheckCircle className="text-luxury-lime w-5 h-5 flex-shrink-0" />
+                    <span className="font-body text-luxury-text-secondary text-sm">{item}</span>
                   </div>
-                  <CardTitle className="text-2xl font-bold">Enterprise Brand Package</CardTitle>
-                  <CardDescription className="text-lg mt-2 italic">Complete marketing system for growing companies</CardDescription>
-                </div>
-              </CardHeader>
-              <CardContent className="space-y-4">
-                <div className="space-y-3">
-                  {[
-                    "Premium Logo Suite (Multiple variations)",
-                    "Complete Brand Manual & Guidelines",
-                    "Full Stationery & Business Materials",
-                    "Marketing Collateral Suite",
-                    "Full Vehicle Wrap Design",
-                    "Large Format Signage Package",
-                    "Trade Show & Event Materials",
-                    "Uniform & Apparel Designs",
-                    "Complete Digital Brand Package",
-                    "Brand Photography Guidelines",
-                    "Ongoing Brand Consultation (3 months)",
-                    "Brand Implementation Support"
-                  ].map((item, index) => (
-                    <div key={index} className="flex items-center gap-3">
-                      <CheckCircle className="text-primary w-5 h-5 flex-shrink-0" />
-                      <span className="text-muted-foreground">{item}</span>
-                    </div>
-                  ))}
-                </div>
-              </CardContent>
-            </Card>
+                ))}
+              </div>
+            </div>
           </div>
 
           <div className="text-center mt-12">
             <Link to="/contact#get-in-touch">
-              <Button variant="hero" size="lg">
-                Get Started with Your Brand Package
-                <ArrowRight className="ml-2" size={20} />
+              <Button className="group relative overflow-hidden bg-luxury-lime text-black hover:bg-luxury-lime/90 transition-all duration-300 px-8 py-6 text-sm font-semibold uppercase tracking-wider">
+                <span className="relative z-10">Get Started with Your Brand Package</span>
+                <ArrowRight className="ml-2 relative z-10 group-hover:translate-x-1 transition-transform" size={20} />
               </Button>
             </Link>
           </div>
@@ -291,32 +257,35 @@ const Branding = () => {
       </section>
 
       {/* Logo Showcase Section */}
-      <section className="py-16 bg-white overflow-hidden">
+      <section className="py-32 bg-luxury-bg overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-center text-foreground mb-12">
-            Trusted by Industry Leaders
-          </h2>
+          <div className="text-center mb-16">
+            <div className="section-eyebrow mb-4">✦ Portfolio</div>
+            <h2 className="display-heading text-luxury-text-primary text-3xl md:text-4xl">
+              Trusted by Industry Leaders
+            </h2>
+          </div>
           <div className="relative">
             <div className="flex animate-scroll space-x-16 items-center">
               {[...Array(2)].map((_, setIndex) => (
                 <div key={setIndex} className="flex space-x-16 items-center">
-                  <div className="flex-shrink-0 h-16 w-32 bg-muted/30 rounded-lg flex items-center justify-center">
-                    <span className="text-lg font-bold text-muted-foreground">BuildCorp</span>
+                  <div className="flex-shrink-0 h-16 w-32 bg-luxury-surface border border-white/6 rounded-lg flex items-center justify-center">
+                    <span className="text-lg font-bold text-luxury-text-secondary">BuildCorp</span>
                   </div>
-                  <div className="flex-shrink-0 h-16 w-32 bg-muted/30 rounded-lg flex items-center justify-center">
-                    <span className="text-lg font-bold text-muted-foreground">SolarMax</span>
+                  <div className="flex-shrink-0 h-16 w-32 bg-luxury-surface border border-white/6 rounded-lg flex items-center justify-center">
+                    <span className="text-lg font-bold text-luxury-text-secondary">SolarMax</span>
                   </div>
-                  <div className="flex-shrink-0 h-16 w-32 bg-muted/30 rounded-lg flex items-center justify-center">
-                    <span className="text-lg font-bold text-muted-foreground">GreenScape</span>
+                  <div className="flex-shrink-0 h-16 w-32 bg-luxury-surface border border-white/6 rounded-lg flex items-center justify-center">
+                    <span className="text-lg font-bold text-luxury-text-secondary">GreenScape</span>
                   </div>
-                  <div className="flex-shrink-0 h-16 w-32 bg-muted/30 rounded-lg flex items-center justify-center">
-                    <span className="text-lg font-bold text-muted-foreground">RoofPro</span>
+                  <div className="flex-shrink-0 h-16 w-32 bg-luxury-surface border border-white/6 rounded-lg flex items-center justify-center">
+                    <span className="text-lg font-bold text-luxury-text-secondary">RoofPro</span>
                   </div>
-                  <div className="flex-shrink-0 h-16 w-32 bg-muted/30 rounded-lg flex items-center justify-center">
-                    <span className="text-lg font-bold text-muted-foreground">EliteWork</span>
+                  <div className="flex-shrink-0 h-16 w-32 bg-luxury-surface border border-white/6 rounded-lg flex items-center justify-center">
+                    <span className="text-lg font-bold text-luxury-text-secondary">EliteWork</span>
                   </div>
-                  <div className="flex-shrink-0 h-16 w-32 bg-muted/30 rounded-lg flex items-center justify-center">
-                    <span className="text-lg font-bold text-muted-foreground">PowerGen</span>
+                  <div className="flex-shrink-0 h-16 w-32 bg-luxury-surface border border-white/6 rounded-lg flex items-center justify-center">
+                    <span className="text-lg font-bold text-luxury-text-secondary">PowerGen</span>
                   </div>
                 </div>
               ))}
@@ -326,11 +295,12 @@ const Branding = () => {
       </section>
 
       {/* Features Section */}
-      <section className="py-24">
+      <section className="py-32 bg-luxury-surface border-y border-white/6">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div>
-              <h2 className="text-4xl font-bold text-foreground mb-8">
+              <div className="section-eyebrow mb-4">✦ Benefits</div>
+              <h2 className="display-heading text-luxury-text-primary text-4xl lg:text-5xl mb-8">
                 Why Professional Branding Matters
               </h2>
               <div className="space-y-6">
@@ -342,8 +312,8 @@ const Branding = () => {
                   "Provides consistency across all marketing materials"
                 ].map((benefit, index) => (
                   <div key={index} className="flex items-center gap-3">
-                    <CheckCircle className="text-primary w-6 h-6 flex-shrink-0" />
-                    <p className="text-lg text-muted-foreground">{benefit}</p>
+                    <CheckCircle className="text-luxury-lime w-6 h-6 flex-shrink-0" />
+                    <p className="font-body text-luxury-text-secondary text-lg">{benefit}</p>
                   </div>
                 ))}
               </div>
@@ -352,7 +322,7 @@ const Branding = () => {
             <img 
               src={brandKitShowcase} 
               alt="Studios by Dave brand kit showcase featuring logo variations and brand identity designs" 
-              className="w-full h-auto rounded-2xl shadow-elegant"
+              className="w-full h-auto rounded-2xl luxury-card"
               loading="lazy"
               decoding="async"
               width="600"
@@ -364,47 +334,48 @@ const Branding = () => {
       </section>
 
       {/* Related Services & Resources Section */}
-      <section className="py-16 bg-gradient-subtle">
+      <section className="py-32 bg-luxury-bg">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-foreground mb-4">Complete Your Brand Experience</h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+          <div className="text-center mb-16">
+            <div className="section-eyebrow mb-4">✦ Complete Your Brand</div>
+            <h2 className="display-heading text-luxury-text-primary text-3xl md:text-4xl mb-4">Complete Your Brand Experience</h2>
+            <p className="font-body text-luxury-text-secondary text-lg max-w-2xl mx-auto">
               Your brand deserves a complete digital presence. Explore our services that complement your new brand identity
             </p>
           </div>
           
-          <div className="grid md:grid-cols-3 gap-8 mb-12">
+          <div className="grid md:grid-cols-3 gap-8 mb-16">
             {/* Web Design Service */}
-            <div className="bg-card p-6 rounded-xl border border-border/50 hover:border-primary/50 transition-colors">
-              <h3 className="text-xl font-bold mb-3 text-primary">Web Design</h3>
-              <p className="text-muted-foreground mb-4">
+            <div className="luxury-card rounded-xl p-6 hover:border-luxury-royal-blue/50 transition-all">
+              <h3 className="display-heading text-luxury-text-primary text-xl mb-3">Web Design</h3>
+              <p className="font-body text-luxury-text-secondary mb-4">
                 Websites that perfectly reflect your brand identity and convert visitors into loyal customers.
               </p>
-              <Link to="/services/web-design" className="text-primary hover:text-primary/80 font-medium inline-flex items-center gap-2">
+              <Link to="/services/web-design" className="text-luxury-royal-blue hover:text-luxury-purple font-body text-sm font-semibold uppercase tracking-wider inline-flex items-center gap-2 transition-colors">
                 Get Branded Website
                 <ArrowRight size={16} />
               </Link>
             </div>
 
             {/* SEO Service */}
-            <div className="bg-card p-6 rounded-xl border border-border/50 hover:border-primary/50 transition-colors">
-              <h3 className="text-xl font-bold mb-3 text-primary">SEO Optimization</h3>
-              <p className="text-muted-foreground mb-4">
+            <div className="luxury-card rounded-xl p-6 hover:border-luxury-royal-blue/50 transition-all">
+              <h3 className="display-heading text-luxury-text-primary text-xl mb-3">SEO Optimization</h3>
+              <p className="font-body text-luxury-text-secondary mb-4">
                 Get your branded business found online with SEO strategies that build on your brand recognition.
               </p>
-              <Link to="/services/seo" className="text-primary hover:text-primary/80 font-medium inline-flex items-center gap-2">
+              <Link to="/services/seo" className="text-luxury-royal-blue hover:text-luxury-purple font-body text-sm font-semibold uppercase tracking-wider inline-flex items-center gap-2 transition-colors">
                 Boost Brand Visibility
                 <ArrowRight size={16} />
               </Link>
             </div>
 
             {/* Google Optimization */}
-            <div className="bg-card p-6 rounded-xl border border-border/50 hover:border-primary/50 transition-colors">
-              <h3 className="text-xl font-bold mb-3 text-primary">Google Optimization</h3>
-              <p className="text-muted-foreground mb-4">
+            <div className="luxury-card rounded-xl p-6 hover:border-luxury-royal-blue/50 transition-all">
+              <h3 className="display-heading text-luxury-text-primary text-xl mb-3">Google Optimization</h3>
+              <p className="font-body text-luxury-text-secondary mb-4">
                 Ensure your brand appears consistently across Google Search, Maps, and Business Profile.
               </p>
-              <Link to="/services/google-optimization" className="text-primary hover:text-primary/80 font-medium inline-flex items-center gap-2">
+              <Link to="/services/google-optimization" className="text-luxury-royal-blue hover:text-luxury-purple font-body text-sm font-semibold uppercase tracking-wider inline-flex items-center gap-2 transition-colors">
                 Optimize Brand Presence
                 <ArrowRight size={16} />
               </Link>
@@ -412,34 +383,34 @@ const Branding = () => {
           </div>
 
           {/* Related Blog Articles */}
-          <div className="bg-background/50 p-8 rounded-xl border border-border/30">
-            <h3 className="text-2xl font-bold mb-6 text-center">Branding & Marketing Insights</h3>
+          <div className="bg-luxury-surface p-8 rounded-xl border border-white/6">
+            <h3 className="display-heading text-luxury-text-primary text-2xl mb-6 text-center">Branding & Marketing Insights</h3>
             <div className="grid md:grid-cols-2 gap-6">
               <div>
-                <h4 className="font-semibold mb-3">Branding Strategy</h4>
+                <h4 className="font-section text-luxury-text-primary text-sm uppercase tracking-wider mb-3">Branding Strategy</h4>
                 <ul className="space-y-2">
                   <li>
-                    <Link to="/blog/why-choose-studios-by-dave" className="text-primary hover:text-primary/80 underline">
+                    <Link to="/blog/why-choose-studios-by-dave" className="text-luxury-royal-blue hover:text-luxury-purple transition-colors font-body text-sm">
                       Why Choose Studios by Dave Over Local Competition?
                     </Link>
                   </li>
                   <li>
-                    <Link to="/blog/does-your-business-need-a-website-2026" className="text-primary hover:text-primary/80 underline">
+                    <Link to="/blog/does-your-business-need-a-website-2026" className="text-luxury-royal-blue hover:text-luxury-purple transition-colors font-body text-sm">
                       Does Your Business Really Need a Website in 2026?
                     </Link>
                   </li>
                 </ul>
               </div>
               <div>
-                <h4 className="font-semibold mb-3">Business Growth</h4>
+                <h4 className="font-section text-luxury-text-primary text-sm uppercase tracking-wider mb-3">Business Growth</h4>
                 <ul className="space-y-2">
                   <li>
-                    <Link to="/blog/local-seo-essentials-2026" className="text-primary hover:text-primary/80 underline">
+                    <Link to="/blog/local-seo-essentials-2026" className="text-luxury-royal-blue hover:text-luxury-purple transition-colors font-body text-sm">
                       Local SEO Essentials for Shelby Businesses in 2026
                     </Link>
                   </li>
                   <li>
-                    <Link to="/blog/website-mistakes-costing-customers" className="text-primary hover:text-primary/80 underline">
+                    <Link to="/blog/website-mistakes-costing-customers" className="text-luxury-royal-blue hover:text-luxury-purple transition-colors font-body text-sm">
                       5 Common Website Mistakes Costing Local Businesses Customers
                     </Link>
                   </li>
