@@ -293,12 +293,12 @@ const WebDesignShelby = () => {
           </p>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {/* Starter Web Package */}
+            {/* Starter Website */}
             <Card className="border-2 border-border hover:border-primary/50 transition-all duration-300 group relative bg-gradient-to-br from-white to-gray-50 shadow-[0_4px_6px_-1px_rgba(0,0,0,0.1),0_2px_4px_-1px_rgba(0,0,0,0.06),0_8px_16px_-4px_rgba(0,0,0,0.15)] hover:shadow-[0_8px_12px_-1px_rgba(0,0,0,0.15),0_4px_6px_-1px_rgba(0,0,0,0.1),0_16px_32px_-4px_rgba(0,0,0,0.25)] hover:-translate-y-1">
               <CardHeader className="text-center pb-4">
-                <CardTitle className="text-2xl green-yellow-outline-text group-hover:animate-bounce-hover">Starter Web Package</CardTitle>
+                <CardTitle className="text-2xl green-yellow-outline-text group-hover:animate-bounce-hover">Starter Website</CardTitle>
                 <CardDescription className="text-sm font-medium text-primary">NEW</CardDescription>
-                <div className="text-3xl font-bold trophy-gold-text mt-2 group-hover:animate-throb group-hover:animate-red-yellow-flash">ONLY $499</div>
+                <div className="text-3xl font-bold trophy-gold-text mt-2 group-hover:animate-throb group-hover:animate-red-yellow-flash">ONLY $598</div>
               </CardHeader>
               <CardContent className="space-y-4">
                 <p className="text-sm text-primary text-center italic">Best for startups</p>

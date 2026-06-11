@@ -209,7 +209,7 @@ const Navigation = () => {
         </div>
 
         {/* Mobile Navigation - Slide-in drawer from right */}
-        {isOpen && <div className="lg:hidden fixed inset-0 z-40">
+        {isOpen && <div className="lg:hidden fixed inset-0 z-[60]">
             <div className="absolute inset-0 bg-black/50" onClick={() => setIsOpen(false)}></div>
             <div className="absolute right-0 top-0 h-full w-80 bg-luxury-surface border-l border-white/6 p-6 overflow-y-auto">
               <div className="flex justify-end mb-8">

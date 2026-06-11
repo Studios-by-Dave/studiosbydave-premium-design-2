@@ -216,12 +216,12 @@ const WebDesignGastonia = () => {
           </p>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {/* Starter Web Package */}
+            {/* Starter Website */}
             <div className="luxury-card rounded-xl p-6 hover:border-luxury-royal-blue/50 transition-all duration-300 group relative">
               <div className="text-center pb-4">
-                <h3 className="display-heading text-luxury-text-primary text-2xl">Starter Web Package</h3>
+                <h3 className="display-heading text-luxury-text-primary text-2xl">Starter Website</h3>
                 <p className="text-sm font-medium text-luxury-lime mt-1">NEW</p>
-                <div className="text-3xl font-bold text-luxury-lime mt-2">ONLY $499</div>
+                <div className="text-3xl font-bold text-luxury-lime mt-2">ONLY $598</div>
               </div>
               <div className="space-y-4">
                 <p className="text-sm text-luxury-royal-blue text-center italic font-body">Best for startups</p>
