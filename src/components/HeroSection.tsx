@@ -28,8 +28,8 @@ const HeroSection = () => {
       {/* Content */}
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-16">
         <div className="grid lg:grid-cols-2 gap-12 items-start min-h-[calc(100vh-200px)]">
-          {/* Left Column - Content */}
-          <div className="space-y-8 z-10 text-center">
+          {/* Left Column - Content (order-2 on mobile so image shows first) */}
+          <div className="space-y-8 z-10 text-left order-2 lg:order-1">
             {/* Trust Badge */}
             <div className="inline-flex items-center space-x-2 bg-luxury-surface border border-luxury-lime/30 px-4 py-2 rounded-full">
               <div className="flex items-center space-x-1">
@@ -84,8 +84,8 @@ const HeroSection = () => {
 
           </div>
 
-          {/* Right Column - Hero Image */}
-          <div className="relative flex justify-center z-10">
+          {/* Right Column - Hero Image (order-1 on mobile = shows first, flush right) */}
+          <div className="relative flex justify-end z-10 order-1 lg:order-2">
             <div className="relative w-full lg:w-[115%] xl:w-[130%]">
               {/* Hero Image */}
               <div className="aspect-square rounded-2xl overflow-hidden border border-white/6 relative">

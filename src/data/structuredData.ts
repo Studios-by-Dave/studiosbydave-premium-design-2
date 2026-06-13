@@ -377,10 +377,10 @@ export const webDesignFAQSchema = {
   "mainEntity": [
     {
       "@type": "Question",
-      "name": "What is included in the Starter Web Package?",
+      "name": "What is included in the Starter Website?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "The Starter Web Package includes 1-3 pages, mobile responsive design, contact form, basic SEO setup, and a 7-day turnaround. Domain and hosting are purchased separately, and no maintenance is included with 1 revision round."
+        "text": "The Starter Website includes 1-3 pages, mobile responsive design, contact form, basic SEO setup, and a 7-day turnaround. Domain and hosting are purchased separately, and no maintenance is included with 1 revision round."
       }
     },
     {
@@ -396,7 +396,7 @@ export const webDesignFAQSchema = {
       "name": "How long does it take to build a website?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "The Starter Web Package has a 7-day turnaround. Other packages typically take 2-4 weeks depending on complexity and requirements. We work closely with you throughout the process to ensure timely delivery."
+        "text": "The Starter Website has a 7-day turnaround. Other packages typically take 2-4 weeks depending on complexity and requirements. We work closely with you throughout the process to ensure timely delivery."
       }
     },
     {
@@ -422,9 +422,9 @@ export const webPackageOfferSchema = [
   {
     "@context": "https://schema.org",
     "@type": "Offer",
-    "name": "Starter Web Package",
+    "name": "Starter Website",
     "description": "1-3 pages, mobile responsive, contact form, basic SEO setup, 7-day turnaround",
-    "price": "499",
+    "price": "598",
     "priceCurrency": "USD",
     "availability": "https://schema.org/InStock",
     "seller": {
