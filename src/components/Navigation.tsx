@@ -118,7 +118,7 @@ const Navigation = () => {
                       key={service.name} 
                       to={service.path} 
                       onClick={() => setServicesOpen(false)} 
-                      className={`font-body text-xs whitespace-nowrap px-4 py-2 rounded-md transition-all duration-300 hover:bg-white/5 hover:text-luxury-royal-blue ${service.name === 'Portfolio' ? 'font-semibold' : 'font-medium'} ${isActive(service.path) ? "text-luxury-royal-blue bg-white/5" : "text-luxury-text-secondary"} ${servicesOpen ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-8'}`}
+                      className={`font-body text-xs whitespace-nowrap px-4 py-2 rounded-md transition-all duration-300 hover:bg-white/5 hover:text-luxury-royal-blue ${service.name === 'Portfolio' ? 'font-semibold' : 'font-medium'} ${isActive(service.path) ? "text-luxury-royal-blue bg-white/5" : "text-white/70"} ${servicesOpen ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-8'}`}
                       style={{ transitionDelay: servicesOpen ? `${index * 60}ms` : '0ms' }}
                     >
                       {service.name}
@@ -148,7 +148,7 @@ const Navigation = () => {
                       key={area.name} 
                       to={area.path} 
                       onClick={() => setServiceAreasOpen(false)} 
-                      className={`font-body text-xs whitespace-nowrap px-4 py-2 rounded-md transition-all duration-300 hover:bg-white/5 hover:text-luxury-royal-blue font-medium ${isActive(area.path) ? "text-luxury-royal-blue bg-white/5" : "text-luxury-text-secondary"} ${serviceAreasOpen ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-8'}`}
+                      className={`font-body text-xs whitespace-nowrap px-4 py-2 rounded-md transition-all duration-300 hover:bg-white/5 hover:text-luxury-royal-blue font-medium ${isActive(area.path) ? "text-luxury-royal-blue bg-white/5" : "text-white/70"} ${serviceAreasOpen ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-8'}`}
                       style={{ transitionDelay: serviceAreasOpen ? `${index * 60}ms` : '0ms' }}
                     >
                       {area.name}
@@ -173,7 +173,7 @@ const Navigation = () => {
                       key={promo.name} 
                       to={promo.path} 
                       onClick={() => setPromosOpen(false)} 
-                      className={`font-body text-xs whitespace-nowrap px-4 py-2 rounded-md transition-all duration-300 hover:bg-white/5 hover:text-luxury-royal-blue font-medium ${isActive(promo.path) ? "text-luxury-royal-blue bg-white/5" : "text-luxury-text-secondary"} ${promosOpen ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-8'}`}
+                      className={`font-body text-xs whitespace-nowrap px-4 py-2 rounded-md transition-all duration-300 hover:bg-white/5 hover:text-luxury-royal-blue font-medium ${isActive(promo.path) ? "text-luxury-royal-blue bg-white/5" : "text-white/70"} ${promosOpen ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-8'}`}
                       style={{ transitionDelay: promosOpen ? `${index * 60}ms` : '0ms' }}
                     >
                       {promo.name}
@@ -238,7 +238,7 @@ const Navigation = () => {
                         key={service.name} 
                         to={service.path} 
                         onClick={() => setIsOpen(false)} 
-                        className={`block font-body text-sm hover:text-luxury-royal-blue transition-colors ${service.name === 'Portfolio' ? 'font-semibold text-luxury-text-primary' : 'text-luxury-text-secondary'} ${isActive(service.path) ? "text-luxury-royal-blue" : ""}`}
+                        className={`block font-body text-sm hover:text-luxury-royal-blue transition-colors ${service.name === 'Portfolio' ? 'font-semibold text-luxury-text-primary' : 'text-white/70'} ${isActive(service.path) ? "text-luxury-royal-blue" : ""}`}
                       >
                         {service.name}
                       </Link>
@@ -261,7 +261,7 @@ const Navigation = () => {
                         key={area.name} 
                         to={area.path} 
                         onClick={() => setIsOpen(false)} 
-                        className={`block font-body text-sm hover:text-luxury-royal-blue transition-colors text-luxury-text-secondary ${isActive(area.path) ? "text-luxury-royal-blue" : ""}`}
+                        className={`block font-body text-sm hover:text-luxury-royal-blue transition-colors text-white/70 ${isActive(area.path) ? "text-luxury-royal-blue" : ""}`}
                       >
                         {area.name}
                       </Link>
@@ -280,7 +280,7 @@ const Navigation = () => {
                         key={promo.name} 
                         to={promo.path} 
                         onClick={() => setIsOpen(false)} 
-                        className={`block font-body text-sm hover:text-luxury-royal-blue transition-colors text-luxury-text-secondary ${isActive(promo.path) ? "text-luxury-royal-blue" : ""}`}
+                        className={`block font-body text-sm hover:text-luxury-royal-blue transition-colors text-white/70 ${isActive(promo.path) ? "text-luxury-royal-blue" : ""}`}
                       >
                         {promo.name}
                       </Link>
