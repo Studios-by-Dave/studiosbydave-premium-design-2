@@ -85,7 +85,8 @@ const Navigation = () => {
   }];
   const isActive = (path: string) => location.pathname === path;
   const isServicesActive = () => location.pathname.startsWith('/services');
-  return <nav className="frosted-glass border-b border-white/6 sticky top-0 z-50">
+  return <>
+    <nav className="frosted-glass border-b border-white/6 sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
@@ -208,15 +209,18 @@ const Navigation = () => {
           </div>
         </div>
 
-        {/* Mobile Navigation - Slide-in drawer from right */}
-        {isOpen && <div className="lg:hidden fixed inset-0 z-40">
-            <div className="absolute inset-0 bg-black/50" onClick={() => setIsOpen(false)}></div>
-            <div className="absolute right-0 top-0 h-full w-80 bg-luxury-surface border-l border-white/6 p-6 overflow-y-auto">
-              <div className="flex justify-end mb-8">
-                <Button variant="ghost" size="sm" onClick={() => setIsOpen(false)} className="text-luxury-text-primary hover:text-luxury-lime p-2">
-                  <X size={28} strokeWidth={2} />
-                </Button>
-              </div>
+      </div>
+    </nav>
+
+    {/* Mobile Navigation - Rendered outside nav to avoid backdrop-filter creating a containing block for fixed positioning */}
+    {isOpen && <div className="lg:hidden fixed inset-0 z-[60]">
+        <div className="absolute inset-0 bg-black/50" onClick={() => setIsOpen(false)}></div>
+        <div className="absolute right-0 top-0 h-full w-80 bg-luxury-surface border-l border-white/6 p-6 overflow-y-auto">
+          <div className="flex justify-end mb-8">
+            <Button variant="ghost" size="sm" onClick={() => setIsOpen(false)} className="text-luxury-text-primary hover:text-luxury-lime p-2">
+              <X size={28} strokeWidth={2} />
+            </Button>
+          </div>
               
               <div className="space-y-6">
                 <Link to="/" onClick={() => setIsOpen(false)} className={`block font-body text-sm uppercase tracking-wider transition-colors hover:text-luxury-royal-blue ${isActive('/') ? "text-luxury-royal-blue" : "text-luxury-text-primary"}`}>
@@ -301,9 +305,8 @@ const Navigation = () => {
                   </Button>
                 </Link>
               </div>
-            </div>
-          </div>}
-      </div>
-    </nav>;
+        </div>
+      </div>}
+  </>;
 };
 export default Navigation;
