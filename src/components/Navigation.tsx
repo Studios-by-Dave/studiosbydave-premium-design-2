@@ -189,7 +189,7 @@ const Navigation = () => {
             </Link>
 
             {/* Blog */}
-            <Link to="/blog" className={`font-body text-xs uppercase tracking-wider transition-all duration-300 hover:text-luxury-royal-blue relative ${isActive('/blog') ? "text-luxury-royal-blue" : "text-luxury-text-primary"}`}>
+            <Link to="/blog" className={`font-body font-bold text-xs uppercase tracking-wider transition-all duration-300 hover:text-luxury-royal-blue relative ${isActive('/blog') ? "text-luxury-royal-blue" : "text-luxury-text-primary"}`}>
               Blog
               <span className={`absolute bottom-0 left-0 h-px bg-luxury-royal-blue transition-all duration-300 ${isActive('/blog') ? "w-full" : "w-0 group-hover:w-full"}`}></span>
             </Link>
@@ -294,7 +294,7 @@ const Navigation = () => {
 
                 {/* Mobile Blog */}
                 <div className="border-t border-white/6 pt-6">
-                  <Link to="/blog" onClick={() => setIsOpen(false)} className={`block font-body text-sm uppercase tracking-wider transition-all ${isActive('/blog') ? "text-luxury-royal-blue" : "text-luxury-text-primary"}`}>
+                  <Link to="/blog" onClick={() => setIsOpen(false)} className={`block font-body font-bold text-sm uppercase tracking-wider transition-all ${isActive('/blog') ? "text-luxury-royal-blue" : "text-luxury-text-primary"}`}>
                     Blog
                   </Link>
                 </div>

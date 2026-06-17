@@ -13,6 +13,28 @@ import googleBackdrop from "@/assets/google-backdrop.jpeg";
 import mediaPacksBackdrop from "@/assets/media-packs-backdrop.jpg";
 
 const WebDesignShelby = () => {
+  const reviews = [
+    {
+      text: "Dave really presented /uncovered opportunities that we wouldn't have ever known otherwise. And now our website is really generating our online business beautifully! Thanks again Dave! 😃",
+      initials: "PR",
+      name: "Paul Richardson",
+      role: "Local Guide"
+    },
+    {
+      text: "Studios by Dave really knocked it out of the park. Our online presence is not only fully present, its generating our business so many leads now! Thank You!!!",
+      initials: "RJ",
+      name: "Ryan \"Kris\" Jones",
+      role: "Verified Customer"
+    },
+    {
+      text: "The BEST experience!!",
+      initials: "MB",
+      name: "Michelle Bryant",
+      role: "Google Reviews"
+    }
+  ];
+  const selectedReview = reviews[Math.floor(Math.random() * reviews.length)];
+
   const breadcrumbs = breadcrumbSchema([
     { name: "Home", url: "https://www.studiosbydave.com" },
     { name: "Web Design Shelby", url: "https://www.studiosbydave.com/web-design-shelby-nc" }
@@ -282,187 +304,24 @@ const WebDesignShelby = () => {
         </div>
       </section>
 
-      {/* Pricing Section */}
-      <section className="py-24 bg-gradient-subtle" itemScope itemType="https://schema.org/ItemList">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl font-bold text-center text-foreground mb-4" itemProp="name">
-            Web Design Packages for Shelby Businesses
-          </h2>
-          <p className="text-xl text-muted-foreground text-center max-w-2xl mx-auto mb-16">
-            Choose the perfect package for your Shelby business needs
-          </p>
-          
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {/* Starter Web Package */}
-            <Card className="border-2 border-border hover:border-primary/50 transition-all duration-300 group relative bg-gradient-to-br from-white to-gray-50 shadow-[0_4px_6px_-1px_rgba(0,0,0,0.1),0_2px_4px_-1px_rgba(0,0,0,0.06),0_8px_16px_-4px_rgba(0,0,0,0.15)] hover:shadow-[0_8px_12px_-1px_rgba(0,0,0,0.15),0_4px_6px_-1px_rgba(0,0,0,0.1),0_16px_32px_-4px_rgba(0,0,0,0.25)] hover:-translate-y-1">
-              <CardHeader className="text-center pb-4">
-                <CardTitle className="text-2xl green-yellow-outline-text group-hover:animate-bounce-hover">Starter Web Package</CardTitle>
-                <CardDescription className="text-sm font-medium text-primary">NEW</CardDescription>
-                <div className="text-3xl font-bold trophy-gold-text mt-2 group-hover:animate-throb group-hover:animate-red-yellow-flash">ONLY $499</div>
-              </CardHeader>
-              <CardContent className="space-y-4">
-                <p className="text-sm text-primary text-center italic">Best for startups</p>
-                <ul className="space-y-2">
-                  {[
-                    "1-3 pages",
-                    "Mobile responsive",
-                    "Contact form",
-                    "Basic SEO setup",
-                    "7-day turnaround",
-                    "Domain and hosting purchased separately",
-                    "No maintenance included, 1 revision round"
-                  ].map((feature, index) => (
-                    <li key={index} className="flex items-start gap-2">
-                      <CheckCircle className="h-4 w-4 text-green-500 mt-0.5 flex-shrink-0" />
-                      <span className={`text-sm ${index >= 5 ? 'font-bold text-foreground' : 'text-muted-foreground'}`}>{feature}</span>
-                    </li>
-                  ))}
-                </ul>
-                <Link to="/contact" className="block mt-6">
-                  <Button variant="outline" className="w-full" size="lg">
-                    Get Started
-                  </Button>
-                </Link>
-              </CardContent>
-            </Card>
-
-            {/* Business Web Package */}
-            <Card className="border-2 border-primary relative transition-all duration-300 group bg-gradient-to-br from-white to-gray-50 shadow-[0_4px_6px_-1px_rgba(0,0,0,0.1),0_2px_4px_-1px_rgba(0,0,0,0.06),0_8px_16px_-4px_rgba(0,0,0,0.15)] hover:shadow-[0_8px_12px_-1px_rgba(0,0,0,0.15),0_4px_6px_-1px_rgba(0,0,0,0.1),0_16px_32px_-4px_rgba(0,0,0,0.25)] hover:-translate-y-1">
-              <div className="absolute -top-4 left-1/2 -translate-x-1/2">
-                <span className="bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-400 text-black px-4 py-1 rounded-full text-sm font-semibold shadow-lg shadow-yellow-500/50">
-                  Most Popular
-                </span>
-              </div>
-              <CardHeader className="text-center pb-4 pt-8">
-                <CardTitle className="text-2xl green-yellow-outline-text group-hover:animate-bounce-hover">Business Web Package</CardTitle>
-                <CardDescription className="text-sm font-medium text-primary italic">Best for established local businesses</CardDescription>
-                <div className="text-3xl font-bold trophy-gold-text mt-2">$998</div>
-              </CardHeader>
-              <CardContent className="space-y-4">
-                <ul className="space-y-2">
-                  {[
-                    "Up to 5 pages",
-                    "Custom branding",
-                    "Lead capture forms",
-                    "Google Business Profile integration",
-                    "Basic on-page SEO",
-                    "2 revision rounds",
-                    "Optional care plan"
-                  ].map((feature, index) => (
-                    <li key={index} className="flex items-start gap-2">
-                      <CheckCircle className="h-4 w-4 text-green-500 mt-0.5 flex-shrink-0" />
-                      <span className="text-sm text-muted-foreground">{feature}</span>
-                    </li>
-                  ))}
-                </ul>
-                <Link to="/contact" className="block mt-6">
-                  <Button variant="primary" className="w-full" size="lg">
-                    Get Started
-                  </Button>
-                </Link>
-              </CardContent>
-            </Card>
-
-            {/* Scale Web Package */}
-            <Card className="border-2 border-border hover:border-primary/50 transition-all duration-300 group bg-gradient-to-br from-white to-gray-50 shadow-[0_4px_6px_-1px_rgba(0,0,0,0.1),0_2px_4px_-1px_rgba(0,0,0,0.06),0_8px_16px_-4px_rgba(0,0,0,0.15)] hover:shadow-[0_8px_12px_-1px_rgba(0,0,0,0.15),0_4px_6px_-1px_rgba(0,0,0,0.1),0_16px_32px_-4px_rgba(0,0,0,0.25)] hover:-translate-y-1">
-              <CardHeader className="text-center pb-4">
-                <CardTitle className="text-2xl green-yellow-outline-text group-hover:animate-bounce-hover">Scale Web Package</CardTitle>
-                <CardDescription className="text-sm font-medium text-primary italic">Best for lead generation</CardDescription>
-                <div className="text-3xl font-bold trophy-gold-text mt-2">$1,998</div>
-              </CardHeader>
-              <CardContent className="space-y-4">
-                <ul className="space-y-2">
-                  {[
-                    "Up to 10 pages",
-                    "Conversion-focused design",
-                    "Advanced forms",
-                    "CRM integration",
-                    "Local SEO setup",
-                    "Analytics dashboard",
-                    "Priority support"
-                  ].map((feature, index) => (
-                    <li key={index} className="flex items-start gap-2">
-                      <CheckCircle className="h-4 w-4 text-green-500 mt-0.5 flex-shrink-0" />
-                      <span className="text-sm text-muted-foreground">{feature}</span>
-                    </li>
-                  ))}
-                </ul>
-                <Link to="/contact" className="block mt-6">
-                  <Button variant="outline" className="w-full" size="lg">
-                    Get Started
-                  </Button>
-                </Link>
-              </CardContent>
-            </Card>
-
-            {/* Ultra Premium Web Package */}
-            <Card className="border-2 border-border hover:border-primary/50 transition-all duration-300 group bg-gradient-to-br from-white to-gray-50 shadow-[0_4px_6px_-1px_rgba(0,0,0,0.1),0_2px_4px_-1px_rgba(0,0,0,0.06),0_8px_16px_-4px_rgba(0,0,0,0.15)] hover:shadow-[0_8px_12px_-1px_rgba(0,0,0,0.15),0_4px_6px_-1px_rgba(0,0,0,0.1),0_16px_32px_-4px_rgba(0,0,0,0.25)] hover:-translate-y-1">
-              <CardHeader className="text-center pb-4">
-                <CardTitle className="text-2xl green-yellow-outline-text group-hover:animate-bounce-hover">Ultra Premium Web Package</CardTitle>
-                <CardDescription className="text-sm font-medium text-primary italic">Complete digital presence</CardDescription>
-                <div className="text-3xl font-bold trophy-gold-text mt-2">Call for Quote</div>
-              </CardHeader>
-              <CardContent className="space-y-4">
-                <ul className="space-y-2">
-                  {[
-                    "Fully custom design",
-                    "Advanced integrations",
-                    "Memberships, booking, or custom functionality",
-                    "Multi-location support",
-                    "Conversion optimization",
-                    "Strategy consultation",
-                    "30 days post-launch support"
-                  ].map((feature, index) => (
-                    <li key={index} className="flex items-start gap-2">
-                      <CheckCircle className="h-4 w-4 text-green-500 mt-0.5 flex-shrink-0" />
-                      <span className="text-sm text-muted-foreground">{feature}</span>
-                    </li>
-                  ))}
-                </ul>
-                <Link to="/contact" className="block mt-6">
-                  <Button variant="outline" className="w-full" size="lg">
-                    Get Started
-                  </Button>
-                </Link>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
-      </section>
-
       {/* Testimonials Section */}
       <section className="py-20 bg-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-4xl font-bold text-center text-foreground mb-12">What Our Clients Say</h2>
           <p className="text-lg text-muted-foreground text-center mb-8">Serving businesses throughout Shelby and Cleveland County</p>
-          <div className="grid md:grid-cols-2 gap-8">
-            <div className="bg-white p-8 rounded-lg shadow-lg border border-border/20">
+          <div className="flex justify-center">
+            <div className="bg-white p-8 rounded-lg shadow-lg border border-border/20 w-full max-w-2xl">
               <div className="flex items-center gap-1 mb-4">
                 {[...Array(5)].map((_, i) => <Star key={i} className="h-5 w-5 fill-yellow-400 text-yellow-400" />)}
               </div>
-              <p className="text-muted-foreground mb-6 italic">"Dave really presented /uncovered opportunities that we wouldn't have ever known otherwise. And now our website is really generating our online business beautifully! Thanks again Dave! 😃"</p>
+              <p className="text-muted-foreground mb-6 italic">"{ selectedReview.text }"</p>
               <div className="flex items-center gap-3">
                 <div className="h-12 w-12 bg-primary/10 rounded-full flex items-center justify-center">
-                  <span className="text-primary font-bold text-lg">PR</span>
+                  <span className="text-primary font-bold text-lg">{ selectedReview.initials }</span>
                 </div>
                 <div>
-                  <p className="font-semibold text-foreground">Paul Richardson</p>
-                  <p className="text-sm text-muted-foreground">Local Guide</p>
-                </div>
-              </div>
-            </div>
-            <div className="bg-white p-8 rounded-lg shadow-lg border border-border/20">
-              <div className="flex items-center gap-1 mb-4">
-                {[...Array(5)].map((_, i) => <Star key={i} className="h-5 w-5 fill-yellow-400 text-yellow-400" />)}
-              </div>
-              <p className="text-muted-foreground mb-6 italic">"Studios by Dave really knocked it out of the park. Our online presence is not only fully present, its generating our business so many leads now! Thank You!!!"</p>
-              <div className="flex items-center gap-3">
-                <div className="h-12 w-12 bg-primary/10 rounded-full flex items-center justify-center">
-                  <span className="text-primary font-bold text-lg">RJ</span>
-                </div>
-                <div>
-                  <p className="font-semibold text-foreground">Ryan "Kris" Jones</p>
-                  <p className="text-sm text-muted-foreground">Verified Customer</p>
+                  <p className="font-semibold text-foreground">{ selectedReview.name }</p>
+                  <p className="text-sm text-muted-foreground">{ selectedReview.role }</p>
                 </div>
               </div>
             </div>

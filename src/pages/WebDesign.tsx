@@ -99,7 +99,7 @@ const WebDesign = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-20 py-24">
           <div className="relative inline-block">
             <div className="section-eyebrow mb-4">✦ Web Design Services</div>
-            <h1 className="display-heading text-luxury-text-primary text-4xl lg:text-6xl mb-6" itemProp="headline" style={{ fontSize: 'clamp(2.5rem, 6vw, 4.5rem)' }}>
+            <h1 className="display-heading text-luxury-text-primary text-4xl lg:text-5xl mb-6" itemProp="headline" style={{ fontSize: 'clamp(2.5rem, 6vw, 4rem)' }}>
               Professional{" "}
               <span className="bg-gradient-to-r from-luxury-purple to-luxury-royal-blue bg-clip-text text-transparent">
                 Web Design
@@ -214,7 +214,7 @@ const WebDesign = () => {
               <div className="text-center pb-4">
                 <h3 className="display-heading text-luxury-text-primary text-2xl mb-1">Starter Web Package</h3>
                 <span className="inline-block text-xs font-semibold uppercase tracking-wider text-luxury-lime mb-2">NEW</span>
-                <div className="text-3xl font-bold text-luxury-lime mt-2">ONLY $499</div>
+                <div className="text-3xl font-bold text-luxury-lime mt-2">ONLY $598</div>
               </div>
               <div className="space-y-4">
                 <p className="text-sm text-luxury-lime text-center italic font-body">Best for startups</p>
