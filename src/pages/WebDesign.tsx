@@ -209,12 +209,12 @@ const WebDesign = () => {
           </div>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {/* Starter Web Package */}
+            {/* Starter Website */}
             <div className="luxury-card rounded-xl p-6 transition-all duration-300 group relative hover:border-luxury-royal-blue/50">
               <div className="text-center pb-4">
-                <h3 className="display-heading text-luxury-text-primary text-2xl mb-1">Starter Web Package</h3>
+                <h3 className="display-heading text-luxury-text-primary text-2xl mb-1">Starter Website</h3>
                 <span className="inline-block text-xs font-semibold uppercase tracking-wider text-luxury-lime mb-2">NEW</span>
-                <div className="text-3xl font-bold text-luxury-lime mt-2">ONLY $598</div>
+                <div className="text-3xl font-bold bg-gradient-to-r from-luxury-purple via-luxury-lime to-luxury-purple bg-clip-text text-transparent mt-2">ONLY $598</div>
               </div>
               <div className="space-y-4">
                 <p className="text-sm text-luxury-lime text-center italic font-body">Best for startups</p>
@@ -226,7 +226,8 @@ const WebDesign = () => {
                     "Basic SEO setup",
                     "7-day turnaround",
                     "Domain and hosting purchased separately",
-                    "No maintenance included, 1 revision round"
+                    "No maintenance included, 1 revision round",
+                    "This is not a Web Package and does not qualify for Web Package promotions"
                   ].map((feature, index) => (
                     <li key={index} className="flex items-start gap-2">
                       <CheckCircle className="h-4 w-4 text-luxury-lime mt-0.5 flex-shrink-0" />
@@ -252,7 +253,7 @@ const WebDesign = () => {
               <div className="text-center pb-4 pt-8">
                 <h3 className="display-heading text-luxury-text-primary text-2xl mb-1">Business Web Package</h3>
                 <p className="text-sm font-medium text-luxury-lime italic font-body">Best for established local businesses</p>
-                <div className="text-3xl font-bold text-luxury-lime mt-2">$998</div>
+                <div className="text-3xl font-bold bg-gradient-to-r from-luxury-purple via-luxury-lime to-luxury-purple bg-clip-text text-transparent mt-2">$998</div>
               </div>
               <div className="space-y-4">
                 <ul className="space-y-2">
@@ -284,7 +285,7 @@ const WebDesign = () => {
               <div className="text-center pb-4">
                 <h3 className="display-heading text-luxury-text-primary text-2xl mb-1">Scale Web Package</h3>
                 <p className="text-sm font-medium text-luxury-royal-blue italic font-body">Best for lead generation</p>
-                <div className="text-3xl font-bold text-luxury-lime mt-2">$1,998</div>
+                <div className="text-3xl font-bold bg-gradient-to-r from-luxury-purple via-luxury-lime to-luxury-purple bg-clip-text text-transparent mt-2">$1,998</div>
               </div>
               <div className="space-y-4">
                 <ul className="space-y-2">
@@ -316,7 +317,7 @@ const WebDesign = () => {
               <div className="text-center pb-4">
                 <h3 className="display-heading text-luxury-text-primary text-2xl mb-1">Ultra Premium Web Package</h3>
                 <p className="text-sm font-medium text-luxury-purple italic font-body">Complete digital presence</p>
-                <div className="text-3xl font-bold text-luxury-lime mt-2">Call for Quote</div>
+                <div className="text-3xl font-bold bg-gradient-to-r from-luxury-purple via-luxury-lime to-luxury-purple bg-clip-text text-transparent mt-2">Call for Quote</div>
               </div>
               <div className="space-y-4">
                 <ul className="space-y-2">
