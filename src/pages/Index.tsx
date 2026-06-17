@@ -1,6 +1,5 @@
 import Navigation from "@/components/Navigation";
 import HeroSection from "@/components/HeroSection";
-import PsychedelicImage from "@/components/PsychedelicImage";
 import TrustedLogosMarquee from "@/components/TrustedLogosMarquee";
 import ServicesSection from "@/components/ServicesSection";
 import NonExclusiveSection from "@/components/NonExclusiveSection";
@@ -28,20 +27,6 @@ const Index = () => {
       <main>
         <HeroSection />
         
-        <section className="py-20 bg-luxury-bg border-y border-white/5">
-          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-8">
-              <span className="text-luxury-lime uppercase tracking-widest text-xs font-bold">Featured Showcase</span>
-              <h2 className="display-heading text-white text-3xl mt-2">Psychedelic Visual Experience</h2>
-            </div>
-            <PsychedelicImage 
-              src="/assets/dave_1.jpg" 
-              alt="Studios by Dave Visual" 
-              className="aspect-video shadow-2xl shadow-luxury-purple/20"
-            />
-          </div>
-        </section>
-
         <TrustedLogosMarquee />
         <ServicesSection />
         
