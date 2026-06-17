@@ -57,6 +57,10 @@ const Footer = () => {
             <p className="font-body text-luxury-text-secondary leading-relaxed text-sm">
               We don't just build you a website. We build something GREAT together!
             </p>
+            <div className="flex items-center space-x-4 pt-2">
+              <img src="/assets/aplus_1.png" alt="CompTIA A+" className="h-12 w-auto grayscale hover:grayscale-0 transition-all duration-300" />
+              <img src="/assets/aplus_2.jpg" alt="CompTIA Certified" className="h-12 w-auto grayscale hover:grayscale-0 transition-all duration-300" />
+            </div>
             <div className="space-y-3">
               <div className="flex items-center space-x-3 text-luxury-text-secondary text-sm">
                 <Phone size={16} className="text-luxury-royal-blue" />

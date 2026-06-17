@@ -2,7 +2,6 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import PixieDust from "@/components/PixieDust";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { CheckCircle, ArrowRight, Globe, Smartphone, Zap, Search, Star } from "lucide-react";
 import { Link } from "react-router-dom";
 import SimpleSEO from "@/components/SimpleSEO";
@@ -53,7 +52,7 @@ const WebDesignShelby = () => {
   );
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen bg-luxury-bg">
       <SimpleSEO
         title="Web Design Shelby NC | Professional Websites for Local Businesses"
         description="Custom web design services in Shelby, NC. We build mobile-responsive websites that convert visitors into customers for contractors, retail, restaurants, and professional services. Get your free quote today."
@@ -63,7 +62,7 @@ const WebDesignShelby = () => {
       <Navigation />
       
       {/* Hero Section */}
-      <section className="bg-gradient-hero py-16 relative" itemScope itemType="https://schema.org/WebPageElement">
+      <section className="relative min-h-[70vh] bg-luxury-bg noise-overlay flex items-center" itemScope itemType="https://schema.org/WebPageElement">
         {/* Shelby Background */}
         <div
           className="absolute inset-0 z-0"
@@ -71,62 +70,46 @@ const WebDesignShelby = () => {
             backgroundImage: 'url("/assets/Shelby-intro-1751301212.webp")',
             backgroundSize: 'cover',
             backgroundPosition: 'center',
-            filter: 'brightness(0.4) contrast(1.1)'
+            filter: 'brightness(0.3) contrast(1.1)'
           }}
         />
-        
-        {/* Crown Molding Top */}
-        <div
-          className="absolute top-0 left-0 w-full h-8 z-10"
-          style={{
-            backgroundImage: 'url("/assets/crown molding cherry wood.png")',
-            backgroundRepeat: 'repeat-x',
-            backgroundSize: 'contain',
-            backgroundPosition: 'top'
-          }}
-        />
-        
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-20 pt-8 pb-8">
+        {/* Radial Glow */}
+        <div className="absolute inset-0 radial-glow z-10" />
+
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-20 py-24">
           <div className="relative inline-block">
-            <PixieDust />
-            <h1 className="text-4xl lg:text-5xl font-bold text-white mb-6" itemProp="headline">
-              Shelby{" "}
-              <span className="gradient-text bg-gradient-to-r from-accent to-white bg-clip-text text-transparent">
-                Web Design
-              </span>
-              {" "}Services
-            </h1>
+            <div className="section-eyebrow mb-4">✦ Shelby, NC</div>
+            <div className="relative inline-block">
+              <PixieDust />
+              <h1 className="display-heading text-luxury-text-primary text-4xl lg:text-5xl mb-6" itemProp="headline" style={{ fontSize: 'clamp(2.5rem, 6vw, 4.5rem)' }}>
+                Shelby{" "}
+                <span className="bg-gradient-to-r from-luxury-purple to-luxury-royal-blue bg-clip-text text-transparent">
+                  Web Design
+                </span>
+                {" "}Services
+              </h1>
+            </div>
           </div>
-          <p className="text-xl text-white/90 max-w-3xl mx-auto mb-8" itemProp="description">
+          <p className="font-body text-luxury-text-secondary text-xl max-w-3xl mx-auto mb-10" itemProp="description">
             Professional web design for Shelby businesses. We create custom websites that turn visitors into paying customers—serving Cleveland County and surrounding areas.
           </p>
           <Link to="/contact#get-in-touch">
-            <Button variant="hero" size="lg">
-              Get Your Free Quote
-              <ArrowRight className="ml-2" size={20} />
+            <Button className="group relative overflow-hidden bg-luxury-lime text-black hover:bg-luxury-lime/90 transition-all duration-300 px-8 py-6 text-sm font-semibold uppercase tracking-wider">
+              <span className="relative z-10">Get Your Free Quote</span>
+              <ArrowRight className="ml-2 relative z-10 group-hover:translate-x-1 transition-transform" size={20} />
             </Button>
           </Link>
         </div>
-
-        {/* Crown Molding Bottom */}
-        <div
-          className="absolute bottom-0 left-0 w-full h-8 z-10 transform rotate-180"
-          style={{
-            backgroundImage: 'url("/assets/crown molding cherry wood.png")',
-            backgroundRepeat: 'repeat-x',
-            backgroundSize: 'contain',
-            backgroundPosition: 'top'
-          }}
-        />
       </section>
 
       {/* Shelby Market Focus Section */}
-      <section className="py-24 bg-gradient-subtle">
+      <section className="py-32 bg-luxury-surface border-y border-white/6">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl font-bold text-center text-foreground mb-12">
+          <div className="section-eyebrow mb-4 text-center">✦ Local Focus</div>
+          <h2 className="display-heading text-luxury-text-primary text-4xl text-center mb-12">
             Serving Shelby's Diverse Business Community
           </h2>
-          <p className="text-lg text-muted-foreground max-w-4xl mx-auto mb-12 leading-relaxed text-center">
+          <p className="font-body text-luxury-text-secondary text-lg max-w-4xl mx-auto mb-16 leading-relaxed text-center">
             Shelby is the heart of Cleveland County, known for its historic downtown, manufacturing heritage, and growing small business community. From uptown businesses to industrial areas, we understand the unique challenges Shelby businesses face. Our web design services are tailored to help Shelby businesses thrive in this close-knit local market.
           </p>
           
@@ -148,37 +131,36 @@ const WebDesignShelby = () => {
                 industries: ["Healthcare Providers", "Legal Services", "Financial Services", "Consultants"]
               }
             ].map((area, index) => (
-              <Card key={index} className="border-2 border-border/50 hover:border-primary/50 transition-all duration-300">
-                <CardHeader>
-                  <CardTitle className="text-xl font-bold text-primary">{area.title}</CardTitle>
-                  <CardDescription className="text-base">{area.description}</CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <ul className="space-y-2">
-                    {area.industries.map((industry, idx) => (
-                      <li key={idx} className="flex items-center text-foreground/80">
-                        <CheckCircle size={16} className="text-green-500 mr-3 flex-shrink-0" />
-                        <span className="font-medium">{industry}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </CardContent>
-              </Card>
+              <div key={index} className="luxury-card rounded-xl p-6 hover:border-luxury-royal-blue/50 transition-all">
+                <div className="mb-4">
+                  <h3 className="display-heading text-luxury-royal-blue text-xl font-bold">{area.title}</h3>
+                  <p className="font-body text-luxury-text-secondary text-base mt-2">{area.description}</p>
+                </div>
+                <ul className="space-y-2">
+                  {area.industries.map((industry, idx) => (
+                    <li key={idx} className="flex items-center text-luxury-text-secondary">
+                      <CheckCircle size={16} className="text-luxury-lime mr-3 flex-shrink-0" />
+                      <span className="font-body font-medium">{industry}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
             ))}
           </div>
         </div>
       </section>
 
       {/* Shelby Cafe Image Section */}
-      <section className="py-16 bg-background relative overflow-hidden">
+      <section className="py-32 bg-luxury-bg">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
             {/* Left Column - Content */}
-            <div className="space-y-6">
-              <h2 className="text-3xl font-bold text-foreground">
+            <div className="space-y-8">
+              <div className="section-eyebrow mb-4">✦ Community</div>
+              <h2 className="display-heading text-luxury-text-primary text-4xl">
                 Supporting Shelby's Local Business Scene
               </h2>
-              <p className="text-lg text-muted-foreground leading-relaxed">
+              <p className="font-body text-luxury-text-secondary text-lg leading-relaxed">
                 From charming local cafes to established businesses, Shelby's entrepreneurial spirit drives our community forward. We understand the unique character of Shelby's business landscape and create websites that reflect the authentic, hometown feel that makes our city special.
               </p>
               <div className="space-y-4">
@@ -188,14 +170,14 @@ const WebDesignShelby = () => {
                   "Shelby market expertise",
                   "Personalized service"
                 ].map((point, index) => (
-                  <div key={index} className="flex items-center space-x-3">
-                    <CheckCircle size={20} className="text-green-500 flex-shrink-0" />
-                    <span className="text-foreground font-medium">{point}</span>
+                  <div key={index} className="flex items-center space-x-3 text-luxury-text-primary">
+                    <CheckCircle size={20} className="text-luxury-lime flex-shrink-0" />
+                    <span className="font-body font-medium">{point}</span>
                   </div>
                 ))}
               </div>
-              <Link to="/contact#get-in-touch">
-                <Button variant="default" size="lg">
+              <Link to="/contact#get-in-touch" className="inline-block mt-4">
+                <Button className="bg-luxury-lime text-black hover:bg-luxury-lime/90 px-8 py-6 text-sm font-semibold uppercase tracking-wider">
                   Connect With Us
                   <ArrowRight className="ml-2" size={20} />
                 </Button>
@@ -203,31 +185,30 @@ const WebDesignShelby = () => {
             </div>
 
             {/* Right Column - Image */}
-            <div className="relative">
-              <div className="relative rounded-2xl overflow-hidden shadow-glow border border-border/20">
+            <div className="relative group">
+              <div className="relative rounded-2xl overflow-hidden border border-white/10 shadow-2xl">
                 <img 
                   src="/assets/shelby-cafe-768x938.jpg" 
                   alt="Shelby local cafe scene showcasing the vibrant downtown business community" 
-                  className="w-full h-auto object-cover"
+                  className="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-105"
                   loading="lazy"
-                  decoding="async"
                 />
-                {/* Overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-primary/20 via-transparent to-accent/10" />
+                <div className="absolute inset-0 bg-gradient-to-t from-luxury-bg/80 via-transparent to-transparent opacity-60" />
               </div>
               
-              {/* Floating Elements */}
-              <div className="absolute -top-4 -right-4 w-16 h-16 bg-accent/20 rounded-full blur-xl animate-pulse" />
-              <div className="absolute -bottom-4 -left-4 w-24 h-24 bg-white/10 rounded-full blur-2xl animate-pulse" />
+              {/* Floating Decorative Elements */}
+              <div className="absolute -top-6 -right-6 w-24 h-24 bg-luxury-purple/20 rounded-full blur-3xl animate-pulse" />
+              <div className="absolute -bottom-6 -left-6 w-32 h-32 bg-luxury-royal-blue/20 rounded-full blur-3xl animate-pulse" />
             </div>
           </div>
         </div>
       </section>
 
       {/* Features Section */}
-      <section className="py-24 bg-background" itemScope itemType="https://schema.org/ItemList">
+      <section className="py-32 bg-luxury-surface border-y border-white/6" itemScope itemType="https://schema.org/ItemList">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl font-bold text-center text-foreground mb-16" itemProp="name">
+          <div className="section-eyebrow mb-4 text-center">✦ Features</div>
+          <h2 className="display-heading text-luxury-text-primary text-4xl text-center mb-16" itemProp="name">
             Everything Your Shelby Business Website Needs
           </h2>
           
@@ -264,9 +245,9 @@ const WebDesignShelby = () => {
             ].map((feature, index) => {
               const IconComponent = feature.icon;
               return (
-                <Card key={index} className="group hover:shadow-card transition-all duration-300 border-0 bg-white/80 backdrop-blur-sm overflow-hidden relative">
+                <div key={index} className="luxury-card rounded-xl p-6 hover:border-luxury-royal-blue/50 transition-all relative overflow-hidden">
                   <div 
-                    className="absolute inset-0 opacity-[0.06] pointer-events-none"
+                    className="absolute inset-0 opacity-[0.03] pointer-events-none"
                     style={{
                       backgroundImage: `url(${feature.backdrop})`,
                       backgroundSize: 'cover',
@@ -275,29 +256,26 @@ const WebDesignShelby = () => {
                       mixBlendMode: 'multiply'
                     }}
                   />
-                  <CardHeader className="pb-4 relative z-10">
-                    <div className="relative w-14 h-14 rounded-lg bg-gradient-primary-gold flex items-center justify-center mb-4 group-hover:scale-110 transition-transform overflow-hidden">
-                      <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/40 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700 ease-out skew-x-12" />
-                      <IconComponent size={28} className="text-white drop-shadow-md relative z-10" />
+                  <div className="relative z-10">
+                    <div className="w-12 h-12 rounded-lg bg-luxury-lime/10 flex items-center justify-center mb-6 group-hover:bg-luxury-lime/20 transition-colors">
+                      <IconComponent size={24} className="text-luxury-lime" />
                     </div>
-                    <CardTitle className="text-2xl font-bold text-foreground group-hover:text-primary transition-colors">
+                    <h3 className="display-heading text-luxury-text-primary text-2xl mb-4 group-hover:text-luxury-lime transition-colors">
                       {feature.title}
-                    </CardTitle>
-                    <CardDescription className="text-base text-muted-foreground leading-relaxed">
+                    </h3>
+                    <p className="font-body text-luxury-text-secondary text-base leading-relaxed mb-6">
                       {feature.description}
-                    </CardDescription>
-                  </CardHeader>
-                  <CardContent className="relative z-10">
+                    </p>
                     <ul className="space-y-3">
                       {feature.features.map((item, idx) => (
-                        <li key={idx} className="flex items-center text-foreground/80">
-                          <CheckCircle size={16} className="text-green-500 mr-3 flex-shrink-0" />
-                          <span className="font-medium">{item}</span>
+                        <li key={idx} className="flex items-center text-luxury-text-primary/80 text-sm">
+                          <CheckCircle size={16} className="text-luxury-lime mr-3 flex-shrink-0" />
+                          <span className="font-body">{item}</span>
                         </li>
                       ))}
                     </ul>
-                  </CardContent>
-                </Card>
+                  </div>
+                </div>
               );
             })}
           </div>
@@ -305,23 +283,30 @@ const WebDesignShelby = () => {
       </section>
 
       {/* Testimonials Section */}
-      <section className="py-20 bg-background">
+      <section className="py-32 bg-luxury-bg">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl font-bold text-center text-foreground mb-12">What Our Clients Say</h2>
-          <p className="text-lg text-muted-foreground text-center mb-8">Serving businesses throughout Shelby and Cleveland County</p>
+          <div className="section-eyebrow mb-4 text-center">✦ Reviews</div>
+          <h2 className="display-heading text-luxury-text-primary text-4xl text-center mb-16">What Our Clients Say</h2>
+          
           <div className="flex justify-center">
-            <div className="bg-white p-8 rounded-lg shadow-lg border border-border/20 w-full max-w-2xl">
-              <div className="flex items-center gap-1 mb-4">
-                {[...Array(5)].map((_, i) => <Star key={i} className="h-5 w-5 fill-yellow-400 text-yellow-400" />)}
+            <div className="luxury-card rounded-2xl p-12 max-w-3xl w-full border-t-2 border-t-luxury-royal-blue relative overflow-hidden">
+              <div className="absolute top-0 right-0 p-8 opacity-10">
+                <Star size={120} className="text-luxury-lime" />
               </div>
-              <p className="text-muted-foreground mb-6 italic">"{ selectedReview.text }"</p>
-              <div className="flex items-center gap-3">
-                <div className="h-12 w-12 bg-primary/10 rounded-full flex items-center justify-center">
-                  <span className="text-primary font-bold text-lg">{ selectedReview.initials }</span>
+              
+              <div className="relative z-10">
+                <div className="flex items-center gap-1 mb-6">
+                  {[...Array(5)].map((_, i) => <Star key={i} className="h-6 w-6 fill-luxury-lime text-luxury-lime" />)}
                 </div>
-                <div>
-                  <p className="font-semibold text-foreground">{ selectedReview.name }</p>
-                  <p className="text-sm text-muted-foreground">{ selectedReview.role }</p>
+                <p className="font-body text-luxury-text-primary text-2xl mb-10 italic leading-relaxed">"{ selectedReview.text }"</p>
+                <div className="flex items-center gap-4">
+                  <div className="h-14 w-14 bg-gradient-to-r from-luxury-purple to-luxury-royal-blue rounded-full flex items-center justify-center">
+                    <span className="text-white font-bold text-xl">{ selectedReview.initials }</span>
+                  </div>
+                  <div>
+                    <p className="display-heading text-luxury-text-primary text-xl">{ selectedReview.name }</p>
+                    <p className="font-body text-luxury-text-secondary">{ selectedReview.role }</p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -330,16 +315,17 @@ const WebDesignShelby = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 bg-gradient-subtle">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl font-bold text-foreground mb-4">Ready to Grow Your Shelby Business Online?</h2>
-          <p className="text-lg text-muted-foreground mb-8">
+      <section className="py-32 bg-luxury-surface relative overflow-hidden">
+        <div className="absolute inset-0 radial-glow opacity-50" />
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+          <h2 className="display-heading text-luxury-text-primary text-4xl mb-6">Ready to Grow Your Shelby Business Online?</h2>
+          <p className="font-body text-luxury-text-secondary text-xl mb-10">
             Contact us today for a free consultation and discover how we can help your Shelby business succeed online.
           </p>
           <Link to="/contact#get-in-touch">
-            <Button variant="hero" size="lg">
+            <Button className="bg-luxury-lime text-black hover:bg-luxury-lime/90 px-10 py-8 text-base font-bold uppercase tracking-widest shadow-xl transition-all hover:scale-105">
               Get Your Free Quote
-              <ArrowRight className="ml-2" size={20} />
+              <ArrowRight className="ml-2" size={24} />
             </Button>
           </Link>
         </div>

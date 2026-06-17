@@ -147,7 +147,17 @@ const Contact = () => {
       <Navigation />
       
       {/* Hero Section */}
-      <section className="relative min-h-[60vh] bg-luxury-bg noise-overlay flex items-center" role="banner">
+      <section className="relative min-h-[60vh] bg-luxury-bg noise-overlay flex items-center overflow-hidden" role="banner">
+        {/* Tie Dye Background */}
+        <div 
+          className="absolute inset-0 z-0 opacity-20 contrast-125 brightness-75 scale-110 blur-[2px]"
+          style={{
+            backgroundImage: 'url("/assets/tie dye_3.jpg")',
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+            mixBlendMode: 'screen'
+          }}
+        />
         {/* Radial Glow */}
         <div className="absolute inset-0 radial-glow z-10" />
 
@@ -182,11 +192,11 @@ const Contact = () => {
           <div id="get-in-touch" className="space-y-8">
             <div>
               <div className="section-eyebrow mb-4">✦ Get in Touch</div>
-              <h2 className="display-heading text-luxury-text-primary text-3xl mb-6">
+              <h2 className="display-heading text-luxury-text-primary text-4xl lg:text-5xl mb-6">
                 Get in Touch
               </h2>
                 <p className="font-body text-luxury-text-secondary text-lg mb-8">
-                  We're here to help your business succeed online. Reach out through any of these channels:
+                  We're here to help your business succeed online. Reach out through any of these channels: Hit the button!
                 </p>
               </div>
 
@@ -253,6 +263,17 @@ const Contact = () => {
 
               {/* Contact Form - Temporarily Removed */}
               
+              {/* Certification Badges */} 
+              <div className="flex justify-center gap-8 py-8 bg-black/20 rounded-2xl border border-white/5 mb-8"> 
+                <div className="flex flex-col items-center gap-2"> 
+                  <img src="/assets/aplus_1.png" alt="A+ Certification" className="h-16 md:h-20 w-auto object-contain" /> 
+                  <span className="text-[10px] uppercase tracking-widest text-luxury-text-secondary font-bold">CompTIA A+</span> 
+                </div> 
+                <div className="flex flex-col items-center gap-2"> 
+                  <img src="/assets/aplus_2.jpg" alt="Technical Excellence" className="h-16 md:h-20 w-auto object-contain" /> 
+                  <span className="text-[10px] uppercase tracking-widest text-luxury-text-secondary font-bold">Certified Tech</span> 
+                </div> 
+              </div>
               {/* CTA Box */}
               <div className="luxury-card rounded-xl p-8">
                 <div className="text-center mb-6">

@@ -99,13 +99,16 @@ const WebDesign = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-20 py-24">
           <div className="relative inline-block">
             <div className="section-eyebrow mb-4">✦ Web Design Services</div>
-            <h1 className="display-heading text-luxury-text-primary text-4xl lg:text-5xl mb-6" itemProp="headline" style={{ fontSize: 'clamp(2.5rem, 6vw, 4rem)' }}>
-              Professional{" "}
-              <span className="bg-gradient-to-r from-luxury-purple to-luxury-royal-blue bg-clip-text text-transparent">
-                Web Design
-              </span>
-              {" "}with You in Mind
-            </h1>
+            <div className="relative inline-block">
+              <PixieDust />
+              <h1 className="display-heading text-luxury-text-primary text-4xl lg:text-5xl mb-6" itemProp="headline" style={{ fontSize: 'clamp(2.5rem, 6vw, 4rem)' }}>
+                Professional{" "}
+                <span className="bg-gradient-to-r from-luxury-purple to-luxury-royal-blue bg-clip-text text-transparent">
+                  Web Design
+                </span>
+                {" "}with You in Mind
+              </h1>
+            </div>
           </div>
           <p className="font-body text-luxury-text-secondary text-xl max-w-3xl mx-auto mb-10 leading-relaxed" itemProp="description">
             Custom websites that turn visitors into paying customers—designed specifically
@@ -415,11 +418,25 @@ const WebDesign = () => {
             </div>
             
             {/* Right Certification Image */}
-            <div className="flex justify-center">
+            <div className="flex justify-center gap-4">
               <img 
                 src={comptiaLogo}
                 alt="CompTIA A+ Certified professional" 
-                className="w-32 h-32 md:w-40 md:h-40 object-contain"
+                className="w-24 h-24 md:w-32 md:h-32 object-contain"
+                loading="lazy"
+                decoding="async"
+              />
+              <img 
+                src="/assets/aplus_1.png"
+                alt="A+ Certification Badge" 
+                className="w-24 h-24 md:w-32 md:h-32 object-contain"
+                loading="lazy"
+                decoding="async"
+              />
+              <img 
+                src="/assets/aplus_2.jpg"
+                alt="Technical Certification Badge" 
+                className="w-24 h-24 md:w-32 md:h-32 object-contain"
                 loading="lazy"
                 decoding="async"
               />
