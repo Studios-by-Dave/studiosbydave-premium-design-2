@@ -147,11 +147,11 @@ const Contact = () => {
       <Navigation />
       
       {/* Hero Section */}
-      <section className="relative min-h-[70vh] bg-luxury-bg noise-overlay flex items-center" role="banner">
+      <section className="relative min-h-[60vh] bg-luxury-bg noise-overlay flex items-center" role="banner">
         {/* Radial Glow */}
         <div className="absolute inset-0 radial-glow z-10" />
 
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-20 py-24">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-20 py-16">
           <div className="relative inline-block">
             <div className="section-eyebrow mb-4">✦ Contact</div>
             <h1 className="display-heading text-luxury-text-primary text-5xl lg:text-6xl mb-6 text-center" style={{ fontSize: 'clamp(2.5rem, 6vw, 4.5rem)' }}>
@@ -169,7 +169,7 @@ const Contact = () => {
       </section>
 
       {/* Contact Information Section */}
-      <section className="py-32 bg-luxury-surface border-y border-white/6 relative">
+      <section className="py-24 bg-luxury-surface border-y border-white/6 relative">
         {/* Contact Mascot */}
         <div className="hidden lg:block absolute right-4 top-1/2 -translate-y-1/2 z-10 animate-bounce-slow">
           <img 
@@ -191,34 +191,39 @@ const Contact = () => {
               </div>
 
               {/* Contact Card - Phone & Email */}
-              <div className="flex flex-col gap-4 mb-8">
-                {/* Phone Card */}
-                <div className="luxury-card rounded-xl p-6">
-                  <div className="text-center">
-                    <div className="w-12 h-12 bg-luxury-lime/10 rounded-full flex items-center justify-center mx-auto mb-3">
-                      <Phone size={24} className="text-luxury-lime" />
+              <div className="flex flex-col gap-8 mb-8">
+                {/* Phone Button */}
+                <div className="group relative">
+                  <div className="absolute -inset-1 bg-gradient-to-r from-luxury-lime to-white rounded-2xl blur opacity-25 group-hover:opacity-100 transition duration-1000 group-hover:duration-200"></div>
+                  <a href="tel:+17044738188" className="relative flex flex-col items-center justify-center bg-luxury-lime p-8 lg:p-12 rounded-2xl transition-all duration-300 transform group-hover:scale-[1.01] shadow-2xl">
+                    <div className="flex items-center gap-3 mb-2">
+                      <Phone size={24} className="text-black/60" />
+                      <span className="text-black/60 text-sm font-bold uppercase tracking-widest">Call or Text Anytime</span>
                     </div>
-                    <p className="text-luxury-text-secondary text-base font-medium mb-1">Call Us — TEXT US!</p>
-                    <a href="tel:+17044738188" className="text-3xl lg:text-5xl font-bold transition-colors bg-gradient-to-r from-luxury-lime via-white to-luxury-lime bg-[length:200%_auto] animate-text-shine bg-clip-text text-transparent block">
+                    <span className="text-4xl lg:text-7xl font-bold text-black tracking-tight text-center">
                       (704) 473-8188
-                    </a>
-                    <p className="text-luxury-lime font-bold text-base mt-2">Always Open. 24/7.</p>
-                    <p className="text-luxury-text-secondary text-xs mt-1">We respond within 12-24 hours, guaranteed.</p>
-                  </div>
+                    </span>
+                    <div className="mt-4 px-4 py-1 bg-black/10 rounded-full">
+                      <p className="text-black font-bold text-sm uppercase tracking-wider">Available 24/7 • Responsive</p>
+                    </div>
+                  </a>
                 </div>
 
-                {/* Email Card */}
-                <div className="luxury-card rounded-xl p-6">
-                  <div className="text-center">
-                    <div className="w-12 h-12 bg-luxury-lime/10 rounded-full flex items-center justify-center mx-auto mb-3">
-                      <Mail size={24} className="text-luxury-lime" />
+                {/* Email Button */}
+                <div className="group relative">
+                  <div className="absolute -inset-1 bg-gradient-to-r from-luxury-lime to-white rounded-2xl blur opacity-25 group-hover:opacity-100 transition duration-1000 group-hover:duration-200"></div>
+                  <a href="mailto:david.richardson@studiosbydave.com" className="relative flex flex-col items-center justify-center bg-luxury-lime p-8 lg:p-12 rounded-2xl transition-all duration-300 transform group-hover:scale-[1.01] shadow-2xl">
+                    <div className="flex items-center gap-3 mb-2">
+                      <Mail size={24} className="text-black/60" />
+                      <span className="text-black/60 text-sm font-bold uppercase tracking-widest">Send an Email</span>
                     </div>
-                    <p className="text-luxury-text-secondary text-base font-medium mb-1">Email Us</p>
-                    <a href="mailto:david.richardson@studiosbydave.com" className="text-xl lg:text-3xl font-bold transition-colors break-all block bg-gradient-to-r from-luxury-lime via-white to-luxury-lime bg-[length:200%_auto] animate-text-shine bg-clip-text text-transparent">
+                    <span className="text-xl sm:text-2xl lg:text-4xl font-bold text-black break-all text-center leading-tight max-w-full">
                       david.richardson@studiosbydave.com
-                    </a>
-                    <p className="text-luxury-text-secondary text-xs mt-2">We reply within 24 hours</p>
-                  </div>
+                    </span>
+                    <div className="mt-4 px-4 py-1 bg-black/10 rounded-full">
+                      <p className="text-black font-bold text-sm uppercase tracking-wider">Replied within 24 Hours</p>
+                    </div>
+                  </a>
                 </div>
               </div>
 

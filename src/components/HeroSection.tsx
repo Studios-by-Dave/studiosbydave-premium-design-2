@@ -11,16 +11,16 @@ const HeroSection = () => {
       
       {/* Phone Number Display */}
       <div className="absolute top-8 right-8 z-30 hidden md:block">
-        <div className="frosted-glass rounded-xl border border-white/6 px-6 py-4 relative">
+        <div className="frosted-glass rounded-xl border border-white/6 px-8 py-5 relative">
           <div className="text-center">
-            <p className="text-luxury-text-secondary font-medium mb-1 text-xs uppercase tracking-wider flex items-center justify-center gap-2">
-              <Phone className="text-luxury-lime w-3 h-3" />
+            <p className="text-luxury-text-secondary font-medium mb-1 text-sm uppercase tracking-wider flex items-center justify-center gap-2">
+              <Phone className="text-luxury-lime w-4 h-4" />
               Call Us Text Us
             </p>
-            <a href="tel:+17044738188" className="font-display font-bold transition-colors duration-300 text-luxury-lime text-3xl hover:text-white">
+            <a href="tel:+17044738188" className="font-display font-bold transition-colors duration-300 text-luxury-lime text-4xl hover:text-white">
               (704) 473-8188
             </a>
-            <p className="text-luxury-text-secondary text-xs mt-1">We're here 24/7</p>
+            <p className="text-luxury-text-secondary text-sm mt-1">We're here 24/7</p>
           </div>
         </div>
       </div>

@@ -195,6 +195,11 @@ export default {
 						transform: 'scale(0)',
 						opacity: '0'
 					}
+				},
+				'psychedelic': {
+					'0%': { backgroundPosition: '0% 50%' },
+					'50%': { backgroundPosition: '100% 50%' },
+					'100%': { backgroundPosition: '0% 50%' },
 				}
 			},
 			animation: {
@@ -207,7 +212,9 @@ export default {
 				'gentle-sway': 'gentle-sway 4s ease-in-out infinite',
 				// Ultra-Premium animations
 				'fade-in-up': 'fade-in-up 0.6s ease-out',
-				'cursor-trail': 'cursor-trail 0.5s ease-out'
+				'cursor-trail': 'cursor-trail 0.5s ease-out',
+				'psychedelic': 'psychedelic 5s linear infinite',
+				'psychedelic-slow': 'psychedelic 15s linear infinite',
 			}
 		}
 	},

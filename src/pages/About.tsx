@@ -293,16 +293,27 @@ const About = () => {
               </div>
 
             </div>
-            <div className="luxury-card rounded-2xl p-8 text-center">
-              <h3 className="display-heading text-luxury-text-primary text-2xl font-bold mb-4">Ready to Build Something GREAT?</h3>
-              <p className="font-body text-luxury-text-secondary mb-6">
-                Let's work together to unlock your business's full potential and create something amazing.
-              </p>
-              <Link to="/contact#get-in-touch">
-                <Button className="bg-luxury-lime text-black hover:bg-luxury-lime/90 font-semibold uppercase tracking-wider text-xs" size="lg">
-                  Let's Get Started
-                </Button>
-              </Link>
+            <div className="space-y-8">
+              <div className="relative group">
+                <div className="absolute -inset-1 bg-gradient-to-r from-luxury-lime to-luxury-royal-blue rounded-2xl blur opacity-25 group-hover:opacity-100 transition duration-1000 group-hover:duration-200"></div>
+                <img 
+                  src="/assets/dave_1.jpg" 
+                  alt="Dave working on site" 
+                  className="relative w-full h-[500px] object-cover rounded-2xl shadow-2xl transition-transform duration-500 group-hover:scale-[1.02]"
+                />
+              </div>
+              
+              <div className="luxury-card rounded-2xl p-8 text-center">
+                <h3 className="display-heading text-luxury-text-primary text-2xl font-bold mb-4">Ready to Build Something GREAT?</h3>
+                <p className="font-body text-luxury-text-secondary mb-6">
+                  Let's work together to unlock your business's full potential and create something amazing.
+                </p>
+                <Link to="/contact#get-in-touch" onClick={() => window.scrollTo(0, 0)}>
+                  <Button className="bg-luxury-lime text-black hover:bg-luxury-lime/90 font-semibold uppercase tracking-wider text-xs" size="lg">
+                    Let's Get Started
+                  </Button>
+                </Link>
+              </div>
             </div>
           </div>
         </div>
