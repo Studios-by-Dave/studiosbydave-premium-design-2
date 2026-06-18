@@ -395,6 +395,18 @@ const About = () => {
               </div>
             ))}
           </div>
+
+          {/* Steeple Image */}
+          <div className="mt-20 max-w-4xl mx-auto">
+            <div className="relative group">
+              <div className="absolute -inset-1 bg-gradient-to-r from-luxury-purple to-luxury-royal-blue rounded-2xl blur opacity-25 group-hover:opacity-40 transition duration-1000"></div>
+              <img 
+                src="/assets/steeple_1.jpg" 
+                alt="Local landmark steeple representing our community values" 
+                className="relative w-full h-[400px] md:h-[500px] object-cover rounded-2xl shadow-2xl"
+              />
+            </div>
+          </div>
         </div>
       </section>
 
