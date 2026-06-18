@@ -123,6 +123,41 @@ const BlogArticle11 = () => {
                 <p className="mb-4">
                   Many companies offer either design or SEO. As a full-service <strong>SEO agency Shelby</strong>, we do both. This integrated approach means your new website starts ranking faster and generating leads sooner.
                 </p>
+                <div className="bg-primary/5 p-6 rounded-lg border-l-4 border-primary mt-6">
+                  <h3 className="font-bold text-lg mb-2 flex items-center gap-2">
+                    <Target className="h-5 w-5 text-primary" /> Dominating the "Map Pack"
+                  </h3>
+                  <p className="text-sm text-neutral-700 leading-relaxed italic">
+                    Did you know that 46% of all Google searches have local intent? When we build your site, we structure your schema markup and local landing pages so Google recognizes you as the authority in Shelby. This is how you land in the "Top 3" map results, which command 70% of the clicks.
+                  </p>
+                </div>
+              </section>
+
+              <section>
+                <h2 className="text-2xl font-bold text-[hsl(259_84%_30%)] mb-4 font-serif">
+                  Anatomy of a High-Converting Page
+                </h2>
+                <p className="mb-6">To turn a Shelby visitor into a lead, every page needs these three elements:</p>
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+                  <Card className="bg-white border-primary/20">
+                    <CardContent className="pt-6">
+                      <h4 className="font-bold mb-2">The Hero Hook</h4>
+                      <p className="text-sm text-neutral-600">A clear value proposition that answers "What do you do?" in 3 seconds.</p>
+                    </CardContent>
+                  </Card>
+                  <Card className="bg-white border-primary/20">
+                    <CardContent className="pt-6">
+                      <h4 className="font-bold mb-2">Social Proof</h4>
+                      <p className="text-sm text-neutral-600">Actual reviews from Shelby locals to build instant credibility.</p>
+                    </CardContent>
+                  </Card>
+                  <Card className="bg-white border-primary/20">
+                    <CardContent className="pt-6">
+                      <h4 className="font-bold mb-2">Frictionless CTA</h4>
+                      <p className="text-sm text-neutral-600">A prominent, easy-to-use button to book or call immediately.</p>
+                    </CardContent>
+                  </Card>
+                </div>
               </section>
 
               <section>
@@ -135,15 +170,15 @@ const BlogArticle11 = () => {
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
                   <div className="p-4 bg-white rounded shadow-sm border border-primary/10 text-center">
                     <p className="text-3xl font-bold text-primary mb-1">↑</p>
-                    <p className="font-bold">Organic traffic</p>
+                    <p className="font-bold text-neutral-900">Organic traffic</p>
                   </div>
                   <div className="p-4 bg-white rounded shadow-sm border border-primary/10 text-center">
                     <p className="text-3xl font-bold text-primary mb-1">✆</p>
-                    <p className="font-bold">Phone calls & forms</p>
+                    <p className="font-bold text-neutral-900">Phone calls & forms</p>
                   </div>
                   <div className="p-4 bg-white rounded shadow-sm border border-primary/10 text-center">
                     <p className="text-3xl font-bold text-primary mb-1">$</p>
-                    <p className="font-bold">Overall revenue</p>
+                    <p className="font-bold text-neutral-900">Overall revenue</p>
                   </div>
                 </div>
               </section>
@@ -155,7 +190,7 @@ const BlogArticle11 = () => {
                 <p className="mb-6">
                   Whether you need a full redesign or a brand-new site, our <strong>web designers near me</strong> are here to help you succeed.
                 </p>
-                <div className="bg-primary text-white p-8 rounded-lg shadow-xl text-center">
+                <div className="bg-primary text-primary-foreground p-8 rounded-lg shadow-xl text-center">
                   <p className="text-xl font-bold mb-4">Limited-Time Offer:</p>
                   <p className="text-2xl mb-6">Free logo design + $100 referral bonus with any website package.</p>
                   <div className="flex flex-col md:flex-row items-center justify-center gap-6 mt-4">

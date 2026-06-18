@@ -81,8 +81,8 @@ const BlogArticle9 = () => {
                         <MessageSquare className="h-6 w-6 text-primary" />
                       </div>
                       <div>
-                        <h3 className="text-xl font-bold text-foreground mb-2">1. Faster Communication & Turnaround</h3>
-                        <p className="text-muted-foreground">
+                        <h3 className="text-xl font-bold text-neutral-900 mb-2">1. Faster Communication & Turnaround</h3>
+                        <p className="text-neutral-600">
                           No more waiting days for replies from a team across the country. With local <strong>web designers near me</strong>, you get quick feedback and faster launches.
                         </p>
                       </div>
@@ -95,8 +95,8 @@ const BlogArticle9 = () => {
                         <Users className="h-6 w-6 text-primary" />
                       </div>
                       <div>
-                        <h3 className="text-xl font-bold text-foreground mb-2">2. Deep Understanding of the Local Market</h3>
-                        <p className="text-muted-foreground">
+                        <h3 className="text-xl font-bold text-neutral-900 mb-2">2. Deep Understanding of the Local Market</h3>
+                        <p className="text-neutral-600">
                           We know what works in Shelby, Gastonia, and Charlotte. Our <strong>web development</strong> is tailored to how local customers search and buy services.
                         </p>
                       </div>
@@ -109,8 +109,8 @@ const BlogArticle9 = () => {
                         <Zap className="h-6 w-6 text-primary" />
                       </div>
                       <div>
-                        <h3 className="text-xl font-bold text-foreground mb-2">3. Better Value & Flexibility</h3>
-                        <p className="text-muted-foreground">
+                        <h3 className="text-xl font-bold text-neutral-900 mb-2">3. Better Value & Flexibility</h3>
+                        <p className="text-neutral-600">
                           Big agencies come with big retainers and rigid contracts. We offer transparent <strong>web design Shelby</strong> packages with no long-term lock-ins.
                         </p>
                       </div>
@@ -123,14 +123,44 @@ const BlogArticle9 = () => {
                         <Globe className="h-6 w-6 text-primary" />
                       </div>
                       <div>
-                        <h3 className="text-xl font-bold text-foreground mb-2">4. Combined SEO Expertise</h3>
-                        <p className="text-muted-foreground">
+                        <h3 className="text-xl font-bold text-neutral-900 mb-2">4. Combined SEO Expertise</h3>
+                        <p className="text-neutral-600">
                           As a true <strong>SEO agency Shelby</strong>, we don't just design — we build websites that rank. Your site will be optimized for both Google search and "web designers near me" queries.
                         </p>
                       </div>
                     </div>
                   </div>
                 </div>
+              </section>
+
+              <section className="bg-neutral-100 p-8 rounded-xl border-t-4 border-primary my-12">
+                <h2 className="text-2xl font-bold text-neutral-900 mb-6 font-serif">
+                  The "Local Advantage" Interview Checklist
+                </h2>
+                <p className="mb-4 text-neutral-700">Before hiring even a local designer, ask these 5 critical questions to ensure you're getting high-level strategy, not just a layout:</p>
+                <div className="space-y-4">
+                  <div className="flex gap-4 items-center">
+                    <div className="w-8 h-8 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-bold flex-shrink-0">1</div>
+                    <p className="font-bold">"Do you build with performance (LCP/FID) or just templates?"</p>
+                  </div>
+                  <div className="flex gap-4 items-center">
+                    <div className="w-8 h-8 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-bold flex-shrink-0">2</div>
+                    <p className="font-bold">"How specifically will you optimize for local 'Map Pack' search?"</p>
+                  </div>
+                  <div className="flex gap-4 items-center">
+                    <div className="w-8 h-8 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-bold flex-shrink-0">3</div>
+                    <p className="font-bold">"Is the branding research included or do I provide everything?"</p>
+                  </div>
+                  <div className="flex gap-4 items-center">
+                    <div className="w-8 h-8 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-bold flex-shrink-0">4</div>
+                    <p className="font-bold">"Who do I call at 6:30 PM on a Tuesday if the site has an issue?"</p>
+                  </div>
+                  <div className="flex gap-4 items-center">
+                    <div className="w-8 h-8 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-bold flex-shrink-0">5</div>
+                    <p className="font-bold">"What is the actual data-driven path from a visitor to a phone call?"</p>
+                  </div>
+                </div>
+                <p className="mt-6 italic text-neutral-600">At Studios by Dave, we have detailed answers for all five of these, ready to share during our first consultation.</p>
               </section>
 
               <section>
@@ -195,7 +225,7 @@ const BlogArticle9 = () => {
                 <p className="mb-6">
                   Stop overpaying for average results. If you're looking for <strong>web design Shelby</strong> that truly understands your business and your customers, you're in the right place.
                 </p>
-                <div className="bg-primary text-white p-8 rounded-lg shadow-xl text-center">
+                <div className="bg-primary text-primary-foreground p-8 rounded-lg shadow-xl text-center">
                   <p className="text-xl font-bold mb-4">Special Offer:</p>
                   <p className="text-2xl mb-6">Free professional logo design with any new website package + $100 referral bonus.</p>
                   <div className="flex flex-col md:flex-row items-center justify-center gap-6 mt-4">

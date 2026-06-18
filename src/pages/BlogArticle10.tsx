@@ -80,8 +80,8 @@ const BlogArticle10 = () => {
                       <div className="bg-primary/10 w-12 h-12 rounded-full flex items-center justify-center">
                         <Smartphone className="h-6 w-6 text-primary" />
                       </div>
-                      <h3 className="text-xl font-bold text-foreground">Mobile-First & Speed Optimized</h3>
-                      <p className="text-sm text-muted-foreground">
+                      <h3 className="text-xl font-bold text-neutral-900">Mobile-First & Speed Optimized</h3>
+                      <p className="text-sm text-neutral-600">
                         Most "<strong>web designers near me</strong>" searches happen on phones. Slow sites lose visitors instantly.
                       </p>
                     </div>
@@ -92,8 +92,8 @@ const BlogArticle10 = () => {
                       <div className="bg-primary/10 w-12 h-12 rounded-full flex items-center justify-center">
                         <Zap className="h-6 w-6 text-primary" />
                       </div>
-                      <h3 className="text-xl font-bold text-foreground">AI-Powered Lead Tools</h3>
-                      <p className="text-sm text-muted-foreground">
+                      <h3 className="text-xl font-bold text-neutral-900">AI-Powered Lead Tools</h3>
+                      <p className="text-sm text-neutral-600">
                         Smart chat, instant quote forms, and automated follow-ups are no longer just for big corporations.
                       </p>
                     </div>
@@ -104,8 +104,8 @@ const BlogArticle10 = () => {
                       <div className="bg-primary/10 w-12 h-12 rounded-full flex items-center justify-center">
                         <Globe className="h-6 w-6 text-primary" />
                       </div>
-                      <h3 className="text-xl font-bold text-foreground">Strong Local SEO Integration</h3>
-                      <p className="text-sm text-muted-foreground">
+                      <h3 className="text-xl font-bold text-neutral-900">Strong Local SEO Integration</h3>
+                      <p className="text-sm text-neutral-600">
                         Built-in optimization so you rank for your services + location automatically.
                       </p>
                     </div>
@@ -116,8 +116,8 @@ const BlogArticle10 = () => {
                       <div className="bg-primary/10 w-12 h-12 rounded-full flex items-center justify-center">
                         <Laptop className="h-6 w-6 text-primary" />
                       </div>
-                      <h3 className="text-xl font-bold text-foreground">Seamless User Experience</h3>
-                      <p className="text-sm text-muted-foreground">
+                      <h3 className="text-xl font-bold text-neutral-900">Seamless User Experience</h3>
+                      <p className="text-sm text-neutral-600">
                         Clear navigation, fast booking, and trust-building elements that turn visitors into clients.
                       </p>
                     </div>
@@ -126,6 +126,30 @@ const BlogArticle10 = () => {
                 <p className="mt-6 italic">
                   Our <strong>web design Shelby</strong> team builds all of these features into every project, customized for your industry.
                 </p>
+              </section>
+
+              <section className="space-y-6">
+                <h2 className="text-2xl font-bold text-[hsl(259_84%_30%)] mb-4 font-serif">
+                  Deep Dive: AI and Core Web Vitals in 2026
+                </h2>
+                <div className="grid md:grid-cols-2 gap-8">
+                  <div className="bg-white p-6 rounded-xl shadow-lg border-l-4 border-secondary">
+                    <h3 className="text-xl font-bold mb-3 flex items-center gap-2">
+                       <Cpu className="text-secondary h-5 w-5" /> AI That Sells
+                    </h3>
+                    <p className="text-neutral-700 leading-relaxed text-sm">
+                      AI isn't just for bots anymore. In 2026, we're using predictive AI to track how users move their mice and scroll. If a visitor looks like they're about to leave, we can trigger a high-value "exit offer" specifically for Shelby locals.
+                    </p>
+                  </div>
+                  <div className="bg-white p-6 rounded-xl shadow-lg border-l-4 border-primary">
+                    <h3 className="text-xl font-bold mb-3 flex items-center gap-2">
+                       <Zap className="text-primary h-5 w-5" /> The 1-Second Rule
+                    </h3>
+                    <p className="text-neutral-700 leading-relaxed text-sm">
+                      Google's "Core Web Vitals" now prioritize Largest Contentful Paint (LCP) more than ever. If your site takes more than 1.5 seconds to feel "active," you will lose 40% of your Shelby traffic to competitors. Our <strong>web development</strong> process guarantees high-speed scores.
+                    </p>
+                  </div>
+                </div>
               </section>
 
               <section>
@@ -171,7 +195,7 @@ const BlogArticle10 = () => {
                 <p className="mb-6">
                   If you're ready for a website that works as hard as you do, reach out to the top <strong>web designers near me</strong> in the Shelby area.
                 </p>
-                <div className="bg-primary text-white p-8 rounded-lg shadow-xl text-center">
+                <div className="bg-primary text-primary-foreground p-8 rounded-lg shadow-xl text-center">
                   <p className="text-xl font-bold mb-4">Special Offer:</p>
                   <p className="text-2xl mb-6">Free logo design with every new web project.</p>
                   <div className="flex flex-col md:flex-row items-center justify-center gap-6 mt-4">
