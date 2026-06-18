@@ -2,18 +2,20 @@ import { useEffect } from "react";
 
 const ElfsightChatbot = () => {
   useEffect(() => {
-    // Check if script already exists to avoid duplicates
-    if (document.querySelector('script[src="https://elfsightcdn.com/platform.js"]')) {
-      return;
-    }
+    const timer = setTimeout(() => {
+      // Check if script already exists to avoid duplicates
+      if (document.querySelector('script[src="https://elfsightcdn.com/platform.js"]')) {
+        return;
+      }
 
-    const script = document.createElement("script");
-    script.src = "https://elfsightcdn.com/platform.js";
-    script.async = true;
-    document.body.appendChild(script);
+      const script = document.createElement("script");
+      script.src = "https://elfsightcdn.com/platform.js";
+      script.async = true;
+      document.body.appendChild(script);
+    }, 3000); // 3-second delay to improve initial load speed
 
     return () => {
-      // Cleanup not needed as script should persist
+      clearTimeout(timer);
     };
   }, []);
 

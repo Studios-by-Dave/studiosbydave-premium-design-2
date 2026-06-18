@@ -200,6 +200,10 @@ export default {
 					'0%': { backgroundPosition: '0% 50%' },
 					'50%': { backgroundPosition: '100% 50%' },
 					'100%': { backgroundPosition: '0% 50%' },
+				},
+				'flash-red': {
+					'0%, 100%': { color: 'inherit' },
+					'50%': { color: '#ff0000' },
 				}
 			},
 			animation: {
@@ -215,6 +219,7 @@ export default {
 				'cursor-trail': 'cursor-trail 0.5s ease-out',
 				'psychedelic': 'psychedelic 5s linear infinite',
 				'psychedelic-slow': 'psychedelic 15s linear infinite',
+				'flash-red': 'flash-red 1s step-end infinite',
 			}
 		}
 	},

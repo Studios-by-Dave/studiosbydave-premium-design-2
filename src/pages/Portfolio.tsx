@@ -10,7 +10,7 @@ import { ChevronLeft, ChevronRight, X } from "lucide-react";
 import { Link } from "react-router-dom";
 
 // Portfolio screenshots
-import studiosbydaveImg from "@/assets/portfolio/studiosbydave.png";
+import studiosbydaveImg from "@/assets/portfolio/studiosbydave.webp";
 import fsExpeditedImg from "@/assets/portfolio/fs-expedited.jpg";
 import padgsteenguitarsImg from "@/assets/portfolio/padgsteenguitars.png";
 import shadesColorCraftImg from "@/assets/portfolio/shades-color-craft.png";

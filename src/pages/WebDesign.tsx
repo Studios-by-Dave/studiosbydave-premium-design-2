@@ -228,14 +228,15 @@ const WebDesign = () => {
                 <p className="text-sm text-luxury-lime text-center italic font-body">Best for startups</p>
                 <ul className="space-y-2">
                   {[
-                    "1-3 pages",
-                    "Mobile responsive",
-                    "Contact form",
-                    "Basic SEO setup",
-                    "7-day turnaround",
-                    "Domain and hosting purchased separately",
-                    "No maintenance included, 1 revision round",
-                    "This is not a Web Package and does not qualify for Web Package promotions"
+                    "1-3 Premium Pages",
+                    "Fully Mobile Responsive",
+                    "Security-First Form Integration",
+                    "Basic Local SEO Audit & Setup",
+                    "Lightning Fast 7-Day Turnaround",
+                    "Domain/Hosting Guidance (Purchased Separately)",
+                    "Single Design Revision Round",
+                    "Perfect Foundation for New Startups",
+                    "Note: This base tier does not qualify for Web Package promotions"
                   ].map((feature, index) => (
                     <li key={index} className="flex items-start gap-2">
                       <CheckCircle className="h-4 w-4 text-luxury-lime mt-0.5 flex-shrink-0" />
@@ -266,13 +267,14 @@ const WebDesign = () => {
               <div className="space-y-4">
                 <ul className="space-y-2">
                   {[
-                    "Up to 5 pages",
-                    "Custom branding",
-                    "Lead capture forms",
-                    "Google Business Profile integration",
-                    "Basic on-page SEO",
-                    "2 revision rounds",
-                    "Optional care plan"
+                    "Up to 5 Professional Pages",
+                    "Custom Brand Kit & Identity",
+                    "Strategic Lead Capture Forms",
+                    "Google Business Profile Sync",
+                    "Local Keyword SEO Strategy",
+                    "2 Full Revision Rounds",
+                    "Social Media Feed Integration",
+                    "Priority Care & Support Options"
                   ].map((feature, index) => (
                     <li key={index} className="flex items-start gap-2">
                       <CheckCircle className="h-4 w-4 text-luxury-lime mt-0.5 flex-shrink-0" />
@@ -298,14 +300,15 @@ const WebDesign = () => {
               <div className="space-y-4">
                 <ul className="space-y-2">
                   {[
-                    "Up to 10 pages",
-                    "Conversion-focused design",
-                    "Advanced forms",
-                    "CRM integration",
-                    "Full Blog Implementation (Ranking Articles etc)",
-                    "Local SEO setup",
-                    "Analytics dashboard",
-                    "Priority support"
+                    "Up to 10 Advanced Pages",
+                    "High-Conversion UI/UX Design",
+                    "Smart Forms with Logic Flow",
+                    "Seamless CRM Data Integration",
+                    "Full Blog with 2 Ranking Articles",
+                    "Complete Local SEO Domination",
+                    "Real-time Analytics Dashboard",
+                    "Priority 24/7 Support Line",
+                    "Custom Video Header Integration"
                   ].map((feature, index) => (
                     <li key={index} className="flex items-start gap-2">
                       <CheckCircle className="h-4 w-4 text-luxury-lime mt-0.5 flex-shrink-0" />
@@ -331,14 +334,15 @@ const WebDesign = () => {
               <div className="space-y-4">
                 <ul className="space-y-2">
                   {[
-                    "Includes all features from Business and Scale Web Packages",
-                    "Fully custom design",
-                    "Advanced integrations",
-                    "Memberships, booking, or custom functionality",
-                    "Multi-location support",
-                    "Conversion optimization",
-                    "Strategy consultation",
-                    "30 days post-launch support"
+                    "Complete Enterprise Ecosystem",
+                    "Advanced Custom Database Logic",
+                    "Automated AI Chatbot Training",
+                    "E-Commerce & Membership Portals",
+                    "Multi-Location & Franchise SEO",
+                    "A/B Testing & Heatmap Tracking",
+                    "Monthly 1-on-1 Strategy Calls",
+                    "Full Marketing Funnel Architecture",
+                    "Unlimited Content Revisions"
                   ].map((feature, index) => (
                     <li key={index} className="flex items-start gap-2">
                       <CheckCircle className="h-4 w-4 text-luxury-lime mt-0.5 flex-shrink-0" />

@@ -181,22 +181,22 @@ const Contact = () => {
       {/* Contact Information Section */}
       <section className="py-24 bg-luxury-surface border-y border-white/6 relative">
         {/* Contact Mascot */}
-        <div className="hidden lg:block absolute right-4 top-1/2 -translate-y-1/2 z-10 animate-bounce-slow">
+        <div className="hidden lg:block absolute right-4 top-1/4 z-10 animate-bounce-slow">
           <img 
             src="/assets/promos/logo-mascot-contact.png" 
             alt="Mascot pointing to contact information" 
             className="w-64 h-64 object-contain drop-shadow-lg"
           />
         </div>
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 lg:pr-40">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 lg:pr-40 text-center">
           <div id="get-in-touch" className="space-y-8">
-            <div>
+            <div className="flex flex-col items-center">
               <div className="section-eyebrow mb-4">✦ Get in Touch</div>
               <h2 className="display-heading text-luxury-text-primary text-4xl lg:text-5xl mb-6">
                 Get in Touch
               </h2>
-                <p className="font-body text-luxury-text-secondary text-xl mb-12">
-                  We're here to help your business succeed online. Reach out through any of these channels: <span className="text-luxury-lime font-bold">Hit the button!</span>
+                <p className="font-body text-luxury-text-secondary text-xl mb-12 max-w-2xl mx-auto">
+                  We're here to help your business succeed online. Reach out through any of these channels: <span className="text-luxury-lime font-bold text-2xl animate-flash-red">Hit the button!</span>
                 </p>
               </div>
 
@@ -204,34 +204,34 @@ const Contact = () => {
               <div className="flex flex-col gap-8 mb-8">
                 {/* Phone Button */}
                 <div className="group relative">
-                  <div className="absolute -inset-1 bg-gradient-to-r from-luxury-lime to-white rounded-[3rem] blur opacity-25 group-hover:opacity-100 transition duration-1000 group-hover:duration-200"></div>
-                  <a href="tel:+17044738188" className="relative flex flex-col items-center justify-center bg-luxury-lime p-8 lg:p-12 rounded-[3rem] transition-all duration-300 transform group-hover:scale-[1.01] shadow-2xl">
+                  <div className="absolute -inset-1 bg-gradient-to-r from-luxury-lime to-white rounded-full blur opacity-25 group-hover:opacity-100 transition duration-1000 group-hover:duration-200"></div>
+                  <a href="tel:+17044738188" className="relative flex flex-col items-center justify-center bg-luxury-lime p-6 lg:p-10 rounded-full transition-all duration-300 transform group-hover:scale-[1.01] shadow-[0_20px_50px_rgba(201,240,77,0.3),inset_0_-8px_12px_rgba(0,0,0,0.2),inset_0_8px_12px_rgba(255,255,255,0.4)] border-b-8 border-luxury-lime/50 active:translate-y-1 active:border-b-0">
                     <div className="flex items-center gap-3 mb-2">
                       <Phone size={24} className="text-black/60" />
                       <span className="text-black/60 text-sm font-bold uppercase tracking-widest">Call or Text Anytime</span>
                     </div>
-                    <span className="text-4xl lg:text-7xl font-bold text-black tracking-tight text-center">
+                    <span className="text-3xl lg:text-6xl font-bold text-black tracking-tight text-center">
                       (704) 473-8188
                     </span>
                     <div className="mt-4 px-4 py-1 bg-black/10 rounded-full">
-                      <p className="text-black font-bold text-sm uppercase tracking-wider">Available 24/7 • Responsive</p>
+                      <p className="text-black font-bold text-sm uppercase tracking-wider">Available 24/7 • IF NO IMMEDIATE RESPONSE 12-24 HR RESPONSE GUARANTEED</p>
                     </div>
                   </a>
                 </div>
 
                 {/* Email Button */}
                 <div className="group relative">
-                  <div className="absolute -inset-1 bg-gradient-to-r from-luxury-lime to-white rounded-[3rem] blur opacity-25 group-hover:opacity-100 transition duration-1000 group-hover:duration-200"></div>
-                  <a href="mailto:david.richardson@studiosbydave.com" className="relative flex flex-col items-center justify-center bg-luxury-lime p-8 lg:p-12 rounded-[3rem] transition-all duration-300 transform group-hover:scale-[1.01] shadow-2xl">
+                  <div className="absolute -inset-1 bg-gradient-to-r from-luxury-lime to-white rounded-full blur opacity-25 group-hover:opacity-100 transition duration-1000 group-hover:duration-200"></div>
+                  <a href="mailto:david.richardson@studiosbydave.com" className="relative flex flex-col items-center justify-center bg-luxury-lime p-6 lg:p-10 rounded-full transition-all duration-300 transform group-hover:scale-[1.01] shadow-[0_20px_50px_rgba(201,240,77,0.3),inset_0_-8px_12px_rgba(0,0,0,0.2),inset_0_8px_12px_rgba(255,255,255,0.4)] border-b-8 border-luxury-lime/50 active:translate-y-1 active:border-b-0">
                     <div className="flex items-center gap-3 mb-2">
                       <Mail size={24} className="text-black/60" />
                       <span className="text-black/60 text-sm font-bold uppercase tracking-widest">Send an Email</span>
                     </div>
-                    <span className="text-xl sm:text-2xl lg:text-4xl font-bold text-black break-all text-center leading-tight max-w-full">
+                    <span className="text-lg sm:text-xl lg:text-3xl font-bold text-black break-all text-center leading-tight max-w-full">
                       david.richardson@studiosbydave.com
                     </span>
                     <div className="mt-4 px-4 py-1 bg-black/10 rounded-full">
-                      <p className="text-black font-bold text-sm uppercase tracking-wider">Replied within 24 Hours</p>
+                      <p className="text-black font-bold text-sm uppercase tracking-wider">IF NO IMMEDIATE RESPONSE 12-24 HR RESPONSE GUARANTEED</p>
                     </div>
                   </a>
                 </div>

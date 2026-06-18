@@ -70,7 +70,7 @@ const HeroSection = () => {
               </Link>
               <Link to="/about">
                 <Button variant="outline" className="border-white/20 text-luxury-text-primary hover:bg-white/5 hover:border-luxury-royal-blue hover:text-luxury-royal-blue transition-all duration-300 px-8 py-6 text-sm font-semibold uppercase tracking-wider">
-                  Learn More
+                  Learn About Our Story
                 </Button>
               </Link>
             </div>
@@ -89,13 +89,37 @@ const HeroSection = () => {
             <div className="relative w-full lg:w-[115%] xl:w-[130%]">
               {/* Hero Image */}
               <div className="aspect-square rounded-2xl overflow-hidden border border-white/6 relative">
-              <img src="/lovable-uploads/hero-human-inside.png" alt="Human Inside - futuristic UFO-shaped device with robotic arms holding website screens hovering over a sunlit meadow, representing Studios by Dave connecting humanity through technology" className="w-full h-full object-cover object-center" fetchPriority="high" decoding="sync" loading="eager" width="1024" height="1024" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 60vw, 700px" />
+              <picture>
+                <source srcSet="/lovable-uploads/hero-human-inside.webp" type="image/webp" />
+                <img 
+                  src="/lovable-uploads/hero-human-inside.png" 
+                  alt="Human Inside - futuristic UFO-shaped device with robotic arms holding website screens hovering over a sunlit meadow, representing Studios by Dave connecting humanity through technology" 
+                  className="w-full h-full object-cover object-center" 
+                  fetchPriority="high" 
+                  decoding="sync" 
+                  loading="eager" 
+                  width="1024" 
+                  height="1024" 
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 60vw, 700px" 
+                />
+              </picture>
                 {/* Overlay */}
                 <div className="absolute inset-0 bg-gradient-to-t from-luxury-bg/80 via-transparent to-transparent" />
                 
                 {/* Company Mascot in corner */}
                 <div className="absolute -bottom-4 -right-4 sm:-bottom-6 sm:-right-6 w-20 h-20 sm:w-28 sm:h-28 z-20">
-                  <img src="/lovable-uploads/8f46217d-91db-4458-96ee-0d61e8302830-optimized.jpg" alt="Studios by Dave AI-powered mascot delivering innovative web design, SEO, and digital marketing solutions for contractors" className="w-full h-full object-contain drop-shadow-lg" loading="lazy" decoding="async" width="112" height="112" />
+                  <picture>
+                    <source srcSet="/lovable-uploads/8f46217d-91db-4458-96ee-0d61e8302830.webp" type="image/webp" />
+                    <img 
+                      src="/lovable-uploads/8f46217d-91db-4458-96ee-0d61e8302830-optimized.jpg" 
+                      alt="Studios by Dave AI-powered mascot delivering innovative web design, SEO, and digital marketing solutions for contractors" 
+                      className="w-full h-full object-contain drop-shadow-lg" 
+                      loading="lazy" 
+                      decoding="async" 
+                      width="112" 
+                      height="112" 
+                    />
+                  </picture>
                 </div>
               </div>
 

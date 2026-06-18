@@ -2,15 +2,21 @@ import { useEffect } from "react";
 
 const ElfsightPopup = () => {
   useEffect(() => {
-    // Check if script already exists to avoid duplicates
-    if (document.querySelector('script[src="https://elfsightcdn.com/platform.js"]')) {
-      return;
-    }
+    const timer = setTimeout(() => {
+      // Check if script already exists to avoid duplicates
+      if (document.querySelector('script[src="https://elfsightcdn.com/platform.js"]')) {
+        return;
+      }
 
-    const script = document.createElement("script");
-    script.src = "https://elfsightcdn.com/platform.js";
-    script.async = true;
-    document.body.appendChild(script);
+      const script = document.createElement("script");
+      script.src = "https://elfsightcdn.com/platform.js";
+      script.async = true;
+      document.body.appendChild(script);
+    }, 4000); // 4-second delay to stagger script loading
+
+    return () => {
+      clearTimeout(timer);
+    };
   }, []);
 
   return (

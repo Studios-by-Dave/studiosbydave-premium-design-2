@@ -8,7 +8,7 @@ const NonExclusiveSection = () => {
           <div className="flex justify-center mb-2">
             <div className="relative">
               <div className="text-xl md:text-2xl font-bold text-black transform -rotate-2" style={{ fontFamily: 'Comic Sans MS, cursive, sans-serif', textShadow: '2px 2px 0px rgba(0,0,0,0.1)', position: 'relative', display: 'inline-block' }}>
-                Click Here!
+                See Why We're Different!
                 <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2">
                   <ArrowDown size={24} className="text-black md:w-8 md:h-8" />
                 </div>
