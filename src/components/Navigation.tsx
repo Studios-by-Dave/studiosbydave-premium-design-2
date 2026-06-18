@@ -118,7 +118,7 @@ const Navigation = () => {
                       key={service.name} 
                       to={service.path} 
                       onClick={() => setServicesOpen(false)} 
-                      className={`font-body text-xs whitespace-nowrap px-4 py-2 rounded-md transition-all duration-300 hover:bg-white/5 hover:text-luxury-royal-blue ${service.name === 'Portfolio' ? 'font-semibold' : 'font-medium'} ${isActive(service.path) ? "text-luxury-royal-blue bg-white/5" : "text-white/70"} ${servicesOpen ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-8'}`}
+                      className={`font-body text-base whitespace-nowrap px-4 py-2 rounded-md transition-all duration-300 hover:bg-white/5 hover:text-luxury-royal-blue ${service.name === 'Portfolio' ? 'font-semibold' : 'font-medium'} ${isActive(service.path) ? "text-luxury-royal-blue bg-white/5" : "text-white/70"} ${servicesOpen ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-8'}`}
                       style={{ transitionDelay: servicesOpen ? `${index * 60}ms` : '0ms' }}
                     >
                       {service.name}
@@ -183,15 +183,15 @@ const Navigation = () => {
               </div>
             </div>
 
-            <Link to="/contact" className={`font-body text-xs uppercase tracking-wider transition-all duration-300 hover:text-luxury-royal-blue relative ${isActive('/contact') ? "text-luxury-royal-blue" : "text-luxury-text-primary"}`}>
+            <Link to="/contact" className="font-body text-xs uppercase tracking-wider transition-all duration-300 hover:text-luxury-royal-blue relative text-luxury-royal-blue">
               Contact
-              <span className={`absolute bottom-0 left-0 h-px bg-luxury-royal-blue transition-all duration-300 ${isActive('/contact') ? "w-full" : "w-0 group-hover:w-full"}`}></span>
+              <span className={`absolute bottom-0 left-0 h-px bg-luxury-royal-blue transition-all duration-300 w-full`}></span>
             </Link>
 
             {/* Blog */}
-            <Link to="/blog" className={`font-body font-bold text-xs uppercase tracking-wider transition-all duration-300 hover:text-luxury-royal-blue relative ${isActive('/blog') ? "text-luxury-royal-blue" : "text-luxury-text-primary"}`}>
+            <Link to="/blog" className={`font-body text-xs uppercase tracking-wider transition-all duration-300 relative poofy-blog text-white`}> 
               Blog
-              <span className={`absolute bottom-0 left-0 h-px bg-luxury-royal-blue transition-all duration-300 ${isActive('/blog') ? "w-full" : "w-0 group-hover:w-full"}`}></span>
+              <span className={`absolute bottom-0 left-0 h-px bg-luxury-lime transition-all duration-300 w-full`}></span>
             </Link>
             
             <Link to="/contact#get-in-touch">
@@ -223,7 +223,7 @@ const Navigation = () => {
           </div>
               
               <div className="space-y-6">
-                <Link to="/" onClick={() => setIsOpen(false)} className={`block font-body text-sm uppercase tracking-wider transition-colors hover:text-luxury-royal-blue ${isActive('/') ? "text-luxury-royal-blue" : "text-luxury-text-primary"}`}>
+                <Link to="/" onClick={() => setIsOpen(false)} className={`block font-body text-sm uppercase tracking-wider transition-colors hover:text-luxury-royal-blue ${isActive('/') ? "text-luxury-royal-blue" : "text-luxury-royal-blue"}`}>
                   Home
                 </Link>
                 
@@ -232,13 +232,13 @@ const Navigation = () => {
                   <div className={`font-body text-sm uppercase tracking-wider transition-colors hover:text-luxury-royal-blue mb-4 ${isServicesActive() ? "text-luxury-royal-blue" : "text-luxury-text-primary"}`}>
                     Services
                   </div>
-                  <div className="ml-4 space-y-3">
+                    <div className="ml-4 space-y-3">
                     {services.map(service => (
                       <Link 
                         key={service.name} 
                         to={service.path} 
                         onClick={() => setIsOpen(false)} 
-                        className={`block font-body text-sm hover:text-luxury-royal-blue transition-colors ${service.name === 'Portfolio' ? 'font-semibold text-luxury-text-primary' : 'text-white/70'} ${isActive(service.path) ? "text-luxury-royal-blue" : ""}`}
+                        className={`block font-body text-base hover:text-luxury-royal-blue transition-colors ${service.name === 'Portfolio' ? 'font-semibold text-luxury-royal-blue' : 'text-luxury-royal-blue'} ${isActive(service.path) ? "text-luxury-royal-blue" : ""}`}
                       >
                         {service.name}
                       </Link>
@@ -246,7 +246,7 @@ const Navigation = () => {
                   </div>
                 </div>
 
-                <Link to="/about" onClick={() => setIsOpen(false)} className={`block font-body text-sm uppercase tracking-wider transition-colors hover:text-luxury-royal-blue ${isActive('/about') ? "text-luxury-royal-blue" : "text-luxury-text-primary"}`}>
+                <Link to="/about" onClick={() => setIsOpen(false)} className={`block font-body text-sm uppercase tracking-wider transition-colors hover:text-luxury-royal-blue ${isActive('/about') ? "text-luxury-royal-blue" : "text-luxury-royal-blue"}`}>
                   About Us
                 </Link>
 
@@ -261,7 +261,7 @@ const Navigation = () => {
                         key={area.name} 
                         to={area.path} 
                         onClick={() => setIsOpen(false)} 
-                        className={`block font-body text-sm hover:text-luxury-royal-blue transition-colors text-white/70 ${isActive(area.path) ? "text-luxury-royal-blue" : ""}`}
+                        className={`block font-body text-sm hover:text-luxury-royal-blue transition-colors text-luxury-royal-blue ${isActive(area.path) ? "text-luxury-royal-blue" : ""}`}
                       >
                         {area.name}
                       </Link>
@@ -280,7 +280,7 @@ const Navigation = () => {
                         key={promo.name} 
                         to={promo.path} 
                         onClick={() => setIsOpen(false)} 
-                        className={`block font-body text-sm hover:text-luxury-royal-blue transition-colors text-white/70 ${isActive(promo.path) ? "text-luxury-royal-blue" : ""}`}
+                        className={`block font-body text-sm hover:text-luxury-royal-blue transition-colors text-luxury-royal-blue ${isActive(promo.path) ? "text-luxury-royal-blue" : ""}`}
                       >
                         {promo.name}
                       </Link>
@@ -288,13 +288,13 @@ const Navigation = () => {
                   </div>
                 </div>
 
-                <Link to="/contact" onClick={() => setIsOpen(false)} className={`block font-body text-sm uppercase tracking-wider transition-colors hover:text-luxury-royal-blue ${isActive('/contact') ? "text-luxury-royal-blue" : "text-luxury-text-primary"}`}>
+                <Link to="/contact" onClick={() => setIsOpen(false)} className={`block font-body text-sm uppercase tracking-wider transition-colors hover:text-luxury-royal-blue ${isActive('/contact') ? "text-luxury-royal-blue" : "text-luxury-royal-blue"}`}>
                   Contact
                 </Link>
 
                 {/* Mobile Blog */}
                 <div className="border-t border-white/6 pt-6">
-                  <Link to="/blog" onClick={() => setIsOpen(false)} className={`block font-body font-bold text-sm uppercase tracking-wider transition-all ${isActive('/blog') ? "text-luxury-royal-blue" : "text-luxury-text-primary"}`}>
+                  <Link to="/blog" onClick={() => setIsOpen(false)} className={`block font-body text-sm uppercase tracking-wider transition-all poofy-blog text-white`}>
                     Blog
                   </Link>
                 </div>

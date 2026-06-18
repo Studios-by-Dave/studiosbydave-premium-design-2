@@ -275,9 +275,26 @@ const Portfolio = () => {
       
       <main>
         {/* Hero Section */}
-        <section className="relative min-h-[50vh] bg-luxury-bg noise-overlay flex items-center">
+        <section className="relative min-h-[50vh] bg-luxury-bg noise-overlay flex items-center overflow-hidden">
           {/* Radial Glow */}
           <div className="absolute inset-0 radial-glow" />
+
+          {/* Background Mosaic of Website Screens */}
+          <div className="absolute inset-0 z-0 opacity-[0.07] blur-[2px] overflow-hidden pointer-events-none select-none">
+            <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-4 scale-125 -rotate-6 origin-center">
+              {[
+                studiosbydaveImg, fsExpeditedImg, padgsteenguitarsImg, shadesColorCraftImg,
+                leeBuildsShelbyImg, odysseyHomeVisionsImg, bigFuturisticPictureBoxImg, audioNotesAiImg,
+                melodyLockImg, mikesGutHealerImg, theLivingWordImg, rifeWaveImg, waveSpyImg,
+                studiosbydaveImg, fsExpeditedImg, padgsteenguitarsImg, shadesColorCraftImg, 
+                leeBuildsShelbyImg, odysseyHomeVisionsImg, bigFuturisticPictureBoxImg
+              ].map((img, i) => (
+                <div key={i} className="aspect-video bg-luxury-surface rounded-lg shadow-2xl border border-white/10 overflow-hidden transform hover:scale-110 transition-transform duration-700">
+                  <img src={img} alt="" className="w-full h-full object-cover" />
+                </div>
+              ))}
+            </div>
+          </div>
 
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-20 py-24">
             <div className="text-center max-w-3xl mx-auto">

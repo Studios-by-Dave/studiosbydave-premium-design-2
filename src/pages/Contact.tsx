@@ -195,8 +195,8 @@ const Contact = () => {
               <h2 className="display-heading text-luxury-text-primary text-4xl lg:text-5xl mb-6">
                 Get in Touch
               </h2>
-                <p className="font-body text-luxury-text-secondary text-lg mb-8">
-                  We're here to help your business succeed online. Reach out through any of these channels: Hit the button!
+                <p className="font-body text-luxury-text-secondary text-xl mb-12">
+                  We're here to help your business succeed online. Reach out through any of these channels: <span className="text-luxury-lime font-bold">Hit the button!</span>
                 </p>
               </div>
 
@@ -204,8 +204,8 @@ const Contact = () => {
               <div className="flex flex-col gap-8 mb-8">
                 {/* Phone Button */}
                 <div className="group relative">
-                  <div className="absolute -inset-1 bg-gradient-to-r from-luxury-lime to-white rounded-2xl blur opacity-25 group-hover:opacity-100 transition duration-1000 group-hover:duration-200"></div>
-                  <a href="tel:+17044738188" className="relative flex flex-col items-center justify-center bg-luxury-lime p-8 lg:p-12 rounded-2xl transition-all duration-300 transform group-hover:scale-[1.01] shadow-2xl">
+                  <div className="absolute -inset-1 bg-gradient-to-r from-luxury-lime to-white rounded-[3rem] blur opacity-25 group-hover:opacity-100 transition duration-1000 group-hover:duration-200"></div>
+                  <a href="tel:+17044738188" className="relative flex flex-col items-center justify-center bg-luxury-lime p-8 lg:p-12 rounded-[3rem] transition-all duration-300 transform group-hover:scale-[1.01] shadow-2xl">
                     <div className="flex items-center gap-3 mb-2">
                       <Phone size={24} className="text-black/60" />
                       <span className="text-black/60 text-sm font-bold uppercase tracking-widest">Call or Text Anytime</span>
@@ -221,8 +221,8 @@ const Contact = () => {
 
                 {/* Email Button */}
                 <div className="group relative">
-                  <div className="absolute -inset-1 bg-gradient-to-r from-luxury-lime to-white rounded-2xl blur opacity-25 group-hover:opacity-100 transition duration-1000 group-hover:duration-200"></div>
-                  <a href="mailto:david.richardson@studiosbydave.com" className="relative flex flex-col items-center justify-center bg-luxury-lime p-8 lg:p-12 rounded-2xl transition-all duration-300 transform group-hover:scale-[1.01] shadow-2xl">
+                  <div className="absolute -inset-1 bg-gradient-to-r from-luxury-lime to-white rounded-[3rem] blur opacity-25 group-hover:opacity-100 transition duration-1000 group-hover:duration-200"></div>
+                  <a href="mailto:david.richardson@studiosbydave.com" className="relative flex flex-col items-center justify-center bg-luxury-lime p-8 lg:p-12 rounded-[3rem] transition-all duration-300 transform group-hover:scale-[1.01] shadow-2xl">
                     <div className="flex items-center gap-3 mb-2">
                       <Mail size={24} className="text-black/60" />
                       <span className="text-black/60 text-sm font-bold uppercase tracking-widest">Send an Email</span>
@@ -263,17 +263,8 @@ const Contact = () => {
 
               {/* Contact Form - Temporarily Removed */}
               
-              {/* Certification Badges */} 
-              <div className="flex justify-center gap-8 py-8 bg-black/20 rounded-2xl border border-white/5 mb-8"> 
-                <div className="flex flex-col items-center gap-2"> 
-                  <img src="/assets/aplus_1.png" alt="A+ Certification" className="h-16 md:h-20 w-auto object-contain" /> 
-                  <span className="text-[10px] uppercase tracking-widest text-luxury-text-secondary font-bold">CompTIA A+</span> 
-                </div> 
-                <div className="flex flex-col items-center gap-2"> 
-                  <img src="/assets/aplus_2.jpg" alt="Technical Excellence" className="h-16 md:h-20 w-auto object-contain" /> 
-                  <span className="text-[10px] uppercase tracking-widest text-luxury-text-secondary font-bold">Certified Tech</span> 
-                </div> 
-              </div>
+              {/* Certification Badges Section - Moved to Footer for better flow */}
+              
               {/* CTA Box */}
               <div className="luxury-card rounded-xl p-8">
                 <div className="text-center mb-6">

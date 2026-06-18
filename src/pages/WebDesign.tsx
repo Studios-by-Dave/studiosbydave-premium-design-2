@@ -172,6 +172,11 @@ const WebDesign = () => {
               const IconComponent = feature.icon;
               return (
                 <div key={index} className="luxury-card rounded-xl p-8 relative overflow-hidden group">
+                  {/* Floating checkmark on hover */}
+                  <div className="absolute top-4 right-4 text-luxury-lime opacity-0 translate-y-2 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 ease-out z-20 pointer-events-none">
+                    <CheckCircle size={28} className="fill-luxury-lime/10" />
+                  </div>
+                  
                   <div className="relative z-10">
                     <div className="w-12 h-12 rounded-lg bg-luxury-lime/10 flex items-center justify-center mb-6 group-hover:bg-luxury-lime/20 transition-colors">
                       <IconComponent size={24} className="text-luxury-lime" />
@@ -297,6 +302,7 @@ const WebDesign = () => {
                     "Conversion-focused design",
                     "Advanced forms",
                     "CRM integration",
+                    "Full Blog Implementation (Ranking Articles etc)",
                     "Local SEO setup",
                     "Analytics dashboard",
                     "Priority support"
@@ -319,12 +325,13 @@ const WebDesign = () => {
             <div className="luxury-card rounded-xl p-6 transition-all duration-300 group relative hover:border-luxury-purple/50">
               <div className="text-center pb-4">
                 <h3 className="display-heading text-luxury-text-primary text-2xl mb-1">Ultra Premium Web Package</h3>
-                <p className="text-sm font-medium text-luxury-purple italic font-body">Complete digital presence</p>
+                <p className="text-sm font-medium text-luxury-purple italic font-body">No limits, just pure performance</p>
                 <div className="text-3xl font-bold bg-gradient-to-r from-luxury-purple via-luxury-lime to-luxury-purple bg-clip-text text-transparent mt-2">Call for Quote</div>
               </div>
               <div className="space-y-4">
                 <ul className="space-y-2">
                   {[
+                    "Includes all features from Business and Scale Web Packages",
                     "Fully custom design",
                     "Advanced integrations",
                     "Memberships, booking, or custom functionality",
@@ -417,25 +424,11 @@ const WebDesign = () => {
               </p>
             </div>
             
-            {/* Right Certification Image */}
+            {/* Certification Logos - Single display */}
             <div className="flex justify-center gap-4">
               <img 
                 src={comptiaLogo}
                 alt="CompTIA A+ Certified professional" 
-                className="w-24 h-24 md:w-32 md:h-32 object-contain"
-                loading="lazy"
-                decoding="async"
-              />
-              <img 
-                src="/assets/aplus_1.png"
-                alt="A+ Certification Badge" 
-                className="w-24 h-24 md:w-32 md:h-32 object-contain"
-                loading="lazy"
-                decoding="async"
-              />
-              <img 
-                src="/assets/aplus_2.jpg"
-                alt="Technical Certification Badge" 
                 className="w-24 h-24 md:w-32 md:h-32 object-contain"
                 loading="lazy"
                 decoding="async"

@@ -87,7 +87,7 @@ const Blog = () => {
   ]);
 
   return (
-    <div className="min-h-screen bg-[#f5f5f0]">
+    <div className="min-h-screen bg-luxury-bg">
       <SimpleSEO
         title="The Studio's Chronicle | Local Business Tips & Insights 2026"
         description="Insights, tips, and stories for local business success — web design, SEO, branding, and digital marketing advice from Studios by Dave in Shelby, NC."
@@ -97,44 +97,44 @@ const Blog = () => {
       />
       <Navigation />
       
-      <main className="py-12 md:py-20 relative">
+      <main className="py-12 md:py-20 relative bg-luxury-bg noise-overlay">
         {/* Corner Images */}
         <img
           src="/assets/blog1.jpeg"
           alt="Blog decoration"
-          className="absolute top-4 left-4 w-12 h-12 md:w-32 md:h-32 object-cover rounded-lg opacity-60"
+          className="absolute top-4 left-4 w-12 h-12 md:w-32 md:h-32 object-cover rounded-lg opacity-20 filter grayscale"
         />
         <img
           src="/assets/blog3.jpeg"
           alt="Blog decoration"
-          className="absolute top-4 right-4 w-12 h-12 md:w-32 md:h-32 object-cover rounded-lg opacity-60"
+          className="absolute top-4 right-4 w-12 h-12 md:w-32 md:h-32 object-cover rounded-lg opacity-20 filter grayscale"
         />
         <img
           src="/assets/blog2.jpeg"
           alt="Blog decoration"
-          className="absolute bottom-4 left-4 w-12 h-12 md:w-32 md:h-32 object-cover rounded-lg opacity-60"
+          className="absolute bottom-4 left-4 w-12 h-12 md:w-32 md:h-32 object-cover rounded-lg opacity-20 filter grayscale"
         />
         <img
           src="/assets/blog4.jpeg"
           alt="Blog decoration"
-          className="absolute bottom-4 right-4 w-12 h-12 md:w-32 md:h-32 object-cover rounded-lg opacity-60"
+          className="absolute bottom-4 right-4 w-12 h-12 md:w-32 md:h-32 object-cover rounded-lg opacity-20 filter grayscale"
         />
 
         <div className="container mx-auto px-4 max-w-5xl">
           {/* Newspaper Masthead */}
-          <header className="text-center mb-12 border-b-4 border-double border-neutral-900 pb-8">
-            <p className="text-xs tracking-[0.3em] uppercase text-neutral-500 font-serif mb-2">
+          <header className="text-center mb-12 border-b-4 border-double border-white/10 pb-8">
+            <p className="text-xs tracking-[0.3em] uppercase text-neutral-400 font-serif mb-2">
               Est. 2024
             </p>
-            <h1 className="text-3xl md:text-5xl lg:text-7xl font-bold text-[hsl(259_84%_30%)] font-serif tracking-tight border-4 border-[hsl(218_49%_22%)] rounded-lg px-4 md:px-6 py-2 md:py-3 inline-block shadow-[0_0_15px_hsl(259_84%_30%/0.15)] italic [font-style:oblique_4deg]">
+            <h1 className="text-3xl md:text-5xl lg:text-7xl font-bold text-luxury-lime font-serif tracking-tight border-4 border-white/10 rounded-lg px-4 md:px-6 py-2 md:py-3 inline-block shadow-[0_0_30px_rgba(201,240,77,0.1)] italic [font-style:oblique_4deg]">
               The Studio's Chronicle
             </h1>
-            <p className="text-lg text-neutral-600 font-serif italic mt-4">
+            <p className="text-lg text-neutral-400 font-serif italic mt-4">
               Insights, Tips & Stories for Local Business Success
             </p>
             <div className="flex items-center justify-center gap-4 text-xs text-neutral-500 mt-4 font-serif">
               <span>Shelby, North Carolina</span>
-              <span className="w-1 h-1 bg-neutral-400 rounded-full" />
+              <span className="w-1 h-1 bg-neutral-600 rounded-full" />
               <span>Digital Edition</span>
             </div>
           </header>
@@ -147,28 +147,31 @@ const Blog = () => {
                 to={`/blog/${article.slug}`}
                 className="block group"
               >
-                <article className="bg-white border-2 border-neutral-900 p-6 md:p-8 hover:shadow-[8px_8px_0px_0px_rgba(0,0,0,0.9)] transition-all duration-300 rounded-xl">
+                <article className="bg-luxury-surface border border-white/10 p-6 md:p-8 hover:shadow-[0_0_30px_rgba(201,240,77,0.05)] transition-all duration-300 rounded-xl relative overflow-hidden group">
+                  {/* Subtle hover glow background */}
+                  <div className="absolute inset-0 bg-gradient-to-br from-luxury-lime/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                  
                   {/* Article Header */}
-                  <div className="flex items-center justify-between text-xs text-neutral-500 font-serif mb-4 border-b border-neutral-200 pb-4">
+                  <div className="flex items-center justify-between text-xs text-neutral-400 font-serif mb-4 border-b border-white/5 pb-4 relative z-10">
                     <span className="electric-green-red-text">{article.volume}</span>
                     <span>{article.date}</span>
                   </div>
                   
                   {/* Article Title */}
-                  <h2 className="text-xl md:text-2xl lg:text-3xl font-bold text-neutral-900 font-serif mb-2 group-hover:underline decoration-2 underline-offset-4">
+                  <h2 className="text-xl md:text-2xl lg:text-3xl font-bold text-white font-serif mb-2 group-hover:text-luxury-lime transition-colors relative z-10">
                     {article.title}
                   </h2>
-                  <p className="text-base md:text-lg text-neutral-600 font-serif italic mb-4">
+                  <p className="text-base md:text-lg text-neutral-400 font-serif italic mb-4 relative z-10">
                     {article.subtitle}
                   </p>
                   
                   {/* Excerpt */}
-                  <p className="text-sm md:text-base text-neutral-700 font-serif leading-relaxed mb-6">
+                  <p className="text-sm md:text-base text-neutral-300 font-serif leading-relaxed mb-6 relative z-10">
                     {article.excerpt}
                   </p>
                   
                   {/* Read More */}
-                  <div className="flex items-center gap-2 text-neutral-900 font-semibold font-serif group-hover:gap-3 transition-all">
+                  <div className="flex items-center gap-2 text-luxury-lime font-semibold font-serif group-hover:gap-3 transition-all relative z-10">
                     <span>Continue Reading</span>
                     <ArrowRight className="w-4 h-4" />
                   </div>
@@ -178,7 +181,7 @@ const Blog = () => {
           </div>
 
           {/* More Articles Coming Soon */}
-          <div className="mt-12 text-center border-t-2 border-neutral-300 pt-8">
+          <div className="mt-12 text-center border-t border-white/10 pt-8">
             <p className="text-neutral-500 font-serif italic">
               More articles coming soon...
             </p>

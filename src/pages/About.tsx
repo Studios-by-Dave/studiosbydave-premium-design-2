@@ -197,18 +197,6 @@ const About = () => {
               <p className="font-body text-luxury-text-secondary text-xl italic max-w-4xl mx-auto leading-relaxed">
                 "Dave" David Richardson is a seasoned-long veteran in the various fields of Technology. He attended The University of North Carolina at Charlotte in 1997 and transferred to ECPI College of Technology in 2001 where he earned President of the National Vocational Technical Honor Society along with his College Degree. He then ventured into various service positions, one being Broadband Specialist/Installer with Shelby's own Computer Connections Inc. "Hey Eddie! Hi Lynne!" 😄 And then eventually proceeded to become Network Engineer at several private IT Firms. Local firms all the way to the deserts of Las Vegas, NV. David is also a life long musician that started playing music at the age of 8. He took to the love of recording music starting back at the turn of 1999-2000 and continued this craft on the side of work for nearly over 3 decades. Eventually coined his own status of Audio Mastering Engineer. "Dave" has always had a love for building websites and learning code and has taken this road full on as a Web Designer/Developer. Here at Studios by Dave we wanna see you succeed. Because when our clients are happy, Everybody is Happy! 😁
               </p>
-              <div className="flex justify-center gap-6 mt-8">
-                <img 
-                  src="/assets/aplus_1.png" 
-                  alt="CompTIA A+ Certification" 
-                  className="h-20 md:h-24 w-auto object-contain drop-shadow-lg"
-                />
-                <img 
-                  src="/assets/aplus_2.jpg" 
-                  alt="CompTIA Technical Certification" 
-                  className="h-20 md:h-24 w-auto object-contain drop-shadow-lg"
-                />
-              </div>
               <div className="mt-8">
                 <img
                   src="/assets/sbd yard sign1.png"

@@ -24,7 +24,7 @@ const BlogArticle1 = () => {
   );
 
   return (
-    <div className="min-h-screen bg-[#f5f5f0]">
+    <div className="min-h-screen bg-luxury-bg text-white font-serif">
       <SimpleSEO
         title="Why Choose Studios by Dave Over the Local Competition? | Studios by Dave Blog"
         description="A Local Partner for Professional Web Design, Branding, and SEO in Shelby, NC. Learn what makes Studios by Dave different from other local options."
@@ -40,105 +40,105 @@ const BlogArticle1 = () => {
       <main className="py-12 md:py-20">
         <div className="container mx-auto px-4 max-w-4xl">
           {/* Article Header */}
-          <header className="text-center mb-12 border-b-4 border-double border-neutral-900 pb-8">
-            <div className="flex items-center justify-center gap-4 text-xs text-neutral-500 font-serif mb-4">
-              <span className="text-primary">Vol #1 Article #1</span>
-              <span className="w-1 h-1 bg-neutral-400 rounded-full" />
+          <header className="text-center mb-12 border-b border-white/10 pb-8">
+            <div className="flex items-center justify-center gap-4 text-xs text-neutral-400 font-serif mb-4">
+              <span className="text-luxury-lime">Vol #1 Article #1</span>
+              <span className="w-1 h-1 bg-neutral-600 rounded-full" />
               <span>January 2025</span>
             </div>
-            <h1 className="text-4xl md:text-5xl font-bold text-[hsl(259_84%_30%)] font-serif tracking-tight mb-6 leading-tight">
+            <h1 className="text-4xl md:text-5xl font-bold text-white text-shadow-glow font-serif tracking-tight mb-6 leading-tight">
               Why Choose Studios by Dave Over the Local Competition?
             </h1>
-            <p className="text-xl text-neutral-600 font-serif italic leading-relaxed">
+            <p className="text-xl text-neutral-300 font-serif italic leading-relaxed">
               A Local Partner for Professional Web Design, Branding, and SEO in Shelby, NC.
             </p>
           </header>
 
           {/* Article Content */}
-          <article className="prose prose-neutral max-w-none font-serif">
+          <article className="prose prose-invert max-w-none font-serif">
             {/* Introduction */}
             <section className="mb-12">
-              <p className="text-lg text-neutral-700 leading-relaxed mb-6">
+              <p className="text-lg text-neutral-300 leading-relaxed mb-6">
                 Building Strong Local Businesses Starts with a Strong Online Presence. In today's digital-first world, your website and online presence are often the first impression customers have of your business.
               </p>
               
-              <p className="text-lg text-neutral-700 leading-relaxed mb-8">
+              <p className="text-lg text-neutral-300 leading-relaxed mb-8">
                 For local businesses in Shelby, North Carolina and the surrounding areas, choosing the right digital partner can make the difference between being found — or being overlooked.
               </p>
               
-              <p className="text-lg text-neutral-700 leading-relaxed mb-8">
+              <p className="text-lg text-neutral-300 leading-relaxed mb-8">
                 At Studios by Dave, we don't just build websites. We help local businesses stand out, compete, and grow in an increasingly crowded online marketplace.
               </p>
             </section>
 
             {/* What Makes Studios by Dave Different */}
             <section className="mb-12">
-              <h2 className="text-3xl font-bold text-neutral-900 font-serif mb-6">What Makes Studios by Dave Different?</h2>
+              <h2 className="text-3xl font-bold text-white font-serif mb-6">What Makes Studios by Dave Different?</h2>
               
-              <p className="text-lg text-neutral-700 leading-relaxed mb-6">
+              <p className="text-lg text-neutral-300 leading-relaxed mb-6">
                 Here's what sets us apart from other local web designers and agencies:
               </p>
               
               <div className="grid md:grid-cols-2 gap-6 mb-8">
-                <Card>
+                <Card className="bg-luxury-surface border border-white/10">
                   <CardHeader>
                     <div className="flex items-center gap-3">
-                      <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center">
-                        <MapPin className="w-6 h-6 text-primary" />
+                      <div className="w-12 h-12 bg-white/5 rounded-full flex items-center justify-center">
+                        <MapPin className="w-6 h-6 text-luxury-lime" />
                       </div>
-                      <h3 className="text-xl font-semibold text-foreground">Local Focus</h3>
+                      <h3 className="text-xl font-semibold text-white">Local Focus</h3>
                     </div>
                   </CardHeader>
                   <CardContent>
-                    <p className="text-muted-foreground">
+                    <p className="text-neutral-400">
                       We're not just serving Shelby — we're part of the community. We understand local businesses, local customers, and what works in our area.
                     </p>
                   </CardContent>
                 </Card>
 
-                <Card>
+                <Card className="bg-luxury-surface border border-white/10">
                   <CardHeader>
                     <div className="flex items-center gap-3">
-                      <div className="w-12 h-12 bg-accent/10 rounded-full flex items-center justify-center">
-                        <Users className="w-6 h-6 text-accent" />
+                      <div className="w-12 h-12 bg-white/5 rounded-full flex items-center justify-center">
+                        <Users className="w-6 h-6 text-luxury-lime" />
                       </div>
-                      <h3 className="text-xl font-semibold text-foreground">Personal Service</h3>
+                      <h3 className="text-xl font-semibold text-white">Personal Service</h3>
                     </div>
                   </CardHeader>
                   <CardContent>
-                    <p className="text-muted-foreground">
+                    <p className="text-neutral-400">
                       You work directly with me, Dave. No account managers, no outsourcing. Just straight talk and real solutions for your business.
                     </p>
                   </CardContent>
                 </Card>
 
-                <Card>
+                <Card className="bg-luxury-surface border border-white/10">
                   <CardHeader>
                     <div className="flex items-center gap-3">
-                      <div className="w-12 h-12 bg-trophy-gold/10 rounded-full flex items-center justify-center">
-                        <Award className="w-6 h-6 text-trophy-gold" />
+                      <div className="w-12 h-12 bg-white/5 rounded-full flex items-center justify-center">
+                        <Award className="w-6 h-6 text-luxury-lime" />
                       </div>
-                      <h3 className="text-xl font-semibold text-foreground">Proven Results</h3>
+                      <h3 className="text-xl font-semibold text-white">Proven Results</h3>
                     </div>
                   </CardHeader>
                   <CardContent>
-                    <p className="text-muted-foreground">
+                    <p className="text-neutral-400">
                       Our clients rank higher, get more customers, and grow their businesses. We have the track record to prove it.
                     </p>
                   </CardContent>
                 </Card>
 
-                <Card>
+                <Card className="bg-luxury-surface border border-white/10">
                   <CardHeader>
                     <div className="flex items-center gap-3">
-                      <div className="w-12 h-12 bg-green-500/10 rounded-full flex items-center justify-center">
-                        <CheckCircle className="w-6 h-6 text-green-600" />
+                      <div className="w-12 h-12 bg-white/5 rounded-full flex items-center justify-center">
+                        <CheckCircle className="w-6 h-6 text-luxury-lime" />
                       </div>
-                      <h3 className="text-xl font-semibold text-foreground">Complete Solutions</h3>
+                      <h3 className="text-xl font-semibold text-white">Complete Solutions</h3>
                     </div>
                   </CardHeader>
                   <CardContent>
-                    <p className="text-muted-foreground">
+                    <p className="text-neutral-400">
                       Web design, SEO, branding, and ongoing support — all in one place. No juggling multiple vendors or dealing with finger-pointing.
                     </p>
                   </CardContent>

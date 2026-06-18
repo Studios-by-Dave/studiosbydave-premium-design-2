@@ -17,7 +17,7 @@ const HeroSection = () => {
               <Phone className="text-luxury-lime w-4 h-4" />
               Call Us Text Us
             </p>
-            <a href="tel:+17044738188" className="font-display font-bold transition-colors duration-300 text-luxury-lime text-4xl hover:text-white">
+            <a href="tel:+17044738188" className="font-display font-bold transition-colors duration-300 text-luxury-lime text-4xl hover:text-white animate-phone-pulse">
               (704) 473-8188
             </a>
             <p className="text-luxury-text-secondary text-sm mt-1">We're here 24/7</p>
