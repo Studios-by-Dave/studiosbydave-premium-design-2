@@ -1,14 +1,14 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import SimpleSEO from "@/components/SimpleSEO";
+import PixieDust from "@/components/PixieDust";
 import { Link } from "react-router-dom";
-import { Users, CheckCircle, ArrowRight, Clock } from "lucide-react";
+import { Users, CheckCircle, ArrowRight, Clock, Banknote, ShieldCheck } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 const ReferralBonus = () => {
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-luxury-bg">
       <SimpleSEO
         title="Unlimited $100 Referral Bonus | Studios by Dave"
         description="Earn $100 for every successful referral with our unlimited referral bonus program. No limits on how much you can earn. Perfect for contractors and local businesses."
@@ -18,150 +18,123 @@ const ReferralBonus = () => {
       
       <main>
         {/* Hero Section */}
-        <section className="relative py-20" style={{ background: 'linear-gradient(135deg, hsl(218 49% 15%) 0%, hsl(218 49% 22%) 50%, hsl(218 49% 18%) 100%)' }}>
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <div className="relative inline-block">
-              {/* Pixie Dust Effect */}
-              <div className="absolute -top-8 -left-4 w-40 h-40 pointer-events-none">
-                {[...Array(18)].map((_, i) => (
-                  <div
-                    key={i}
-                    className="absolute w-1.5 h-1.5 rounded-full animate-dust-float"
-                    style={{
-                      left: `${Math.random() * 100}%`,
-                      top: `${Math.random() * 100}%`,
-                      background: i % 4 === 0 
-                        ? 'hsl(var(--trophy-gold))' 
-                        : i % 4 === 1 
-                        ? 'hsl(var(--accent) / 0.6)'
-                        : 'hsl(0, 0%, 30%)',
-                      animationDelay: `${i * 0.15}s`,
-                      animationDuration: `${2 + Math.random() * 2}s`,
-                      filter: 'blur(0.5px)',
-                      boxShadow: i % 4 === 0 ? '0 0 5px hsl(var(--trophy-gold))' : 'none'
-                    }}
-                  />
-                ))}
+        <section className="relative min-h-[60vh] flex items-center justify-center overflow-hidden">
+          <div className="absolute inset-0 bg-luxury-bg noise-overlay" />
+          <div className="absolute inset-0 radial-glow opacity-60" />
+          
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-20 pt-20">
+            <div className="relative inline-block mb-4">
+              <div className="section-eyebrow animate-fade-in mx-auto">✦ Unlimited Rewards</div>
+            </div>
+            
+            <h1 className="display-heading text-4xl md:text-6xl lg:text-7xl text-luxury-text-primary mb-8 leading-tight">
+              Earn <span className="text-luxury-royal-blue">$100</span> for Every<br />
+              <span className="text-luxury-lime">Successful Referral</span>
+            </h1>
+            
+            <p className="font-body text-xl text-luxury-text-secondary max-w-2xl mx-auto mb-12">
+              Share the quality. Reap the rewards. There are zero limits on how much you can earn by connecting us with businesses that need a digital edge.
+            </p>
+
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
+              <Link to="/contact#get-in-touch">
+                <Button size="lg" className="bg-luxury-lime text-black hover:bg-luxury-lime/90 font-bold uppercase tracking-widest px-8">
+                  Start Referring
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </Button>
+              </Link>
+            </div>
+          </div>
+
+          <PixieDust />
+        </section>
+
+        {/* Benefits & Details */}
+        <section className="py-32 bg-luxury-bg relative overflow-hidden">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="grid lg:grid-cols-2 gap-20 items-center">
+              <div>
+                <div className="section-eyebrow mb-6">✦ Why Participate</div>
+                <h2 className="display-heading text-3xl md:text-5xl text-luxury-text-primary mb-8">Your Network is Your Net Worth</h2>
+                
+                <div className="space-y-8 mt-12">
+                  <div className="flex gap-6">
+                    <div className="h-14 w-14 rounded-xl bg-luxury-surface border border-white/6 flex items-center justify-center shrink-0">
+                      <Banknote className="h-6 w-6 text-luxury-lime" />
+                    </div>
+                    <div>
+                      <h3 className="font-section text-xl text-luxury-text-primary mb-2 uppercase tracking-wide">$100 Cash Reward</h3>
+                      <p className="font-body text-luxury-text-secondary">Earn a flat $100 referral fee for every qualifying new client you bring to Studios by Dave.</p>
+                    </div>
+                  </div>
+
+                  <div className="flex gap-6">
+                    <div className="h-14 w-14 rounded-xl bg-luxury-surface border border-white/6 flex items-center justify-center shrink-0">
+                      <ShieldCheck className="h-6 w-6 text-luxury-royal-blue" />
+                    </div>
+                    <div>
+                      <h3 className="font-section text-xl text-luxury-text-primary mb-2 uppercase tracking-wide">No Earning Cap</h3>
+                      <p className="font-body text-luxury-text-secondary">Refer 10 people, earn $1,000. Refer 100 people, earn $10,000. We value your connections.</p>
+                    </div>
+                  </div>
+
+                  <div className="flex gap-6">
+                    <div className="h-14 w-14 rounded-xl bg-luxury-surface border border-white/6 flex items-center justify-center shrink-0">
+                      <Clock className="h-6 w-6 text-luxury-lime" />
+                    </div>
+                    <div>
+                      <h3 className="font-section text-xl text-luxury-text-primary mb-2 uppercase tracking-wide">Rapid Payouts</h3>
+                      <p className="font-body text-luxury-text-secondary">Bonuses are typically processed within 1-14 business days of the qualifying purchase confirmation.</p>
+                    </div>
+                  </div>
+                </div>
               </div>
-              <h1 className="text-4xl md:text-5xl lg:text-5xl font-bold text-white mb-6">
-                Unlimited <span className="text-accent">$100</span> Referral Bonus
-              </h1>
-              <p className="text-xl text-white/80 max-w-3xl mx-auto">
-                Earn Cash for Every Referral—No Limits!
-              </p>
+
+              <div className="relative">
+                <div className="luxury-card rounded-2xl p-10 relative z-10 overflow-hidden">
+                  <div className="absolute top-0 right-0 w-32 h-32 bg-luxury-royal-blue/5 rounded-full blur-2xl -mr-10 -mt-10" />
+                  
+                  <h3 className="font-section text-2xl text-luxury-text-primary mb-8 uppercase tracking-widest text-center">Reward Roadmap</h3>
+                  
+                  <div className="space-y-8">
+                    {[
+                      { step: "01", title: "Spread the Word", desc: "Share our web design services with your network of business owners and contractors." },
+                      { step: "02", title: "Intro Connection", desc: "Have the referred client mention your name when they contact us for a quote." },
+                      { step: "03", title: "Qualifying Purchase", desc: "The client purchases any Standard Web Package ($998 or higher)." },
+                      { step: "04", title: "Verification", desc: "We verify the order and your referral status immediately." },
+                      { step: "05", title: "Get Paid", desc: "Receive your $100 Visa gift card as a thank you for your support." }
+                    ].map((item, i) => (
+                      <div key={i} className="flex gap-6 items-start group">
+                        <span className="font-display text-4xl text-luxury-royal-blue/30 group-hover:text-luxury-royal-blue/60 transition-colors">{item.step}</span>
+                        <div>
+                          <h4 className="font-section text-luxury-text-primary text-sm uppercase tracking-wider mb-1">{item.title}</h4>
+                          <p className="font-body text-luxury-text-secondary text-sm">{item.desc}</p>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+
+                  <div className="mt-12 pt-10 border-t border-white/6 text-center">
+                    <p className="text-xs text-luxury-text-secondary mb-6 font-body italic">
+                      *Terms and conditions apply. Referral must mention your name at time of booking to qualify for the bonus.
+                    </p>
+                    <Link to="/contact#get-in-touch">
+                      <Button className="w-full bg-luxury-royal-blue text-white hover:bg-luxury-royal-blue/90 font-bold uppercase tracking-widest">
+                        Submit a Lead
+                      </Button>
+                    </Link>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </section>
 
-        {/* Referral Bonus Details */}
-        <section className="py-20 bg-muted/30 relative">
-          {/* Mascot Pointer - Flipped and on left */}
-          <div className="hidden lg:block absolute left-4 top-1/2 -translate-y-1/2 z-10 animate-bounce-slow">
-            <img
-              src="/assets/promos/logo-mascot-pointer.png"
-              alt="Mascot pointing to promotion"
-              className="w-64 h-64 object-contain drop-shadow-lg transform -scale-x-100"
-            />
-          </div>
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 lg:pl-40">
-            <Card className="border-2 border-accent/20 shadow-xl overflow-hidden">
-              <div className="bg-gradient-to-r from-trophy-gold to-trophy-gold/80 p-6 relative overflow-hidden">
-                <div className="absolute inset-0 overflow-hidden">
-                  <div className="absolute -inset-full bg-gradient-to-r from-transparent via-white/30 to-transparent skew-x-12 animate-[shimmer_3s_infinite]" style={{ animationDelay: '1.5s' }} />
-                  <div className="absolute -inset-full bg-gradient-to-r from-transparent via-white/10 to-transparent skew-x-12 animate-[shimmer_3s_infinite]" style={{ animationDelay: '3s' }} />
-                </div>
-                <div className="flex items-center justify-center relative z-10">
-                  <div className="bg-white/20 p-3 rounded-full">
-                    <Users className="h-8 w-8 text-white" />
-                  </div>
-                </div>
-              </div>
-              <CardContent className="p-8">
-                <div className="grid md:grid-cols-2 gap-8">
-                  <div>
-                    <h3 className="text-xl font-semibold text-foreground mb-4">How It Works</h3>
-                    <p className="text-muted-foreground mb-6">
-                      Earn <strong className="text-foreground">$100 for every successful referral</strong> you send our way. 
-                      There are absolutely no limits on how many referrals you can make—keep referring and keep earning!
-                    </p>
-                    <div className="space-y-3">
-                      <div className="flex items-start gap-3">
-                        <CheckCircle className="h-5 w-5 text-accent mt-0.5" />
-                        <span className="text-foreground"><strong>$100</strong> for every qualifying referral</span>
-                      </div>
-                      <div className="flex items-start gap-3">
-                        <CheckCircle className="h-5 w-5 text-accent mt-0.5" />
-                        <span className="text-foreground">Unlimited referrals—no maximum cap</span>
-                      </div>
-                      <div className="flex items-start gap-3">
-                        <CheckCircle className="h-5 w-5 text-accent mt-0.5" />
-                        <span className="text-foreground">Paid via <strong>Visa gift card</strong> upon successful referral</span>
-                      </div>
-                      <div className="flex items-start gap-3">
-                        <CheckCircle className="h-5 w-5 text-accent mt-0.5" />
-                        <span className="text-foreground">Referred client must purchase Standard Web Package ($998+)</span>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="bg-muted/50 rounded-lg p-6">
-                    <h3 className="text-xl font-semibold text-foreground mb-4 flex items-center gap-2">
-                      <Clock className="h-5 w-5 text-accent" />
-                      Payment Timeline
-                    </h3>
-                    <p className="text-muted-foreground mb-4">
-                      Upon successful completion of a referred client's purchase of any qualifying service, 
-                      the referral bonus shall be processed and disbursed according to the following terms:
-                    </p>
-                    <ul className="space-y-3 text-muted-foreground">
-                      <li className="flex items-start gap-2">
-                        <span className="text-accent font-bold">•</span>
-                        Payment processing may occur as quickly as the same business day in certain circumstances.
-                      </li>
-                      <li className="flex items-start gap-2">
-                        <span className="text-accent font-bold">•</span>
-                        Standard processing time is typically within one to fourteen (1-14) business days.
-                      </li>
-                      <li className="flex items-start gap-2">
-                        <span className="text-accent font-bold">•</span>
-                        Under no circumstances shall the payment period exceed fourteen (14) business days from the date of qualifying purchase confirmation.
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-
-                {/* Bonus Structure Emphasis */}
-                <div className="mt-8 p-6 bg-accent/10 rounded-lg border border-accent/20 text-center">
-                  <h4 className="text-2xl font-bold text-accent mb-2">Unlimited $100 Referral Bonuses</h4>
-                  <p className="text-muted-foreground">
-                    Earn <strong>$100</strong> for every qualifying referral—paid via Visa gift card. Referred clients must purchase a 
-                    Standard Web Package ($998 or higher). There is no ceiling on your referral earnings—your network is your earning potential.
-                  </p>
-                </div>
-
-                {/* CTA */}
-                <div className="mt-8 text-center">
-                  <Link to="/contact#get-in-touch">
-                    <Button variant="hero" size="lg" className="group">
-                      Start Referring Today
-                      <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
-                    </Button>
-                  </Link>
-                  <p className="text-sm text-muted-foreground mt-4">
-                    *Terms and conditions apply. See full terms for eligibility requirements.
-                  </p>
-                </div>
-              </CardContent>
-            </Card>
-          </div>
-        </section>
-
         {/* Back to All Promos */}
-        <section className="py-12 bg-muted/30">
+        <section className="py-24 bg-luxury-bg">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <Link to="/promos">
-              <Button variant="outline">
-                ← View All Promotions
-              </Button>
+            <Link to="/promos" className="group text-luxury-text-secondary hover:text-luxury-text-primary transition-colors flex items-center justify-center gap-2">
+              <span className="group-hover:-translate-x-1 transition-transform">←</span> Back to All Promotions
             </Link>
           </div>
         </section>

@@ -223,7 +223,7 @@ const Navigation = () => {
           </div>
               
               <div className="space-y-6">
-                <Link to="/" onClick={() => setIsOpen(false)} className={`block font-body text-sm uppercase tracking-wider transition-colors hover:text-luxury-royal-blue ${isActive('/') ? "text-luxury-royal-blue" : "text-luxury-royal-blue"}`}>
+                <Link to="/" onClick={() => setIsOpen(false)} className={`block font-body text-sm uppercase tracking-wider transition-colors hover:text-luxury-royal-blue ${isActive('/') ? "text-luxury-royal-blue" : "text-luxury-text-primary"}`}>
                   Home
                 </Link>
                 
@@ -238,7 +238,7 @@ const Navigation = () => {
                         key={service.name} 
                         to={service.path} 
                         onClick={() => setIsOpen(false)} 
-                        className={`block font-body text-base hover:text-luxury-royal-blue transition-colors ${service.name === 'Portfolio' ? 'font-semibold text-luxury-royal-blue' : 'text-luxury-royal-blue'} ${isActive(service.path) ? "text-luxury-royal-blue" : ""}`}
+                        className={`block font-body text-base hover:text-luxury-royal-blue transition-colors ${service.name === 'Portfolio' ? 'font-semibold' : ''} ${isActive(service.path) ? "text-luxury-royal-blue" : "text-luxury-text-primary"}`}
                       >
                         {service.name}
                       </Link>
@@ -246,7 +246,7 @@ const Navigation = () => {
                   </div>
                 </div>
 
-                <Link to="/about" onClick={() => setIsOpen(false)} className={`block font-body text-sm uppercase tracking-wider transition-colors hover:text-luxury-royal-blue ${isActive('/about') ? "text-luxury-royal-blue" : "text-luxury-royal-blue"}`}>
+                <Link to="/about" onClick={() => setIsOpen(false)} className={`block font-body text-sm uppercase tracking-wider transition-colors hover:text-luxury-royal-blue ${isActive('/about') ? "text-luxury-royal-blue" : "text-luxury-text-primary"}`}>
                   About Us
                 </Link>
 
@@ -261,7 +261,7 @@ const Navigation = () => {
                         key={area.name} 
                         to={area.path} 
                         onClick={() => setIsOpen(false)} 
-                        className={`block font-body text-sm hover:text-luxury-royal-blue transition-colors text-luxury-royal-blue ${isActive(area.path) ? "text-luxury-royal-blue" : ""}`}
+                        className={`block font-body text-sm hover:text-luxury-royal-blue transition-colors ${isActive(area.path) ? "text-luxury-royal-blue" : "text-luxury-text-primary"}`}
                       >
                         {area.name}
                       </Link>
@@ -280,7 +280,7 @@ const Navigation = () => {
                         key={promo.name} 
                         to={promo.path} 
                         onClick={() => setIsOpen(false)} 
-                        className={`block font-body text-sm hover:text-luxury-royal-blue transition-colors text-luxury-royal-blue ${isActive(promo.path) ? "text-luxury-royal-blue" : ""}`}
+                        className={`block font-body text-sm hover:text-luxury-royal-blue transition-colors ${isActive(promo.path) ? "text-luxury-royal-blue" : "text-luxury-text-primary"}`}
                       >
                         {promo.name}
                       </Link>
@@ -288,7 +288,7 @@ const Navigation = () => {
                   </div>
                 </div>
 
-                <Link to="/contact" onClick={() => setIsOpen(false)} className={`block font-body text-sm uppercase tracking-wider transition-colors hover:text-luxury-royal-blue ${isActive('/contact') ? "text-luxury-royal-blue" : "text-luxury-royal-blue"}`}>
+                <Link to="/contact" onClick={() => setIsOpen(false)} className={`block font-body text-sm uppercase tracking-wider transition-colors hover:text-luxury-royal-blue ${isActive('/contact') ? "text-luxury-royal-blue" : "text-luxury-text-primary"}`}>
                   Contact
                 </Link>
 
