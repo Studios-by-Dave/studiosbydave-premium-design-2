@@ -2,7 +2,7 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import SimpleSEO from "@/components/SimpleSEO";
 import { Link } from "react-router-dom";
-import { ArrowLeft, CheckCircle, Zap, Shield, Smartphone, Globe, MessageSquare, Laptop, Rocket, TrendingUp } from "lucide-react";
+import { ArrowLeft, CheckCircle, Zap, Shield, Smartphone, Globe, MessageSquare, Laptop, Rocket, TrendingUp, Cpu } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { breadcrumbSchema, articleSchema } from "@/data/structuredData";
