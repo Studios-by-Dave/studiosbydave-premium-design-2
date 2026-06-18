@@ -16,7 +16,7 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-luxury-bg">
       <SimpleSEO
-        title="Your Local Shelby Web Designer — Studios by Dave"
+        title="Web Design & Development Shelby NC | Studios by Dave"
         description="Your Local Shelby, NC web design, app development & digital marketing studio. Building modern websites and custom web apps that drive real growth for local businesses. Free logo design included + $100 referral rewards."
         keywords="web design contractors, roofing contractor websites, landscaping web design, solar panel installer marketing, SEO for contractors, AI automation business, North Carolina web design"
         structuredData={structuredData}

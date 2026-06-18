@@ -54,7 +54,7 @@ const WebDesignShelby = () => {
   return (
     <div className="min-h-screen bg-luxury-bg">
       <SimpleSEO
-        title="Web Design Shelby NC | Professional Websites for Local Businesses"
+        title="Web Design & Development Shelby NC | Studios by Dave"
         description="Custom web design services in Shelby, NC. We build mobile-responsive websites that convert visitors into customers for contractors, retail, restaurants, and professional services. Get your free quote today."
         keywords="web design Shelby NC, Shelby web development, Shelby website design, Shelby small business websites, Shelby contractor websites, Shelby SEO, Shelby digital marketing"
         structuredData={[breadcrumbs, shelbyWebDesignSchema, shelbyLocalSchema, webDesignFAQSchema, ...webPackageOfferSchema, ...googleReviewsSchema]}
