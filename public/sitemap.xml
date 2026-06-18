@@ -111,7 +111,7 @@
   <!-- Blog Section -->
   <url>
     <loc>https://www.studiosbydave.com/blog</loc>
-    <lastmod>2026-06-06</lastmod>
+    <lastmod>2026-06-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -159,6 +159,24 @@
   </url>
   <url>
     <loc>https://www.studiosbydave.com/blog/web-development-2026</loc>
+    <lastmod>2026-06-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.studiosbydave.com/blog/web-designers-near-me-vs-big-agencies</loc>
+    <lastmod>2026-06-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.studiosbydave.com/blog/future-of-web-development-shelby-nc</loc>
+    <lastmod>2026-06-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.studiosbydave.com/blog/professional-web-design-shelby-nc-leads</loc>
     <lastmod>2026-06-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>

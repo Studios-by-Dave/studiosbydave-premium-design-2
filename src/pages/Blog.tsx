@@ -7,6 +7,33 @@ import { breadcrumbSchema } from "@/data/structuredData";
 
 const blogArticles = [
   {
+    id: 11,
+    slug: "professional-web-design-shelby-nc-leads",
+    title: "How Professional Web Design Shelby NC Drives More Local Leads in 2026",
+    subtitle: "Turning Clicks into Customers with Conversion-Focused Design and SEO",
+    date: "June 2026",
+    volume: "Vol #2 Article #11",
+    excerpt: "Looking for web design Shelby NC that actually brings in customers? See how Studios by Dave combines beautiful design, strong web development, and local SEO to grow businesses.",
+  },
+  {
+    id: 10,
+    slug: "future-of-web-development-shelby-nc",
+    title: "The Future of Web Development: Why Shelby Businesses Need Modern Websites Now",
+    subtitle: "How 2026 Website Trends are Transforming Local Business results",
+    date: "June 2026",
+    volume: "Vol #2 Article #10",
+    excerpt: "Web development in Shelby NC is evolving fast. Learn what 2026 website trends matter most for local businesses and how Studios by Dave delivers them.",
+  },
+  {
+    id: 9,
+    slug: "web-designers-near-me-vs-big-agencies",
+    title: "Web Designers Near Me vs Big Agencies: Why Shelby NC Businesses Are Choosing Local in 2026",
+    subtitle: "Better Results, Faster Service, and Lower Costs – Why Local Web Design Wins",
+    date: "June 2026",
+    volume: "Vol #2 Article #9",
+    excerpt: "Searching for web designers near me? Discover why local web design Shelby experts at Studios by Dave outperform big agencies with better results, faster service, and lower costs.",
+  },
+  {
     id: 8,
     slug: "web-development-2026",
     title: "Web Development in 2026: What Local Businesses Need to Know",

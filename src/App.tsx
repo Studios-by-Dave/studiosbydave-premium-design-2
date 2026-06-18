@@ -16,6 +16,9 @@ const BlogArticle5 = lazy(() => import("./pages/BlogArticle5"));
 const BlogArticle6 = lazy(() => import("./pages/BlogArticle6"));
 const BlogArticle7 = lazy(() => import("./pages/BlogArticle7"));
 const BlogArticle8 = lazy(() => import("./pages/BlogArticle8"));
+const BlogArticle9 = lazy(() => import("./pages/BlogArticle9"));
+const BlogArticle10 = lazy(() => import("./pages/BlogArticle10"));
+const BlogArticle11 = lazy(() => import("./pages/BlogArticle11"));
 
 const WebDesign = lazy(() => import("./pages/WebDesign"));
 const Branding = lazy(() => import("./pages/Branding"));
@@ -118,6 +121,9 @@ const App = () => (
             <Route path="/blog/ai-development-stack-2026" element={<BlogArticle6 />} />
             <Route path="/blog/trucking-industry-challenges-2026" element={<BlogArticle7 />} />
             <Route path="/blog/web-development-2026" element={<BlogArticle8 />} />
+            <Route path="/blog/web-designers-near-me-vs-big-agencies" element={<BlogArticle9 />} />
+            <Route path="/blog/future-of-web-development-shelby-nc" element={<BlogArticle10 />} />
+            <Route path="/blog/professional-web-design-shelby-nc-leads" element={<BlogArticle11 />} />
             
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
