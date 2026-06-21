@@ -33,6 +33,7 @@ const GoogleOptimization = lazy(() => import("./pages/GoogleOptimization"));
 const SEOPage = lazy(() => import("./pages/SEO"));
 const Promos = lazy(() => import("./pages/Promos"));
 const MediaPacks = lazy(() => import("./pages/MediaPacks"));
+const CaseStudies = lazy(() => import("./pages/CaseStudies"));
 const FreeLogoDesign = lazy(() => import("./pages/promos/FreeLogoDesign"));
 const ReferralBonus = lazy(() => import("./pages/promos/ReferralBonus"));
 const FreeSEOAudit = lazy(() => import("./pages/promos/FreeSEOAudit"));
@@ -101,6 +102,7 @@ const App = () => (
             <Route path="/services/seo" element={<SEOPage />} />
             <Route path="/services/promos" element={<Navigate to="/promos" replace />} />
             <Route path="/services/media-packs" element={<MediaPacks />} />
+            <Route path="/services/case-studies" element={<CaseStudies />} />
             
             {/* Promos main page */}
             <Route path="/promos" element={<Promos />} />

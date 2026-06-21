@@ -41,6 +41,10 @@ const Navigation = () => {
     path: "/services/media-packs",
     description: "Custom digital content packages"
   }, {
+    name: "Case Studies",
+    path: "/services/case-studies",
+    description: "Real results for real clients"
+  }, {
     name: "Portfolio",
     path: "/services/portfolio",
     description: "View our work"

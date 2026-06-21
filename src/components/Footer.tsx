@@ -19,6 +19,9 @@ const Footer = () => {
     }, {
       name: "Media Packs",
       href: "/services/media-packs"
+    }, {
+      name: "Case Studies",
+      href: "/services/case-studies"
     }],
     company: [{
       name: "About Us",
