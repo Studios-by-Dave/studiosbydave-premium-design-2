@@ -358,6 +358,12 @@ const WebDesign = () => {
               </div>
             </div>
           </div>
+
+          <div className="mt-12 text-center max-w-4xl mx-auto px-4">
+            <p className="font-body text-luxury-text-primary text-sm lg:text-base font-semibold leading-relaxed">
+              Websites can range quite a bit, starting as low as $498 for a 1-2 page brochure site with no backend, and can go into the thousands for custom enterprise projects. We work mostly within our Business and Scale Package models ($998 to $1,998). Give us a call and we'll guide you in the right direction — Call for Your Free Quote Today!
+            </p>
+          </div>
         </div>
       </section>
 
