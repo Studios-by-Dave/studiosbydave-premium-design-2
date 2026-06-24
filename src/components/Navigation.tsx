@@ -33,9 +33,9 @@ const Navigation = () => {
     path: "/services/seo",
     description: "Get found by your ideal customers"
   }, {
-    name: "Google Optimization",
-    path: "/services/google-optimization",
-    description: "Dominate local search results"
+    name: "Audio Branding",
+    path: "/services/audio-branding",
+    description: "Sonic logos & audio production"
   }, {
     name: "Media Packs",
     path: "/services/media-packs",

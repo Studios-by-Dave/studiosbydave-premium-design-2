@@ -29,8 +29,8 @@ const WebDesignAsheville = lazy(() => import("./pages/WebDesignAsheville"));
 const WebDesignRaleigh = lazy(() => import("./pages/WebDesignRaleigh"));
 const WebDesignShelby = lazy(() => import("./pages/WebDesignShelby"));
 
-const GoogleOptimization = lazy(() => import("./pages/GoogleOptimization"));
 const SEOPage = lazy(() => import("./pages/SEO"));
+const AudioBranding = lazy(() => import("./pages/AudioBranding"));
 const Promos = lazy(() => import("./pages/Promos"));
 const MediaPacks = lazy(() => import("./pages/MediaPacks"));
 const CaseStudies = lazy(() => import("./pages/CaseStudies"));
@@ -68,7 +68,7 @@ const App = () => (
             <Route path="/studiosweb" element={<Navigate to="/services" replace />} />
             <Route path="/studiosweb/webdesign" element={<Navigate to="/services/web-design" replace />} />
             <Route path="/studiosweb/branding" element={<Navigate to="/services/branding" replace />} />
-            <Route path="/studiosweb/google-optimization" element={<Navigate to="/services/google-optimization" replace />} />
+            <Route path="/studiosweb/google-optimization" element={<Navigate to="/services/seo" replace />} />
             <Route path="/studiosweb/seo" element={<Navigate to="/services/seo" replace />} />
             <Route path="/studiosweb/promos" element={<Navigate to="/services/promos" replace />} />
             <Route path="/studiosweb/media-packs" element={<Navigate to="/services/media-packs" replace />} />
@@ -98,8 +98,9 @@ const App = () => (
             <Route path="/web-design-raleigh-nc" element={<WebDesignRaleigh />} />
             <Route path="/web-design-shelby-nc" element={<WebDesignShelby />} />
             
-            <Route path="/services/google-optimization" element={<GoogleOptimization />} />
+            <Route path="/services/google-optimization" element={<Navigate to="/services/seo" replace />} />
             <Route path="/services/seo" element={<SEOPage />} />
+            <Route path="/services/audio-branding" element={<AudioBranding />} />
             <Route path="/services/promos" element={<Navigate to="/promos" replace />} />
             <Route path="/services/media-packs" element={<MediaPacks />} />
             <Route path="/services/case-studies" element={<CaseStudies />} />

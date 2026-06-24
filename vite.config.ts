@@ -18,7 +18,7 @@ export default defineConfig(({ mode }) => ({
         '/services/web-design',
         '/services/branding',
         '/services/seo',
-        '/services/google-optimization',
+        '/services/audio-branding',
         '/services/promos',
         '/services/media-packs',
         '/services/portfolio',

@@ -369,14 +369,14 @@ const Branding = () => {
               </Link>
             </div>
 
-            {/* Google Optimization */}
+            {/* Media Packs */}
             <div className="luxury-card rounded-xl p-6 hover:border-luxury-royal-blue/50 transition-all">
-              <h3 className="display-heading text-luxury-text-primary text-xl mb-3">Google Optimization</h3>
+              <h3 className="display-heading text-luxury-text-primary text-xl mb-3">Media Packs</h3>
               <p className="font-body text-luxury-text-secondary mb-4">
-                Ensure your brand appears consistently across Google Search, Maps, and Business Profile.
+                Launch your brand across platforms with comprehensive digital asset packages.
               </p>
-              <Link to="/services/google-optimization" className="text-luxury-royal-blue hover:text-luxury-purple font-body text-sm font-semibold uppercase tracking-wider inline-flex items-center gap-2 transition-colors">
-                Optimize Brand Presence
+              <Link to="/services/media-packs" className="text-luxury-royal-blue hover:text-luxury-purple font-body text-sm font-semibold uppercase tracking-wider inline-flex items-center gap-2 transition-colors">
+                Explore Media Packs
                 <ArrowRight size={16} />
               </Link>
             </div>

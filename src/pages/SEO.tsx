@@ -428,8 +428,49 @@ const SEOPage = () => {
         </div>
       </section>
 
-      {/* Results Section */}
+      {/* Google Optimization Section */}
       <section className="py-32 bg-luxury-bg">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+            <div>
+              <div className="section-eyebrow mb-4">✦ Local Ecosystem</div>
+              <h2 className="display-heading text-luxury-text-primary text-4xl lg:text-5xl mb-8">
+                Google Business Profile Optimization
+              </h2>
+              <p className="font-body text-luxury-text-secondary text-xl mb-8">
+                Your Google Business profile is often the first thing local customers see. We optimize your entire presence in the Google ecosystem to get you more calls, reviews, and customers exactly where they look first.
+              </p>
+              <div className="space-y-6">
+                {[
+                  "Complete Business Profile setup and optimization",
+                  "Review monitoring and reputation management",
+                  "Local Maps ranking and visibility strategies",
+                  "Ongoing post integration and Q&A management"
+                ].map((item, index) => (
+                  <div key={index} className="flex items-center gap-3">
+                    <CheckCircle className="text-luxury-lime w-6 h-6 flex-shrink-0" />
+                    <p className="font-body text-luxury-text-secondary text-lg">{item}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+            <div className="relative">
+              <img 
+                src="/lovable-uploads/b56502ca-7d57-469f-a63b-c87e8173c7c4.png" 
+                alt="Google My Business profile optimization featuring 5-star reviews, local search visibility, and enhanced business listing for contractors" 
+                className="w-full h-auto rounded-2xl luxury-card"
+                loading="lazy"
+                decoding="async"
+                width="672"
+                height="448"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Results Section */}
+      <section className="py-32 bg-luxury-surface border-y border-white/6">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div>
@@ -469,7 +510,7 @@ const SEOPage = () => {
       </section>
 
       {/* SEO Packages Section */}
-      <section className="py-32 bg-luxury-surface border-y border-white/6">
+      <section className="py-32 bg-luxury-bg">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="section-eyebrow mb-4">✦ Solutions</div>
           <h2 className="display-heading text-luxury-text-primary text-4xl lg:text-5xl mb-16">
@@ -510,7 +551,7 @@ const SEOPage = () => {
       </section>
 
       {/* Related Services & Resources Section */}
-      <section className="py-32 bg-luxury-bg">
+      <section className="py-32 bg-luxury-surface border-y border-white/6">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <div className="section-eyebrow mb-4">✦ Complete Your Strategy</div>
@@ -533,14 +574,14 @@ const SEOPage = () => {
               </Link>
             </div>
 
-            {/* Google Optimization */}
+            {/* Media Packs */}
             <div className="luxury-card rounded-xl p-6 hover:border-luxury-royal-blue/50 transition-all">
-              <h3 className="display-heading text-luxury-text-primary text-xl mb-3">Google Optimization</h3>
+              <h3 className="display-heading text-luxury-text-primary text-xl mb-3">Media Packs</h3>
               <p className="font-body text-luxury-text-secondary mb-4">
-                Complete Google Business Profile optimization to dominate local search results.
+                Custom digital content packages designed to fuel your online presence and engage your audience.
               </p>
-              <Link to="/services/google-optimization" className="text-luxury-royal-blue hover:text-luxury-purple font-body text-sm font-semibold uppercase tracking-wider inline-flex items-center gap-2 transition-colors">
-                Optimize Google Presence
+              <Link to="/services/media-packs" className="text-luxury-royal-blue hover:text-luxury-purple font-body text-sm font-semibold uppercase tracking-wider inline-flex items-center gap-2 transition-colors">
+                Explore Media Packs
                 <ArrowRight size={16} />
               </Link>
             </div>
@@ -632,9 +673,9 @@ const SEOPage = () => {
                 Related Services
               </h4>
               <div className="space-y-3">
-                <Link to="/services/google-optimization" className="block p-4 rounded-lg border border-white/6 hover:border-luxury-royal-blue/50 transition-colors bg-luxury-bg/50">
-                  <h5 className="font-body text-luxury-text-primary hover:text-luxury-royal-blue transition-colors font-medium">Google Optimization</h5>
-                  <p className="text-sm text-luxury-text-secondary mt-1">Local search dominance</p>
+                <Link to="/services/media-packs" className="block p-4 rounded-lg border border-white/6 hover:border-luxury-royal-blue/50 transition-colors bg-luxury-bg/50">
+                  <h5 className="font-body text-luxury-text-primary hover:text-luxury-royal-blue transition-colors font-medium">Media Packs</h5>
+                  <p className="text-sm text-luxury-text-secondary mt-1">Custom digital assets</p>
                 </Link>
                 <Link to="/services/web-design" className="block p-4 rounded-lg border border-white/6 hover:border-luxury-royal-blue/50 transition-colors bg-luxury-bg/50">
                   <h5 className="font-body text-luxury-text-primary hover:text-luxury-royal-blue transition-colors font-medium">SEO-Friendly Web Design</h5>

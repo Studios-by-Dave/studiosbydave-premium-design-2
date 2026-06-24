@@ -326,13 +326,13 @@ const BlogArticle4 = () => {
                 </Card>
 
                 <Card className="hover:shadow-lg transition-shadow cursor-pointer">
-                  <Link to="/services/google-optimization">
+                  <Link to="/services/media-packs">
                     <CardContent className="p-6 text-center">
                       <div className="w-12 h-12 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
                         <MapPin className="w-6 h-6 text-accent" />
                       </div>
-                      <h3 className="font-semibold text-foreground mb-2">Google Optimization</h3>
-                      <p className="text-muted-foreground text-sm">GBP & local search</p>
+                      <h3 className="font-semibold text-foreground mb-2">Media Packs</h3>
+                      <p className="text-muted-foreground text-sm">Custom content assets</p>
                     </CardContent>
                   </Link>
                 </Card>

@@ -17,7 +17,7 @@
     },
     {
       "source": "/studiosweb/google-optimization",
-      "destination": "/services/google-optimization",
+      "destination": "/services/seo",
       "statusCode": 301
     },
     {

@@ -27,11 +27,11 @@ const services = [{
   backdrop: brandingBackdrop
 }, {
   icon: Search,
-  title: "Google Optimization",
-  description: "Complete Google ecosystem optimization to dominate local search results and attract more customers.",
-  features: ["Local SEO", "Google My Business", "Review Optimization", "Google Ads Management"],
-  link: "/services/google-optimization",
-  linkText: "Learn About Google Optimization",
+  title: "SEO Services",
+  description: "Complete search engine optimization to help your business dominate search results and attract more customers.",
+  features: ["Technical SEO", "On-Page Optimization", "Local Search Dominance", "Google Business Profile"],
+  link: "/services/seo",
+  linkText: "Learn About SEO Services",
   gradient: "from-primary to-accent",
   backdrop: googleBackdrop
 }, {

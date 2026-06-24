@@ -14,9 +14,6 @@ const Footer = () => {
       name: "SEO Services",
       href: "/services/seo"
     }, {
-      name: "Google Optimization",
-      href: "/services/google-optimization"
-    }, {
       name: "Media Packs",
       href: "/services/media-packs"
     }, {

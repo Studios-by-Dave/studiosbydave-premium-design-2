@@ -11,7 +11,6 @@ const serviceLinks: InternalLink[] = [
   { text: "Web Design Services", url: "/services/web-design", description: "Custom contractor websites", category: "services" },
   { text: "SEO Optimization", url: "/services/seo", description: "Rank higher in search results", category: "services" },
   { text: "Branding & Logo Design", url: "/services/branding", description: "Professional brand identity", category: "services" },
-  { text: "Google Optimization", url: "/services/google-optimization", description: "Local search dominance", category: "services" },
   { text: "Current Promotions", url: "/services/promos", description: "Special offers & deals", category: "services" },
   { text: "Media Packs", url: "/services/media-packs", description: "Custom digital content", category: "services" },
 ];

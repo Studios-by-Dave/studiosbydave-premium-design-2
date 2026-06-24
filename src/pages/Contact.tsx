@@ -238,7 +238,7 @@ const Contact = () => {
               </div>
 
               {/* Additional Info Cards */}
-              <div className="grid md:grid-cols-2 gap-6">
+              <div className="grid md:grid-cols-2 gap-6 mb-12">
                 <div className="flex items-start space-x-4 p-6 luxury-card rounded-xl">
                   <div className="w-12 h-12 bg-luxury-royal-blue/10 rounded-lg flex items-center justify-center flex-shrink-0">
                     <MapPin size={24} className="text-luxury-royal-blue" />
@@ -261,8 +261,116 @@ const Contact = () => {
                 </div>
               </div>
 
-              {/* Contact Form - Temporarily Removed */}
-              
+              {/* Contact Form */}
+              <div className="luxury-card rounded-xl p-8 mb-12 border border-luxury-purple/20 text-left relative overflow-hidden">
+                <div className="absolute top-0 right-0 p-32 bg-luxury-royal-blue/10 blur-3xl opacity-50 pointer-events-none" />
+                <div className="relative z-10 w-full mb-8 text-center">
+                  <h3 className="font-body text-xl md:text-2xl text-luxury-text-primary font-medium tracking-wide">
+                    And if you prefer a contact form below, it's routed in
+                  </h3>
+                  <div className="w-16 h-1 bg-gradient-to-r from-luxury-purple to-luxury-royal-blue mx-auto mt-4 rounded-full" />
+                </div>
+                <Form {...form}>
+                  <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6 relative z-10">
+                    <div className="grid md:grid-cols-2 gap-6">
+                      <FormField
+                        control={form.control}
+                        name="firstName"
+                        render={({ field }) => (
+                          <FormItem>
+                            <FormLabel className="text-luxury-text-secondary uppercase text-xs tracking-wider">First Name</FormLabel>
+                            <FormControl>
+                              <Input placeholder="John" className="bg-white border-white/20 text-black placeholder:text-black/50 focus:border-luxury-lime focus:ring-1 focus:ring-luxury-lime transition-colors font-medium shadow-inner" {...field} />
+                            </FormControl>
+                            <FormMessage />
+                          </FormItem>
+                        )}
+                      />
+                      <FormField
+                        control={form.control}
+                        name="lastName"
+                        render={({ field }) => (
+                          <FormItem>
+                            <FormLabel className="text-luxury-text-secondary uppercase text-xs tracking-wider">Last Name</FormLabel>
+                            <FormControl>
+                              <Input placeholder="Doe" className="bg-white border-white/20 text-black placeholder:text-black/50 focus:border-luxury-lime focus:ring-1 focus:ring-luxury-lime transition-colors font-medium shadow-inner" {...field} />
+                            </FormControl>
+                            <FormMessage />
+                          </FormItem>
+                        )}
+                      />
+                    </div>
+                    <div className="grid md:grid-cols-2 gap-6">
+                      <FormField
+                        control={form.control}
+                        name="email"
+                        render={({ field }) => (
+                          <FormItem>
+                            <FormLabel className="text-luxury-text-secondary uppercase text-xs tracking-wider">Email</FormLabel>
+                            <FormControl>
+                              <Input type="email" placeholder="john@example.com" className="bg-white border-white/20 text-black placeholder:text-black/50 focus:border-luxury-lime focus:ring-1 focus:ring-luxury-lime transition-colors font-medium shadow-inner" {...field} />
+                            </FormControl>
+                            <FormMessage />
+                          </FormItem>
+                        )}
+                      />
+                      <FormField
+                        control={form.control}
+                        name="phone"
+                        render={({ field }) => (
+                          <FormItem>
+                            <FormLabel className="text-luxury-text-secondary uppercase text-xs tracking-wider">Phone</FormLabel>
+                            <FormControl>
+                              <Input type="tel" placeholder="(555) 123-4567" className="bg-white border-white/20 text-black placeholder:text-black/50 focus:border-luxury-lime focus:ring-1 focus:ring-luxury-lime transition-colors font-medium shadow-inner" {...field} />
+                            </FormControl>
+                            <FormMessage />
+                          </FormItem>
+                        )}
+                      />
+                    </div>
+                    <FormField
+                      control={form.control}
+                      name="message"
+                      render={({ field }) => (
+                        <FormItem>
+                          <FormLabel className="text-luxury-text-secondary uppercase text-xs tracking-wider">Message</FormLabel>
+                          <FormControl>
+                            <Textarea 
+                              placeholder="How can we help you today?" 
+                              className="min-h-[120px] bg-white border-white/20 text-black placeholder:text-black/50 focus:border-luxury-lime focus:ring-1 focus:ring-luxury-lime transition-colors resize-y font-medium shadow-inner" 
+                              {...field} 
+                            />
+                          </FormControl>
+                          <FormMessage />
+                        </FormItem>
+                      )}
+                    />
+                    
+                    {/* Honeypot field for spam prevention */}
+                    <FormField
+                      control={form.control}
+                      name="honeypot"
+                      render={({ field }) => (
+                        <FormItem className="hidden">
+                          <FormControl>
+                            <Input {...field} tabIndex={-1} autoComplete="off" />
+                          </FormControl>
+                        </FormItem>
+                      )}
+                    />
+
+                    <Button 
+                      type="submit" 
+                      disabled={isSubmitting}
+                      className="w-full bg-luxury-royal-blue text-white hover:bg-luxury-purple transition-all duration-300 font-semibold uppercase tracking-wider h-14 relative overflow-hidden group"
+                    >
+                      <span className="relative z-10">{isSubmitting ? "Sending..." : "Send Message"}</span>
+                      <div className="absolute inset-0 bg-white/20 translate-y-[100%] group-hover:translate-y-[0%] transition-transform duration-300 ease-smooth" />
+                    </Button>
+                  </form>
+                </Form>
+              </div>
+
               {/* Certification Badges Section - Moved to Footer for better flow */}
               
               {/* CTA Box */}
