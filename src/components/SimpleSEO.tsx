@@ -25,8 +25,14 @@ const SimpleSEO = ({
   datePublished,
   dateModified
 }: SEOProps) => {
+  const fullTitle = title.includes("Studios by Dave") ? title : `${title} | Studios by Dave`;
+
+  // Provide to prerenderer natively
+  if (typeof global !== 'undefined') {
+    (global as any).__PRERENDER_SEO = { title: fullTitle, description };
+  }
+
   useEffect(() => {
-    const fullTitle = title.includes("Studios by Dave") ? title : `${title} | Studios by Dave`;
     const url = canonical || `https://www.studiosbydave.com${window.location.pathname}`;
 
     // Update document title

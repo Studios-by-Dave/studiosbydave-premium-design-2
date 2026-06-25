@@ -3,53 +3,51 @@ import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { Routes, Route, Navigate } from "react-router-dom";
-import { lazy, Suspense } from "react";
 import Index from "./pages/Index";
 import ScrollToTop from "./components/ScrollToTop";
 
-const Blog = lazy(() => import("./pages/Blog"));
-const BlogArticle1 = lazy(() => import("./pages/BlogArticle1"));
-const BlogArticle2 = lazy(() => import("./pages/BlogArticle2"));
-const BlogArticle3 = lazy(() => import("./pages/BlogArticle3"));
-const BlogArticle4 = lazy(() => import("./pages/BlogArticle4"));
-const BlogArticle5 = lazy(() => import("./pages/BlogArticle5"));
-const BlogArticle6 = lazy(() => import("./pages/BlogArticle6"));
-const BlogArticle7 = lazy(() => import("./pages/BlogArticle7"));
-const BlogArticle8 = lazy(() => import("./pages/BlogArticle8"));
-const BlogArticle9 = lazy(() => import("./pages/BlogArticle9"));
-const BlogArticle10 = lazy(() => import("./pages/BlogArticle10"));
-const BlogArticle11 = lazy(() => import("./pages/BlogArticle11"));
+import Blog from "./pages/Blog";
+import BlogArticle1 from "./pages/BlogArticle1";
+import BlogArticle2 from "./pages/BlogArticle2";
+import BlogArticle3 from "./pages/BlogArticle3";
+import BlogArticle4 from "./pages/BlogArticle4";
+import BlogArticle5 from "./pages/BlogArticle5";
+import BlogArticle6 from "./pages/BlogArticle6";
+import BlogArticle7 from "./pages/BlogArticle7";
+import BlogArticle8 from "./pages/BlogArticle8";
+import BlogArticle9 from "./pages/BlogArticle9";
+import BlogArticle10 from "./pages/BlogArticle10";
+import BlogArticle11 from "./pages/BlogArticle11";
 
-const WebDesign = lazy(() => import("./pages/WebDesign"));
-const Branding = lazy(() => import("./pages/Branding"));
-const WebDesignCharlotte = lazy(() => import("./pages/WebDesignCharlotte"));
-const WebDesignGastonia = lazy(() => import("./pages/WebDesignGastonia"));
-const WebDesignSpartanburg = lazy(() => import("./pages/WebDesignSpartanburg"));
-const WebDesignAsheville = lazy(() => import("./pages/WebDesignAsheville"));
-const WebDesignRaleigh = lazy(() => import("./pages/WebDesignRaleigh"));
-const WebDesignShelby = lazy(() => import("./pages/WebDesignShelby"));
+import WebDesign from "./pages/WebDesign";
+import Branding from "./pages/Branding";
+import WebDesignCharlotte from "./pages/WebDesignCharlotte";
+import WebDesignGastonia from "./pages/WebDesignGastonia";
+import WebDesignSpartanburg from "./pages/WebDesignSpartanburg";
+import WebDesignAsheville from "./pages/WebDesignAsheville";
+import WebDesignRaleigh from "./pages/WebDesignRaleigh";
+import WebDesignShelby from "./pages/WebDesignShelby";
 
-const SEOPage = lazy(() => import("./pages/SEO"));
-const AudioBranding = lazy(() => import("./pages/AudioBranding"));
-const Promos = lazy(() => import("./pages/Promos"));
-const MediaPacks = lazy(() => import("./pages/MediaPacks"));
-const CaseStudies = lazy(() => import("./pages/CaseStudies"));
-const FreeLogoDesign = lazy(() => import("./pages/promos/FreeLogoDesign"));
-const ReferralBonus = lazy(() => import("./pages/promos/ReferralBonus"));
-const FreeSEOAudit = lazy(() => import("./pages/promos/FreeSEOAudit"));
+import SEOPage from "./pages/SEO";
+import AudioBranding from "./pages/AudioBranding";
+import Promos from "./pages/Promos";
+import MediaPacks from "./pages/MediaPacks";
+import CaseStudies from "./pages/CaseStudies";
+import FreeLogoDesign from "./pages/promos/FreeLogoDesign";
+import ReferralBonus from "./pages/promos/ReferralBonus";
+import FreeSEOAudit from "./pages/promos/FreeSEOAudit";
 
-const Portfolio = lazy(() => import("./pages/Portfolio"));
-const About = lazy(() => import("./pages/About"));
-const Contact = lazy(() => import("./pages/Contact"));
-const Booking = lazy(() => import("./pages/Booking"));
-const Privacy = lazy(() => import("./pages/Privacy"));
-const Terms = lazy(() => import("./pages/Terms"));
-const NotFound = lazy(() => import("./pages/NotFound"));
+import Portfolio from "./pages/Portfolio";
+import About from "./pages/About";
+import Contact from "./pages/Contact";
+import Booking from "./pages/Booking";
+import Privacy from "./pages/Privacy";
+import Terms from "./pages/Terms";
+import NotFound from "./pages/NotFound";
 
 import Watermark from "./components/Watermark";
-const ElfsightChatbot = lazy(() => import("./components/ElfsightChatbot"));
-const ElfsightPopup = lazy(() => import("./components/ElfsightPopup"));
-
+import ElfsightChatbot from "./components/ElfsightChatbot";
+import ElfsightPopup from "./components/ElfsightPopup";
 
 const queryClient = new QueryClient();
 
@@ -60,8 +58,7 @@ const App = () => (
         <Sonner />
           <Watermark />
         <ScrollToTop />
-        <Suspense fallback={<div className="min-h-screen flex items-center justify-center bg-background"><div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary"></div></div>}>
-          <Routes>
+        <Routes>
             <Route path="/" element={<Index />} />
             
             {/* Redirects for old StudiosWeb paths */}
@@ -136,11 +133,8 @@ const App = () => (
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>
-        </Suspense>
-        <Suspense fallback={null}>
           <ElfsightChatbot />
           <ElfsightPopup />
-        </Suspense>
       </TooltipProvider>
   </QueryClientProvider>
 );

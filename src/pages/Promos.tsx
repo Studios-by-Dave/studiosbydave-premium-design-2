@@ -3,8 +3,9 @@ import Footer from "@/components/Footer";
 import InternalLinksFooter from "@/components/InternalLinks";
 import SimpleSEO from "@/components/SimpleSEO";
 import { Link } from "react-router-dom";
-import { Gift, Users, Clock, CheckCircle, Star, Search, Settings, MapPin, TrendingUp, Phone, Star as StarIcon } from "lucide-react";
+import { Gift, Users, Clock, CheckCircle, Star, Search, Settings, MapPin, TrendingUp, Phone, Star as StarIcon, ArrowRight } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
 
 const Promos = () => {
   return (

@@ -54,7 +54,12 @@ if (typeof global !== 'undefined' && typeof window === 'undefined') {
   });
 }
 
-export async function prerender(url: string) {
+export async function prerender(data: any) {
+  const url = typeof data === 'string' ? data : (data?.url || '/');
+
+  // Clear any previous SEO info before rendering
+  (global as any).__PRERENDER_SEO = undefined;
+
   const queryClient = new QueryClient({
     defaultOptions: {
       queries: {
@@ -73,24 +78,29 @@ export async function prerender(url: string) {
     </QueryClientProvider>
   );
 
+  queryClient.clear();
+
   // Dynamically import server-only crawling tool
   const { parseLinks } = await import('vite-prerender-plugin/parse');
   const links = parseLinks(html);
 
-  // Force exit after a short delay to ensure Vercel/CI environments don't hang
-  if (typeof process !== 'undefined' && process.env.NODE_ENV === 'production') {
-    setTimeout(() => {
-      console.log('Pre-rendering complete. Force exiting...');
-      process.exit(0);
-    }, 2000);
+  // Setup head options based on SEO captured during render
+  const headOpts: any = { lang: 'en' };
+  const seoInfo = (global as any).__PRERENDER_SEO;
+  if (seoInfo) {
+    headOpts.title = seoInfo.title;
+    headOpts.elements = new Set([
+      { type: 'meta', props: { name: 'description', content: seoInfo.description } },
+      { type: 'meta', props: { property: 'og:title', content: seoInfo.title } },
+      { type: 'meta', props: { property: 'og:description', content: seoInfo.description } },
+      { type: 'meta', props: { name: 'twitter:title', content: seoInfo.title } },
+      { type: 'meta', props: { name: 'twitter:description', content: seoInfo.description } }
+    ]);
   }
 
   return { 
     html,
     links: new Set(links),
-    // We can expand this later to return specific titles/meta per URL
-    head: {
-      lang: 'en',
-    }
+    head: headOpts
   };
 }

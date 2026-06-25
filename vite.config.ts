@@ -42,6 +42,16 @@ export default defineConfig(({ mode }) => ({
         '/404'
       ],
     }),
+    {
+      name: 'force-exit',
+      closeBundle() {
+        // Wait an appropriate amount of time for all prerenders to complete, then exit to prevent hangs
+        setTimeout(() => {
+          console.log('Build and Prerender complete, forcing exit to clear remaining open handles...');
+          process.exit(0);
+        }, 15000);
+      }
+    }
   ].filter(Boolean),
   resolve: {
     alias: {
