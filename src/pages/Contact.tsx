@@ -124,10 +124,13 @@ const Contact = () => {
       });
 
       form.reset();
-    } catch (error: any) {
+    } catch (error: unknown) {
+      const errorMessage = error instanceof Error
+        ? error.message
+        : "Failed to send message. Please try again or contact us directly at david.richardson@studiosbydave.com";
       toast({
         title: "Error",
-        description: error.message || "Failed to send message. Please try again or contact us directly at david.richardson@studiosbydave.com",
+        description: errorMessage,
         variant: "destructive",
         duration: 7000
       });
@@ -266,7 +269,7 @@ const Contact = () => {
                 <div className="absolute top-0 right-0 p-32 bg-luxury-royal-blue/10 blur-3xl opacity-50 pointer-events-none" />
                 <div className="relative z-10 w-full mb-8 text-center">
                   <h3 className="font-body text-xl md:text-2xl text-luxury-text-primary font-medium tracking-wide">
-                    And if you prefer a contact form below, it's routed in
+                    Or if you prefer a contact form below, it's routed in
                   </h3>
                   <div className="w-16 h-1 bg-gradient-to-r from-luxury-purple to-luxury-royal-blue mx-auto mt-4 rounded-full" />
                 </div>

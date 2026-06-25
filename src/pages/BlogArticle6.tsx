@@ -6,6 +6,8 @@ import { ArrowRight, ExternalLink, CheckCircle, Zap, Shield, Layers, GitBranch, 
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { breadcrumbSchema, articleSchema } from "@/data/structuredData";
+import { getArticleBySlug } from "@/data/blogArticles";
+import { BlogCategoryBadge } from "@/components/BlogCategoryBadge";
 
 const BlogArticle6 = () => {
   const breadcrumbs = breadcrumbSchema([
@@ -23,6 +25,8 @@ const BlogArticle6 = () => {
     image: "https://www.studiosbydave.com/images/ai-development-stack-2026.jpg"
   });
 
+  const article = getArticleBySlug("ai-development-stack-2026");
+
   return (
     <div className="min-h-screen bg-luxury-bg">
       <SimpleSEO
@@ -39,6 +43,7 @@ const BlogArticle6 = () => {
         <div className="container mx-auto px-4 max-w-4xl">
           <header className="text-center mb-12 border-b-4 border-double border-white/10 pb-8">
             <div className="flex items-center justify-center gap-4 text-xs text-neutral-400 font-serif mb-4">
+              {article && <BlogCategoryBadge categorySlug={article.category} theme={article.theme} />}
               <span className="electric-green-red-text">Vol #1 Article #6</span>
               <span className="w-1 h-1 bg-neutral-600 rounded-full" />
               <span>April 2026</span>

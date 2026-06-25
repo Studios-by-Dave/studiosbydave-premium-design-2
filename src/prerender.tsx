@@ -4,9 +4,65 @@ import { StaticRouter } from 'react-router-dom/server';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { TooltipProvider } from "@/components/ui/tooltip";
 
+interface PrerenderSEO {
+  title: string;
+  description: string;
+}
+
+interface MockWindow {
+  location: { pathname: string };
+  history: {
+    pushState: () => void;
+    replaceState: () => void;
+    state: Record<string, unknown>;
+  };
+  addEventListener: () => void;
+  removeEventListener: () => void;
+  dispatchEvent: () => void;
+  getComputedStyle: () => { getPropertyValue: () => string };
+  matchMedia: () => {
+    matches: boolean;
+    addListener: () => void;
+    removeListener: () => void;
+  };
+}
+
+interface MockDocument {
+  defaultView: MockWindow;
+  documentElement: {
+    style: Record<string, unknown>;
+    getAttribute: () => null;
+    setAttribute: () => void;
+  };
+  createElement: () => {
+    style: Record<string, unknown>;
+    setAttribute: () => void;
+    getAttribute: () => null;
+  };
+  getElementsByTagName: () => unknown[];
+  head: { appendChild: () => void };
+  body: { appendChild: () => void };
+}
+
+interface MockLocalStorage {
+  getItem: () => null;
+  setItem: () => void;
+  removeItem: () => void;
+  clear: () => void;
+}
+
+type GlobalWithMocks = typeof globalThis & {
+  window?: MockWindow;
+  document?: MockDocument;
+  localStorage?: MockLocalStorage;
+  __PRERENDER_SEO?: PrerenderSEO;
+};
+
+const globalWithMocks = globalThis as GlobalWithMocks;
+
 // Mock browser globals for Node.js environment during pre-rendering
 if (typeof global !== 'undefined' && typeof window === 'undefined') {
-  (global as any).window = {
+  const mockWindow: MockWindow = {
     location: { pathname: '/' },
     history: {
       pushState: () => {},
@@ -25,14 +81,16 @@ if (typeof global !== 'undefined' && typeof window === 'undefined') {
       removeListener: () => {},
     }),
   };
-  (global as any).document = {
-    defaultView: (global as any).window,
-    documentElement: { 
+
+  globalWithMocks.window = mockWindow;
+  globalWithMocks.document = {
+    defaultView: mockWindow,
+    documentElement: {
       style: {},
       getAttribute: () => null,
       setAttribute: () => {},
     },
-    createElement: () => ({ 
+    createElement: () => ({
       style: {},
       setAttribute: () => {},
       getAttribute: () => null,
@@ -41,7 +99,7 @@ if (typeof global !== 'undefined' && typeof window === 'undefined') {
     head: { appendChild: () => {} },
     body: { appendChild: () => {} },
   };
-  (global as any).localStorage = {
+  globalWithMocks.localStorage = {
     getItem: () => null,
     setItem: () => {},
     removeItem: () => {},
@@ -54,11 +112,11 @@ if (typeof global !== 'undefined' && typeof window === 'undefined') {
   });
 }
 
-export async function prerender(data: any) {
+export async function prerender(data: string | { url?: string }) {
   const url = typeof data === 'string' ? data : (data?.url || '/');
 
   // Clear any previous SEO info before rendering
-  (global as any).__PRERENDER_SEO = undefined;
+  globalWithMocks.__PRERENDER_SEO = undefined;
 
   const queryClient = new QueryClient({
     defaultOptions: {
@@ -85,11 +143,11 @@ export async function prerender(data: any) {
   const links = parseLinks(html);
 
   // Setup head options based on SEO captured during render
-  const headOpts: any = { lang: 'en' };
-  const seoInfo = (global as any).__PRERENDER_SEO;
+  const head: { lang: string; title?: string; elements?: Set<{ type: string; props: Record<string, string> }> } = { lang: 'en' };
+  const seoInfo = globalWithMocks.__PRERENDER_SEO;
   if (seoInfo) {
-    headOpts.title = seoInfo.title;
-    headOpts.elements = new Set([
+    head.title = seoInfo.title;
+    head.elements = new Set([
       { type: 'meta', props: { name: 'description', content: seoInfo.description } },
       { type: 'meta', props: { property: 'og:title', content: seoInfo.title } },
       { type: 'meta', props: { property: 'og:description', content: seoInfo.description } },
@@ -98,9 +156,9 @@ export async function prerender(data: any) {
     ]);
   }
 
-  return { 
+  return {
     html,
     links: new Set(links),
-    head: headOpts
+    head
   };
 }

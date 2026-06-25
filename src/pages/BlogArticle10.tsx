@@ -6,6 +6,8 @@ import { ArrowLeft, CheckCircle, Zap, Shield, Smartphone, Globe, MessageSquare, 
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { breadcrumbSchema, articleSchema } from "@/data/structuredData";
+import { getArticleBySlug } from "@/data/blogArticles";
+import { BlogCategoryBadge } from "@/components/BlogCategoryBadge";
 
 const BlogArticle10 = () => {
   const breadcrumbs = breadcrumbSchema([
@@ -22,6 +24,8 @@ const BlogArticle10 = () => {
     "2026-06-18",
     "Studios by Dave"
   );
+
+  const article = getArticleBySlug("future-of-web-development-shelby-nc");
 
   return (
     <div className="min-h-screen bg-[#f5f5f0]">
@@ -47,6 +51,7 @@ const BlogArticle10 = () => {
           {/* Article Header */}
           <header className="text-center mb-12 border-b-4 border-double border-neutral-900 pb-8">
             <div className="flex items-center justify-center gap-4 text-xs text-neutral-500 font-serif mb-4">
+              {article && <BlogCategoryBadge categorySlug={article.category} theme={article.theme} />}
               <span className="text-primary">Vol #2 Article #10</span>
               <span className="w-1 h-1 bg-neutral-400 rounded-full" />
               <span>June 2026</span>

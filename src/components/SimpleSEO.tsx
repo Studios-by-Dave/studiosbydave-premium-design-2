@@ -7,7 +7,7 @@ interface SEOProps {
   canonical?: string;
   ogImage?: string;
   ogType?: string;
-  structuredData?: any;
+  structuredData?: object | object[];
   noindex?: boolean;
   datePublished?: string;
   dateModified?: string;
@@ -29,7 +29,11 @@ const SimpleSEO = ({
 
   // Provide to prerenderer natively
   if (typeof global !== 'undefined') {
-    (global as any).__PRERENDER_SEO = { title: fullTitle, description };
+    (
+      globalThis as typeof globalThis & {
+        __PRERENDER_SEO?: { title: string; description: string };
+      }
+    ).__PRERENDER_SEO = { title: fullTitle, description };
   }
 
   useEffect(() => {

@@ -6,6 +6,8 @@ import { ArrowLeft, CheckCircle, Zap, Shield, Smartphone, Globe } from "lucide-r
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { breadcrumbSchema, articleSchema } from "@/data/structuredData";
+import { getArticleBySlug } from "@/data/blogArticles";
+import { BlogCategoryBadge } from "@/components/BlogCategoryBadge";
 
 const BlogArticle8 = () => {
   const breadcrumbs = breadcrumbSchema([
@@ -22,6 +24,8 @@ const BlogArticle8 = () => {
     "2026-05-22",
     "Studios by Dave"
   );
+
+  const article = getArticleBySlug("web-development-2026");
 
   return (
     <div className="min-h-screen bg-[#f5f5f0]">
@@ -42,6 +46,7 @@ const BlogArticle8 = () => {
           {/* Article Header */}
           <header className="text-center mb-12 border-b-4 border-double border-neutral-900 pb-8">
             <div className="flex items-center justify-center gap-4 text-xs text-neutral-500 font-serif mb-4">
+              {article && <BlogCategoryBadge categorySlug={article.category} theme={article.theme} />}
               <span className="text-primary">Vol #2 Article #8</span>
               <span className="w-1 h-1 bg-neutral-400 rounded-full" />
               <span>May 2026</span>

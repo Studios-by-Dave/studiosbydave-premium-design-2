@@ -6,6 +6,8 @@ import { ArrowLeft, CheckCircle, Users, Award, MapPin } from "lucide-react";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { breadcrumbSchema, articleSchema } from "@/data/structuredData";
+import { getArticleBySlug } from "@/data/blogArticles";
+import { BlogCategoryBadge } from "@/components/BlogCategoryBadge";
 
 const BlogArticle1 = () => {
   const breadcrumbs = breadcrumbSchema([
@@ -22,6 +24,8 @@ const BlogArticle1 = () => {
     "2025-01-15",
     "Studios by Dave"
   );
+
+  const article = getArticleBySlug("why-choose-studios-by-dave");
 
   return (
     <div className="min-h-screen bg-luxury-bg text-white font-serif">
@@ -42,6 +46,7 @@ const BlogArticle1 = () => {
           {/* Article Header */}
           <header className="text-center mb-12 border-b border-white/10 pb-8">
             <div className="flex items-center justify-center gap-4 text-xs text-neutral-400 font-serif mb-4">
+              {article && <BlogCategoryBadge categorySlug={article.category} theme={article.theme} />}
               <span className="text-luxury-lime">Vol #1 Article #1</span>
               <span className="w-1 h-1 bg-neutral-600 rounded-full" />
               <span>January 2025</span>

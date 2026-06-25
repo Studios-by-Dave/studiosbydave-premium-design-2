@@ -5,8 +5,11 @@ import { Link } from "react-router-dom";
 import { ArrowLeft, CheckCircle, Zap, Phone, Smartphone, MapPin, Palette } from "lucide-react";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import { getArticleBySlug } from "@/data/blogArticles";
+import { BlogCategoryBadge } from "@/components/BlogCategoryBadge";
 
 const BlogArticle3 = () => {
+  const article = getArticleBySlug("website-mistakes-costing-customers");
   return (
     <div className="min-h-screen bg-[#f5f5f0]">
       <SimpleSEO
@@ -25,6 +28,7 @@ const BlogArticle3 = () => {
           {/* Article Header */}
           <header className="text-center mb-12 border-b-4 border-double border-neutral-900 pb-8">
             <div className="flex items-center justify-center gap-4 text-xs text-neutral-500 font-serif mb-4">
+              {article && <BlogCategoryBadge categorySlug={article.category} theme={article.theme} />}
               <span className="text-trophy-gold">Vol #1 Article #3</span>
               <span className="w-1 h-1 bg-neutral-400 rounded-full" />
               <span>January 2026</span>

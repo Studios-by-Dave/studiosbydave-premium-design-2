@@ -113,6 +113,7 @@ const App = () => (
 
             <Route path="/services/portfolio" element={<Portfolio />} />
             <Route path="/blog" element={<Blog />} />
+            <Route path="/blog/category/:categorySlug" element={<Blog />} />
             <Route path="/blog/why-choose-studios-by-dave" element={<BlogArticle1 />} />
             <Route path="/blog/does-your-business-need-a-website-2026" element={<BlogArticle2 />} />
             <Route path="/blog/website-mistakes-costing-customers" element={<BlogArticle3 />} />
