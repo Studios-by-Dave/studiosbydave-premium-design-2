@@ -10,6 +10,8 @@ const supabaseServiceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!;
 const supabase = createClient(supabaseUrl, supabaseServiceKey);
 
 const ALLOWED_ORIGINS = [
+  'https://www.shelbywebco.com',
+  'https://shelbywebco.com',
   'https://www.studiosbydave.com',
   'https://studiosbydave.com',
   'https://studiosbydave-official-site-7422bd0-five.vercel.app',
@@ -195,7 +197,7 @@ const handler = async (req: Request): Promise<Response> => {
       html: `
         <h1>Thank you for contacting Studios by Dave, ${escapeHtml(firstName)}!</h1>
         <p>We have received your message and will get back to you within 24 hours.</p>
-        <p>In the meantime, feel free to explore our services at <a href="https://www.studiosbydave.com">studiosbydave.com</a>.</p>
+        <p>In the meantime, feel free to explore our services at <a href="https://www.shelbywebco.com">shelbywebco.com</a>.</p>
         <hr>
         <p><strong>Your message:</strong></p>
         <p>${escapeHtml(message).replace(/\n/g, '<br>')}</p>
