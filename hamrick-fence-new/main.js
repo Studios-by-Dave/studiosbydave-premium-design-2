@@ -57,10 +57,14 @@ const quoteElement = document.getElementById('testimonial-quote');
 const authorElement = document.getElementById('testimonial-author');
 const testimonialButtons = document.querySelectorAll('.testimonial-button');
 let testimonialIndex = 0;
-let rotationTimer;
+let rotationTimer = null;
+const isLocalPreview = window.location.hostname === '127.0.0.1' || window.location.hostname === 'localhost';
 
 function renderTestimonial(index) {
   if (!quoteElement || !authorElement || index < 0 || index >= testimonials.length) {
+    if (isLocalPreview) {
+      console.warn('Testimonial rendering skipped because the target elements or index were invalid.');
+    }
     return;
   }
 

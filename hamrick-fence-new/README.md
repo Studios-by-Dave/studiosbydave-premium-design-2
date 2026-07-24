@@ -4,8 +4,6 @@ This folder is a standalone, local-folder-first website build for **Hamrick Fenc
 
 `downloads/websites/clients/hamrick-fence-new`
 
-The original user-provided folder name was `downloads/websites/clients/hamrick fence-new`. The starter will still work there, but the hyphenated folder name above is the recommended long-term path because it is easier to use in terminal commands and version control.
-
 ## What's included
 
 - `index.html` — full one-page marketing website
@@ -42,6 +40,10 @@ Then open:
 4. Connect the estimate form if you are not deploying on Netlify
 5. Add the real Google Business Profile URL and Facebook URL once the client provides them
 6. Launch the site from the local folder or move it into a new dedicated repository
+
+## Folder setup note
+
+The original user-provided folder name was `downloads/websites/clients/hamrick fence-new`. The starter will still work there, but the hyphenated folder name above is the recommended long-term path because it is easier to use in terminal commands and version control.
 
 ## Form handling
 
