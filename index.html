@@ -3,97 +3,76 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, minimum-scale=1.0, user-scalable=yes" />
-    <meta name="theme-color" content="#0EA5E9" />
+    <meta name="theme-color" content="#FFD100" />
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
-    <!-- Default Title and meta description (updated dynamically by SimpleSEO component) -->
-    <title>Studios by Dave: Web Design & Development Shelby NC</title>
-    <meta name="description" content="Your Local Shelby, NC web design, app development & digital marketing studio. Building modern websites and custom web apps that drive growth for local businesses." />
-    <meta name="author" content="Studios by Dave" />
+    <title>Hamrick Fence Co. | Fence Installation &amp; Repair | Boiling Springs &amp; Shelby, NC</title>
+    <meta name="description" content="Hamrick Fence Co. — 13+ years serving Cleveland County, NC. Wood, vinyl, chain link, metal, and farm fencing. Free estimates. Call (704) 434-5011." />
+    <meta name="keywords" content="fence company Boiling Springs NC, Shelby NC fence installation, wood fence repair Cleveland County, vinyl fence, chain link fence, farm fencing NC" />
+    <meta name="author" content="Hamrick Fence Co." />
     <meta name="geo.region" content="US-NC" />
-    <meta name="geo.placename" content="Shelby" />
-    <!-- Canonical tag will be set dynamically by SimpleSEO component -->
+    <meta name="geo.placename" content="Boiling Springs" />
 
-    <!-- Favicons removed to avoid conflicts with other projects -->
-    <link rel="icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR4nGNgYAAAAAMAASsJTYQAAAAASUVORK5CYII=" />
+    <!-- Favicon -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='6' fill='%23FFD100'/><text x='50%25' y='54%25' dominant-baseline='middle' text-anchor='middle' font-family='Arial Black,sans-serif' font-size='10' font-weight='900' fill='%231A1A1A'>HFC</text></svg>" />
 
-    <!-- Sitemap -->
-    <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml" />
-
-    <!-- Resource Hints for Performance -->
-    <link rel="dns-prefetch" href="https://studiosbydave-final.lovable.app">
-    <link rel="dns-prefetch" href="https://omnisnippet1.com">
+    <!-- Resource Hints -->
     <link rel="dns-prefetch" href="https://fonts.googleapis.com">
     <link rel="dns-prefetch" href="https://fonts.gstatic.com">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="modulepreload" href="/src/main.tsx">
 
-    <!-- Critical Image Preloading -->
-    <link rel="preload" as="image" href="/lovable-uploads/hero-human-inside.png" fetchpriority="high">
-    <link rel="preload" as="image" href="/new-logo.png" fetchpriority="high">
+    <!-- Google Fonts: Oswald (headlines) + Merriweather (body) + Open Sans (UI) -->
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Merriweather:ital,wght@0,400;0,700;1,400&family=Open+Sans:wght@400;500;600;700&display=swap">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Merriweather:ital,wght@0,400;0,700;1,400&family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Merriweather:ital,wght@0,400;0,700;1,400&family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet"></noscript>
 
-    <!-- Font Loading Optimization -->
-    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&family=Syne:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700;800&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&display=swap">
-
-    <!-- Google Analytics (GA4) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-7PYLQDFZ6M"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-7PYLQDFZ6M');
-    </script>
-
-    <!-- Google Fonts with font-display: swap -->
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&family=Syne:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700;800&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&display=swap" rel="stylesheet">
-    <noscript><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&family=Syne:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700;800&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&display=swap" rel="stylesheet"></noscript>
-
-    <!-- Critical CSS Inlining for Performance -->
+    <!-- Critical CSS -->
     <style>
-      /* Critical above-the-fold styles */
-      body { margin: 0; font-family: 'Inter', sans-serif; }
-      .loading { opacity: 0; transition: opacity 0.3s; }
-      .loaded { opacity: 1; }
-      /* Prevent layout shifts */
+      body { margin: 0; font-family: 'Open Sans', sans-serif; background: #F5F0E6; }
       img { max-width: 100%; height: auto; }
     </style>
 
     <!-- Open Graph -->
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://www.shelbywebco.com/" />
-    <meta property="og:image" content="https://storage.googleapis.com/gpt-engineer-file-uploads/7yFZRN3a4zOnW6XxdC0mKKnJqbo1/social-images/social-1770800137613-instant_brand_kit_1f0db7f0-9175-6920-b144-d295dd9ac2e8_0_0(2).png">
-    <meta property="og:title" content="Studios by Dave: Web Design & Development Shelby NC">
-    <meta property="og:description" content="Your Local Shelby, NC web design, app development & digital marketing studio. Building modern websites and custom web apps that drive growth for local businesses.">
+    <meta property="og:url" content="https://hamrickfence.com/" />
+    <meta property="og:title" content="Hamrick Fence Co. | Fence Installation &amp; Repair | Boiling Springs &amp; Shelby, NC" />
+    <meta property="og:description" content="Hamrick Fence Co. — 13+ years serving Cleveland County, NC. Wood, vinyl, chain link, metal, and farm fencing. Free estimates. Call (704) 434-5011." />
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@studiosbydave" />
-    <meta name="twitter:image" content="https://storage.googleapis.com/gpt-engineer-file-uploads/7yFZRN3a4zOnW6XxdC0mKKnJqbo1/social-images/social-1770800137613-instant_brand_kit_1f0db7f0-9175-6920-b144-d295dd9ac2e8_0_0(2).png">
-    <meta name="twitter:title" content="Studios by Dave: Web Design & Development Shelby NC">
-    <meta name="twitter:description" content="Your Local Shelby, NC web design, app development & digital marketing studio. Building modern websites and custom web apps that drive growth for local businesses.">
-</head>
+    <meta name="twitter:title" content="Hamrick Fence Co. | Fence Installation &amp; Repair | Boiling Springs &amp; Shelby, NC" />
+    <meta name="twitter:description" content="Hamrick Fence Co. — 13+ years serving Cleveland County, NC. Free estimates. Call (704) 434-5011." />
+
+    <!-- LocalBusiness Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Hamrick Fence Co.",
+      "description": "Fence sales, installation and repair serving Boiling Springs, Shelby, and Cleveland County, NC for 13+ years.",
+      "telephone": "(704) 434-5011",
+      "url": "https://hamrickfence.com",
+      "address": [
+        {
+          "@type": "PostalAddress",
+          "streetAddress": "407 E College Ave",
+          "addressLocality": "Boiling Springs",
+          "addressRegion": "NC",
+          "postalCode": "28017",
+          "addressCountry": "US"
+        }
+      ],
+      "openingHours": "Mo-Fr 08:00-17:00",
+      "priceRange": "$$",
+      "areaServed": ["Boiling Springs, NC", "Shelby, NC", "Cleveland County, NC"],
+      "serviceType": ["Fence Installation", "Fence Repair", "Deck Construction", "Gate Installation"]
+    }
+    </script>
+  </head>
 
   <body>
     <div id="root"></div>
     <script prerender type="module" src="/src/main.tsx" defer></script>
-
-    <!-- Omnisend Tracking - Optimized Loading -->
-    <script type="text/javascript">
-        // Initialize Omnisend with deferred loading to prevent forced reflows
-        window.omnisend = window.omnisend || [];
-        omnisend.push(["brandID", "678f5723f9d19334d6009afe"]);
-
-        // Defer script loading to prevent blocking initial render
-        window.addEventListener('load', function() {
-            setTimeout(function() {
-                omnisend.push(["track", "$pageViewed"]);
-                var e = document.createElement("script");
-                e.type = "text/javascript";
-                e.async = true;
-                e.src = "https://omnisnippet1.com/inshop/launcher-v2.js";
-                document.head.appendChild(e);
-            }, 1000);
-        });
-    </script>
   </body>
 </html>

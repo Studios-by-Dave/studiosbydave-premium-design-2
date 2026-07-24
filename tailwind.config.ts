@@ -20,16 +20,28 @@ export default {
 		},
 		extend: {
 			colors: {
-				// Ultra-Premium Dark Luxury Palette
-				'luxury-bg': '#0A0A0F',
-				'luxury-surface': '#111118',
-				'luxury-royal-blue': '#4169E1',
-				'luxury-purple': '#9370DB',
-				'luxury-lime': '#C9F04D',
-				'luxury-text-primary': '#F2F2F0',
-				'luxury-text-secondary': '#7A7A8A',
-				'luxury-footer': '#070709',
-				
+				// Hamrick Fence Co. Brand Palette
+				'fence-yellow': '#FFD100',
+				'fence-yellow-dark': '#F4C430',
+				'fence-black': '#1A1A1A',
+				'fence-cream': '#F5F0E6',
+				'fence-red': '#B8321A',
+				'fence-brown': '#8B5E3C',
+				'fence-green': '#6B8E5A',
+				'fence-green-dark': '#4A6B3A',
+				'fence-white': '#FAFAF8',
+				'fence-gray': '#6B7280',
+
+				// Legacy luxury tokens (kept for shadcn compatibility)
+				'luxury-bg': '#1A1A1A',
+				'luxury-surface': '#2A2A2A',
+				'luxury-royal-blue': '#FFD100',
+				'luxury-purple': '#B8321A',
+				'luxury-lime': '#FFD100',
+				'luxury-text-primary': '#F5F0E6',
+				'luxury-text-secondary': '#8B7355',
+				'luxury-footer': '#111111',
+
 				// Existing shadcn colors (keeping for compatibility)
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
@@ -95,14 +107,16 @@ export default {
 				'bounce': 'var(--transition-bounce)',
 			},
 			fontFamily: {
-				// Ultra-Premium Typography
-				display: ['Playfair Display', 'serif'],
-				section: ['Syne', 'sans-serif'],
-				body: ['Inter', 'system-ui', 'sans-serif'],
-				accent: ['Cormorant Garamond', 'serif'],
+				// Hamrick Fence Typography
+				'headline': ['Oswald', 'Arial Black', 'sans-serif'],
+				'body': ['Open Sans', 'system-ui', 'sans-serif'],
+				'serif': ['Merriweather', 'Georgia', 'serif'],
 				// Legacy font names for compatibility
-				sans: ['Inter', 'system-ui', 'sans-serif'],
-				poofy: ['Fredoka One', 'cursive'],
+				display: ['Oswald', 'Arial Black', 'sans-serif'],
+				section: ['Oswald', 'sans-serif'],
+				sans: ['Open Sans', 'system-ui', 'sans-serif'],
+				accent: ['Merriweather', 'Georgia', 'serif'],
+				poofy: ['Oswald', 'sans-serif'],
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
