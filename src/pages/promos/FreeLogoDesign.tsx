@@ -7,6 +7,14 @@ import { Link } from "react-router-dom";
 import { ArrowRight, ChevronDown, ChevronUp } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
+// First 4 items also appear in the ticket card summary; rest are detail-only
+const ticketItems = [
+  "Custom logo concept",
+  "Color & typography system",
+  "Web-ready & print-ready files",
+  "One revision round included",
+];
+
 const includedItems = [
   "One original logo concept built around your business and industry",
   "A matching color palette and font pairing for your brand",
@@ -54,7 +62,7 @@ const faqs = [
 ];
 
 const FreeLogoDesign = () => {
-  const [openFaq, setOpenFaq] = useState<number | null>(0);
+  const [openFaq, setOpenFaq] = useState<number | null>(null);
 
   return (
     <div className="min-h-screen bg-luxury-bg">
@@ -124,7 +132,7 @@ const FreeLogoDesign = () => {
                   </p>
                   <div className="border-t border-dashed border-white/10 mb-6" />
                   <ul className="grid grid-cols-2 gap-x-4 gap-y-3 m-0 p-0 list-none">
-                    {["Custom logo concept", "Color & typography system", "Web-ready & print-ready files", "One revision round included"].map((item) => (
+                    {ticketItems.map((item) => (
                       <li key={item} className="flex items-start gap-2 text-sm text-luxury-text-secondary font-body">
                         <span className="text-luxury-royal-blue font-bold mt-0.5 shrink-0">✓</span>
                         {item}
