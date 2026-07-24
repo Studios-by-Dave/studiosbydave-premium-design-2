@@ -4,6 +4,8 @@ This folder is a standalone, local-folder-first website build for **Hamrick Fenc
 
 `downloads/websites/clients/hamrick fence-new`
 
+If you want cleaner terminal commands later, you can rename that local folder to `hamrick-fence-new`, but the files in this starter will also work in the original space-containing folder name you provided.
+
 ## What's included
 
 - `index.html` — full one-page marketing website
@@ -34,7 +36,7 @@ Then open:
 
 ## Recommended local-folder workflow
 
-1. Copy the contents of this folder into `downloads/websites/clients/hamrick fence-new`
+1. Copy the contents of this folder into `downloads/websites/clients/hamrick fence-new` (or rename the destination folder to `hamrick-fence-new` first if you want to avoid quoting paths in terminal commands)
 2. Replace the placeholder/demo photos with real Hamrick Fence Co. photos
 3. Update the JSON-LD `url` fields in `index.html` to the real production domain
 4. Connect the estimate form if you are not deploying on Netlify
