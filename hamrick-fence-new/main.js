@@ -60,7 +60,7 @@ let testimonialIndex = 0;
 let rotationTimer;
 
 function renderTestimonial(index) {
-  if (!quoteElement || !authorElement) {
+  if (!quoteElement || !authorElement || index < 0 || index >= testimonials.length) {
     return;
   }
 
@@ -96,8 +96,10 @@ testimonialButtons.forEach((button) => {
   });
 });
 
-renderTestimonial(testimonialIndex);
-startRotation();
+if (quoteElement && authorElement) {
+  renderTestimonial(testimonialIndex);
+  startRotation();
+}
 
 const yearElement = document.getElementById('year');
 
