@@ -43,7 +43,7 @@ Then open:
 
 ## Folder setup note
 
-The original user-provided folder name was `downloads/websites/clients/hamrick fence-new`. The starter will still work there, but the hyphenated folder name above is the recommended long-term path because it is easier to use in terminal commands and version control.
+This starter already uses the recommended hyphenated folder name: `hamrick-fence-new`. The only space-containing path mentioned in this README is the original user-provided local folder name, `downloads/websites/clients/hamrick fence-new`. The files will still work there, but the hyphenated version is the better long-term path for terminal commands and version control.
 
 ## Form handling
 

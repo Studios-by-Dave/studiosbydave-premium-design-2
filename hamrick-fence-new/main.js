@@ -59,6 +59,11 @@ const testimonialButtons = document.querySelectorAll('.testimonial-button');
 let testimonialIndex = 0;
 let rotationTimer = null;
 const isLocalPreview = window.location.hostname === '127.0.0.1' || window.location.hostname === 'localhost';
+const hasPlaceholderDomain = document.documentElement.innerHTML.includes('https://example.com/');
+
+if (hasPlaceholderDomain && !isLocalPreview) {
+  console.warn('Replace all example.com structured-data URLs with the final production domain before launch.');
+}
 
 function renderTestimonial(index) {
   if (!quoteElement || !authorElement || index < 0 || index >= testimonials.length) {
