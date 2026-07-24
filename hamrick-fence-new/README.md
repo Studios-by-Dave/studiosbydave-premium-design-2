@@ -1,10 +1,10 @@
 # Hamrick Fence Co. starter project
 
-This folder is a standalone, local-folder-first website build for **Hamrick Fence Co.** It is intentionally separate from the existing `Studios-by-Dave/studiosbydave-premium-design-2` app so you can copy it directly into:
+This folder is a standalone, local-folder-first website build for **Hamrick Fence Co.** It is intentionally separate from the existing `Studios-by-Dave/studiosbydave-premium-design-2` app so you can copy it directly into a dedicated client folder such as:
 
-`downloads/websites/clients/hamrick fence-new`
+`downloads/websites/clients/hamrick-fence-new`
 
-If you want cleaner terminal commands later, you can rename that local folder to `hamrick-fence-new`, but the files in this starter will also work in the original space-containing folder name you provided.
+The original user-provided folder name was `downloads/websites/clients/hamrick fence-new`. The starter will still work there, but the hyphenated folder name above is the recommended long-term path because it is easier to use in terminal commands and version control.
 
 ## What's included
 
@@ -36,7 +36,7 @@ Then open:
 
 ## Recommended local-folder workflow
 
-1. Copy the contents of this folder into `downloads/websites/clients/hamrick fence-new` (or rename the destination folder to `hamrick-fence-new` first if you want to avoid quoting paths in terminal commands)
+1. Copy the contents of this folder into `downloads/websites/clients/hamrick-fence-new` (or keep the original `hamrick fence-new` folder name if you prefer and quote the path when using terminal commands)
 2. Replace the placeholder/demo photos with real Hamrick Fence Co. photos
 3. Update the JSON-LD `url` fields in `index.html` to the real production domain
 4. Connect the estimate form if you are not deploying on Netlify
@@ -57,6 +57,7 @@ If you deploy anywhere else, either:
 - The current repository is **not** the long-term home for the Hamrick Fence project
 - Real business photos, the final roadside-sign logo photo reference, and review copy still need to be provided
 - No confirmed production domain, Google Business Profile URL, Facebook URL, or email address was available in the prompt
+- The two street addresses in the starter came directly from the provided project brief and should be confirmed against the final business listings before launch
 
 ## Best next actions
 
